@@ -1,4 +1,20 @@
-# Rubocop::Lts
+<p align="center">
+    <a href="https://rubocop.org#gh-light-mode-only"  target="_blank" rel="noopener">
+      <img height="120px" src="https://github.com/rubocop-lts/rubocop-ruby1_9/raw/main/docs/images/logo/rubocop-light.svg?raw=true" alt="SVG RuboCop Logo, Copyright (c) 2014 Dimiter Petrov, CC BY-NC 4.0, see docs/images/logo/README.txt">
+    </a>
+    <a href="https://rubocop.org#gh-dark-mode-only"  target="_blank" rel="noopener">
+      <img height="120px" src="https://github.com/rubocop-lts/rubocop-ruby1_9/raw/main/docs/images/logo/rubocop-dark.svg?raw=true" alt="SVG RuboCop Logo, Copyright (c) 2014 Dimiter Petrov, CC BY-NC 4.0, see docs/images/logo/README.txt">
+    </a>
+    <a href="https://www.ruby-lang.org/" target="_blank" rel="noopener">
+      <img height="120px" src="https://github.com/rubocop-lts/rubocop-ruby1_9/raw/main/docs/images/logo/ruby-logo.svg?raw=true" alt="Yukihiro Matsumoto, Ruby Visual Identity Team, CC BY-SA 2.5, see docs/images/logo/README.txt">
+    </a>
+    <a href="https://semver.org/#gh-light-mode-only" target="_blank" rel="noopener">
+      <img height="120px" src="https://github.com/rubocop-lts/rubocop-ruby1_9/raw/main/docs/images/logo/semver-light.svg?raw=true" alt="SemVer.org Logo by @maxhaz, see docs/images/logo/README.txt">
+    </a>
+    <a href="https://semver.org/#gh-dark-mode-only" target="_blank" rel="noopener">
+      <img height="120px" src="https://github.com/rubocop-lts/rubocop-ruby1_9/raw/main/docs/images/logo/semver-dark.svg?raw=true" alt="SemVer.org Logo by @maxhaz, see docs/images/logo/README.txt">
+    </a>
+</p>
 
 ## Rubocop LTS
 
@@ -14,54 +30,64 @@ doesn't follow SemVer, and occasionally it will unexpectedly break things.
 
 All releases are stable releases. The major version you need depends on the version of minimum supported version of Ruby version for your project.
 
-| Your Ruby | Your Gemfile                   | Your Gemfile.lock | Your .rubocop.yml              |
-|-----------|--------------------------------|-------------------|--------------------------------|
-| `1.9.x`   | `gem "rubocop-lts", "~> 1.0"`  | `rubocop-ruby1_9` | `inherit_gem: rubocop-lts.yml` |
-| `2.0.x`   | `gem "rubocop-lts", "~> 2.0"`  | `rubocop-ruby2_0` | `inherit_gem: rubocop-lts.yml` |
-| `2.1.x`   | `gem "rubocop-lts", "~> 3.0"`  | `rubocop-ruby2_1` | `inherit_gem: rubocop-lts.yml` |
-| `2.2.x`   | `gem "rubocop-lts", "~> 4.0"`  | `rubocop-ruby2_2` | `inherit_gem: rubocop-lts.yml` |
-| `2.3.x`   | `gem "rubocop-lts", "~> 5.0"`  | `rubocop-ruby2_3` | `inherit_gem: rubocop-lts.yml` |
-| `2.4.x`   | `gem "rubocop-lts", "~> 6.0"`  | `rubocop-ruby2_4` | `inherit_gem: rubocop-lts.yml` |
-| `2.5.x`   | `gem "rubocop-lts", "~> 7.0"`  | `rubocop-ruby2_5` | `inherit_gem: rubocop-lts.yml` |
-| `2.6.x`   | `gem "rubocop-lts", "~> 8.0"`  | `rubocop-ruby2_6` | `inherit_gem: rubocop-lts.yml` |
-| `2.7.x`   | `gem "rubocop-lts", "~> 9.0"`  | `rubocop-ruby2_7` | `inherit_gem: rubocop-lts.yml` |
-| `3.0.x`   | `gem "rubocop-lts", "~> 10.0"` | `rubocop-ruby3_0` | `inherit_gem: rubocop-lts.yml` |
-| `3.1.x`   | `gem "rubocop-lts", "~> 11.0"` | `rubocop-ruby3_1` | `inherit_gem: rubocop-lts.yml` |
+| Your Ruby | Your Gemfile                   | Your Gemfile.lock | Your .rubocop.yml                              |
+|-----------|--------------------------------|-------------------|------------------------------------------------|
+| `1.9.x`   | `gem "rubocop-lts", "~> 1.0"`  | `rubocop-ruby1_9` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.0.x`   | `gem "rubocop-lts", "~> 2.0"`  | `rubocop-ruby2_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.1.x`   | `gem "rubocop-lts", "~> 3.0"`  | `rubocop-ruby2_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.2.x`   | `gem "rubocop-lts", "~> 4.0"`  | `rubocop-ruby2_2` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.3.x`   | `gem "rubocop-lts", "~> 5.0"`  | `rubocop-ruby2_3` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.4.x`   | `gem "rubocop-lts", "~> 6.0"`  | `rubocop-ruby2_4` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.5.x`   | `gem "rubocop-lts", "~> 7.0"`  | `rubocop-ruby2_5` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.6.x`   | `gem "rubocop-lts", "~> 8.0"`  | `rubocop-ruby2_6` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.7.x`   | `gem "rubocop-lts", "~> 9.0"`  | `rubocop-ruby2_7` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `3.0.x`   | `gem "rubocop-lts", "~> 10.0"` | `rubocop-ruby3_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `3.1.x`   | `gem "rubocop-lts", "~> 11.0"` | `rubocop-ruby3_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
 
 # 👩‍💻 Project Status
 
 ## How To Untie Gorgon's Knot
 
-> NOTE: Look [here][what1_8] if you have a library still supporting Ruby 1.8.7, or are looking to drop support for Ruby 1.8.7 following SemVer.
-
-[what1_8]: https://github.com/rubocop-lts/rubocop-ruby1_9#what-about-ruby-18
-
 > NOTE: `rubocop-lts` is under active development, and hasn't had any releases yet.  The ruby specific versions, e.g. `rubocop-ruby2_7`, are complete already, and you can use them! Keep scrolling down for links to each of them.
 
-| Your Ruby     | Your Gemfile                         |     | required_ruby_version   | Your Gemfile.lock            | Your .rubocop.yml              |
-|---------------|--------------------------------------|-----|-------------------------|------------------------------|--------------------------------|
-| `1.9.x`       | `gem "rubocop-lts", "~> 1.0"`        |     | `['>= 1.9.0', '< 2']`   | [`rubocop-ruby1_9`][⛳️19-gh] | `inherit_gem: rubocop-lts.yml` |
-| ⬆️ to `2.0.x` | ⬆️ to `gem "rubocop-lts", "~> 1.1"`  |     | `['>= 1.9.0', '< 3.1']` | no change                    | no change                      |
-| no change     | ⬆️ to `gem "rubocop-lts", "~> 2.0"`  |     | `['>= 2.0.0', '< 2.1']` | [`rubocop-ruby2_0`][⛳️20-gh] | no change                      |
-| ⬆️ to `2.1.x` | ⬆️ to `gem "rubocop-lts", "~> 2.1"`  |     | `['>= 2.0.0', '< 3.1']` | no change                    | no change                      |
-| no change     | ⬆️ to `gem "rubocop-lts", "~> 3.0"`  |     | `['>= 2.1.0', '< 2.2']` | [`rubocop-ruby2_1`][⛳️21-gh] | no change                      |
-| ⬆️ to `2.2.x` | ⬆️ to `gem "rubocop-lts", "~> 3.1"`  |     | `['>= 2.1.0', '< 3.1']` | no change                    | no change                      |
-| no change     | ⬆️ to `gem "rubocop-lts", "~> 4.0"`  |     | `['>= 2.2.0', '< 2.3']` | [`rubocop-ruby2_2`][⛳️22-gh] | no change                      |
-| ⬆️ to `2.3.x` | ⬆️ to `gem "rubocop-lts", "~> 4.1"`  |     | `['>= 2.2.0', '< 3.0']` | no change                    | no change                      |
-| no change     | ⬆️ to `gem "rubocop-lts", "~> 5.0"`  |     | `['>= 2.3.0', '< 2.4']` | [`rubocop-ruby2_3`][⛳️23-gh] | no change                      |
-| ⬆️ to `2.4.x` | ⬆️ to `gem "rubocop-lts", "~> 5.1"`  |     | `['>= 2.3.0', '< 3.1']` | no change                    | no change                      |
-| no change     | ⬆️ to `gem "rubocop-lts", "~> 6.0"`  |     | `['>= 2.4.0', '< 2.5']` | [`rubocop-ruby2_4`][⛳️24-gh] | no change                      |
-| ⬆️ to `2.5.x` | ⬆️ to `gem "rubocop-lts", "~> 6.1"`  |     | `['>= 2.4.0', '< 3.1']` | no change                    | no change                      |
-| no change     | ⬆️ to `gem "rubocop-lts", "~> 7.0"`  |     | `['>= 2.5.0', '< 2.6']` | [`rubocop-ruby2_5`][⛳️25-gh] | no change                      |
-| ⬆️ to `2.6.x` | ⬆️ to `gem "rubocop-lts", "~> 7.1"`  |     | `['>= 2.5.0', '< 3.2']` | no change                    | no change                      |
-| no change     | ⬆️ to `gem "rubocop-lts", "~> 8.0"`  |     | `['>= 2.6.0', '< 2.7']` | [`rubocop-ruby2_6`][⛳️26-gh] | no change                      |
-| ⬆️ to `2.7.x` | ⬆️ to `gem "rubocop-lts", "~> 8.1"`  |     | `['>= 2.6.0', '< 3.2']` | no change                    | no change                      |
-| no change     | ⬆️ to `gem "rubocop-lts", "~> 9.0"`  |     | `['>= 2.7.0', '< 3.0']` | [`rubocop-ruby2_7`][⛳️27-gh] | no change                      |
-| ⬆️ to `3.0.x` | ⬆️ to `gem "rubocop-lts", "~> 9.1"`  |     | `['>= 2.7.0', '< 3.2']` | no change                    | no change                      |
-| no change     | ⬆️ to `gem "rubocop-lts", "~> 10.0"` |     | `['>= 3.0.0', '< 3.1']` | [`rubocop-ruby3_0`][⛳️30-gh] | no change                      |
-| ⬆️ to `3.1.x` | ⬆️ to `gem "rubocop-lts", "~> 10.1"` |     | `['>= 3.0.0', '< 3.2']` | no change                    | no change                      |
-| no change     | ⬆️ to `gem "rubocop-lts", "~> 11.0"` |     | `['>= 3.1.0', '< 3.2']` | [`rubocop-ruby3_1`][⛳️31-gh] | no change                      |
-| ⬆️ to `3.2.x` | ⬆️ to `gem "rubocop-lts", "~> 11.1"` |     | `['>= 3.1.0', '< 3.2']` | no change                    | no change                      |
+| Your Ruby     | Your Gemfile                         |     | required_ruby_version   | Your Gemfile.lock            | Your .rubocop.yml                              |
+|---------------|--------------------------------------|-----|-------------------------|------------------------------|------------------------------------------------|
+| `1.9.x`       | `gem "rubocop-lts", "~> 1.0"`        |     | `['>= 1.9.0', '< 2']`   | [`rubocop-ruby1_9`][⛳️19-gh] | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| ⬆️ to `2.0.x` | ⬆️ to `gem "rubocop-lts", "~> 1.1"`  |     | `['>= 1.9.0', '< 3.1']` | no change                    | no change                                      |
+| no change     | ⬆️ to `gem "rubocop-lts", "~> 2.0"`  |     | `['>= 2.0.0', '< 2.1']` | [`rubocop-ruby2_0`][⛳️20-gh] | no change                                      |
+| ⬆️ to `2.1.x` | ⬆️ to `gem "rubocop-lts", "~> 2.1"`  |     | `['>= 2.0.0', '< 3.1']` | no change                    | no change                                      |
+| no change     | ⬆️ to `gem "rubocop-lts", "~> 3.0"`  |     | `['>= 2.1.0', '< 2.2']` | [`rubocop-ruby2_1`][⛳️21-gh] | no change                                      |
+| ⬆️ to `2.2.x` | ⬆️ to `gem "rubocop-lts", "~> 3.1"`  |     | `['>= 2.1.0', '< 3.1']` | no change                    | no change                                      |
+| no change     | ⬆️ to `gem "rubocop-lts", "~> 4.0"`  |     | `['>= 2.2.0', '< 2.3']` | [`rubocop-ruby2_2`][⛳️22-gh] | no change                                      |
+| ⬆️ to `2.3.x` | ⬆️ to `gem "rubocop-lts", "~> 4.1"`  |     | `['>= 2.2.0', '< 3.0']` | no change                    | no change                                      |
+| no change     | ⬆️ to `gem "rubocop-lts", "~> 5.0"`  |     | `['>= 2.3.0', '< 2.4']` | [`rubocop-ruby2_3`][⛳️23-gh] | no change                                      |
+| ⬆️ to `2.4.x` | ⬆️ to `gem "rubocop-lts", "~> 5.1"`  |     | `['>= 2.3.0', '< 3.1']` | no change                    | no change                                      |
+| no change     | ⬆️ to `gem "rubocop-lts", "~> 6.0"`  |     | `['>= 2.4.0', '< 2.5']` | [`rubocop-ruby2_4`][⛳️24-gh] | no change                                      |
+| ⬆️ to `2.5.x` | ⬆️ to `gem "rubocop-lts", "~> 6.1"`  |     | `['>= 2.4.0', '< 3.1']` | no change                    | no change                                      |
+| no change     | ⬆️ to `gem "rubocop-lts", "~> 7.0"`  |     | `['>= 2.5.0', '< 2.6']` | [`rubocop-ruby2_5`][⛳️25-gh] | no change                                      |
+| ⬆️ to `2.6.x` | ⬆️ to `gem "rubocop-lts", "~> 7.1"`  |     | `['>= 2.5.0', '< 3.2']` | no change                    | no change                                      |
+| no change     | ⬆️ to `gem "rubocop-lts", "~> 8.0"`  |     | `['>= 2.6.0', '< 2.7']` | [`rubocop-ruby2_6`][⛳️26-gh] | no change                                      |
+| ⬆️ to `2.7.x` | ⬆️ to `gem "rubocop-lts", "~> 8.1"`  |     | `['>= 2.6.0', '< 3.2']` | no change                    | no change                                      |
+| no change     | ⬆️ to `gem "rubocop-lts", "~> 9.0"`  |     | `['>= 2.7.0', '< 3.0']` | [`rubocop-ruby2_7`][⛳️27-gh] | no change                                      |
+| ⬆️ to `3.0.x` | ⬆️ to `gem "rubocop-lts", "~> 9.1"`  |     | `['>= 2.7.0', '< 3.2']` | no change                    | no change                                      |
+| no change     | ⬆️ to `gem "rubocop-lts", "~> 10.0"` |     | `['>= 3.0.0', '< 3.1']` | [`rubocop-ruby3_0`][⛳️30-gh] | no change                                      |
+| ⬆️ to `3.1.x` | ⬆️ to `gem "rubocop-lts", "~> 10.1"` |     | `['>= 3.0.0', '< 3.2']` | no change                    | no change                                      |
+| no change     | ⬆️ to `gem "rubocop-lts", "~> 11.0"` |     | `['>= 3.1.0', '< 3.2']` | [`rubocop-ruby3_1`][⛳️31-gh] | no change                                      |
+| ⬆️ to `3.2.x` | ⬆️ to `gem "rubocop-lts", "~> 11.1"` |     | `['>= 3.1.0', '< 3.2']` | no change                    | no change                                      |
+
+### Supporting Ruby 1.8.7?
+
+Have a library still supporting Ruby 1.8.7, or looking to drop support for Ruby 1.8.7 in a SemVer-compliant manner?
+
+Simply use
+```yaml
+inherit_gem:
+  rubocop-lts: rubocop-lts1_8.yml
+```
+
+> NOTE: For more on how Ruby 1.8 support works, look [here][what1_8]
+
+[what1_8]: https://github.com/rubocop-lts/rubocop-ruby1_9#what-about-ruby-18
 
 ## Project Health
 
