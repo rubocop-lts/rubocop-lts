@@ -1,0 +1,16 @@
+# Removed as of 0.80.0
+# braces setting is for compatibility with Ruby 2.7+
+# See:
+#  * https://github.com/rubocop/rubocop/issues/7641
+#  * https://github.com/rubocop/rubocop/pull/7643
+Style/BracesAroundHashParameters:
+  Enabled: true
+  EnforcedStyle: context_dependent
+
+# The encoding comments can be removed once the project drops Ruby 1.9 support (and this gem!).
+# Whole file UTF-8 Encoding is default in Ruby 2+, so the Encoding comment is usually not needed there.
+# See:
+#  * https://www.rubydoc.info/gems/rubocop/0.49.0/RuboCop/Cop/Style/Encoding
+Style/Encoding:
+  Enabled: true
+  EnforcedStyle: always

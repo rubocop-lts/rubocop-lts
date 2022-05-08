@@ -1,0 +1,13 @@
+inherit_gem:
+  rubocop-lts: rubocop-lts1_8.yml
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+Metrics/LineLength:
+  Max: 120
