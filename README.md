@@ -33,16 +33,53 @@ All releases are stable releases. The major version you need depends on the vers
 | Your Ruby | Your Gemfile                   | Your Gemfile.lock | Your .rubocop.yml                              |
 |-----------|--------------------------------|-------------------|------------------------------------------------|
 | `1.9.x`   | `gem "rubocop-lts", "~> 1.0"`  | `rubocop-ruby1_9` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.0.x`   | `gem "rubocop-lts", "~> 2.0"`  | `rubocop-ruby2_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.1.x`   | `gem "rubocop-lts", "~> 3.0"`  | `rubocop-ruby2_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.2.x`   | `gem "rubocop-lts", "~> 4.0"`  | `rubocop-ruby2_2` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.3.x`   | `gem "rubocop-lts", "~> 5.0"`  | `rubocop-ruby2_3` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.4.x`   | `gem "rubocop-lts", "~> 6.0"`  | `rubocop-ruby2_4` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.5.x`   | `gem "rubocop-lts", "~> 7.0"`  | `rubocop-ruby2_5` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.6.x`   | `gem "rubocop-lts", "~> 8.0"`  | `rubocop-ruby2_6` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.7.x`   | `gem "rubocop-lts", "~> 9.0"`  | `rubocop-ruby2_7` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `3.0.x`   | `gem "rubocop-lts", "~> 10.0"` | `rubocop-ruby3_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `3.1.x`   | `gem "rubocop-lts", "~> 11.0"` | `rubocop-ruby3_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.0.x`   | `gem "rubocop-lts", "~> 3.0"`  | `rubocop-ruby2_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.1.x`   | `gem "rubocop-lts", "~> 5.0"`  | `rubocop-ruby2_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.2.x`   | `gem "rubocop-lts", "~> 7.0"`  | `rubocop-ruby2_2` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.3.x`   | `gem "rubocop-lts", "~> 9.0"`  | `rubocop-ruby2_3` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.4.x`   | `gem "rubocop-lts", "~> 11.0"` | `rubocop-ruby2_4` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.5.x`   | `gem "rubocop-lts", "~> 13.0"` | `rubocop-ruby2_5` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.6.x`   | `gem "rubocop-lts", "~> 15.0"` | `rubocop-ruby2_6` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.7.x`   | `gem "rubocop-lts", "~> 17.0"` | `rubocop-ruby2_7` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `3.0.x`   | `gem "rubocop-lts", "~> 19.0"` | `rubocop-ruby3_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `3.1.x`   | `gem "rubocop-lts", "~> 21.0"` | `rubocop-ruby3_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+
+##  Version Conventions
+
+### `Odd` Major Release
+
+Versions like:
+```ruby
+"1.0.0"
+"3.0.0"
+"5.0.0"
+# ... etc
+```
+Locked to a single minor version of Ruby, e.g. `['>= 2.6.0', '< 2.7']` will install any `2.6.x` version of Ruby.
+
+Odd versions should be attached to a project's trunk (e.g. the `main` branch), for long-term stability (ahem, _lts_, anyone?) of the style rules.
+
+### `Even` Major Release
+
+Versions like:
+```ruby
+"2.0.0"
+"4.0.0"
+"6.0.0"
+# ... etc
+```
+Locked to the forward range of Rubies on which the gem can be installed (though `rubocop` may not execute on all),
+e.g. `['>= 2.6.0', '< 3.2']` will install on any released version of ruby from `2.6` on.
+
+Even versions will help projects upgrade to newer Rubies while keeping the same underlying version of Rubocop version, so change can be introduced one step at a time.
+
+### All together now!
+
+Upgrading a single step from odd to even will allow upgrading Ruby.
+
+Upgrading a single step from even to odd will keep the same version of Ruby, and instead upgrade to the next RuboCop milestone.
+
+Each major version will have a tracking branch named accordingly, [for development](https://github.com/rubocop-lts/rubocop-lts#git-branch-names).
 
 # 👩‍💻 Project Status
 
@@ -50,32 +87,34 @@ All releases are stable releases. The major version you need depends on the vers
 
 > NOTE: `rubocop-lts` is under active development, and hasn't had any releases yet.  The ruby specific versions, e.g. `rubocop-ruby2_7`, are complete already, and you can use them! Keep scrolling down for links to each of them.
 
-| Your Ruby     | Your Gemfile                         |     | required_ruby_version   | Your Gemfile.lock            | Your .rubocop.yml                              |
-|---------------|--------------------------------------|-----|-------------------------|------------------------------|------------------------------------------------|
-| `1.9.x`       | `gem "rubocop-lts", "~> 1.0"`        |     | `['>= 1.9.0', '< 2']`   | [`rubocop-ruby1_9`][⛳️19-gh] | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| ⬆️ to `2.0.x` | ⬆️ to `gem "rubocop-lts", "~> 1.1"`  |     | `['>= 1.9.0', '< 3.1']` | no change                    | no change                                      |
-| no change     | ⬆️ to `gem "rubocop-lts", "~> 2.0"`  |     | `['>= 2.0.0', '< 2.1']` | [`rubocop-ruby2_0`][⛳️20-gh] | no change                                      |
-| ⬆️ to `2.1.x` | ⬆️ to `gem "rubocop-lts", "~> 2.1"`  |     | `['>= 2.0.0', '< 3.1']` | no change                    | no change                                      |
-| no change     | ⬆️ to `gem "rubocop-lts", "~> 3.0"`  |     | `['>= 2.1.0', '< 2.2']` | [`rubocop-ruby2_1`][⛳️21-gh] | no change                                      |
-| ⬆️ to `2.2.x` | ⬆️ to `gem "rubocop-lts", "~> 3.1"`  |     | `['>= 2.1.0', '< 3.1']` | no change                    | no change                                      |
-| no change     | ⬆️ to `gem "rubocop-lts", "~> 4.0"`  |     | `['>= 2.2.0', '< 2.3']` | [`rubocop-ruby2_2`][⛳️22-gh] | no change                                      |
-| ⬆️ to `2.3.x` | ⬆️ to `gem "rubocop-lts", "~> 4.1"`  |     | `['>= 2.2.0', '< 3.0']` | no change                    | no change                                      |
-| no change     | ⬆️ to `gem "rubocop-lts", "~> 5.0"`  |     | `['>= 2.3.0', '< 2.4']` | [`rubocop-ruby2_3`][⛳️23-gh] | no change                                      |
-| ⬆️ to `2.4.x` | ⬆️ to `gem "rubocop-lts", "~> 5.1"`  |     | `['>= 2.3.0', '< 3.1']` | no change                    | no change                                      |
-| no change     | ⬆️ to `gem "rubocop-lts", "~> 6.0"`  |     | `['>= 2.4.0', '< 2.5']` | [`rubocop-ruby2_4`][⛳️24-gh] | no change                                      |
-| ⬆️ to `2.5.x` | ⬆️ to `gem "rubocop-lts", "~> 6.1"`  |     | `['>= 2.4.0', '< 3.1']` | no change                    | no change                                      |
-| no change     | ⬆️ to `gem "rubocop-lts", "~> 7.0"`  |     | `['>= 2.5.0', '< 2.6']` | [`rubocop-ruby2_5`][⛳️25-gh] | no change                                      |
-| ⬆️ to `2.6.x` | ⬆️ to `gem "rubocop-lts", "~> 7.1"`  |     | `['>= 2.5.0', '< 3.2']` | no change                    | no change                                      |
-| no change     | ⬆️ to `gem "rubocop-lts", "~> 8.0"`  |     | `['>= 2.6.0', '< 2.7']` | [`rubocop-ruby2_6`][⛳️26-gh] | no change                                      |
-| ⬆️ to `2.7.x` | ⬆️ to `gem "rubocop-lts", "~> 8.1"`  |     | `['>= 2.6.0', '< 3.2']` | no change                    | no change                                      |
-| no change     | ⬆️ to `gem "rubocop-lts", "~> 9.0"`  |     | `['>= 2.7.0', '< 3.0']` | [`rubocop-ruby2_7`][⛳️27-gh] | no change                                      |
-| ⬆️ to `3.0.x` | ⬆️ to `gem "rubocop-lts", "~> 9.1"`  |     | `['>= 2.7.0', '< 3.2']` | no change                    | no change                                      |
-| no change     | ⬆️ to `gem "rubocop-lts", "~> 10.0"` |     | `['>= 3.0.0', '< 3.1']` | [`rubocop-ruby3_0`][⛳️30-gh] | no change                                      |
-| ⬆️ to `3.1.x` | ⬆️ to `gem "rubocop-lts", "~> 10.1"` |     | `['>= 3.0.0', '< 3.2']` | no change                    | no change                                      |
-| no change     | ⬆️ to `gem "rubocop-lts", "~> 11.0"` |     | `['>= 3.1.0', '< 3.2']` | [`rubocop-ruby3_1`][⛳️31-gh] | no change                                      |
-| ⬆️ to `3.2.x` | ⬆️ to `gem "rubocop-lts", "~> 11.1"` |     | `['>= 3.1.0', '< 3.2']` | no change                    | no change                                      |
+How to upgrade a project from yesterday, to today.
 
-### Supporting Ruby 1.8.7?
+| Your Ruby     | Your Gemfile                         | required_ruby_version   | Your Gemfile.lock            | Your .rubocop.yml                              |
+|---------------|--------------------------------------|-------------------------|------------------------------|------------------------------------------------|
+| `1.9.x`       | `gem "rubocop-lts", "~> 1.0"`        | `['>= 1.9.0', '< 2']`   | [`rubocop-ruby1_9`][⛳️19-gh] | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| ⬆️ to `2.0.x` | ⬆️ to `gem "rubocop-lts", "~> 2.0"`  | `['>= 1.9.0', '< 3.1']` | no change                    | no change                                      |
+| no change     | ⬆️ to `gem "rubocop-lts", "~> 3.0"`  | `['>= 2.0.0', '< 2.1']` | [`rubocop-ruby2_0`][⛳️20-gh] | no change                                      |
+| ⬆️ to `2.1.x` | ⬆️ to `gem "rubocop-lts", "~> 4.0"`  | `['>= 2.0.0', '< 3.1']` | no change                    | no change                                      |
+| no change     | ⬆️ to `gem "rubocop-lts", "~> 5.0"`  | `['>= 2.1.0', '< 2.2']` | [`rubocop-ruby2_1`][⛳️21-gh] | no change                                      |
+| ⬆️ to `2.2.x` | ⬆️ to `gem "rubocop-lts", "~> 6.0"`  | `['>= 2.1.0', '< 3.1']` | no change                    | no change                                      |
+| no change     | ⬆️ to `gem "rubocop-lts", "~> 7.0"`  | `['>= 2.2.0', '< 2.3']` | [`rubocop-ruby2_2`][⛳️22-gh] | no change                                      |
+| ⬆️ to `2.3.x` | ⬆️ to `gem "rubocop-lts", "~> 8.0"`  | `['>= 2.2.0', '< 3.0']` | no change                    | no change                                      |
+| no change     | ⬆️ to `gem "rubocop-lts", "~> 9.0"`  | `['>= 2.3.0', '< 2.4']` | [`rubocop-ruby2_3`][⛳️23-gh] | no change                                      |
+| ⬆️ to `2.4.x` | ⬆️ to `gem "rubocop-lts", "~> 10.0"` | `['>= 2.3.0', '< 3.1']` | no change                    | no change                                      |
+| no change     | ⬆️ to `gem "rubocop-lts", "~> 11.0"` | `['>= 2.4.0', '< 2.5']` | [`rubocop-ruby2_4`][⛳️24-gh] | no change                                      |
+| ⬆️ to `2.5.x` | ⬆️ to `gem "rubocop-lts", "~> 12.0"` | `['>= 2.4.0', '< 3.1']` | no change                    | no change                                      |
+| no change     | ⬆️ to `gem "rubocop-lts", "~> 13.0"` | `['>= 2.5.0', '< 2.6']` | [`rubocop-ruby2_5`][⛳️25-gh] | no change                                      |
+| ⬆️ to `2.6.x` | ⬆️ to `gem "rubocop-lts", "~> 14.0"` | `['>= 2.5.0', '< 3.2']` | no change                    | no change                                      |
+| no change     | ⬆️ to `gem "rubocop-lts", "~> 15.0"` | `['>= 2.6.0', '< 2.7']` | [`rubocop-ruby2_6`][⛳️26-gh] | no change                                      |
+| ⬆️ to `2.7.x` | ⬆️ to `gem "rubocop-lts", "~> 16.0"` | `['>= 2.6.0', '< 3.2']` | no change                    | no change                                      |
+| no change     | ⬆️ to `gem "rubocop-lts", "~> 17.0"` | `['>= 2.7.0', '< 3.0']` | [`rubocop-ruby2_7`][⛳️27-gh] | no change                                      |
+| ⬆️ to `3.0.x` | ⬆️ to `gem "rubocop-lts", "~> 18.0"` | `['>= 2.7.0', '< 3.2']` | no change                    | no change                                      |
+| no change     | ⬆️ to `gem "rubocop-lts", "~> 19.0"` | `['>= 3.0.0', '< 3.1']` | [`rubocop-ruby3_0`][⛳️30-gh] | no change                                      |
+| ⬆️ to `3.1.x` | ⬆️ to `gem "rubocop-lts", "~> 20.0"` | `['>= 3.0.0', '< 3.2']` | no change                    | no change                                      |
+| no change     | ⬆️ to `gem "rubocop-lts", "~> 21.0"` | `['>= 3.1.0', '< 3.2']` | [`rubocop-ruby3_1`][⛳️31-gh] | no change                                      |
+| ⬆️ to `3.2.x` | ⬆️ to `gem "rubocop-lts", "~> 22.0"` | `['>= 3.1.0', '< 3.2']` | no change                    | no change                                      |
+
+### Supporting Ruby 1.8
 
 Have a library still supporting Ruby 1.8.7, or looking to drop support for Ruby 1.8.7 in a SemVer-compliant manner?
 
@@ -91,19 +130,20 @@ inherit_gem:
 
 ## Project Health
 
-| Gem Name                     | Version                           | Downloads                                                        | CI                                                                                                 | Activity                                                                                                                                      |
-|------------------------------|-----------------------------------|------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| [`rubocop-ruby1_9`][⛳️19-gh] | [![Gem Version][⛳️19-vi]][⛳️19-g] | [![Total DL][🖇️19-dti]][⛳️19-g] [![DL Rank][🏘️19-rti]][⛳️19-g] | [![Current][🚎19-cwfi]][🚎19-cwf] [![Legacy][🧮19-lwfi]][🧮19-lwf]                                 | [![Open Issues][📗19-ioi]][📗19-io] [![Closed Issues][🚀19-ici]][🚀19-ic] [![Open PRs][💄19-poi]][💄19-po] [![Closed PRs][👽19-pci]][👽19-pc] |
-| [`rubocop-ruby2_0`][⛳️20-gh] | [![Gem Version][⛳️20-vi]][⛳️20-g] | [![Total DL][🖇️20-dti]][⛳️20-g] [![DL Rank][🏘️20-rti]][⛳️20-g] | [![Current][🚎20-cwfi]][🚎20-cwf] [![Legacy][🧮20-lwfi]][🧮20-lwf]                                 | [![Open Issues][📗20-ioi]][📗20-io] [![Closed Issues][🚀20-ici]][🚀20-ic] [![Open PRs][💄20-poi]][💄20-po] [![Closed PRs][👽20-pci]][👽20-pc] |
-| [`rubocop-ruby2_1`][⛳️21-gh] | [![Gem Version][⛳️21-vi]][⛳️21-g] | [![Total DL][🖇️21-dti]][⛳️21-g] [![DL Rank][🏘️21-rti]][⛳️21-g] | [![Current][🚎21-cwfi]][🚎21-cwf] [![Legacy][🧮21-lwfi]][🧮21-lwf]                                 | [![Open Issues][📗21-ioi]][📗21-io] [![Closed Issues][🚀21-ici]][🚀21-ic] [![Open PRs][💄21-poi]][💄21-po] [![Closed PRs][👽21-pci]][👽21-pc] |
-| [`rubocop-ruby2_2`][⛳️22-gh] | [![Gem Version][⛳️22-vi]][⛳️22-g] | [![Total DL][🖇️22-dti]][⛳️22-g] [![DL Rank][🏘️22-rti]][⛳️22-g] | [![Current][🚎22-cwfi]][🚎22-cwf] [![Legacy][🧮22-lwfi]][🧮22-lwf]                                 | [![Open Issues][📗22-ioi]][📗22-io] [![Closed Issues][🚀22-ici]][🚀22-ic] [![Open PRs][💄22-poi]][💄22-po] [![Closed PRs][👽22-pci]][👽22-pc] |
-| [`rubocop-ruby2_3`][⛳️23-gh] | [![Gem Version][⛳️23-vi]][⛳️23-g] | [![Total DL][🖇️23-dti]][⛳️23-g] [![DL Rank][🏘️23-rti]][⛳️23-g] | [![Current][🚎23-cwfi]][🚎23-cwf] [![Legacy][🧮23-lwfi]][🧮23-lwf]                                 | [![Open Issues][📗23-ioi]][📗23-io] [![Closed Issues][🚀23-ici]][🚀23-ic] [![Open PRs][💄23-poi]][💄23-po] [![Closed PRs][👽23-pci]][👽23-pc] |
-| [`rubocop-ruby2_4`][⛳️24-gh] | [![Gem Version][⛳️24-vi]][⛳️24-g] | [![Total DL][🖇️24-dti]][⛳️24-g] [![DL Rank][🏘️24-rti]][⛳️24-g] | [![Current][🚎24-cwfi]][🚎24-cwf] [![Legacy][🧮24-lwfi]][🧮24-lwf]                                 | [![Open Issues][📗24-ioi]][📗24-io] [![Closed Issues][🚀24-ici]][🚀24-ic] [![Open PRs][💄24-poi]][💄24-po] [![Closed PRs][👽24-pci]][👽24-pc] |
-| [`rubocop-ruby2_5`][⛳️25-gh] | [![Gem Version][⛳️25-vi]][⛳️25-g] | [![Total DL][🖇️25-dti]][⛳️25-g] [![DL Rank][🏘️25-rti]][⛳️25-g] | [![Current][🚎25-cwfi]][🚎25-cwf] [![Heads][🖐25-hwfi]][🖐25-hwf] [![Legacy][🧮25-lwfi]][🧮25-lwf] | [![Open Issues][📗25-ioi]][📗25-io] [![Closed Issues][🚀25-ici]][🚀25-ic] [![Open PRs][💄25-poi]][💄25-po] [![Closed PRs][👽25-pci]][👽25-pc] |
-| [`rubocop-ruby2_6`][⛳️26-gh] | [![Gem Version][⛳️26-vi]][⛳️26-g] | [![Total DL][🖇️26-dti]][⛳️26-g] [![DL Rank][🏘️26-rti]][⛳️26-g] | [![Current][🚎26-cwfi]][🚎26-cwf] [![Heads][🖐26-hwfi]][🖐26-hwf] [![Legacy][🧮26-lwfi]][🧮26-lwf] | [![Open Issues][📗26-ioi]][📗26-io] [![Closed Issues][🚀26-ici]][🚀26-ic] [![Open PRs][💄26-poi]][💄26-po] [![Closed PRs][👽26-pci]][👽26-pc] |
-| [`rubocop-ruby2_7`][⛳️27-gh] | [![Gem Version][⛳️27-vi]][⛳️27-g] | [![Total DL][🖇️27-dti]][⛳️27-g] [![DL Rank][🏘️27-rti]][⛳️27-g] | [![Current][🚎27-cwfi]][🚎27-cwf] [![Heads][🖐27-hwfi]][🖐27-hwf]                                  | [![Open Issues][📗27-ioi]][📗27-io] [![Closed Issues][🚀27-ici]][🚀27-ic] [![Open PRs][💄27-poi]][💄27-po] [![Closed PRs][👽27-pci]][👽27-pc] |
-| [`rubocop-ruby3_0`][⛳️30-gh] | [![Gem Version][⛳️30-vi]][⛳️30-g] | [![Total DL][🖇️30-dti]][⛳️30-g] [![DL Rank][🏘️30-rti]][⛳️30-g] | [![Current][🚎30-cwfi]][🚎30-cwf] [![Heads][🖐30-hwfi]][🖐30-hwf]                                  | [![Open Issues][📗30-ioi]][📗30-io] [![Closed Issues][🚀30-ici]][🚀30-ic] [![Open PRs][💄30-poi]][💄30-po] [![Closed PRs][👽30-pci]][👽30-pc] |
-| [`rubocop-ruby3_1`][⛳️31-gh] | [![Gem Version][⛳️31-vi]][⛳️31-g] | [![Total DL][🖇️31-dti]][⛳️31-g] [![DL Rank][🏘️31-rti]][⛳️31-g] | [![Current][🚎31-cwfi]][🚎31-cwf] [![Heads][🖐31-hwfi]][🖐31-hwf]                                  | [![Open Issues][📗31-ioi]][📗31-io] [![Closed Issues][🚀31-ici]][🚀31-ic] [![Open PRs][💄31-poi]][💄31-po] [![Closed PRs][👽31-pci]][👽31-pc] |
+| Gem Name                     | Version                             | Downloads                                                            | CI                                                                                                       | Activity                                                                                                                                              |
+|------------------------------|-------------------------------------|----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [`rubocop-lts`][⛳️lts-gh]    | [![Gem Version][⛳️lts-vi]][⛳️lts-g] | [![Total DL][🖇️lts-dti]][⛳️lts-g] [![DL Rank][🏘️lts-rti]][⛳️lts-g] | [![Current][🚎lts-cwfi]][🚎lts-cwf] [![Legacy][🧮lts-lwfi]][🧮lts-lwf] [![Heads][🖐lts-hwfi]][🖐lts-hwf] | [![Open Issues][📗lts-ioi]][📗lts-io] [![Closed Issues][🚀lts-ici]][🚀lts-ic] [![Open PRs][💄lts-poi]][💄lts-po] [![Closed PRs][👽lts-pci]][👽lts-pc] |
+| [`rubocop-ruby1_9`][⛳️19-gh] | [![Gem Version][⛳️19-vi]][⛳️19-g]   | [![Total DL][🖇️19-dti]][⛳️19-g] [![DL Rank][🏘️19-rti]][⛳️19-g]     | [![Current][🚎19-cwfi]][🚎19-cwf] [![Legacy][🧮19-lwfi]][🧮19-lwf]                                       | [![Open Issues][📗19-ioi]][📗19-io] [![Closed Issues][🚀19-ici]][🚀19-ic] [![Open PRs][💄19-poi]][💄19-po] [![Closed PRs][👽19-pci]][👽19-pc]         |
+| [`rubocop-ruby2_0`][⛳️20-gh] | [![Gem Version][⛳️20-vi]][⛳️20-g]   | [![Total DL][🖇️20-dti]][⛳️20-g] [![DL Rank][🏘️20-rti]][⛳️20-g]     | [![Current][🚎20-cwfi]][🚎20-cwf] [![Legacy][🧮20-lwfi]][🧮20-lwf]                                       | [![Open Issues][📗20-ioi]][📗20-io] [![Closed Issues][🚀20-ici]][🚀20-ic] [![Open PRs][💄20-poi]][💄20-po] [![Closed PRs][👽20-pci]][👽20-pc]         |
+| [`rubocop-ruby2_1`][⛳️21-gh] | [![Gem Version][⛳️21-vi]][⛳️21-g]   | [![Total DL][🖇️21-dti]][⛳️21-g] [![DL Rank][🏘️21-rti]][⛳️21-g]     | [![Current][🚎21-cwfi]][🚎21-cwf] [![Legacy][🧮21-lwfi]][🧮21-lwf]                                       | [![Open Issues][📗21-ioi]][📗21-io] [![Closed Issues][🚀21-ici]][🚀21-ic] [![Open PRs][💄21-poi]][💄21-po] [![Closed PRs][👽21-pci]][👽21-pc]         |
+| [`rubocop-ruby2_2`][⛳️22-gh] | [![Gem Version][⛳️22-vi]][⛳️22-g]   | [![Total DL][🖇️22-dti]][⛳️22-g] [![DL Rank][🏘️22-rti]][⛳️22-g]     | [![Current][🚎22-cwfi]][🚎22-cwf] [![Legacy][🧮22-lwfi]][🧮22-lwf]                                       | [![Open Issues][📗22-ioi]][📗22-io] [![Closed Issues][🚀22-ici]][🚀22-ic] [![Open PRs][💄22-poi]][💄22-po] [![Closed PRs][👽22-pci]][👽22-pc]         |
+| [`rubocop-ruby2_3`][⛳️23-gh] | [![Gem Version][⛳️23-vi]][⛳️23-g]   | [![Total DL][🖇️23-dti]][⛳️23-g] [![DL Rank][🏘️23-rti]][⛳️23-g]     | [![Current][🚎23-cwfi]][🚎23-cwf] [![Legacy][🧮23-lwfi]][🧮23-lwf]                                       | [![Open Issues][📗23-ioi]][📗23-io] [![Closed Issues][🚀23-ici]][🚀23-ic] [![Open PRs][💄23-poi]][💄23-po] [![Closed PRs][👽23-pci]][👽23-pc]         |
+| [`rubocop-ruby2_4`][⛳️24-gh] | [![Gem Version][⛳️24-vi]][⛳️24-g]   | [![Total DL][🖇️24-dti]][⛳️24-g] [![DL Rank][🏘️24-rti]][⛳️24-g]     | [![Current][🚎24-cwfi]][🚎24-cwf] [![Legacy][🧮24-lwfi]][🧮24-lwf]                                       | [![Open Issues][📗24-ioi]][📗24-io] [![Closed Issues][🚀24-ici]][🚀24-ic] [![Open PRs][💄24-poi]][💄24-po] [![Closed PRs][👽24-pci]][👽24-pc]         |
+| [`rubocop-ruby2_5`][⛳️25-gh] | [![Gem Version][⛳️25-vi]][⛳️25-g]   | [![Total DL][🖇️25-dti]][⛳️25-g] [![DL Rank][🏘️25-rti]][⛳️25-g]     | [![Current][🚎25-cwfi]][🚎25-cwf] [![Heads][🖐25-hwfi]][🖐25-hwf] [![Legacy][🧮25-lwfi]][🧮25-lwf]       | [![Open Issues][📗25-ioi]][📗25-io] [![Closed Issues][🚀25-ici]][🚀25-ic] [![Open PRs][💄25-poi]][💄25-po] [![Closed PRs][👽25-pci]][👽25-pc]         |
+| [`rubocop-ruby2_6`][⛳️26-gh] | [![Gem Version][⛳️26-vi]][⛳️26-g]   | [![Total DL][🖇️26-dti]][⛳️26-g] [![DL Rank][🏘️26-rti]][⛳️26-g]     | [![Current][🚎26-cwfi]][🚎26-cwf] [![Heads][🖐26-hwfi]][🖐26-hwf] [![Legacy][🧮26-lwfi]][🧮26-lwf]       | [![Open Issues][📗26-ioi]][📗26-io] [![Closed Issues][🚀26-ici]][🚀26-ic] [![Open PRs][💄26-poi]][💄26-po] [![Closed PRs][👽26-pci]][👽26-pc]         |
+| [`rubocop-ruby2_7`][⛳️27-gh] | [![Gem Version][⛳️27-vi]][⛳️27-g]   | [![Total DL][🖇️27-dti]][⛳️27-g] [![DL Rank][🏘️27-rti]][⛳️27-g]     | [![Current][🚎27-cwfi]][🚎27-cwf] [![Heads][🖐27-hwfi]][🖐27-hwf]                                        | [![Open Issues][📗27-ioi]][📗27-io] [![Closed Issues][🚀27-ici]][🚀27-ic] [![Open PRs][💄27-poi]][💄27-po] [![Closed PRs][👽27-pci]][👽27-pc]         |
+| [`rubocop-ruby3_0`][⛳️30-gh] | [![Gem Version][⛳️30-vi]][⛳️30-g]   | [![Total DL][🖇️30-dti]][⛳️30-g] [![DL Rank][🏘️30-rti]][⛳️30-g]     | [![Current][🚎30-cwfi]][🚎30-cwf] [![Heads][🖐30-hwfi]][🖐30-hwf]                                        | [![Open Issues][📗30-ioi]][📗30-io] [![Closed Issues][🚀30-ici]][🚀30-ic] [![Open PRs][💄30-poi]][💄30-po] [![Closed PRs][👽30-pci]][👽30-pc]         |
+| [`rubocop-ruby3_1`][⛳️31-gh] | [![Gem Version][⛳️31-vi]][⛳️31-g]   | [![Total DL][🖇️31-dti]][⛳️31-g] [![DL Rank][🏘️31-rti]][⛳️31-g]     | [![Current][🚎31-cwfi]][🚎31-cwf] [![Heads][🖐31-hwfi]][🖐31-hwf]                                        | [![Open Issues][📗31-ioi]][📗31-io] [![Closed Issues][🚀31-ici]][🚀31-ic] [![Open PRs][💄31-poi]][💄31-po] [![Closed PRs][👽31-pci]][👽31-pc]         |
 
 <!-- columnar badge #s:
 ⛳️
@@ -118,6 +158,25 @@ inherit_gem:
 👽
 -->
 
+[⛳️lts-vi]: http://img.shields.io/gem/v/rubocop-lts.svg
+[🖇️lts-dti]: https://img.shields.io/gem/dt/rubocop-lts.svg
+[🏘️lts-rti]: https://img.shields.io/gem/rt/rubocop-lts.svg
+[🚎lts-cwf]: https://github.com/rubocop-lts/rubocop-lts/actions/workflows/current.yml
+[🚎lts-cwfi]: https://github.com/rubocop-lts/rubocop-lts/actions/workflows/current.yml/badge.svg
+[🖐lts-hwf]: https://github.com/rubocop-lts/rubocop-lts/actions/workflows/heads.yml
+[🖐lts-hwfi]: https://github.com/rubocop-lts/rubocop-lts/actions/workflows/heads.yml/badge.svg
+[🧮lts-lwf]: https://github.com/rubocop-lts/rubocop-lts/actions/workflows/legacy.yml
+[🧮lts-lwfi]: https://github.com/rubocop-lts/rubocop-lts/actions/workflows/legacy.yml/badge.svg
+[📗lts-io]: https://github.com/rubocop-lts/rubocop-lts/issues
+[📗lts-ioi]: https://img.shields.io/github/issues-raw/rubocop-lts/rubocop-lts
+[🚀lts-ic]: https://github.com/rubocop-lts/rubocop-lts/issues?q=is%3Aissue+is%3Aclosed
+[🚀lts-ici]: https://img.shields.io/github/issues-closed-raw/rubocop-lts/rubocop-lts
+[💄lts-po]: https://github.com/rubocop-lts/rubocop-lts/pulls
+[💄lts-poi]: https://img.shields.io/github/issues-pr/rubocop-lts/rubocop-lts
+[👽lts-pc]: https://github.com/rubocop-lts/rubocop-lts/pulls?q=is%3Apr+is%3Aclosed
+[👽lts-pci]: https://img.shields.io/github/issues-pr-closed/rubocop-lts/rubocop-lts
+[⛳️lts-g]: https://rubygems.org/gems/rubocop-lts
+[⛳️lts-gh]: https://github.com/rubocop-lts/rubocop-lts
 [⛳️19-vi]: http://img.shields.io/gem/v/rubocop-ruby1_9.svg
 [🖇️19-dti]: https://img.shields.io/gem/dt/rubocop-ruby1_9.svg
 [🏘️19-rti]: https://img.shields.io/gem/rt/rubocop-ruby1_9.svg
@@ -364,6 +423,52 @@ inherit_gem:
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+
+### Git Branch Names
+
+#### Naming Scheme
+
+```ruby
+"r{{ ruby major }}_{{ ruby minor }}-{{ parity }}-v{{ gem-version }}"
+```
+
+##### Parity
+
+Even versions use the token `even` in the branch name.
+Odd versions use the token `odd` in the branch name.
+
+#### Version - Branch Matrix
+
+| Ruby Version | Parity | Gem Version | Branch Name     | Purpose |
+|--------------|--------|-------------|-----------------|---------|
+| 1.9          | odd    | 1.x         | `r1_9-odd-v1`   | LTS     |
+| 1.9          | even   | 2.x         | `r1_9-even-v2`  | Upgrade |
+| 2.0          | odd    | 3.x         | `r2_0-odd-v3`   | LTS     |
+| 2.0          | even   | 4.x         | `r2_0-even-v4`  | Upgrade |
+| 2.1          | odd    | 5.x         | `r2_1-odd-v5`   | LTS     |
+| 2.1          | even   | 6.x         | `r2_1-even-v6`  | Upgrade |
+| 2.2          | odd    | 7.x         | `r2_2-odd-v7`   | LTS     |
+| 2.2          | even   | 8.x         | `r2_2-even-v8`  | Upgrade |
+| 2.3          | odd    | 9.x         | `r2_3-odd-v9`   | LTS     |
+| 2.3          | even   | 10.x        | `r2_3-even-v10` | Upgrade |
+| 2.4          | odd    | 11.x        | `r2_4-odd-v11`  | LTS     |
+| 2.4          | even   | 12.x        | `r2_4-even-v12` | Upgrade |
+| 2.5          | odd    | 13.x        | `r2_5-odd-v13`  | LTS     |
+| 2.5          | even   | 14.x        | `r2_5-even-v14` | Upgrade |
+| 2.6          | odd    | 15.x        | `r2_6-odd-v15`  | LTS     |
+| 2.6          | even   | 16.x        | `r2_6-even-v16` | Upgrade |
+| 2.7          | odd    | 17.x        | `r2_7-odd-v17`  | LTS     |
+| 2.7          | even   | 18.x        | `r2_7-even-v18` | Upgrade |
+| 3.0          | odd    | 19.x        | `r3_0-odd-v19`  | LTS     |
+| 3.0          | even   | 20.x        | `r3_0-even-v20` | Upgrade |
+| 3.1          | odd    | 21.x        | `r3_1-odd-v21`  | LTS     |
+| 3.1          | even   | 22.x        | `r3_1-even-v22` | Upgrade |
+| 3.2          | odd    | 23.x        | `r3_2-odd-v23`  | LTS     |
+| 3.2          | even   | 24.x        | `r3_2-even-v24` | Upgrade |
+
+> NOTE: For more on how Ruby 1.8 support works, look [here][lts1_8]
+
+[lts1_8]: https://github.com/rubocop-lts/rubocop-lts#supporting-ruby-18
 
 ## 🌈 Contributing
 
