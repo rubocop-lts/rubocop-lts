@@ -16,9 +16,9 @@
     </a>
 </p>
 
-## Rubocop LTS
+# Rubocop LTS
 
-# 🙋‍♀️ How often has RuboCop broken your build?
+## 🙋‍♀️ How often has RuboCop broken your build?
 
 This is both good (literally its job) _and_ bad (when it's for the wrong reasons).
 
@@ -28,7 +28,35 @@ doesn't follow SemVer, and occasionally it will unexpectedly break things.
 
 ## 🗿 Stable
 
-All releases are stable releases. The major version you need depends on the version of minimum supported version of Ruby version for your project.
+All releases are stable releases. The major version you need depends on the supported version(s) of Ruby for your project.
+
+Projects that support a single version of Ruby (like many closed-source applications) will use the [Odd releases][even-release].
+
+Projects that support multiple versions of Ruby simultaneously (like many open-source applications and libraries) will use the [Even releases][even-release].
+
+**This README is for the odd release of `rubocop-lts` supporting only Ruby 1.9.**
+
+[odd-release]: https://github.com/rubocop-lts/rubocop-lts#odd-major-release
+[even-release]: https://github.com/rubocop-lts/rubocop-lts#even-major-release
+
+##  Version Conventions
+
+### Odd Major Release
+
+Versions like:
+```ruby
+"1.0.0"
+"3.0.0"
+"5.0.0"
+# ... etc
+```
+Locked to a single minor version of Ruby, e.g. `['>= 2.6.0', '< 2.7']` will install any `2.6.x` version of Ruby.
+
+#### Implementation
+
+Intended for applications and libraries that only lint against a single Ruby version.
+
+Odd versions should be attached to a project's trunk (e.g. the `main` branch), for long-term stability (ahem, _lts_, anyone?) of the style rules.
 
 | Your Ruby | Your Gemfile                   | Your Gemfile.lock | Your .rubocop.yml                              |
 |-----------|--------------------------------|-------------------|------------------------------------------------|
@@ -44,22 +72,7 @@ All releases are stable releases. The major version you need depends on the vers
 | `3.0.x`   | `gem "rubocop-lts", "~> 19.0"` | `rubocop-ruby3_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
 | `3.1.x`   | `gem "rubocop-lts", "~> 21.0"` | `rubocop-ruby3_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
 
-##  Version Conventions
-
-### `Odd` Major Release
-
-Versions like:
-```ruby
-"1.0.0"
-"3.0.0"
-"5.0.0"
-# ... etc
-```
-Locked to a single minor version of Ruby, e.g. `['>= 2.6.0', '< 2.7']` will install any `2.6.x` version of Ruby.
-
-Odd versions should be attached to a project's trunk (e.g. the `main` branch), for long-term stability (ahem, _lts_, anyone?) of the style rules.
-
-### `Even` Major Release
+### Even Major Release
 
 Versions like:
 ```ruby
@@ -71,7 +84,23 @@ Versions like:
 Locked to the forward range of Rubies on which the gem can be installed (though `rubocop` may not execute on all),
 e.g. `['>= 2.6.0', '< 3.2']` will install on any released version of ruby from `2.6` on.
 
+Intended for applications and libraries that lint against a range of Ruby versions.
+
 Even versions will help projects upgrade to newer Rubies while keeping the same underlying version of Rubocop version, so change can be introduced one step at a time.
+
+| Your Ruby | Your Gemfile                   | Your Gemfile.lock | Your .rubocop.yml                              |
+|-----------|--------------------------------|-------------------|------------------------------------------------|
+| `1.9.x`   | `gem "rubocop-lts", "~> 2.0"`  | `rubocop-ruby1_9` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.0.x`   | `gem "rubocop-lts", "~> 4.0"`  | `rubocop-ruby2_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.1.x`   | `gem "rubocop-lts", "~> 6.0"`  | `rubocop-ruby2_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.2.x`   | `gem "rubocop-lts", "~> 8.0"`  | `rubocop-ruby2_2` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.3.x`   | `gem "rubocop-lts", "~> 10.0"` | `rubocop-ruby2_3` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.4.x`   | `gem "rubocop-lts", "~> 12.0"` | `rubocop-ruby2_4` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.5.x`   | `gem "rubocop-lts", "~> 14.0"` | `rubocop-ruby2_5` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.6.x`   | `gem "rubocop-lts", "~> 16.0"` | `rubocop-ruby2_6` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.7.x`   | `gem "rubocop-lts", "~> 18.0"` | `rubocop-ruby2_7` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `3.0.x`   | `gem "rubocop-lts", "~> 20.0"` | `rubocop-ruby3_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `3.1.x`   | `gem "rubocop-lts", "~> 22.0"` | `rubocop-ruby3_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
 
 ### All together now!
 
@@ -81,9 +110,7 @@ Upgrading a single step from even to odd will keep the same version of Ruby, and
 
 Each major version will have a tracking branch named accordingly, [for development](https://github.com/rubocop-lts/rubocop-lts#git-branch-names).
 
-# 👩‍💻 Project Status
-
-## How To Untie Gorgon's Knot
+### How To Untie Gorgon's Knot
 
 > NOTE: `rubocop-lts` is under active development, and hasn't had any releases yet.  The ruby specific versions, e.g. `rubocop-ruby2_7`, are complete already, and you can use them! Keep scrolling down for links to each of them.
 
@@ -128,7 +155,7 @@ inherit_gem:
 
 [what1_8]: https://github.com/rubocop-lts/rubocop-ruby1_9#what-about-ruby-18
 
-## Project Health
+## 👩‍💻 Project Health
 
 | Gem Name                     | Version                             | Downloads                                                            | CI                                                                                                       | Activity                                                                                                                                              |
 |------------------------------|-------------------------------------|----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -439,38 +466,38 @@ Odd versions use the token `odd` in the branch name.
 
 #### Version - Branch Matrix
 
-| Ruby Version | Parity | Gem Version | Branch Name     | Purpose |
-|--------------|--------|-------------|-----------------|---------|
-| 1.9          | odd    | 1.x         | `r1_9-odd-v1`   | LTS     |
-| 1.9          | even   | 2.x         | `r1_9-even-v2`  | Upgrade |
-| 2.0          | odd    | 3.x         | `r2_0-odd-v3`   | LTS     |
-| 2.0          | even   | 4.x         | `r2_0-even-v4`  | Upgrade |
-| 2.1          | odd    | 5.x         | `r2_1-odd-v5`   | LTS     |
-| 2.1          | even   | 6.x         | `r2_1-even-v6`  | Upgrade |
-| 2.2          | odd    | 7.x         | `r2_2-odd-v7`   | LTS     |
-| 2.2          | even   | 8.x         | `r2_2-even-v8`  | Upgrade |
-| 2.3          | odd    | 9.x         | `r2_3-odd-v9`   | LTS     |
-| 2.3          | even   | 10.x        | `r2_3-even-v10` | Upgrade |
-| 2.4          | odd    | 11.x        | `r2_4-odd-v11`  | LTS     |
-| 2.4          | even   | 12.x        | `r2_4-even-v12` | Upgrade |
-| 2.5          | odd    | 13.x        | `r2_5-odd-v13`  | LTS     |
-| 2.5          | even   | 14.x        | `r2_5-even-v14` | Upgrade |
-| 2.6          | odd    | 15.x        | `r2_6-odd-v15`  | LTS     |
-| 2.6          | even   | 16.x        | `r2_6-even-v16` | Upgrade |
-| 2.7          | odd    | 17.x        | `r2_7-odd-v17`  | LTS     |
-| 2.7          | even   | 18.x        | `r2_7-even-v18` | Upgrade |
-| 3.0          | odd    | 19.x        | `r3_0-odd-v19`  | LTS     |
-| 3.0          | even   | 20.x        | `r3_0-even-v20` | Upgrade |
-| 3.1          | odd    | 21.x        | `r3_1-odd-v21`  | LTS     |
-| 3.1          | even   | 22.x        | `r3_1-even-v22` | Upgrade |
-| 3.2          | odd    | 23.x        | `r3_2-odd-v23`  | LTS     |
-| 3.2          | even   | 24.x        | `r3_2-even-v24` | Upgrade |
+| Ruby Version | Parity | Gem Version | Branch Name     | Purpose                           |
+|--------------|--------|-------------|-----------------|-----------------------------------|
+| 1.9          | odd    | 1.x         | `r1_9-odd-v1`   | LTS, trunk, single-ruby-linting   |
+| 1.9          | even   | 2.x         | `r1_9-even-v2`  | Upgrade, feat, multi-ruby-linting |
+| 2.0          | odd    | 3.x         | `r2_0-odd-v3`   | LTS, trunk, single-ruby-linting   |
+| 2.0          | even   | 4.x         | `r2_0-even-v4`  | Upgrade, feat, multi-ruby-linting |
+| 2.1          | odd    | 5.x         | `r2_1-odd-v5`   | LTS, trunk, single-ruby-linting   |
+| 2.1          | even   | 6.x         | `r2_1-even-v6`  | Upgrade, feat, multi-ruby-linting |
+| 2.2          | odd    | 7.x         | `r2_2-odd-v7`   | LTS, trunk, single-ruby-linting   |
+| 2.2          | even   | 8.x         | `r2_2-even-v8`  | Upgrade, feat, multi-ruby-linting |
+| 2.3          | odd    | 9.x         | `r2_3-odd-v9`   | LTS, trunk, single-ruby-linting   |
+| 2.3          | even   | 10.x        | `r2_3-even-v10` | Upgrade, feat, multi-ruby-linting |
+| 2.4          | odd    | 11.x        | `r2_4-odd-v11`  | LTS, trunk, single-ruby-linting   |
+| 2.4          | even   | 12.x        | `r2_4-even-v12` | Upgrade, feat, multi-ruby-linting |
+| 2.5          | odd    | 13.x        | `r2_5-odd-v13`  | LTS, trunk, single-ruby-linting   |
+| 2.5          | even   | 14.x        | `r2_5-even-v14` | Upgrade, feat, multi-ruby-linting |
+| 2.6          | odd    | 15.x        | `r2_6-odd-v15`  | LTS, trunk, single-ruby-linting   |
+| 2.6          | even   | 16.x        | `r2_6-even-v16` | Upgrade, feat, multi-ruby-linting |
+| 2.7          | odd    | 17.x        | `r2_7-odd-v17`  | LTS, trunk, single-ruby-linting   |
+| 2.7          | even   | 18.x        | `r2_7-even-v18` | Upgrade, feat, multi-ruby-linting |
+| 3.0          | odd    | 19.x        | `r3_0-odd-v19`  | LTS, trunk, single-ruby-linting   |
+| 3.0          | even   | 20.x        | `r3_0-even-v20` | Upgrade, feat, multi-ruby-linting |
+| 3.1          | odd    | 21.x        | `r3_1-odd-v21`  | LTS, trunk, single-ruby-linting   |
+| 3.1          | even   | 22.x        | `r3_1-even-v22` | Upgrade, feat, multi-ruby-linting |
+| 3.2          | odd    | 23.x        | `r3_2-odd-v23`  | LTS, trunk, single-ruby-linting   |
+| 3.2          | even   | 24.x        | `r3_2-even-v24` | Upgrade, feat, multi-ruby-linting |
 
-> NOTE: For more on how Ruby 1.8 support works, look [here][lts1_8]
+> NOTE: For more on how Ruby 1.8 support works, see [above][lts1_8]
 
 [lts1_8]: https://github.com/rubocop-lts/rubocop-lts#supporting-ruby-18
 
-## 🌈 Contributing
+## ⚡️ Contributing
 
 See [CONTRIBUTING.md][contributing]
 
@@ -490,11 +517,11 @@ See [LICENSE][license] for the official [Copyright Notice][copyright-notice-expl
 
 [copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
 
-## 🌈 Code of Conduct
+## 🤝 Code of Conduct
 
 Everyone interacting in the Rubocop::Ruby19 project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/rubocop-lts/rubocop-lts/blob/main/CODE_OF_CONDUCT.md).
 
-## Versioning
+## 📌 Versioning
 
 This library aims to adhere to [Semantic Versioning 2.0.0][semver]. Violations of this scheme should be reported as
 bugs. Specifically, if a minor or patch version is released that breaks backward compatibility, a new version should be
