@@ -34,6 +34,7 @@ Projects that support a single version of Ruby (like many closed-source applicat
 
 Projects that support multiple versions of Ruby simultaneously (like many open-source applications and libraries) will use the [Even releases][even-release].
 
+<!-- FIND VERSION -->
 **This README is for the odd release of `rubocop-lts` supporting only Ruby 1.9.**
 
 [odd-release]: https://github.com/rubocop-lts/rubocop-lts#odd-major-release
@@ -142,7 +143,8 @@ How to upgrade a project from yesterday, to today.
 | ⬆️ to `3.1.x` | ⬆️ to `gem "rubocop-lts", "~> 20.0"` | `['>= 3.0.0', '< 3.2']` | no change                    | no change                                      |
 | no change     | ⬆️ to `gem "rubocop-lts", "~> 21.0"` | `['>= 3.1.0', '< 3.2']` | [`rubocop-ruby3_1`][⛳️31-gh] | no change                                      |
 | ⬆️ to `3.2.x` | ⬆️ to `gem "rubocop-lts", "~> 22.0"` | `['>= 3.1.0', '< 3.2']` | no change                    | no change                                      |
-| no change     | ⬆️ to `gem "rubocop-lts", "~> 23.0"` | `['>= 3.2.0', '< 3.3']` | coming soon...               | no change                                      |
+| no change     | ⬆️ to `gem "rubocop-lts", "~> 23.0"` | `['>= 3.2.0', '< 3.3']` | [`rubocop-ruby3_2`][⛳️32-gh] | no change                                      |
+| ⬆️ to `3.3.x` | ⬆️ to `gem "rubocop-lts", "~> 24.0"` | `['>= 3.2.0', '< 3.3']` | no change                    | no change                                      |
 
 ### Supporting Ruby 1.8
 
@@ -174,6 +176,7 @@ inherit_gem:
 | [`rubocop-ruby2_7`][⛳️27-gh] | [![Gem Version][⛳️27-vi]][⛳️27-g]   | [![Total DL][🖇️27-dti]][⛳️27-g] [![DL Rank][🏘️27-rti]][⛳️27-g]     | [![Current][🚎27-cwfi]][🚎27-cwf] [![Heads][🖐27-hwfi]][🖐27-hwf]                                        | [![Open Issues][📗27-ioi]][📗27-io] [![Closed Issues][🚀27-ici]][🚀27-ic] [![Open PRs][💄27-poi]][💄27-po] [![Closed PRs][👽27-pci]][👽27-pc]         |
 | [`rubocop-ruby3_0`][⛳️30-gh] | [![Gem Version][⛳️30-vi]][⛳️30-g]   | [![Total DL][🖇️30-dti]][⛳️30-g] [![DL Rank][🏘️30-rti]][⛳️30-g]     | [![Current][🚎30-cwfi]][🚎30-cwf] [![Heads][🖐30-hwfi]][🖐30-hwf]                                        | [![Open Issues][📗30-ioi]][📗30-io] [![Closed Issues][🚀30-ici]][🚀30-ic] [![Open PRs][💄30-poi]][💄30-po] [![Closed PRs][👽30-pci]][👽30-pc]         |
 | [`rubocop-ruby3_1`][⛳️31-gh] | [![Gem Version][⛳️31-vi]][⛳️31-g]   | [![Total DL][🖇️31-dti]][⛳️31-g] [![DL Rank][🏘️31-rti]][⛳️31-g]     | [![Current][🚎31-cwfi]][🚎31-cwf] [![Heads][🖐31-hwfi]][🖐31-hwf]                                        | [![Open Issues][📗31-ioi]][📗31-io] [![Closed Issues][🚀31-ici]][🚀31-ic] [![Open PRs][💄31-poi]][💄31-po] [![Closed PRs][👽31-pci]][👽31-pc]         |
+| [`rubocop-ruby3_2`][⛳️32-gh] | [![Gem Version][⛳️32-vi]][⛳️32-g]   | [![Total DL][🖇️32-dti]][⛳️32-g] [![DL Rank][🏘️32-rti]][⛳️32-g]     | [![Current][🚎32-cwfi]][🚎32-cwf] [![Heads][🖐32-hwfi]][🖐32-hwf]                                        | [![Open Issues][📗32-ioi]][📗32-io] [![Closed Issues][🚀32-ici]][🚀32-ic] [![Open PRs][💄32-poi]][💄32-po] [![Closed PRs][👽32-pci]][👽32-pc]         |
 
 <!-- columnar badge #s:
 ⛳️
@@ -416,6 +419,25 @@ inherit_gem:
 [👽31-pci]: https://img.shields.io/github/issues-pr-closed/rubocop-lts/rubocop-ruby3_1
 [⛳️31-g]: https://rubygems.org/gems/rubocop-ruby3_1
 [⛳️31-gh]: https://github.com/rubocop-lts/rubocop-ruby3_1
+[⛳️32-vi]: http://img.shields.io/gem/v/rubocop-ruby3_2.svg
+[🖇️32-dti]: https://img.shields.io/gem/dt/rubocop-ruby3_2.svg
+[🏘️32-rti]: https://img.shields.io/gem/rt/rubocop-ruby3_2.svg
+[🚎32-cwf]: https://github.com/rubocop-lts/rubocop-ruby3_2/actions/workflows/current.yml
+[🚎32-cwfi]: https://github.com/rubocop-lts/rubocop-ruby3_2/actions/workflows/current.yml/badge.svg
+[🖐32-hwf]: https://github.com/rubocop-lts/rubocop-ruby3_2/actions/workflows/heads.yml
+[🖐32-hwfi]: https://github.com/rubocop-lts/rubocop-ruby3_2/actions/workflows/heads.yml/badge.svg
+[🧮32-lwf]: https://github.com/rubocop-lts/rubocop-ruby3_2/actions/workflows/legacy.yml
+[🧮32-lwfi]: https://github.com/rubocop-lts/rubocop-ruby3_2/actions/workflows/legacy.yml/badge.svg
+[📗32-io]: https://github.com/rubocop-lts/rubocop-ruby3_2/issues
+[📗32-ioi]: https://img.shields.io/github/issues-raw/rubocop-lts/rubocop-ruby3_2
+[🚀32-ic]: https://github.com/rubocop-lts/rubocop-ruby3_2/issues?q=is%3Aissue+is%3Aclosed
+[🚀32-ici]: https://img.shields.io/github/issues-closed-raw/rubocop-lts/rubocop-ruby3_2
+[💄32-po]: https://github.com/rubocop-lts/rubocop-ruby3_2/pulls
+[💄32-poi]: https://img.shields.io/github/issues-pr/rubocop-lts/rubocop-ruby3_2
+[👽32-pc]: https://github.com/rubocop-lts/rubocop-ruby3_2/pulls?q=is%3Apr+is%3Aclosed
+[👽32-pci]: https://img.shields.io/github/issues-pr-closed/rubocop-lts/rubocop-ruby3_2
+[⛳️32-g]: https://rubygems.org/gems/rubocop-ruby3_2
+[⛳️32-gh]: https://github.com/rubocop-lts/rubocop-ruby3_2
 
 ## ✨ Installation
 
@@ -425,6 +447,7 @@ Without bundler execute:
 
 Add this line to your application's Gemfile:
 
+<!-- FIND VERSION -->
 ```ruby
 gem 'rubocop-lts', '~> 1.0', require: false
 ```
@@ -432,10 +455,6 @@ gem 'rubocop-lts', '~> 1.0', require: false
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install rubocop-lts
 
 ## 🔧 Usage
 
@@ -536,6 +555,7 @@ the [Pessimistic Version Constraint][pvc] with two digits of precision.
 
 For example:
 
+<!-- FIND VERSION -->
 ```ruby
 spec.add_dependency "rubocop-lts", "~> 1.0"
 ```
