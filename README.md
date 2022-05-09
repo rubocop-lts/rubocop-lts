@@ -58,19 +58,20 @@ Intended for applications and libraries that only lint against a single Ruby ver
 
 Odd versions should be attached to a project's trunk (e.g. the `main` branch), for long-term stability (ahem, _lts_, anyone?) of the style rules.
 
-| Your Ruby | Your Gemfile                   | Your Gemfile.lock | Your .rubocop.yml                              |
-|-----------|--------------------------------|-------------------|------------------------------------------------|
-| `1.9.x`   | `gem "rubocop-lts", "~> 1.0"`  | `rubocop-ruby1_9` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.0.x`   | `gem "rubocop-lts", "~> 3.0"`  | `rubocop-ruby2_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.1.x`   | `gem "rubocop-lts", "~> 5.0"`  | `rubocop-ruby2_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.2.x`   | `gem "rubocop-lts", "~> 7.0"`  | `rubocop-ruby2_2` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.3.x`   | `gem "rubocop-lts", "~> 9.0"`  | `rubocop-ruby2_3` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.4.x`   | `gem "rubocop-lts", "~> 11.0"` | `rubocop-ruby2_4` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.5.x`   | `gem "rubocop-lts", "~> 13.0"` | `rubocop-ruby2_5` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.6.x`   | `gem "rubocop-lts", "~> 15.0"` | `rubocop-ruby2_6` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.7.x`   | `gem "rubocop-lts", "~> 17.0"` | `rubocop-ruby2_7` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `3.0.x`   | `gem "rubocop-lts", "~> 19.0"` | `rubocop-ruby3_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `3.1.x`   | `gem "rubocop-lts", "~> 21.0"` | `rubocop-ruby3_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| Your Ruby           | Your Gemfile                   | Your Gemfile.lock | Your .rubocop.yml                              |
+|---------------------|--------------------------------|-------------------|------------------------------------------------|
+| `1.9.x`             | `gem "rubocop-lts", "~> 1.0"`  | `rubocop-ruby1_9` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.0.x`             | `gem "rubocop-lts", "~> 3.0"`  | `rubocop-ruby2_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.1.x`             | `gem "rubocop-lts", "~> 5.0"`  | `rubocop-ruby2_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.2.x`             | `gem "rubocop-lts", "~> 7.0"`  | `rubocop-ruby2_2` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.3.x`             | `gem "rubocop-lts", "~> 9.0"`  | `rubocop-ruby2_3` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.4.x`             | `gem "rubocop-lts", "~> 11.0"` | `rubocop-ruby2_4` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.5.x`             | `gem "rubocop-lts", "~> 13.0"` | `rubocop-ruby2_5` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.6.x`             | `gem "rubocop-lts", "~> 15.0"` | `rubocop-ruby2_6` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.7.x`             | `gem "rubocop-lts", "~> 17.0"` | `rubocop-ruby2_7` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `3.0.x`             | `gem "rubocop-lts", "~> 19.0"` | `rubocop-ruby3_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `3.1.x`             | `gem "rubocop-lts", "~> 21.0"` | `rubocop-ruby3_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `3.2.x` / ruby-head | `gem "rubocop-lts", "~> 23.0"` | `rubocop-ruby3_2` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
 
 ### Even Major Release
 
@@ -88,19 +89,20 @@ Intended for applications and libraries that lint against a range of Ruby versio
 
 Even versions will help projects upgrade to newer Rubies while keeping the same underlying version of Rubocop version, so change can be introduced one step at a time.
 
-| Your Ruby | Your Gemfile                   | Your Gemfile.lock | Your .rubocop.yml                              |
-|-----------|--------------------------------|-------------------|------------------------------------------------|
-| `1.9.x`   | `gem "rubocop-lts", "~> 2.0"`  | `rubocop-ruby1_9` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.0.x`   | `gem "rubocop-lts", "~> 4.0"`  | `rubocop-ruby2_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.1.x`   | `gem "rubocop-lts", "~> 6.0"`  | `rubocop-ruby2_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.2.x`   | `gem "rubocop-lts", "~> 8.0"`  | `rubocop-ruby2_2` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.3.x`   | `gem "rubocop-lts", "~> 10.0"` | `rubocop-ruby2_3` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.4.x`   | `gem "rubocop-lts", "~> 12.0"` | `rubocop-ruby2_4` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.5.x`   | `gem "rubocop-lts", "~> 14.0"` | `rubocop-ruby2_5` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.6.x`   | `gem "rubocop-lts", "~> 16.0"` | `rubocop-ruby2_6` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.7.x`   | `gem "rubocop-lts", "~> 18.0"` | `rubocop-ruby2_7` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `3.0.x`   | `gem "rubocop-lts", "~> 20.0"` | `rubocop-ruby3_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `3.1.x`   | `gem "rubocop-lts", "~> 22.0"` | `rubocop-ruby3_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| Your Ruby           | Your Gemfile                   | Your Gemfile.lock | Your .rubocop.yml                              |
+|---------------------|--------------------------------|-------------------|------------------------------------------------|
+| `1.9.x`             | `gem "rubocop-lts", "~> 2.0"`  | `rubocop-ruby1_9` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.0.x`             | `gem "rubocop-lts", "~> 4.0"`  | `rubocop-ruby2_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.1.x`             | `gem "rubocop-lts", "~> 6.0"`  | `rubocop-ruby2_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.2.x`             | `gem "rubocop-lts", "~> 8.0"`  | `rubocop-ruby2_2` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.3.x`             | `gem "rubocop-lts", "~> 10.0"` | `rubocop-ruby2_3` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.4.x`             | `gem "rubocop-lts", "~> 12.0"` | `rubocop-ruby2_4` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.5.x`             | `gem "rubocop-lts", "~> 14.0"` | `rubocop-ruby2_5` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.6.x`             | `gem "rubocop-lts", "~> 16.0"` | `rubocop-ruby2_6` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.7.x`             | `gem "rubocop-lts", "~> 18.0"` | `rubocop-ruby2_7` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `3.0.x`             | `gem "rubocop-lts", "~> 20.0"` | `rubocop-ruby3_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `3.1.x`             | `gem "rubocop-lts", "~> 22.0"` | `rubocop-ruby3_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `3.2.x` / ruby-head | `gem "rubocop-lts", "~> 24.0"` | `rubocop-ruby3_2` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
 
 ### All together now!
 
@@ -140,6 +142,7 @@ How to upgrade a project from yesterday, to today.
 | ⬆️ to `3.1.x` | ⬆️ to `gem "rubocop-lts", "~> 20.0"` | `['>= 3.0.0', '< 3.2']` | no change                    | no change                                      |
 | no change     | ⬆️ to `gem "rubocop-lts", "~> 21.0"` | `['>= 3.1.0', '< 3.2']` | [`rubocop-ruby3_1`][⛳️31-gh] | no change                                      |
 | ⬆️ to `3.2.x` | ⬆️ to `gem "rubocop-lts", "~> 22.0"` | `['>= 3.1.0', '< 3.2']` | no change                    | no change                                      |
+| no change     | ⬆️ to `gem "rubocop-lts", "~> 23.0"` | `['>= 3.2.0', '< 3.3']` | coming soon...               | no change                                      |
 
 ### Supporting Ruby 1.8
 
@@ -466,32 +469,32 @@ Odd versions use the token `odd` in the branch name.
 
 #### Version - Branch Matrix
 
-| Ruby Version | Parity | Gem Version | Branch Name     | Purpose                           |
-|--------------|--------|-------------|-----------------|-----------------------------------|
-| 1.9          | odd    | 1.x         | `r1_9-odd-v1`   | LTS, trunk, single-ruby-linting   |
-| 1.9          | even   | 2.x         | `r1_9-even-v2`  | Upgrade, feat, multi-ruby-linting |
-| 2.0          | odd    | 3.x         | `r2_0-odd-v3`   | LTS, trunk, single-ruby-linting   |
-| 2.0          | even   | 4.x         | `r2_0-even-v4`  | Upgrade, feat, multi-ruby-linting |
-| 2.1          | odd    | 5.x         | `r2_1-odd-v5`   | LTS, trunk, single-ruby-linting   |
-| 2.1          | even   | 6.x         | `r2_1-even-v6`  | Upgrade, feat, multi-ruby-linting |
-| 2.2          | odd    | 7.x         | `r2_2-odd-v7`   | LTS, trunk, single-ruby-linting   |
-| 2.2          | even   | 8.x         | `r2_2-even-v8`  | Upgrade, feat, multi-ruby-linting |
-| 2.3          | odd    | 9.x         | `r2_3-odd-v9`   | LTS, trunk, single-ruby-linting   |
-| 2.3          | even   | 10.x        | `r2_3-even-v10` | Upgrade, feat, multi-ruby-linting |
-| 2.4          | odd    | 11.x        | `r2_4-odd-v11`  | LTS, trunk, single-ruby-linting   |
-| 2.4          | even   | 12.x        | `r2_4-even-v12` | Upgrade, feat, multi-ruby-linting |
-| 2.5          | odd    | 13.x        | `r2_5-odd-v13`  | LTS, trunk, single-ruby-linting   |
-| 2.5          | even   | 14.x        | `r2_5-even-v14` | Upgrade, feat, multi-ruby-linting |
-| 2.6          | odd    | 15.x        | `r2_6-odd-v15`  | LTS, trunk, single-ruby-linting   |
-| 2.6          | even   | 16.x        | `r2_6-even-v16` | Upgrade, feat, multi-ruby-linting |
-| 2.7          | odd    | 17.x        | `r2_7-odd-v17`  | LTS, trunk, single-ruby-linting   |
-| 2.7          | even   | 18.x        | `r2_7-even-v18` | Upgrade, feat, multi-ruby-linting |
-| 3.0          | odd    | 19.x        | `r3_0-odd-v19`  | LTS, trunk, single-ruby-linting   |
-| 3.0          | even   | 20.x        | `r3_0-even-v20` | Upgrade, feat, multi-ruby-linting |
-| 3.1          | odd    | 21.x        | `r3_1-odd-v21`  | LTS, trunk, single-ruby-linting   |
-| 3.1          | even   | 22.x        | `r3_1-even-v22` | Upgrade, feat, multi-ruby-linting |
-| 3.2          | odd    | 23.x        | `r3_2-odd-v23`  | LTS, trunk, single-ruby-linting   |
-| 3.2          | even   | 24.x        | `r3_2-even-v24` | Upgrade, feat, multi-ruby-linting |
+| Ruby Version    | Parity | Gem Version | Branch Name     | Purpose                           |
+|-----------------|--------|-------------|-----------------|-----------------------------------|
+| 1.9             | odd    | 1.x         | `r1_9-odd-v1`   | LTS, trunk, single-ruby-linting   |
+| 1.9             | even   | 2.x         | `r1_9-even-v2`  | Upgrade, feat, multi-ruby-linting |
+| 2.0             | odd    | 3.x         | `r2_0-odd-v3`   | LTS, trunk, single-ruby-linting   |
+| 2.0             | even   | 4.x         | `r2_0-even-v4`  | Upgrade, feat, multi-ruby-linting |
+| 2.1             | odd    | 5.x         | `r2_1-odd-v5`   | LTS, trunk, single-ruby-linting   |
+| 2.1             | even   | 6.x         | `r2_1-even-v6`  | Upgrade, feat, multi-ruby-linting |
+| 2.2             | odd    | 7.x         | `r2_2-odd-v7`   | LTS, trunk, single-ruby-linting   |
+| 2.2             | even   | 8.x         | `r2_2-even-v8`  | Upgrade, feat, multi-ruby-linting |
+| 2.3             | odd    | 9.x         | `r2_3-odd-v9`   | LTS, trunk, single-ruby-linting   |
+| 2.3             | even   | 10.x        | `r2_3-even-v10` | Upgrade, feat, multi-ruby-linting |
+| 2.4             | odd    | 11.x        | `r2_4-odd-v11`  | LTS, trunk, single-ruby-linting   |
+| 2.4             | even   | 12.x        | `r2_4-even-v12` | Upgrade, feat, multi-ruby-linting |
+| 2.5             | odd    | 13.x        | `r2_5-odd-v13`  | LTS, trunk, single-ruby-linting   |
+| 2.5             | even   | 14.x        | `r2_5-even-v14` | Upgrade, feat, multi-ruby-linting |
+| 2.6             | odd    | 15.x        | `r2_6-odd-v15`  | LTS, trunk, single-ruby-linting   |
+| 2.6             | even   | 16.x        | `r2_6-even-v16` | Upgrade, feat, multi-ruby-linting |
+| 2.7             | odd    | 17.x        | `r2_7-odd-v17`  | LTS, trunk, single-ruby-linting   |
+| 2.7             | even   | 18.x        | `r2_7-even-v18` | Upgrade, feat, multi-ruby-linting |
+| 3.0             | odd    | 19.x        | `r3_0-odd-v19`  | LTS, trunk, single-ruby-linting   |
+| 3.0             | even   | 20.x        | `r3_0-even-v20` | Upgrade, feat, multi-ruby-linting |
+| 3.1             | odd    | 21.x        | `r3_1-odd-v21`  | LTS, trunk, single-ruby-linting   |
+| 3.1             | even   | 22.x        | `r3_1-even-v22` | Upgrade, feat, multi-ruby-linting |
+| 3.2 / ruby-head | odd    | 23.x        | `r3_2-odd-v23`  | LTS, trunk, single-ruby-linting   |
+| 3.2 / ruby-head | even   | 24.x        | `r3_2-even-v24` | Upgrade, feat, multi-ruby-linting |
 
 > NOTE: For more on how Ruby 1.8 support works, see [above][lts1_8]
 
