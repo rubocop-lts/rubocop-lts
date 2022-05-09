@@ -59,20 +59,20 @@ Intended for applications and libraries that only lint against a single Ruby ver
 
 Odd versions should be attached to a project's trunk (e.g. the `main` branch), for long-term stability (ahem, _lts_, anyone?) of the style rules.
 
-| Your Ruby           | Your Gemfile                   | Your Gemfile.lock | Your .rubocop.yml                              |
-|---------------------|--------------------------------|-------------------|------------------------------------------------|
-| `1.9.x`             | `gem "rubocop-lts", "~> 1.0"`  | `rubocop-ruby1_9` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.0.x`             | `gem "rubocop-lts", "~> 3.0"`  | `rubocop-ruby2_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.1.x`             | `gem "rubocop-lts", "~> 5.0"`  | `rubocop-ruby2_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.2.x`             | `gem "rubocop-lts", "~> 7.0"`  | `rubocop-ruby2_2` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.3.x`             | `gem "rubocop-lts", "~> 9.0"`  | `rubocop-ruby2_3` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.4.x`             | `gem "rubocop-lts", "~> 11.0"` | `rubocop-ruby2_4` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.5.x`             | `gem "rubocop-lts", "~> 13.0"` | `rubocop-ruby2_5` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.6.x`             | `gem "rubocop-lts", "~> 15.0"` | `rubocop-ruby2_6` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.7.x`             | `gem "rubocop-lts", "~> 17.0"` | `rubocop-ruby2_7` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `3.0.x`             | `gem "rubocop-lts", "~> 19.0"` | `rubocop-ruby3_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `3.1.x`             | `gem "rubocop-lts", "~> 21.0"` | `rubocop-ruby3_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `3.2.x` / ruby-head | `gem "rubocop-lts", "~> 23.0"` | `rubocop-ruby3_2` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| Your Ruby                         | Your Gemfile                   | Your Gemfile.lock | Your .rubocop.yml                              |
+|-----------------------------------|--------------------------------|-------------------|------------------------------------------------|
+| `1.9.x` (`['>= 1.9.0', '< 2']`)   | `gem "rubocop-lts", "~> 1.0"`  | `rubocop-ruby1_9` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.0.x` (`['>= 2.0.0', '< 2.1']`) | `gem "rubocop-lts", "~> 3.0"`  | `rubocop-ruby2_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.1.x` (`['>= 2.1.0', '< 2.2']`) | `gem "rubocop-lts", "~> 5.0"`  | `rubocop-ruby2_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.2.x` (`['>= 2.2.0', '< 2.3']`) | `gem "rubocop-lts", "~> 7.0"`  | `rubocop-ruby2_2` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.3.x` (`['>= 2.3.0', '< 2.4']`) | `gem "rubocop-lts", "~> 9.0"`  | `rubocop-ruby2_3` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.4.x` (`['>= 2.4.0', '< 2.5']`) | `gem "rubocop-lts", "~> 11.0"` | `rubocop-ruby2_4` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.5.x` (`['>= 2.5.0', '< 2.6']`) | `gem "rubocop-lts", "~> 13.0"` | `rubocop-ruby2_5` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.6.x` (`['>= 2.6.0', '< 2.7']`) | `gem "rubocop-lts", "~> 15.0"` | `rubocop-ruby2_6` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.7.x` (`['>= 2.7.0', '< 3.0']`) | `gem "rubocop-lts", "~> 17.0"` | `rubocop-ruby2_7` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `3.0.x` (`['>= 3.0.0', '< 3.1']`) | `gem "rubocop-lts", "~> 19.0"` | `rubocop-ruby3_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `3.1.x` (`['>= 3.1.0', '< 3.2']`) | `gem "rubocop-lts", "~> 21.0"` | `rubocop-ruby3_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `3.2.x` / ruby-head               | `gem "rubocop-lts", "~> 23.0"` | `rubocop-ruby3_2` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
 
 ### Even Major Release
 
@@ -90,20 +90,20 @@ Intended for applications and libraries that lint against a range of Ruby versio
 
 Even versions will help projects upgrade to newer Rubies while keeping the same underlying version of Rubocop version, so change can be introduced one step at a time.
 
-| Your Ruby           | Your Gemfile                   | Your Gemfile.lock | Your .rubocop.yml                              |
-|---------------------|--------------------------------|-------------------|------------------------------------------------|
-| `1.9.x`             | `gem "rubocop-lts", "~> 2.0"`  | `rubocop-ruby1_9` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.0.x`             | `gem "rubocop-lts", "~> 4.0"`  | `rubocop-ruby2_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.1.x`             | `gem "rubocop-lts", "~> 6.0"`  | `rubocop-ruby2_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.2.x`             | `gem "rubocop-lts", "~> 8.0"`  | `rubocop-ruby2_2` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.3.x`             | `gem "rubocop-lts", "~> 10.0"` | `rubocop-ruby2_3` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.4.x`             | `gem "rubocop-lts", "~> 12.0"` | `rubocop-ruby2_4` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.5.x`             | `gem "rubocop-lts", "~> 14.0"` | `rubocop-ruby2_5` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.6.x`             | `gem "rubocop-lts", "~> 16.0"` | `rubocop-ruby2_6` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.7.x`             | `gem "rubocop-lts", "~> 18.0"` | `rubocop-ruby2_7` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `3.0.x`             | `gem "rubocop-lts", "~> 20.0"` | `rubocop-ruby3_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `3.1.x`             | `gem "rubocop-lts", "~> 22.0"` | `rubocop-ruby3_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `3.2.x` / ruby-head | `gem "rubocop-lts", "~> 24.0"` | `rubocop-ruby3_2` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| Minimum Ruby                      | Your Gemfile                   | Your Gemfile.lock | Your .rubocop.yml                              |
+|-----------------------------------|--------------------------------|-------------------|------------------------------------------------|
+| `1.9.x` (`['>= 1.9.0', '< 3.1']`) | `gem "rubocop-lts", "~> 2.0"`  | `rubocop-ruby1_9` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.0.x` (`['>= 2.0.0', '< 3.1']`) | `gem "rubocop-lts", "~> 4.0"`  | `rubocop-ruby2_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.1.x` (`['>= 2.1.0', '< 3.1']`) | `gem "rubocop-lts", "~> 6.0"`  | `rubocop-ruby2_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.2.x` (`['>= 2.2.0', '< 3.0']`) | `gem "rubocop-lts", "~> 8.0"`  | `rubocop-ruby2_2` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.3.x` (`['>= 2.3.0', '< 3.1']`) | `gem "rubocop-lts", "~> 10.0"` | `rubocop-ruby2_3` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.4.x` (`['>= 2.4.0', '< 3.1']`) | `gem "rubocop-lts", "~> 12.0"` | `rubocop-ruby2_4` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.5.x` (`['>= 2.5.0', '< 3.2']`) | `gem "rubocop-lts", "~> 14.0"` | `rubocop-ruby2_5` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.6.x` (`['>= 2.6.0', '< 3.2']`) | `gem "rubocop-lts", "~> 16.0"` | `rubocop-ruby2_6` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.7.x` (`['>= 2.7.0', '< 3.2']`) | `gem "rubocop-lts", "~> 18.0"` | `rubocop-ruby2_7` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `3.0.x` (`['>= 3.0.0', '< 3.2']`) | `gem "rubocop-lts", "~> 20.0"` | `rubocop-ruby3_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `3.1.x` (`['>= 3.1.0', '< 3.2']`) | `gem "rubocop-lts", "~> 22.0"` | `rubocop-ruby3_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `3.2.x` / ruby-head               | `gem "rubocop-lts", "~> 24.0"` | `rubocop-ruby3_2` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
 
 ### All together now!
 
@@ -150,7 +150,7 @@ How to upgrade a project from yesterday, to today.
 
 Have a library still supporting Ruby 1.8.7, or looking to drop support for Ruby 1.8.7 in a SemVer-compliant manner?
 
-Simply use
+Simply use `rubocop-lts`, version 1.x or 2.x, which support Ruby 1.9.3 for installation, and 1.8.7 for syntax.
 ```yaml
 inherit_gem:
   rubocop-lts: rubocop-lts1_8.yml
