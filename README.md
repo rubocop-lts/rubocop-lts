@@ -40,7 +40,7 @@ Projects that support multiple versions of Ruby simultaneously (like many open-s
 [odd-release]: https://github.com/rubocop-lts/rubocop-lts#odd-major-release
 [even-release]: https://github.com/rubocop-lts/rubocop-lts#even-major-release
 
-##  Version Conventions
+## Version Conventions
 
 ### Odd Major Release
 
@@ -288,9 +288,28 @@ The gem is available as open source under the terms of
 the [MIT License][license] [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)][license-ref].
 See [LICENSE][license] for the official [Copyright Notice][copyright-notice-explainer].
 
-* Copyright (c) 2022 [Peter H. Boling][peterboling] of [Rails Bling][railsbling]
+<details>
+  <summary>Project Logos (rubocop-ruby3_1)</summary>
 
-[copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
+See [docs/images/logo/README.txt][project-logos]
+</details>
+
+<details>
+  <summary>Organization Logo (rubocop-semver)</summary>
+
+Author: [Yusuf Evli][org-logo-author]
+Source: [Unsplash][org-logo-source]
+License: [Unsplash License][org-logo-license]
+</details>
+
+[project-logos]: https://github.com/rubocop-lts/rubocop-ruby3_1/blob/main/docs/images/logo/README.txt
+[org-logo-author]: https://unsplash.com/@yusufevli
+[org-logo-source]: https://unsplash.com/photos/yaSLNLtKRIU
+[org-logo-license]: https://unsplash.com/license
+
+### © Copyright
+
+* Copyright (c) 2022 [Peter H. Boling][peterboling] of [Rails Bling][railsbling]
 
 ## 🤝 Code of Conduct
 
