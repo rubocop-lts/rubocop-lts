@@ -24,7 +24,7 @@ This is both good (literally its job) _and_ bad (when it's for the wrong reasons
 
 It's supposed to break the build when it finds violations.
 It should not break the build due to incompatibility with your environment.  RuboCop
-doesn't follow SemVer, and occasionally it will unexpectedly break things.
+doesn't [follow SemVer](https://dev.to/pboling/rubocop-ruby-matrix-gems-nj), and occasionally it will unexpectedly break things.
 
 ## 🗿 Stable
 
@@ -51,13 +51,13 @@ Versions like:
 "5.0.0"
 # ... etc
 ```
-Locked to a single minor version of Ruby, e.g. `['>= 2.6.0', '< 2.7']` will install any `2.6.x` version of Ruby.
+Locked to a single minor version of Ruby, e.g. version 15.0 has a `required_ruby_version` of `['>= 2.6.0', '< 2.7']`, which will install only on `2.6.x` versions of Ruby.
 
 #### Implementation
 
 Intended for applications and libraries that only lint against a single Ruby version.
 
-Odd versions should be attached to a project's trunk (e.g. the `main` branch), for long-term stability (ahem, _lts_, anyone?) of the style rules.
+Odd versions should be attached to a project's trunk (e.g. the main branch), for long-term stability (ahem, _lts_, anyone?) of the style rules.
 
 | Your Ruby                         | Your Gemfile                   | Your Gemfile.lock | Your .rubocop.yml                              |
 |-----------------------------------|--------------------------------|-------------------|------------------------------------------------|
@@ -83,8 +83,11 @@ Versions like:
 "6.0.0"
 # ... etc
 ```
-Locked to the forward range of Rubies on which the gem can be installed (though `rubocop` may not execute on all),
-e.g. `['>= 2.6.0', '< 3.2']` will install on any released version of ruby from `2.6` on.
+Locked to the forward range of Rubies on which the gem can be installed (though rubocop may not execute on all),
+e.g. version 16.0 has a `required_ruby_version` of `['>= 2.6.0', '< 3.2']` will install on any released version
+of ruby from `2.6` on.
+
+#### Implementation
 
 Intended for applications and libraries that lint against a range of Ruby versions.
 
@@ -92,12 +95,12 @@ Even versions will help projects upgrade to newer Rubies while keeping the same 
 
 | Minimum Ruby                      | Your Gemfile                   | Your Gemfile.lock | Your .rubocop.yml                              |
 |-----------------------------------|--------------------------------|-------------------|------------------------------------------------|
-| `1.9.x` (`['>= 1.9.0', '< 3.1']`) | `gem "rubocop-lts", "~> 2.0"`  | `rubocop-ruby1_9` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.0.x` (`['>= 2.0.0', '< 3.1']`) | `gem "rubocop-lts", "~> 4.0"`  | `rubocop-ruby2_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.1.x` (`['>= 2.1.0', '< 3.1']`) | `gem "rubocop-lts", "~> 6.0"`  | `rubocop-ruby2_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.2.x` (`['>= 2.2.0', '< 3.0']`) | `gem "rubocop-lts", "~> 8.0"`  | `rubocop-ruby2_2` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.3.x` (`['>= 2.3.0', '< 3.1']`) | `gem "rubocop-lts", "~> 10.0"` | `rubocop-ruby2_3` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `2.4.x` (`['>= 2.4.0', '< 3.1']`) | `gem "rubocop-lts", "~> 12.0"` | `rubocop-ruby2_4` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `1.9.x` (`['>= 1.9.0', '< 3.2']`) | `gem "rubocop-lts", "~> 2.0"`  | `rubocop-ruby1_9` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.0.x` (`['>= 2.0.0', '< 3.2']`) | `gem "rubocop-lts", "~> 4.0"`  | `rubocop-ruby2_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.1.x` (`['>= 2.1.0', '< 3.2']`) | `gem "rubocop-lts", "~> 6.0"`  | `rubocop-ruby2_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.2.x` (`['>= 2.2.0', '< 3.2']`) | `gem "rubocop-lts", "~> 8.0"`  | `rubocop-ruby2_2` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.3.x` (`['>= 2.3.0', '< 3.2']`) | `gem "rubocop-lts", "~> 10.0"` | `rubocop-ruby2_3` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
+| `2.4.x` (`['>= 2.4.0', '< 3.2']`) | `gem "rubocop-lts", "~> 12.0"` | `rubocop-ruby2_4` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
 | `2.5.x` (`['>= 2.5.0', '< 3.2']`) | `gem "rubocop-lts", "~> 14.0"` | `rubocop-ruby2_5` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
 | `2.6.x` (`['>= 2.6.0', '< 3.2']`) | `gem "rubocop-lts", "~> 16.0"` | `rubocop-ruby2_6` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
 | `2.7.x` (`['>= 2.7.0', '< 3.2']`) | `gem "rubocop-lts", "~> 18.0"` | `rubocop-ruby2_7` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
@@ -113,26 +116,32 @@ Upgrading a single step from even to odd will keep the same version of Ruby, and
 
 Each major version will have a tracking branch named accordingly, [for development](https://github.com/rubocop-lts/rubocop-lts#git-branch-names).
 
-### How To Untie Gorgon's Knot
+### 🪢 How To Untie Gorgon's Knot
 
 > NOTE: `rubocop-lts` is under active development, and hasn't had any releases yet.  The ruby specific versions, e.g. `rubocop-ruby2_7`, are complete already, and you can use them! Keep scrolling down for links to each of them.
 
 How to upgrade a project from yesterday, to today.
 
+1. Have good code coverage.
+2. Upgrade one step at a time.
+3. Re-run `bundle exec rubocop -a` in between each step.
+4. Re-run `bundle exec rubocop --auto-gen-config` in between each step.
+5. Commit and push to CI in between each step.
+
 | Your Ruby     | Your Gemfile                         | required_ruby_version   | Your Gemfile.lock            | Your .rubocop.yml                              |
 |---------------|--------------------------------------|-------------------------|------------------------------|------------------------------------------------|
 | `1.9.x`       | `gem "rubocop-lts", "~> 1.0"`        | `['>= 1.9.0', '< 2']`   | [`rubocop-ruby1_9`][⛳️19-gh] | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| ⬆️ to `2.0.x` | ⬆️ to `gem "rubocop-lts", "~> 2.0"`  | `['>= 1.9.0', '< 3.1']` | no change                    | no change                                      |
+| ⬆️ to `2.0.x` | ⬆️ to `gem "rubocop-lts", "~> 2.0"`  | `['>= 1.9.0', '< 3.2']` | no change                    | no change                                      |
 | no change     | ⬆️ to `gem "rubocop-lts", "~> 3.0"`  | `['>= 2.0.0', '< 2.1']` | [`rubocop-ruby2_0`][⛳️20-gh] | no change                                      |
-| ⬆️ to `2.1.x` | ⬆️ to `gem "rubocop-lts", "~> 4.0"`  | `['>= 2.0.0', '< 3.1']` | no change                    | no change                                      |
+| ⬆️ to `2.1.x` | ⬆️ to `gem "rubocop-lts", "~> 4.0"`  | `['>= 2.0.0', '< 3.2']` | no change                    | no change                                      |
 | no change     | ⬆️ to `gem "rubocop-lts", "~> 5.0"`  | `['>= 2.1.0', '< 2.2']` | [`rubocop-ruby2_1`][⛳️21-gh] | no change                                      |
-| ⬆️ to `2.2.x` | ⬆️ to `gem "rubocop-lts", "~> 6.0"`  | `['>= 2.1.0', '< 3.1']` | no change                    | no change                                      |
+| ⬆️ to `2.2.x` | ⬆️ to `gem "rubocop-lts", "~> 6.0"`  | `['>= 2.1.0', '< 3.2']` | no change                    | no change                                      |
 | no change     | ⬆️ to `gem "rubocop-lts", "~> 7.0"`  | `['>= 2.2.0', '< 2.3']` | [`rubocop-ruby2_2`][⛳️22-gh] | no change                                      |
-| ⬆️ to `2.3.x` | ⬆️ to `gem "rubocop-lts", "~> 8.0"`  | `['>= 2.2.0', '< 3.0']` | no change                    | no change                                      |
+| ⬆️ to `2.3.x` | ⬆️ to `gem "rubocop-lts", "~> 8.0"`  | `['>= 2.2.0', '< 3.2']` | no change                    | no change                                      |
 | no change     | ⬆️ to `gem "rubocop-lts", "~> 9.0"`  | `['>= 2.3.0', '< 2.4']` | [`rubocop-ruby2_3`][⛳️23-gh] | no change                                      |
-| ⬆️ to `2.4.x` | ⬆️ to `gem "rubocop-lts", "~> 10.0"` | `['>= 2.3.0', '< 3.1']` | no change                    | no change                                      |
+| ⬆️ to `2.4.x` | ⬆️ to `gem "rubocop-lts", "~> 10.0"` | `['>= 2.3.0', '< 3.2']` | no change                    | no change                                      |
 | no change     | ⬆️ to `gem "rubocop-lts", "~> 11.0"` | `['>= 2.4.0', '< 2.5']` | [`rubocop-ruby2_4`][⛳️24-gh] | no change                                      |
-| ⬆️ to `2.5.x` | ⬆️ to `gem "rubocop-lts", "~> 12.0"` | `['>= 2.4.0', '< 3.1']` | no change                    | no change                                      |
+| ⬆️ to `2.5.x` | ⬆️ to `gem "rubocop-lts", "~> 12.0"` | `['>= 2.4.0', '< 3.2']` | no change                    | no change                                      |
 | no change     | ⬆️ to `gem "rubocop-lts", "~> 13.0"` | `['>= 2.5.0', '< 2.6']` | [`rubocop-ruby2_5`][⛳️25-gh] | no change                                      |
 | ⬆️ to `2.6.x` | ⬆️ to `gem "rubocop-lts", "~> 14.0"` | `['>= 2.5.0', '< 3.2']` | no change                    | no change                                      |
 | no change     | ⬆️ to `gem "rubocop-lts", "~> 15.0"` | `['>= 2.6.0', '< 2.7']` | [`rubocop-ruby2_6`][⛳️26-gh] | no change                                      |
@@ -146,7 +155,12 @@ How to upgrade a project from yesterday, to today.
 | no change     | ⬆️ to `gem "rubocop-lts", "~> 23.0"` | `['>= 3.2.0', '< 3.3']` | [`rubocop-ruby3_2`][⛳️32-gh] | no change                                      |
 | ⬆️ to `3.3.x` | ⬆️ to `gem "rubocop-lts", "~> 24.0"` | `['>= 3.2.0', '< 3.3']` | no change                    | no change                                      |
 
-### Supporting Ruby 1.8
+> NOTE: `required_ruby_version` means the gem will install on a version of Ruby within the range.
+> Versions of this gem intended for ancient Rubies may not execute on more modern Rubies, _despite installing_.
+> As such you might consider limiting linting to only a single version of Ruby, the oldest one supported.
+> Speaking of old rubies... 👇
+
+### 📼 Supporting Ruby 1.8
 
 Have a library still supporting Ruby 1.8.7, or looking to drop support for Ruby 1.8.7 in a SemVer-compliant manner?
 
@@ -178,7 +192,129 @@ inherit_gem:
 | [`rubocop-ruby3_1`][⛳️31-gh] | [![Gem Version][⛳️31-vi]][⛳️31-g]   | [![Total DL][🖇️31-dti]][⛳️31-g] [![DL Rank][🏘️31-rti]][⛳️31-g]     | [![Current][🚎31-cwfi]][🚎31-cwf] [![Heads][🖐31-hwfi]][🖐31-hwf]                                        | [![Open Issues][📗31-ioi]][📗31-io] [![Closed Issues][🚀31-ici]][🚀31-ic] [![Open PRs][💄31-poi]][💄31-po] [![Closed PRs][👽31-pci]][👽31-pc]         |
 | [`rubocop-ruby3_2`][⛳️32-gh] | [![Gem Version][⛳️32-vi]][⛳️32-g]   | [![Total DL][🖇️32-dti]][⛳️32-g] [![DL Rank][🏘️32-rti]][⛳️32-g]     | [![Current][🚎32-cwfi]][🚎32-cwf] [![Heads][🖐32-hwfi]][🖐32-hwf]                                        | [![Open Issues][📗32-ioi]][📗32-io] [![Closed Issues][🚀32-ici]][🚀32-ic] [![Open PRs][💄32-poi]][💄32-po] [![Closed PRs][👽32-pci]][👽32-pc]         |
 
-<!-- columnar badge #s:
+## ✨ Installation
+
+Without bundler execute:
+
+    $ gem install 
+
+Add this line to your application's Gemfile:
+
+<!-- FIND VERSION -->
+```ruby
+gem 'rubocop-lts', '~> 1.0', require: false
+```
+
+And then execute:
+
+    $ bundle
+
+## 🔧 Usage
+
+The following is optional.  We'll discuss why you might want to do this after you see what it does.
+
+Add to the top of your project's `.rubocop.yml` configuration file:
+
+```yaml
+inherit_gem:
+  - rubocop-lts.yml
+```
+
+## Development
+
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+
+To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+
+### Git Branch Names
+
+#### Naming Scheme
+
+```ruby
+"r{{ ruby major }}_{{ ruby minor }}-{{ parity }}-v{{ gem-version }}"
+```
+
+##### Parity
+
+Even versions use the token `even` in the branch name.
+Odd versions use the token `odd` in the branch name.
+
+#### Version - Branch Matrix
+
+| Ruby Version    | Parity | Gem Version | Branch Name     | Purpose                           |
+|-----------------|--------|-------------|-----------------|-----------------------------------|
+| 1.9             | odd    | 1.x         | `r1_9-odd-v1`   | LTS, trunk, single-ruby-linting   |
+| 1.9             | even   | 2.x         | `r1_9-even-v2`  | Upgrade, feat, multi-ruby-linting |
+| 2.0             | odd    | 3.x         | `r2_0-odd-v3`   | LTS, trunk, single-ruby-linting   |
+| 2.0             | even   | 4.x         | `r2_0-even-v4`  | Upgrade, feat, multi-ruby-linting |
+| 2.1             | odd    | 5.x         | `r2_1-odd-v5`   | LTS, trunk, single-ruby-linting   |
+| 2.1             | even   | 6.x         | `r2_1-even-v6`  | Upgrade, feat, multi-ruby-linting |
+| 2.2             | odd    | 7.x         | `r2_2-odd-v7`   | LTS, trunk, single-ruby-linting   |
+| 2.2             | even   | 8.x         | `r2_2-even-v8`  | Upgrade, feat, multi-ruby-linting |
+| 2.3             | odd    | 9.x         | `r2_3-odd-v9`   | LTS, trunk, single-ruby-linting   |
+| 2.3             | even   | 10.x        | `r2_3-even-v10` | Upgrade, feat, multi-ruby-linting |
+| 2.4             | odd    | 11.x        | `r2_4-odd-v11`  | LTS, trunk, single-ruby-linting   |
+| 2.4             | even   | 12.x        | `r2_4-even-v12` | Upgrade, feat, multi-ruby-linting |
+| 2.5             | odd    | 13.x        | `r2_5-odd-v13`  | LTS, trunk, single-ruby-linting   |
+| 2.5             | even   | 14.x        | `r2_5-even-v14` | Upgrade, feat, multi-ruby-linting |
+| 2.6             | odd    | 15.x        | `r2_6-odd-v15`  | LTS, trunk, single-ruby-linting   |
+| 2.6             | even   | 16.x        | `r2_6-even-v16` | Upgrade, feat, multi-ruby-linting |
+| 2.7             | odd    | 17.x        | `r2_7-odd-v17`  | LTS, trunk, single-ruby-linting   |
+| 2.7             | even   | 18.x        | `r2_7-even-v18` | Upgrade, feat, multi-ruby-linting |
+| 3.0             | odd    | 19.x        | `r3_0-odd-v19`  | LTS, trunk, single-ruby-linting   |
+| 3.0             | even   | 20.x        | `r3_0-even-v20` | Upgrade, feat, multi-ruby-linting |
+| 3.1             | odd    | 21.x        | `r3_1-odd-v21`  | LTS, trunk, single-ruby-linting   |
+| 3.1             | even   | 22.x        | `r3_1-even-v22` | Upgrade, feat, multi-ruby-linting |
+| 3.2 / ruby-head | odd    | 23.x        | `r3_2-odd-v23`  | LTS, trunk, single-ruby-linting   |
+| 3.2 / ruby-head | even   | 24.x        | `r3_2-even-v24` | Upgrade, feat, multi-ruby-linting |
+
+> NOTE: For more on how Ruby 1.8 support works, see [above][lts1_8]
+
+[lts1_8]: https://github.com/rubocop-lts/rubocop-lts#supporting-ruby-18
+
+## ⚡️ Contributing
+
+See [CONTRIBUTING.md][contributing]
+
+## 🌈 Contributors
+
+[![Contributors](https://contrib.rocks/image?repo=rubocop-lts/rubocop-lts)]("https://github.com/rubocop-lts/rubocop-lts/graphs/contributors")
+
+Made with [contributors-img](https://contrib.rocks).
+
+## 📄 License
+
+The gem is available as open source under the terms of
+the [MIT License][license] [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)][license-ref].
+See [LICENSE][license] for the official [Copyright Notice][copyright-notice-explainer].
+
+* Copyright (c) 2022 [Peter H. Boling][peterboling] of [Rails Bling][railsbling]
+
+[copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
+
+## 🤝 Code of Conduct
+
+Everyone interacting in the Rubocop::Ruby19 project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/rubocop-lts/rubocop-lts/blob/main/CODE_OF_CONDUCT.md).
+
+## 📌 Versioning
+
+This library aims to adhere to [Semantic Versioning 2.0.0][semver]. Violations of this scheme should be reported as
+bugs. Specifically, if a minor or patch version is released that breaks backward compatibility, a new version should be
+immediately released that restores compatibility. Breaking changes to the public API will only be introduced with new
+major versions.
+
+As a result of this policy, you can (and should) specify a dependency on this gem using
+the [Pessimistic Version Constraint][pvc] with two digits of precision.
+
+For example:
+
+<!-- FIND VERSION -->
+```ruby
+spec.add_dependency "rubocop-lts", "~> 1.0"
+```
+
+
+<!-- columnar badge #s for Project Health table:
 ⛳️
 🖇
 🏘
@@ -438,127 +574,6 @@ inherit_gem:
 [👽32-pci]: https://img.shields.io/github/issues-pr-closed/rubocop-lts/rubocop-ruby3_2
 [⛳️32-g]: https://rubygems.org/gems/rubocop-ruby3_2
 [⛳️32-gh]: https://github.com/rubocop-lts/rubocop-ruby3_2
-
-## ✨ Installation
-
-Without bundler execute:
-
-    $ gem install 
-
-Add this line to your application's Gemfile:
-
-<!-- FIND VERSION -->
-```ruby
-gem 'rubocop-lts', '~> 1.0', require: false
-```
-
-And then execute:
-
-    $ bundle
-
-## 🔧 Usage
-
-The following is optional.  We'll discuss why you might want to do this after you see what it does.
-
-Add to the top of your project's `.rubocop.yml` configuration file:
-
-```yaml
-inherit_gem:
-  - rubocop-lts.yml
-```
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-### Git Branch Names
-
-#### Naming Scheme
-
-```ruby
-"r{{ ruby major }}_{{ ruby minor }}-{{ parity }}-v{{ gem-version }}"
-```
-
-##### Parity
-
-Even versions use the token `even` in the branch name.
-Odd versions use the token `odd` in the branch name.
-
-#### Version - Branch Matrix
-
-| Ruby Version    | Parity | Gem Version | Branch Name     | Purpose                           |
-|-----------------|--------|-------------|-----------------|-----------------------------------|
-| 1.9             | odd    | 1.x         | `r1_9-odd-v1`   | LTS, trunk, single-ruby-linting   |
-| 1.9             | even   | 2.x         | `r1_9-even-v2`  | Upgrade, feat, multi-ruby-linting |
-| 2.0             | odd    | 3.x         | `r2_0-odd-v3`   | LTS, trunk, single-ruby-linting   |
-| 2.0             | even   | 4.x         | `r2_0-even-v4`  | Upgrade, feat, multi-ruby-linting |
-| 2.1             | odd    | 5.x         | `r2_1-odd-v5`   | LTS, trunk, single-ruby-linting   |
-| 2.1             | even   | 6.x         | `r2_1-even-v6`  | Upgrade, feat, multi-ruby-linting |
-| 2.2             | odd    | 7.x         | `r2_2-odd-v7`   | LTS, trunk, single-ruby-linting   |
-| 2.2             | even   | 8.x         | `r2_2-even-v8`  | Upgrade, feat, multi-ruby-linting |
-| 2.3             | odd    | 9.x         | `r2_3-odd-v9`   | LTS, trunk, single-ruby-linting   |
-| 2.3             | even   | 10.x        | `r2_3-even-v10` | Upgrade, feat, multi-ruby-linting |
-| 2.4             | odd    | 11.x        | `r2_4-odd-v11`  | LTS, trunk, single-ruby-linting   |
-| 2.4             | even   | 12.x        | `r2_4-even-v12` | Upgrade, feat, multi-ruby-linting |
-| 2.5             | odd    | 13.x        | `r2_5-odd-v13`  | LTS, trunk, single-ruby-linting   |
-| 2.5             | even   | 14.x        | `r2_5-even-v14` | Upgrade, feat, multi-ruby-linting |
-| 2.6             | odd    | 15.x        | `r2_6-odd-v15`  | LTS, trunk, single-ruby-linting   |
-| 2.6             | even   | 16.x        | `r2_6-even-v16` | Upgrade, feat, multi-ruby-linting |
-| 2.7             | odd    | 17.x        | `r2_7-odd-v17`  | LTS, trunk, single-ruby-linting   |
-| 2.7             | even   | 18.x        | `r2_7-even-v18` | Upgrade, feat, multi-ruby-linting |
-| 3.0             | odd    | 19.x        | `r3_0-odd-v19`  | LTS, trunk, single-ruby-linting   |
-| 3.0             | even   | 20.x        | `r3_0-even-v20` | Upgrade, feat, multi-ruby-linting |
-| 3.1             | odd    | 21.x        | `r3_1-odd-v21`  | LTS, trunk, single-ruby-linting   |
-| 3.1             | even   | 22.x        | `r3_1-even-v22` | Upgrade, feat, multi-ruby-linting |
-| 3.2 / ruby-head | odd    | 23.x        | `r3_2-odd-v23`  | LTS, trunk, single-ruby-linting   |
-| 3.2 / ruby-head | even   | 24.x        | `r3_2-even-v24` | Upgrade, feat, multi-ruby-linting |
-
-> NOTE: For more on how Ruby 1.8 support works, see [above][lts1_8]
-
-[lts1_8]: https://github.com/rubocop-lts/rubocop-lts#supporting-ruby-18
-
-## ⚡️ Contributing
-
-See [CONTRIBUTING.md][contributing]
-
-## 🌈 Contributors
-
-[![Contributors](https://contrib.rocks/image?repo=rubocop-lts/rubocop-lts)]("https://github.com/rubocop-lts/rubocop-lts/graphs/contributors")
-
-Made with [contributors-img](https://contrib.rocks).
-
-## 📄 License
-
-The gem is available as open source under the terms of
-the [MIT License][license] [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)][license-ref].
-See [LICENSE][license] for the official [Copyright Notice][copyright-notice-explainer].
-
-* Copyright (c) 2022 [Peter H. Boling][peterboling] of [Rails Bling][railsbling]
-
-[copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
-
-## 🤝 Code of Conduct
-
-Everyone interacting in the Rubocop::Ruby19 project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/rubocop-lts/rubocop-lts/blob/main/CODE_OF_CONDUCT.md).
-
-## 📌 Versioning
-
-This library aims to adhere to [Semantic Versioning 2.0.0][semver]. Violations of this scheme should be reported as
-bugs. Specifically, if a minor or patch version is released that breaks backward compatibility, a new version should be
-immediately released that restores compatibility. Breaking changes to the public API will only be introduced with new
-major versions.
-
-As a result of this policy, you can (and should) specify a dependency on this gem using
-the [Pessimistic Version Constraint][pvc] with two digits of precision.
-
-For example:
-
-<!-- FIND VERSION -->
-```ruby
-spec.add_dependency "rubocop-lts", "~> 1.0"
-```
 
 [copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
 
