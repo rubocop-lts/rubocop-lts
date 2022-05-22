@@ -118,7 +118,7 @@ Each major version will have a tracking branch named accordingly, [for developme
 
 ### 🪢 How To Untie Gorgon's Knot
 
-> NOTE: `rubocop-lts` is under active development, and hasn't had any releases yet.  The ruby specific versions, e.g. `rubocop-ruby2_7`, are complete already, and you can use them! Keep scrolling down for links to each of them.
+> NOTE: The ruby specific versions, e.g. `rubocop-ruby2_7`, can be used if you won't be upgrading ruby. Keep scrolling down for links to each of them.
 
 How to upgrade a project from yesterday, to today.
 
@@ -289,7 +289,7 @@ the [MIT License][license] [![License: MIT](https://img.shields.io/badge/License
 See [LICENSE][license] for the official [Copyright Notice][copyright-notice-explainer].
 
 <details>
-  <summary>Project Logos (rubocop-ruby3_1)</summary>
+  <summary>Project Logos (rubocop-lts)</summary>
 
 See [docs/images/logo/README.txt][project-logos]
 </details>
@@ -302,7 +302,7 @@ Source: [Unsplash][org-logo-source]
 License: [Unsplash License][org-logo-license]
 </details>
 
-[project-logos]: https://github.com/rubocop-lts/rubocop-ruby3_1/blob/main/docs/images/logo/README.txt
+[project-logos]: https://github.com/rubocop-lts/rubocop-lts/blob/main/docs/images/logo/README.txt
 [org-logo-author]: https://unsplash.com/@yusufevli
 [org-logo-source]: https://unsplash.com/photos/yaSLNLtKRIU
 [org-logo-license]: https://unsplash.com/license
