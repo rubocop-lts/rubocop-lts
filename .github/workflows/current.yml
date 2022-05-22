@@ -56,7 +56,5 @@ jobs:
           bundler-cache: true
       - name: Run RuboCop
         run: bundle exec rubocop -DES
-      - name: Run RuboCop for 1.8.7
-        run: bundle exec rubocop -DES --config ${{ github.workspace }}/.rubocop-ruby1_8.yml
       - name: Run tests
         run: bundle exec rake test
