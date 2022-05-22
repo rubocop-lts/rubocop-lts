@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
   spec.metadata["source_code_uri"] = "#{spec.homepage}/tree/v#{spec.version}"
   spec.metadata["changelog_uri"] = "#{spec.homepage}/blob/v#{spec.version}/CHANGELOG.md"
   spec.metadata["bug_tracker_uri"] = "#{spec.homepage}/issues"
-  spec.metadata["documentation_uri"] = "https://www.rubydoc.info/gems/rubocop-ruby1_9/#{spec.version}"
+  spec.metadata["documentation_uri"] = "https://www.rubydoc.info/gems/#{spec.name}/#{spec.version}"
   spec.metadata["wiki_uri"] = "#{spec.homepage}/wiki"
   spec.metadata["rubygems_mfa_required"] = "true"
 

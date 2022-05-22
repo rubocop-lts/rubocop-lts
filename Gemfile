@@ -5,7 +5,6 @@ source "https://rubygems.org"
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
-# Specify your gem's dependencies in rubocop-ruby1_9.gemspec
 gemspec
 
 gem "rake", "~> 12.2"
