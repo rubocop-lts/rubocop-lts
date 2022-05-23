@@ -1,4 +1,4 @@
-name: Legacy Ruby Support
+name: Current Ruby Support
 
 on:
   push:
@@ -32,17 +32,15 @@ jobs:
         experimental: [false]
         gemfile:
           - vanilla
-          - rails5
+          - rails7
         rubygems:
-          - "2.7.11"
+          - latest
         bundler:
-          - none
+          - latest
         ruby:
-          - "2.2"
-          - "2.3"
-          - "2.4"
-          - "2.5"
-          - "2.6"
+          # NOTE: Underlying version of Rubocop for Ruby 2.2 will not work with Ruby 3
+          - "2.7"
+
     runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.experimental || endsWith(matrix.ruby, 'head') }}
     steps:
