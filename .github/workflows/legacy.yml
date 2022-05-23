@@ -32,15 +32,13 @@ jobs:
         experimental: [false]
         gemfile:
           - vanilla
-          - rails5
+          - rails6
         rubygems:
           - "2.7.11"
         bundler:
           - none
         ruby:
-          - "2.4"
           - "2.5"
-          - "2.6"
     runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.experimental || endsWith(matrix.ruby, 'head') }}
     steps:
