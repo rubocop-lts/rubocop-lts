@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
   spec.description = "Rubocop LTS - Chaos Reduction In a Bottle"
   spec.homepage = "https://github.com/rubocop-lts/rubocop-lts"
   spec.license = "MIT"
-  spec.required_ruby_version = [">= 1.9.0"]#, "< 2"]
+  spec.required_ruby_version = [">= 1.9.0", "< 2"]
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "#{spec.homepage}/tree/v#{spec.version}"
