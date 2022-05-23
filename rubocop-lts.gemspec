@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = "Rubocop LTS - Chaos Reduction In a Bottle"
   spec.homepage = "https://github.com/rubocop-lts/rubocop-lts"
   spec.license = "MIT"
-  spec.required_ruby_version = [">= 2.1.0", "< 3.2"]
+  spec.required_ruby_version = [">= 2.2.0", "< 2.3"]
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "#{spec.homepage}/tree/v#{spec.version}"
@@ -30,5 +30,5 @@ Gem::Specification.new do |spec|
   spec.executables = []
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "rubocop-ruby2_1", "~> 1.0.4"
+  spec.add_dependency "rubocop-ruby2_2", "~> 1.0.4"
 end
