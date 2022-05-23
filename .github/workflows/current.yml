@@ -39,6 +39,7 @@ jobs:
         bundler:
           - latest
         ruby:
+          # NOTE: Underlying version of Rubocop for Ruby 2.1 will not work with Ruby 3.1
           - "2.7"
           - "3.0"
 
