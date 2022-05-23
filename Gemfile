@@ -12,9 +12,9 @@ gem "rspec", "~> 3.0"
 
 ruby_version = Gem::Version.new(RUBY_VERSION)
 minimum_version = ->(version, engine = "ruby") { ruby_version >= Gem::Version.new(version) && RUBY_ENGINE == engine }
-coverage = minimum_version.call("3.0")
-linting = minimum_version.call("3.0")
-debugging = minimum_version.call("3.0")
+coverage = minimum_version.call("3.1")
+linting = minimum_version.call("3.1")
+debugging = minimum_version.call("3.1")
 
 gem "pry", platforms: %i[mri jruby]
 

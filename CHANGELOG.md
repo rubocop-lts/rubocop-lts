@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+## [21.0.0] - 2022-05-23
+### Added
+- Initial odd release supporting Ruby ~> 3.1
+
 ## [20.0.0] - 2022-05-23
 ### Added
 - Initial even release supporting Ruby >= 3.0
@@ -143,7 +147,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial odd release supporting Ruby ~> 1.9
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v20.0.0...HEAD
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v21.0.0...HEAD
+[21.0.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v20.0.0...v21.0.0
 [20.0.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v19.0.0...v20.0.0
 [19.0.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v18.0.0...v19.0.0
 [18.0.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v17.0.0...v18.0.0
