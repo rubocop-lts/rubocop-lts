@@ -35,7 +35,7 @@ Projects that support a single version of Ruby (like many closed-source applicat
 Projects that support multiple versions of Ruby simultaneously (like many open-source applications and libraries) will use the [Even releases][even-release].
 
 <!-- FIND VERSION -->
-**This README is for the odd release of `rubocop-lts` supporting Ruby >= 2.7.0.**
+**This README is for the odd release of `rubocop-lts` supporting Ruby ~> 2.7.0.**
 
 [odd-release]: https://github.com/rubocop-lts/rubocop-lts#odd-major-release
 [even-release]: https://github.com/rubocop-lts/rubocop-lts#even-major-release
@@ -329,7 +329,7 @@ For example:
 
 <!-- FIND VERSION -->
 ```ruby
-spec.add_dependency "rubocop-lts", "~> 17.0"
+spec.add_dependency "rubocop-lts", "~> 18.0"
 ```
 
 
