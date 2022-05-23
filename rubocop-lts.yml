@@ -1,11 +1,2 @@
 inherit_gem:
-  rubocop-ruby2_2: rubocop.yml
-
-# Removed as of 0.80.0
-# braces setting is for compatibility with Ruby 2.7+
-# See:
-#  * https://github.com/rubocop/rubocop/issues/7641
-#  * https://github.com/rubocop/rubocop/pull/7643
-Style/BracesAroundHashParameters:
-  Enabled: true
-  EnforcedStyle: context_dependent
+  rubocop-ruby2_3: rubocop.yml

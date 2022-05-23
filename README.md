@@ -35,7 +35,7 @@ Projects that support a single version of Ruby (like many closed-source applicat
 Projects that support multiple versions of Ruby simultaneously (like many open-source applications and libraries) will use the [Even releases][even-release].
 
 <!-- FIND VERSION -->
-**This README is for the even release of `rubocop-lts` supporting Ruby >= 2.2.0.**
+**This README is for the odd release of `rubocop-lts` supporting Ruby ~> 2.3.0.**
 
 [odd-release]: https://github.com/rubocop-lts/rubocop-lts#odd-major-release
 [even-release]: https://github.com/rubocop-lts/rubocop-lts#even-major-release
@@ -202,7 +202,7 @@ Add this line to your application's Gemfile:
 
 <!-- FIND VERSION -->
 ```ruby
-gem 'rubocop-lts', '~> 8.0', require: false
+gem 'rubocop-lts', '~> 9.0', require: false
 ```
 
 And then execute:
@@ -329,7 +329,7 @@ For example:
 
 <!-- FIND VERSION -->
 ```ruby
-spec.add_dependency "rubocop-lts", "~> 8.0"
+spec.add_dependency "rubocop-lts", "~> 9.0"
 ```
 
 
