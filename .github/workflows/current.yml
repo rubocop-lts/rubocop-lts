@@ -1,4 +1,4 @@
-name: Legacy Ruby Support
+name: Current Ruby Support
 
 on:
   push:
@@ -32,14 +32,16 @@ jobs:
         experimental: [false]
         gemfile:
           - vanilla
-          - rails6
+          - rails7
         rubygems:
-          - "2.7.11"
+          - latest
         bundler:
-          - none
+          - latest
         ruby:
-          - "2.5"
-          - "2.6"
+          - "2.7"
+          - "3.0"
+          - "3.1"
+
     runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.experimental || endsWith(matrix.ruby, 'head') }}
     steps:
