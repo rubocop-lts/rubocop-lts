@@ -72,7 +72,6 @@ Odd versions should be attached to a project's trunk (e.g. the main branch), for
 | `2.7.x` (`['>= 2.7.0', '< 3.0']`) | `gem "rubocop-lts", "~> 17.0"` | `rubocop-ruby2_7` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
 | `3.0.x` (`['>= 3.0.0', '< 3.1']`) | `gem "rubocop-lts", "~> 19.0"` | `rubocop-ruby3_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
 | `3.1.x` (`['>= 3.1.0', '< 3.2']`) | `gem "rubocop-lts", "~> 21.0"` | `rubocop-ruby3_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `3.2.x` / ruby-head               | `gem "rubocop-lts", "~> 23.0"` | `rubocop-ruby3_2` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
 
 ### Even Major Release
 
@@ -106,7 +105,6 @@ Even versions will help projects upgrade to newer Rubies while keeping the same 
 | `2.7.x` (`['>= 2.7.0', '< 3.2']`) | `gem "rubocop-lts", "~> 18.0"` | `rubocop-ruby2_7` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
 | `3.0.x` (`['>= 3.0.0', '< 3.2']`) | `gem "rubocop-lts", "~> 20.0"` | `rubocop-ruby3_0` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
 | `3.1.x` (`['>= 3.1.0', '< 3.2']`) | `gem "rubocop-lts", "~> 22.0"` | `rubocop-ruby3_1` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
-| `3.2.x` / ruby-head               | `gem "rubocop-lts", "~> 24.0"` | `rubocop-ruby3_2` | `inherit_gem:\n  rubocop-lts: rubocop-lts.yml` |
 
 ### All together now!
 
@@ -152,8 +150,7 @@ How to upgrade a project from yesterday, to today.
 | ⬆️ to `3.1.x` | ⬆️ to `gem "rubocop-lts", "~> 20.0"` | `['>= 3.0.0', '< 3.2']` | no change                    | no change                                      |
 | no change     | ⬆️ to `gem "rubocop-lts", "~> 21.0"` | `['>= 3.1.0', '< 3.2']` | [`rubocop-ruby3_1`][⛳️31-gh] | no change                                      |
 | ⬆️ to `3.2.x` | ⬆️ to `gem "rubocop-lts", "~> 22.0"` | `['>= 3.1.0', '< 3.2']` | no change                    | no change                                      |
-| no change     | ⬆️ to `gem "rubocop-lts", "~> 23.0"` | `['>= 3.2.0', '< 3.3']` | [`rubocop-ruby3_2`][⛳️32-gh] | no change                                      |
-| ⬆️ to `3.3.x` | ⬆️ to `gem "rubocop-lts", "~> 24.0"` | `['>= 3.2.0', '< 3.3']` | no change                    | no change                                      |
+
 
 > NOTE: `required_ruby_version` means the gem will install on a version of Ruby within the range.
 > Versions of this gem intended for ancient Rubies may not execute on more modern Rubies, _despite installing_.
@@ -190,7 +187,6 @@ inherit_gem:
 | [`rubocop-ruby2_7`][⛳️27-gh] | [![Gem Version][⛳️27-vi]][⛳️27-g]   | [![Total DL][🖇️27-dti]][⛳️27-g] [![DL Rank][🏘️27-rti]][⛳️27-g]     | [![Current][🚎27-cwfi]][🚎27-cwf] [![Heads][🖐27-hwfi]][🖐27-hwf]                                  | [![Open Issues][📗27-ioi]][📗27-io] [![Closed Issues][🚀27-ici]][🚀27-ic] [![Open PRs][💄27-poi]][💄27-po] [![Closed PRs][👽27-pci]][👽27-pc]         |
 | [`rubocop-ruby3_0`][⛳️30-gh] | [![Gem Version][⛳️30-vi]][⛳️30-g]   | [![Total DL][🖇️30-dti]][⛳️30-g] [![DL Rank][🏘️30-rti]][⛳️30-g]     | [![Current][🚎30-cwfi]][🚎30-cwf] [![Heads][🖐30-hwfi]][🖐30-hwf]                                  | [![Open Issues][📗30-ioi]][📗30-io] [![Closed Issues][🚀30-ici]][🚀30-ic] [![Open PRs][💄30-poi]][💄30-po] [![Closed PRs][👽30-pci]][👽30-pc]         |
 | [`rubocop-ruby3_1`][⛳️31-gh] | [![Gem Version][⛳️31-vi]][⛳️31-g]   | [![Total DL][🖇️31-dti]][⛳️31-g] [![DL Rank][🏘️31-rti]][⛳️31-g]     | [![Current][🚎31-cwfi]][🚎31-cwf] [![Heads][🖐31-hwfi]][🖐31-hwf]                                  | [![Open Issues][📗31-ioi]][📗31-io] [![Closed Issues][🚀31-ici]][🚀31-ic] [![Open PRs][💄31-poi]][💄31-po] [![Closed PRs][👽31-pci]][👽31-pc]         |
-| [`rubocop-ruby3_2`][⛳️32-gh] | [![Gem Version][⛳️32-vi]][⛳️32-g]   | [![Total DL][🖇️32-dti]][⛳️32-g] [![DL Rank][🏘️32-rti]][⛳️32-g]     | [![Current][🚎32-cwfi]][🚎32-cwf] [![Heads][🖐32-hwfi]][🖐32-hwf]                                  | [![Open Issues][📗32-ioi]][📗32-io] [![Closed Issues][🚀32-ici]][🚀32-ic] [![Open PRs][💄32-poi]][💄32-po] [![Closed PRs][👽32-pci]][👽32-pc]         |
 
 ## ✨ Installation
 
@@ -265,8 +261,6 @@ Odd versions use the token `odd` in the branch name.
 | 3.0             | even   | 20.x        | `r3_0-even-v20` | Upgrade, feat, multi-ruby-linting |
 | 3.1             | odd    | 21.x        | `r3_1-odd-v21`  | LTS, trunk, single-ruby-linting   |
 | 3.1             | even   | 22.x        | `r3_1-even-v22` | Upgrade, feat, multi-ruby-linting |
-| 3.2 / ruby-head | odd    | 23.x        | `r3_2-odd-v23`  | LTS, trunk, single-ruby-linting   |
-| 3.2 / ruby-head | even   | 24.x        | `r3_2-even-v24` | Upgrade, feat, multi-ruby-linting |
 
 > NOTE: For more on how Ruby 1.8 support works, see [above][lts1_8]
 
