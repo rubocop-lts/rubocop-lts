@@ -1,4 +1,3 @@
-# encoding: utf-8
 # frozen_string_literal: true
 
 # NOTE: Using __FILE__ because require_relative was added in Ruby 2.1
@@ -28,11 +27,11 @@ Gem::Specification.new do |spec|
 
   # Specify which files should be added to the gem when it is released.
   spec.files = Dir["lib/**/*.rb", "sig/**/*.rbs", "CHANGELOG.md", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md",
-                   "LICENSE.txt", "README.md", "rubocop.yml", "SECURITY.md"]
+                   "LICENSE.txt", "README.md", "rubocop-lts.yml", "SECURITY.md"]
   spec.test_files = Dir["spec/**/*"]
   spec.bindir = "exe"
   spec.executables = []
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "rubocop-ruby2_0", "~> 1.0.4"
+  spec.add_dependency "rubocop-ruby2_0", "~> 1.0.5"
 end
