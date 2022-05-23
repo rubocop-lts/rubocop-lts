@@ -1,11 +1,10 @@
-# encoding: utf-8
 # frozen_string_literal: true
 
 ["bundler/gem_tasks", "rake/testtask", "rspec/core/rake_task"].each { |f| require f }
 
 RSpec::Core::RakeTask.new(:spec)
 desc "alias spec => test"
-task :test => :spec
+task test: :spec
 
 begin
   require "rubocop/rake_task"
@@ -16,4 +15,4 @@ rescue LoadError
   end
 end
 
-task :default => [:spec, :rubocop]
+task default: %i[spec rubocop]

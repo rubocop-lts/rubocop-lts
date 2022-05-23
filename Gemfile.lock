@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    rubocop-lts (2.0.0)
-      rubocop-ruby2_0 (~> 1.0.4)
+    rubocop-lts (4.0.1)
+      rubocop-ruby2_0 (~> 1.0.5)
 
 GEM
   remote: https://rubygems.org/
@@ -41,12 +41,14 @@ GEM
       rainbow (>= 2.2.2, < 3.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
-    rubocop-rspec (1.5.0)
-      rubocop (>= 0.40.0)
-    rubocop-ruby2_0 (1.0.4)
+    rubocop-md (0.2.0)
+      rubocop (~> 0.50)
+    rubocop-rspec (1.5.1)
+      rubocop (>= 0.41.2)
+    rubocop-ruby2_0 (1.0.5)
       rubocop (= 0.50.0)
-    rubocop-thread_safety (0.3.1)
-      rubocop (>= 0.41.1)
+    rubocop-thread_safety (0.3.3)
+      rubocop (>= 0.48.0)
     ruby-progressbar (1.11.0)
     unicode-display_width (1.8.0)
 
@@ -55,11 +57,12 @@ PLATFORMS
 
 DEPENDENCIES
   pry
-  rake (~> 12.2)
+  rake (~> 12.3)
   rspec (~> 3.0)
   rubocop-lts!
-  rubocop-rspec (= 1.5.0)
-  rubocop-thread_safety (= 0.3.1)
+  rubocop-md (= 0.2.0)
+  rubocop-rspec (= 1.5.1)
+  rubocop-thread_safety (= 0.3.3)
 
 BUNDLED WITH
-   2.3.12
+   2.3.14
