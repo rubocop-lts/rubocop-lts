@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [6.0.0] - 2022-05-23
 ### Added
-- Initial odd release supporting Ruby >= 2.1
+- Initial even release supporting Ruby >= 2.1
 
 ## [5.0.1] - 2022-05-23
 ### Fixed
