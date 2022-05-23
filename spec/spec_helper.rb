@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 # This gem
-require "rubocop/ruby1_9"
+require "rubocop/lts"
 
 # RSpec Configs
 require "config/rspec/rspec_core"
