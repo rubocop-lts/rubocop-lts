@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+## [3.0.2] - 2022-05-23
+### Fixed
+- Make rubocop config files load ruby specific config from relevant rubocop-ruby*_* gem
+
 ## [3.0.1] - 2022-05-23
 ### Fixed
 - Ship rubocop config files in gem
