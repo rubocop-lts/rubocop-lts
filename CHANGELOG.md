@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+## [6.0.0] - 2022-05-23
+### Added
+- Initial odd release supporting Ruby >= 2.1
+
 ## [5.0.1] - 2022-05-23
 ### Fixed
 - Make rubocop config files load ruby specific config from relevant rubocop-ruby*_* gem
@@ -83,7 +87,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial odd release supporting Ruby ~> 1.9
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v5.0.1...HEAD
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v6.0.0...HEAD
+[6.0.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v5.0.1...v6.0.0
 [5.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v5.0.0...v5.0.1
 [5.0.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v4.0.2...v5.0.0
 [4.0.2]: https://github.com/rubocop-lts/rubocop-lts/compare/v4.0.1...v4.0.2
