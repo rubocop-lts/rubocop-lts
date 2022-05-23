@@ -15,6 +15,17 @@
 | 9.x     | :white_check_mark: |
 | 10.x    | :white_check_mark: |
 | 11.x    | :white_check_mark: |
+| 12.x    | :white_check_mark: |
+| 13.x    | :white_check_mark: |
+| 14.x    | :white_check_mark: |
+| 15.x    | :white_check_mark: |
+| 16.x    | :white_check_mark: |
+| 17.x    | :white_check_mark: |
+| 18.x    | :white_check_mark: |
+| 19.x    | :white_check_mark: |
+| 20.x    | :white_check_mark: |
+| 21.x    | :white_check_mark: |
+| 22.x    | :white_check_mark: |
 
 ## Reporting a Vulnerability
 
