@@ -40,6 +40,7 @@ jobs:
           - latest
         ruby:
           - "3.0"
+          - "3.1"
 
     runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.experimental || endsWith(matrix.ruby, 'head') }}
