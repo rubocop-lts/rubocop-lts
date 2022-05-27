@@ -16,7 +16,7 @@
     </a>
 </p>
 
-# Rubocop LTS
+# RuboCop LTS
 
 ## 🙋‍♀️ How often has RuboCop broken your build?
 
@@ -90,7 +90,7 @@ of ruby from `2.6` on.
 
 Intended for applications and libraries that lint against a range of Ruby versions.
 
-Even versions will help projects upgrade to newer Rubies while keeping the same underlying version of Rubocop version, so change can be introduced one step at a time.
+Even versions will help projects upgrade to newer Rubies while keeping the same underlying version of RuboCop version, so change can be introduced one step at a time.
 
 | Minimum Ruby                      | Your Gemfile                   | Your Gemfile.lock | Your .rubocop.yml                              |
 |-----------------------------------|--------------------------------|-------------------|------------------------------------------------|
@@ -307,7 +307,7 @@ License: [Unsplash License][org-logo-license]
 
 ## 🤝 Code of Conduct
 
-Everyone interacting in Rubocop LTS codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/rubocop-lts/rubocop-lts/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in RuboCop LTS codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/rubocop-lts/rubocop-lts/blob/main/CODE_OF_CONDUCT.md).
 
 ## 📌 Versioning
 
