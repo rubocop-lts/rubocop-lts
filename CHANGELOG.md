@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+## [7.0.1] - 2022-06-08
+### Added
+- Improve, and dry up documentation
+
 ## [7.0.0] - 2022-05-23
 ### Added
 - Initial odd release supporting Ruby ~> 2.2
