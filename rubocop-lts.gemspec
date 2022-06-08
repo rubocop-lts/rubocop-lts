@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = "Rubocop LTS - Chaos Reduction In a Bottle"
   spec.homepage = "https://github.com/rubocop-lts/rubocop-lts"
   spec.license = "MIT"
-  spec.required_ruby_version = [">= 2.4.0", "< 2.5"]
+  # spec.required_ruby_version = [">= 2.4.0", "< 2.5"]
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "#{spec.homepage}/tree/v#{spec.version}"
@@ -25,7 +25,6 @@ Gem::Specification.new do |spec|
   # Specify which files should be added to the gem when it is released.
   spec.files = Dir["lib/**/*.rb", "sig/**/*.rbs", "CHANGELOG.md", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md",
                    "LICENSE.txt", "README.md", "rubocop-lts.yml", "SECURITY.md"]
-  spec.test_files = Dir["spec/**/*"]
   spec.bindir = "exe"
   spec.executables = []
   spec.require_paths = ["lib"]
