@@ -13,6 +13,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+## [1.0.4] - 2022-06-08
+### Added
+- Security Policy @ SECURITY.md
+- Improve, and dry up documentation
+
 ## [1.0.3] - 2022-05-23
 ### Fixed
 - Make rubocop config files load ruby specific config from relevant rubocop-ruby*_* gem
@@ -31,7 +36,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial odd release supporting Ruby ~> 1.9
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v1.0.3...HEAD
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v1.0.4...HEAD
+[1.0.4]: https://github.com/rubocop-lts/rubocop-lts/compare/v1.0.3...v1.0.4
 [1.0.3]: https://github.com/rubocop-lts/rubocop-lts/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/rubocop-lts/rubocop-lts/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v1.0.0...v1.0.1
