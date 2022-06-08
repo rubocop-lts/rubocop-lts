@@ -1,3 +1,5 @@
+inherit_from: .rubocop_todo.yml
+
 inherit_gem:
   rubocop-lts: rubocop-lts.yml
 
@@ -8,9 +10,6 @@ Style/StringLiterals:
 Style/StringLiteralsInInterpolation:
   Enabled: true
   EnforcedStyle: double_quotes
-
-Metrics/LineLength:
-  Max: 120
 
 ###################################################################
 # Rules that allow preservation of ruby 1.8.7 / ree compatibility #
