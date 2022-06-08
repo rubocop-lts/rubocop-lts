@@ -21,6 +21,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial odd release supporting Ruby ~> 2.1
 
+## [4.0.3] - 2022-06-08
+### Fixed
+- Allow install up to Ruby < 4, which allows running against current Ruby HEAD @ 3.2-dev
+
 ## [4.0.2] - 2022-05-23
 ### Fixed
 - Make rubocop config files load ruby specific config from relevant rubocop-ruby*_* gem
@@ -46,6 +50,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [3.0.0] - 2022-05-22
 ### Added
 - Initial odd release supporting Ruby ~> 2.0
+
+## [2.0.4] - 2022-06-08
+### Fixed
+- Allow install up to Ruby < 4, which allows running against current Ruby HEAD @ 3.2-dev
 
 ## [2.0.3] - 2022-05-23
 ### Fixed
@@ -90,13 +98,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v5.0.1...HEAD
 [5.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v5.0.0...v5.0.1
-[5.0.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v4.0.2...v5.0.0
+[5.0.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v4.0.3...v5.0.0
+[4.0.3]: https://github.com/rubocop-lts/rubocop-lts/compare/v4.0.2...v4.0.3
 [4.0.2]: https://github.com/rubocop-lts/rubocop-lts/compare/v4.0.1...v4.0.2
 [4.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v4.0.0...v4.0.1
 [4.0.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v3.0.2...v4.0.0
 [3.0.2]: https://github.com/rubocop-lts/rubocop-lts/compare/v3.0.1...v3.0.2
 [3.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v3.0.0...v3.0.1
-[3.0.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v2.0.3...v3.0.0
+[3.0.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v2.0.4...v3.0.0
+[2.0.4]: https://github.com/rubocop-lts/rubocop-lts/compare/v2.0.3...v2.0.4
 [2.0.3]: https://github.com/rubocop-lts/rubocop-lts/compare/v2.0.2...v2.0.3
 [2.0.2]: https://github.com/rubocop-lts/rubocop-lts/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v2.0.0...v2.0.1
