@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+## [8.0.2] - 2022-06-09
+### Fixed
+- Allow install up to Ruby < 4, which allows running against current Ruby HEAD @ 3.2-dev
+
 ## [8.0.1] - 2022-06-09
 ### Added
 - Improve, and dry up documentation
@@ -133,7 +137,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial odd release supporting Ruby ~> 1.9
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v8.0.1...HEAD
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v8.0.2...HEAD
+[8.0.2]: https://github.com/rubocop-lts/rubocop-lts/compare/v8.0.1...v8.0.2
 [8.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v8.0.0...v8.0.1
 [8.0.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v7.0.1...v8.0.0
 [7.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v7.0.0...v7.0.1
