@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 ## [15.0.1] - 2022-06-09
+### Changed
+- Bumped dependency rubocop-ruby2_6 to ~> 1.0.7
 ### Added
 - Improve, and dry up documentation
 
