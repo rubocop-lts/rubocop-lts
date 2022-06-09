@@ -204,7 +204,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial odd release supporting Ruby ~> 1.9
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v15.0.0...HEAD
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v15.0.1...HEAD
+[15.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v15.0.0...v15.0.1
 [15.0.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v14.0.1...v15.0.0
 [14.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v14.0.0...v14.0.1
 [14.0.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v13.0.1...v14.0.0
