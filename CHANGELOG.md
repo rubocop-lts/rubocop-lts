@@ -13,9 +13,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
-## [11.0.1] - 2022-06-09
+## [11.0.2] - 2022-06-09
 ### Added
 - Improve, and dry up documentation
+
+## 11.0.1 - 2022-06-09 (YANKED)
+- accidentally removed required_ruby_version from gemspec
 
 ## [11.0.0] - 2022-05-23
 ### Added
@@ -164,8 +167,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial odd release supporting Ruby ~> 1.9
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v11.0.1...HEAD
-[11.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v11.0.0...v11.0.1
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v11.0.2...HEAD
+[11.0.2]: https://github.com/rubocop-lts/rubocop-lts/compare/v11.0.0...v11.0.2
 [11.0.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v10.0.1...v11.0.0
 [10.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v10.0.0...v10.0.1
 [10.0.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v9.0.1...v10.0.0
