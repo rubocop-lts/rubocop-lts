@@ -20,36 +20,48 @@
 
 ## PROJECT DOCUMENTATION
 
-|🌱 [Why Build This?][Why-Build-This]
-|🌱 [Convention > Configuration][Convention-Over-Configuration]
---⊕🌱 [Even Releases][Even-Major-Release]
---⊕🌱 [Odd Releases][Odd-Major-Release]
-|🌱 [How to Upgrade Ruby (1.8 to 3.2)!][How-To-Upgrade-Ruby]
-|👩‍💻 [Org Health](https://github.com/rubocop-lts/.github/blob/main/profile/README.md#👩‍💻-project-health])
---⊕👩‍💻 [Project Health](#👩‍💻-project-health)
-|🌳 [This Branch](#🌳-this-branch)
-|✨ [Installation](#✨-installation)
-|🔧 [Usage](https://github.com/rubocop-lts/.github/blob/main/profile/README.md#🔧-usage)
-|🏗️ [Development](https://github.com/rubocop-lts/.github/blob/main/profile/README.md#🏗️-development)
---⊕⚡️ [Contributing](https://github.com/rubocop-lts/.github/blob/main/profile/README.md#⚡️-contributing)
---⊕🌈 [Contributors](https://github.com/rubocop-lts/.github/blob/main/profile/README.md#🌈-contributors)
-|📄 [License](https://github.com/rubocop-lts/.github/blob/main/profile/README.md#📄-license)
-|⊕© [Copyright](https://github.com/rubocop-lts/.github/blob/main/profile/README.md#©-copyright)
-|🤝 [Code of Conduct](https://github.com/rubocop-lts/.github/blob/main/profile/README.md#🤝-code-of-conduct)
-|📌 [Versioning](https://github.com/rubocop-lts/.github/blob/main/profile/README.md#📌-versioning)
+* 🌱 [Why Build This?][Why-Build-This]
+* 🌱 [Convention > Configuration][Convention-Over-Configuration]
+    * 🌱 [Even Releases][Even-Major-Release]
+    * 🌱 [Odd Releases][Odd-Major-Release]
+* 🌱 [How to Upgrade Ruby (1.8 to 3.2)!][How-To-Upgrade-Ruby]
+* 👩‍💻 [Org Health][OrgHealth]
+* 🔧 [Usage][Usage]
+* 🧮 [Development][Development]
+    * ⚡️ [Contributing][Contributing]
+    * 🌈 [Contributors][Contributors]
+* 📄 [License][License]
+    * © [Copyright][Copyright]
+* 🤝 [Code of Conduct][Code of Conduct]
+* 📌 [Versioning][Versioning]
 
 [Why-Build-This]: https://github.com/rubocop-lts/.github/blob/main/profile/WHY_BUILD_THIS.md
 [Convention-Over-Configuration]: https://github.com/rubocop-lts/.github/blob/main/profile/CONV_OVER_CONF.md
 [Even-Major-Release]: https://github.com/rubocop-lts/.github/blob/main/profile/CONV_OVER_CONF.md#even-major-release
 [Odd-Major-Release]: https://github.com/rubocop-lts/.github/blob/main/profile/CONV_OVER_CONF.md#odd-major-release
 [How-To-Upgrade-Ruby]: https://github.com/rubocop-lts/.github/blob/main/profile/HOW_TO_UPGRADE_RUBY.md
+[OrgHealth]: https://github.com/rubocop-lts/.github/blob/main/profile/README.md#org-health-
+[Usage]: https://github.com/rubocop-lts/.github/blob/main/profile/README.md#usage-
+[Development]: https://github.com/rubocop-lts/.github/blob/main/profile/README.md#development-
+[Contributing]: https://github.com/rubocop-lts/.github/blob/main/profile/README.md#contributing-
+[Contributors]: https://github.com/rubocop-lts/.github/blob/main/profile/README.md#contributors-
+[License]: https://github.com/rubocop-lts/.github/blob/main/profile/README.md#license-
+[Copyright]: https://github.com/rubocop-lts/.github/blob/main/profile/README.md#copyright-
+[Code of Conduct]: https://github.com/rubocop-lts/.github/blob/main/profile/README.md#code-of-conduct-
+[Versioning]: https://github.com/rubocop-lts/.github/blob/main/profile/README.md#versioning-
 
-## 🌳 This Branch
+## This README
+
+* 🌳 [This Branch](#this-branch-)
+* ‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+
+## This Branch 🌳
 
 <!-- FIND VERSION -->
 **This README is for the even release of `rubocop-lts` supporting Ruby >= 2.5.0.**
 
-## 👩‍💻 Project Health
+## Project Health 👩‍💻
 
 | Gem Name                     | Version                             | Downloads                                                            | CI                                                                                                 | Activity                                                                                                                                              |
 |------------------------------|-------------------------------------|----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -66,7 +78,7 @@
 | [`rubocop-ruby3_0`][⛳️30-gh] | [![Gem Version][⛳️30-vi]][⛳️30-g]   | [![Total DL][🖇️30-dti]][⛳️30-g] [![DL Rank][🏘️30-rti]][⛳️30-g]     | [![Current][🚎30-cwfi]][🚎30-cwf] [![Heads][🖐30-hwfi]][🖐30-hwf]                                  | [![Open Issues][📗30-ioi]][📗30-io] [![Closed Issues][🚀30-ici]][🚀30-ic] [![Open PRs][💄30-poi]][💄30-po] [![Closed PRs][👽30-pci]][👽30-pc]         |
 | [`rubocop-ruby3_1`][⛳️31-gh] | [![Gem Version][⛳️31-vi]][⛳️31-g]   | [![Total DL][🖇️31-dti]][⛳️31-g] [![DL Rank][🏘️31-rti]][⛳️31-g]     | [![Current][🚎31-cwfi]][🚎31-cwf] [![Heads][🖐31-hwfi]][🖐31-hwf]                                  | [![Open Issues][📗31-ioi]][📗31-io] [![Closed Issues][🚀31-ici]][🚀31-ic] [![Open PRs][💄31-poi]][💄31-po] [![Closed PRs][👽31-pci]][👽31-pc]         |
 
-## ✨ Installation
+## Installation ✨
 
 Without bundler execute:
 
@@ -375,8 +387,6 @@ And then execute:
 [followme-img]: https://img.shields.io/twitter/follow/galtzo.svg?style=social&label=Follow
 
 [tweetme]: http://twitter.com/galtzo
-
-[politicme]: https://nationalprogressiveparty.org
 
 [documentation]: https://rubydoc.info/github/rubocop-lts/rubocop-lts/main
 
