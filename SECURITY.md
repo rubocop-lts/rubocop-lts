@@ -2,30 +2,30 @@
 
 ## Supported Versions
 
-| Version | Supported          |
-|---------|--------------------|
-| 1.x     | :white_check_mark: |
-| 2.x     | :white_check_mark: |
-| 3.x     | :white_check_mark: |
-| 4.x     | :white_check_mark: |
-| 5.x     | :white_check_mark: |
-| 6.x     | :white_check_mark: |
-| 7.x     | :white_check_mark: |
-| 8.x     | :white_check_mark: |
-| 9.x     | :white_check_mark: |
-| 10.x    | :white_check_mark: |
-| 11.x    | :white_check_mark: |
-| 12.x    | :white_check_mark: |
-| 13.x    | :white_check_mark: |
-| 14.x    | :white_check_mark: |
-| 15.x    | :white_check_mark: |
-| 16.x    | :white_check_mark: |
-| 17.x    | :white_check_mark: |
-| 18.x    | :white_check_mark: |
-| 19.x    | :white_check_mark: |
-| 20.x    | :white_check_mark: |
-| 21.x    | :white_check_mark: |
-| 22.x    | :white_check_mark: |
+| Version   | Supported |
+|-----------|-----------|
+| 1.latest  | ✅         |
+| 2.latest  | ✅         |
+| 3.latest  | ✅         |
+| 4.latest  | ✅         |
+| 5.latest  | ✅         |
+| 6.latest  | ✅         |
+| 7.latest  | ✅         |
+| 8.latest  | ✅         |
+| 9.latest  | ✅         |
+| 10.latest | ✅         |
+| 11.latest | ✅         |
+| 12.latest | ✅         |
+| 13.latest | ✅         |
+| 14.latest | ✅         |
+| 15.latest | ✅         |
+| 16.latest | ✅         |
+| 17.latest | ✅         |
+| 18.latest | ✅         |
+| 19.latest | ✅         |
+| 20.latest | ✅         |
+| 21.latest | ✅         |
+| 22.latest | ✅         |
 
 ## Reporting a Vulnerability
 
