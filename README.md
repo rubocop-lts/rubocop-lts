@@ -95,6 +95,15 @@ And then execute:
 
     $ bundle
 
+### Dependabot Noise Reduction
+
+Add the following to `.github/dependabot.yml` if you use Github Actions.
+
+```yaml
+    ignore:
+      - dependency-name: "rubocop-lts"
+```
+
 ## 🔧 Usage
 
 The following is optional.  We'll discuss why you might want to do this after you see what it does.
