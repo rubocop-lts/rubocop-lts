@@ -29,5 +29,5 @@ Gem::Specification.new do |spec|
   spec.executables = []
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "rubocop-ruby3_1", "~> 1.0.6"
+  spec.add_dependency "rubocop-ruby3_1", ">= 1.0.6", "< 1.2.0"
 end
