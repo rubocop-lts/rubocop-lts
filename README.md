@@ -106,14 +106,25 @@ Add the following to `.github/dependabot.yml` if you use Github Actions.
 
 ## 🔧 Usage
 
-The following is optional.  We'll discuss why you might want to do this after you see what it does.
+The following is optional.
 
 Add to the top of your project's `.rubocop.yml` configuration file:
 
 ```yaml
 inherit_gem:
-  - rubocop-lts.yml
+  rubocop-lts: rubocop-lts.yml
 ```
+
+It is equivalent to doing the following:
+
+```yaml
+inherit_gem:
+  rubocop-ruby3_1: rubocop.yml
+```
+
+Except for one thing. See how the Ruby version is explicit?
+Using rubocop-lts.yml allows the file in your project to remain unchanged, and the Ruby version will track the version of rubocop-lts.
+You would never have to change the line for a Ruby version upgrade, instead just update the gem.
 
 <details>
   <summary>📼 Supporting Ruby 1.8</summary>
