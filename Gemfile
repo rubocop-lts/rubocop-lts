@@ -11,7 +11,7 @@ gem "rake", "~> 13.0"
 gem "rspec", "~> 3.0"
 
 ruby_version = Gem::Version.new(RUBY_VERSION)
-minimum_version = ->(version, engine = "ruby") { ruby_version >= Gem::Version.new(version) && RUBY_ENGINE == engine }
+minimum_version = ->(version, engine = "ruby") { ruby_version >= Gem::Version.new(version) && engine == RUBY_ENGINE }
 coverage = minimum_version.call("2.7")
 linting = minimum_version.call("2.7")
 debugging = minimum_version.call("2.7")
