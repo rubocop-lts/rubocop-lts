@@ -10,11 +10,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
-## [18.1.0] - 2023-03-14
+## [18.1.0] - 2023-03-16
+### Added
+- Certificate for signing gem releases
+- Gemspec metadata
+  - funding_uri
+- SHA256 and SHA512 Checksums for release
 ### Changed
 - Bumped dependency rubocop-ruby2_7 to ~> 1.1.3
   - Allows rubocop ~> 1.48.1
   - Compatible with rubocop-packaging ~> 0.5.2
+- Gem releases are now cryptographically signed
 
 ## [18.0.1] - 2022-06-09
 ### Added
@@ -27,6 +33,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [18.0.0] - 2022-05-23
 ### Added
 - Initial even release supporting Ruby >= 2.7
+
+## [17.1.0] - 2023-03-16
+### Added
+- Certificate for signing gem releases
+- Gemspec metadata
+  - funding_uri
+- SHA256 and SHA512 Checksums for release
+### Changed
+- Bumped dependency rubocop-ruby2_7 to ~> 1.1.3
+  - Allows rubocop ~> 1.48.1
+  - Compatible with rubocop-packaging ~> 0.5.2
+- Gem releases are now cryptographically signed
 
 ## [17.0.1] - 2022-06-09
 ### Added
@@ -245,7 +263,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v18.1.0...HEAD
 [18.1.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v18.0.1...v18.1.0
 [18.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v18.0.0...v18.0.1
-[18.0.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v17.0.1...v18.0.0
+[18.0.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v17.1.0...v18.0.0
+[17.1.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v17.0.1...v17.1.0
 [17.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v17.0.0...v17.0.1
 [17.0.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v16.0.1...v17.0.0
 [16.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v16.0.0...v16.0.1
