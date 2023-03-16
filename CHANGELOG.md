@@ -10,11 +10,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
-## [18.1.0] - 2023-03-15
+## [18.1.0] - 2023-03-16
+### Added
+- Certificate for signing gem releases
+- Gemspec metadata
+  - funding_uri
+- SHA256 and SHA512 Checksums for release
 ### Changed
 - Bumped dependency rubocop-ruby2_7 to ~> 1.1.3
   - Allows rubocop ~> 1.48.1
   - Compatible with rubocop-packaging ~> 0.5.2
+- Gem releases are now cryptographically signed
 
 ## [18.0.1] - 2022-06-09
 ### Added
@@ -28,7 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial even release supporting Ruby >= 2.7
 
-## [17.1.0] - 2023-03-15
+## [17.1.0] - 2023-03-16
 ### Added
 - Certificate for signing gem releases
 - Gemspec metadata
