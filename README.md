@@ -82,13 +82,13 @@
 
 Without bundler execute:
 
-    $ gem install 
+    $ gem install
 
 Add this line to your application's Gemfile:
 
 <!-- FIND VERSION -->
 ```ruby
-gem 'rubocop-lts', '~> 19.0', require: false
+gem "rubocop-lts", "~> 19.0", require: false
 ```
 
 And then execute:
