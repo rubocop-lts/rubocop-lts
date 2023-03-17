@@ -1,12 +1,20 @@
 # frozen_string_literal: true
 
-require_relative "lib/rubocop/lts/version"
+# Get the GEMFILE_VERSION without *require* "my_gem/version", for code coverage accuracy
+# See: https://github.com/simplecov-ruby/simplecov/issues/557#issuecomment-825171399
+load "lib/rubocop/lts/version.rb"
+gem_version = Rubocop::Lts::VERSION
+Rubocop::Lts.send(:remove_const, :VERSION)
 
 Gem::Specification.new do |spec|
   spec.name = "rubocop-lts"
-  spec.version = Rubocop::Lts::VERSION
+  spec.version = gem_version
   spec.authors = ["Peter Boling"]
   spec.email = ["peter.boling@gmail.com"]
+
+  # See CONTRIBUTING.md
+  spec.cert_chain  = ["certs/pboling.pem"]
+  spec.signing_key = File.expand_path("~/.ssh/gem-private_key.pem") if $PROGRAM_NAME.end_with?("gem")
 
   spec.summary = "Rubocop LTS - Semantically Versioned"
   spec.description = "Rubocop LTS - Chaos Reduction In a Bottle"
@@ -24,8 +32,19 @@ Gem::Specification.new do |spec|
   spec.metadata["rubygems_mfa_required"] = "true"
 
   # Specify which files should be added to the gem when it is released.
-  spec.files = Dir["lib/**/*.rb", "sig/**/*.rbs", "CHANGELOG.md", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md",
-                   "LICENSE.txt", "README.md", "rubocop-lts.yml", "SECURITY.md"]
+  spec.files = Dir[
+    # Splats (alphabetical)
+    "lib/**/*.rb",
+    "sig/**/*.rbs",
+    # Files (alphabetical)
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE.txt",
+    "README.md",
+    "rubocop-lts.yml",
+    "SECURITY.md"
+  ]
   spec.bindir = "exe"
   spec.executables = []
   spec.require_paths = ["lib"]
