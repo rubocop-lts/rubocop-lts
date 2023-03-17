@@ -6,12 +6,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-
 ### Changed
-
 ### Fixed
-
 ### Removed
+
+## [19.1.0] - 2023-03-17
+### Added
+- Certificate for signing gem releases
+- Gemspec metadata
+  - funding_uri
+- SHA256 and SHA512 Checksums for release
+### Changed
+- Bumped dependency rubocop-ruby3_0 to ~> 1.1.2
+  - Allows rubocop ~> 1.48.1
+  - Compatible with rubocop-packaging ~> 0.5.2
+- Gem releases are now cryptographically signed
 
 ## [19.0.1] - 2022-06-09
 ### Added
@@ -249,7 +258,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial odd release supporting Ruby ~> 1.9
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v19.0.1...HEAD
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v19.1.0...HEAD
+[19.1.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v19.0.1...v19.1.0
 [19.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v19.0.0...v19.0.1
 [19.0.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v18.0.1...v19.0.0
 [18.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v18.0.0...v18.0.1

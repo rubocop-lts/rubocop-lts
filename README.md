@@ -88,7 +88,7 @@ Add this line to your application's Gemfile:
 
 <!-- FIND VERSION -->
 ```ruby
-gem "rubocop-lts", "~> 19.0", require: false
+gem "rubocop-lts", "~> 19.1", require: false
 ```
 
 And then execute:
