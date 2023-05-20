@@ -12,9 +12,13 @@ Gem::Specification.new do |spec|
   spec.authors = ["Peter Boling"]
   spec.email = ["peter.boling@gmail.com"]
 
-  spec.summary = "Rubocop LTS - Semantically Versioned"
-  spec.description = "Rubocop LTS - Chaos Reduction In a Bottle"
-  spec.homepage = "https://github.com/rubocop-lts/rubocop-lts"
+  # See CONTRIBUTING.md
+  spec.cert_chain = ["certs/pboling.pem"]
+  spec.signing_key = File.expand_path("~/.ssh/gem-private_key.pem") if $PROGRAM_NAME.end_with?("gem")
+
+  spec.summary = "Rules for Rubies: Rubocop + Standard + Betterlint + Shopify + Gradual"
+  spec.description = "Configure RuboCop + a bevy of friends to gradually lint Ruby code"
+  spec.homepage = "https://github.com/rubocop-lts/#{spec.name}"
   spec.license = "MIT"
   spec.required_ruby_version = [">= 1.9.0", "< 4.0"]
 
