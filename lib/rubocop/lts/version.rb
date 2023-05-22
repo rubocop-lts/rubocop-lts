@@ -3,6 +3,8 @@
 
 module Rubocop
   module Lts
-    VERSION = "2.0.5".freeze
+    module Version
+      VERSION = "2.1.0"
+    end
   end
 end

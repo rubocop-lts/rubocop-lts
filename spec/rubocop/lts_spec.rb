@@ -1,8 +1,11 @@
-# encoding: utf-8
 # frozen_string_literal: true
 
+require "rake"
+
 RSpec.describe Rubocop::Lts do
-  it "has a version number" do
-    expect(Rubocop::Lts::VERSION).not_to be nil
+  describe described_class::Error do
+    it "is a standard error" do
+      expect { raise described_class }.to raise_error(StandardError)
+    end
   end
 end

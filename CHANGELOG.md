@@ -6,12 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-
 ### Changed
-
 ### Fixed
-
 ### Removed
+
+## [2.1.0] - 2023-05-20
+### Changed
+- Broadened scope of gem, updated `rubocop-ruby*_*` which configures many linting tools via `standard-rubocop-lts`
+### Removed
+- Install support for Ruby < 2.7 (minimum is now 2.7, analysis of older Ruby still supported)
 
 ## [2.0.5] - 2022-06-08
 ### Added
@@ -23,7 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.0.3] - 2022-05-23
 ### Fixed
-- Make rubocop config files load ruby specific config from relevant rubocop-ruby*_* gem
+- Make rubocop config files load ruby specific config from relevant `rubocop-ruby*_*` gem
 
 ## [2.0.2] - 2022-05-23
 ### Fixed
@@ -46,7 +49,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.3] - 2022-05-23
 ### Fixed
-- Make rubocop config files load ruby specific config from relevant rubocop-ruby*_* gem
+- Make rubocop config files load ruby specific config from relevant `rubocop-ruby*_*` gem
 
 ## [1.0.2] - 2022-05-23
 ### Fixed
@@ -62,7 +65,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial odd release supporting Ruby ~> 1.9
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v2.0.5...HEAD
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v2.1.0...HEAD
+[2.1.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v2.0.5...v2.1.0
 [2.0.5]: https://github.com/rubocop-lts/rubocop-lts/compare/v2.0.4...v2.0.5
 [2.0.4]: https://github.com/rubocop-lts/rubocop-lts/compare/v2.0.3...v2.0.4
 [2.0.3]: https://github.com/rubocop-lts/rubocop-lts/compare/v2.0.2...v2.0.3
