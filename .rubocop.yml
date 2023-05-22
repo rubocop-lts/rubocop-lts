@@ -1,20 +1,13 @@
-inherit_from: .rubocop_todo.yml
+# Other projects will do the following:
+#inherit_gem:
+#  # Pick one:
+#  #  rubocop-lts: config/rails_rspec.yml # or config/rails.yml w/o rspec
+#  #  rubocop-lts: config/ruby_rspec.yml # or config/ruby.yml w/o rspec
+#  # This is a RubyGem and is tested with RSpec, so obviously:
+#  rubocop-lts: config/rubygem_rspec.yml # or config/rubygem.yml w/o rspec
+#  # Also, convention over configuration, so obviously:
+#  rubocop-lts: rubocop.yml # for the ruby + rspec
 
-inherit_gem:
-  rubocop-lts: rubocop-lts.yml
-
-require:
-  - rubocop-md
-  - rubocop-packaging
-  - rubocop-performance
-  - rubocop-rake
-  - rubocop-rspec
-  - rubocop-thread_safety
-
-Style/StringLiterals:
-  Enabled: true
-  EnforcedStyle: double_quotes
-
-Style/StringLiteralsInInterpolation:
-  Enabled: true
-  EnforcedStyle: double_quotes
+# But we are inside the gem, so we need a different paradigm here.
+inherit_from:
+  - config/rubygem_rspec.yml
