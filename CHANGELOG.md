@@ -42,7 +42,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial even release supporting Ruby >= 3.0
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v20.2.0...HEAD
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v20.2.1...HEAD
+[20.2.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v20.2.0...v20.2.1
 [20.2.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v20.1.0...v20.2.0
 [20.1.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v20.0.1...v20.1.0
 [20.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v20.0.0...v20.0.1
