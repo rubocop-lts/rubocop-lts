@@ -10,23 +10,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
-## [16.1.0] - 2023-05-22
-### Removed
-- Support for installs on Ruby < 2.7. Minimum runtime version is Ruby 2.7.  Continues to analyze older Ruby.
+## [18.2.0] - 2023-05-22
+### Changed
+- Bumped dependency rubocop-ruby2_7 to ~> 2.0.4
 
-## [16.0.1] - 2022-06-09
+## [18.1.0] - 2023-03-16
+### Added
+- Certificate for signing gem releases
+- Gemspec metadata
+    - funding_uri
+- SHA256 and SHA512 Checksums for release
+### Changed
+- Bumped dependency rubocop-ruby2_7 to ~> 1.1.3
+    - Allows rubocop ~> 1.48.1
+    - Compatible with rubocop-packaging ~> 0.5.2
+- Gem releases are now cryptographically signed
+
+## [18.0.1] - 2022-06-09
 ### Added
 - Improve, and dry up documentation
 ### Changed
-- Bumped dependency rubocop-ruby2_6 to ~> 1.0.7
+- Bumped dependency rubocop-ruby2_7 to ~> 1.0.6
 ### Fixed
 - Allow install up to Ruby < 4, which allows running against current Ruby HEAD @ 3.2-dev
 
-## [16.0.0] - 2022-05-23
+## [18.0.0] - 2022-05-23
 ### Added
-- Initial even release supporting Ruby >= 2.6
+- Initial even release supporting Ruby >= 2.7
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v16.1.0...HEAD
-[16.1.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v16.0.1...v16.1.0
-[16.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v16.0.0...v16.0.1
-[16.0.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/tags/v16.0.0
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v18.2.0...HEAD
+[18.2.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v18.1.0...v18.2.0
+[18.1.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v18.0.1...v18.1.0
+[18.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v18.0.0...v18.0.1
+[18.0.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/tags/v18.0.0
