@@ -17,6 +17,7 @@ begin
   YARD::Rake::YardocTask.new do |t|
     t.files = [
       # Splats (alphabetical)
+      "config/*.yml",
       "lib/**/*.rb",
       "sig/**/*.rbs",
       # Files (alphabetical)
