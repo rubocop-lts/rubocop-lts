@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [22.1.1] - 2023-05-22
+### Changed
+- Minimum Ruby version is 3.1
+
 ## [22.1.0] - 2023-05-22
 ### Changed
 - Bumped dependency rubocop-ruby3_1 to ~> 2.0.4
@@ -26,8 +30,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial even release supporting Ruby >= 3.1
 
-
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v22.1.0...HEAD
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v22.1.1...HEAD
+[22.1.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v22.1.0...v22.1.1
 [22.1.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v22.0.1...v22.1.0
 [22.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v22.0.0...v22.0.1
 [22.0.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/tags/v22.0.0

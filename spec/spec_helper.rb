@@ -11,8 +11,8 @@ require "config/rspec/rspec_core"
 require "config/rspec/rspec_block_is_expected"
 
 engine = "ruby"
-major = 2
-minor = 7
+major = 3
+minor = 0
 version = "#{major}.#{minor}"
 gte_min = VersionGem::Ruby.gte_minimum_version?(version, engine)
 actual_minor = VersionGem::Ruby.actual_minor_version?(major, minor, engine)
