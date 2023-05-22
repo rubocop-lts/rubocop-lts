@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - 'main'
+      - 'r*-even-v*'
+      - 'r*-odd-v*'
     tags:
       - '!*' # Do not execute on tags
   pull_request:
