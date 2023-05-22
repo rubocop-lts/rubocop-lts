@@ -14,7 +14,7 @@ RUBY_VER = Gem::Version.new(RUBY_VERSION)
 #noinspection RbsMissingTypeSignature
 IS_CI = !ENV["CI"].nil?
 #noinspection RbsMissingTypeSignature
-LOCAL_SUPPORTED = !IS_CI && Gem::Version.new("3.0") <= RUBY_VER && RUBY_ENGINE == "ruby"
+LOCAL_SUPPORTED = !IS_CI && Gem::Version.new("3.1") <= RUBY_VER && RUBY_ENGINE == "ruby"
 # rubocop:enable Layout/LeadingCommentSpace
 
 if LOCAL_SUPPORTED || IS_CI
