@@ -16,6 +16,7 @@ begin
   YARD::Rake::YardocTask.new do |t|
     t.files = [
       # Splats (alphabetical)
+      "config/**/*.yml",
       "lib/**/*.rb",
       "sig/**/*.rbs",
       # Files (alphabetical)
@@ -37,9 +38,9 @@ end
 
 defaults = %i[test]
 
-require "rubocop/ruby2_0"
+require "rubocop/ruby2_2"
 
-Rubocop::Ruby20.install_tasks
+Rubocop::Ruby22.install_tasks
 
 defaults << :rubocop_gradual
 
