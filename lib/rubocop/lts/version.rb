@@ -2,6 +2,8 @@
 
 module Rubocop
   module Lts
-    VERSION = "14.0.1"
+    module Version
+      VERSION = "12.1.0"
+    end
   end
 end
