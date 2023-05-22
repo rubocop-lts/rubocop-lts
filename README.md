@@ -59,7 +59,7 @@
 ## This Branch 🌳
 
 <!-- FIND VERSION -->
-**This README is for the even release of `rubocop-lts` supporting Ruby >= 3.0.**
+**This README is for the even release of `rubocop-lts` supporting Ruby >= 3.1.**
 
 This gem configures many gems for you:
 
@@ -123,7 +123,7 @@ Or add this line to your application's Gemfile:
 
 <!-- FIND VERSION -->
 ```ruby
-gem "rubocop-lts", "~> 20.2", require: false
+gem "rubocop-lts", "~> 22.1", require: false
 ```
 
 And then execute:
