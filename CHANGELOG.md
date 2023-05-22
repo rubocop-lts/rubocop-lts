@@ -10,7 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
-## [20.2.0] - 2023-05-22
+## [20.2.1] - 2023-05-22
+### Changed
+- Minimum Ruby version is 3.0
+
+## [20.2.0] - 2023-05-22 [YANKED]
 ### Changed
 - Bumped dependency rubocop-ruby3_0 to ~> 2.0.4
 
