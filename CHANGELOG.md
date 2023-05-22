@@ -10,38 +10,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
-## [4.1.0] - 2023-05-22
+## [6.1.0] - 2023-05-22
 ### Removed
 - Support for installs on Ruby < 2.7. Minimum runtime version is Ruby 2.7.  Continues to analyze older Ruby.
 
-## [4.0.3] - 2022-06-08
+## [6.0.1] - 2022-06-08
 ### Added
-- Improve, and dry up documentation
-### Fixed
 - Allow install up to Ruby < 4, which allows running against current Ruby HEAD @ 3.2-dev
-
-## [4.0.3] - 2022-06-08
-### Added
 - Improve, and dry up documentation
-### Fixed
-- Allow install up to Ruby < 4, which allows running against current Ruby HEAD @ 3.2-dev
 
-## [4.0.2] - 2022-05-23
-### Fixed
-- Make rubocop config files load ruby specific config from relevant rubocop-ruby*_* gem
-
-## [4.0.1] - 2022-05-23
-### Fixed
-- Ship rubocop config files in gem
-  - rubocop-lts.yml
-
-## [4.0.0] - 2022-05-22
+## [6.0.0] - 2022-05-23
 ### Added
-- Initial even release supporting Ruby >= 2.0
+- Initial even release supporting Ruby >= 2.1
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v4.1.0...HEAD
-[4.1.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v4.0.3...v4.1.0
-[4.0.3]: https://github.com/rubocop-lts/rubocop-lts/compare/v4.0.2...v4.0.3
-[4.0.2]: https://github.com/rubocop-lts/rubocop-lts/compare/v4.0.1...v4.0.2
-[4.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v4.0.0...v4.0.1
-[4.0.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v3.0.2...v4.0.0
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v6.1.0...HEAD
+[6.1.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v6.0.1...v6.1.0
+[6.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v6.0.0...v6.0.1
+[6.0.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/tags/v6.0.0
