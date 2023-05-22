@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Broadened scope of gem, updated `rubocop-ruby*_*` which configures many linting tools via `standard-rubocop-lts`
 ### Removed
 - Install support for Ruby < 2.7 (minimum is now 2.7, analysis of older Ruby still supported)
+- rubocop-lts1_8.yml - Use the new dedicated gem `rubocop-ruby1_8` instead
 
 ## [2.0.5] - 2022-06-08
 ### Added
