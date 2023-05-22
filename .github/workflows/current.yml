@@ -33,14 +33,17 @@ jobs:
         gemfile:
           - vanilla
           - rails7
-        rubygems:
-          - latest
-        bundler:
-          - latest
         ruby:
           # NOTE: Underlying version of Rubocop for Ruby 2.1 will not work with Ruby 3.1
           - "2.7"
           - "3.0"
+          - "3.1"
+          - "3.2"
+        exclude:
+          # Vanilla + 2.7 is effectively run by coverage workflow
+          - gemfile: vanilla
+            ruby: "2.7"
+
 
     runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.experimental || endsWith(matrix.ruby, 'head') }}
@@ -54,7 +57,5 @@ jobs:
           rubygems: ${{ matrix.rubygems }}
           bundler: ${{ matrix.bundler }}
           bundler-cache: true
-      - name: Run RuboCop
-        run: bundle exec rubocop -DES
       - name: Run tests
         run: bundle exec rake test
