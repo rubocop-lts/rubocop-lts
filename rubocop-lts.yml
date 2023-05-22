@@ -1,2 +1,15 @@
-inherit_gem:
-  rubocop-ruby2_6: rubocop.yml
+# Change the file you inherit if you:
+# * use Rails,
+# * are creating a RubyGem, or
+# * don't use RSpec
+# As follows:
+#   inherit_gem:
+#     # Pick one:
+#     #  rubocop-lts: config/rails_rspec.yml # or config/rails.yml w/o rspec
+#     #  rubocop-lts: config/ruby_rspec.yml # or config/ruby.yml w/o rspec
+#     #  rubocop-lts: config/rubygem_rspec.yml # or config/rubygem.yml w/o rspec
+#     # Convention over configuration, hence loading this file just only Ruby and RSpec defaults:
+#     rubocop-lts: rubocop-lts.yml # for the ruby + rspec
+
+inherit_from:
+  - config/ruby_rspec.yml
