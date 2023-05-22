@@ -34,9 +34,9 @@ Gem::Specification.new do |spec|
   # Specify which files should be added to the gem when it is released.
   spec.files = Dir[
     # Splats (alphabetical)
+    "config/*.yml",
     "lib/**/*.rb",
     "sig/**/*.rbs",
-    "config/*.yml",
     # Files (alphabetical)
     "CHANGELOG.md",
     "CODE_OF_CONDUCT.md",
