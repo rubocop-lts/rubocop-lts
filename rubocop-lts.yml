@@ -1,11 +1,15 @@
-inherit_gem:
-  rubocop-ruby2_0: rubocop.yml
+# Change the file you inherit if you:
+# * use Rails,
+# * are creating a RubyGem, or
+# * don't use RSpec
+# As follows:
+#   inherit_gem:
+#     # Pick one:
+#     #  rubocop-lts: config/rails_rspec.yml # or config/rails.yml w/o rspec
+#     #  rubocop-lts: config/ruby_rspec.yml # or config/ruby.yml w/o rspec
+#     #  rubocop-lts: config/rubygem_rspec.yml # or config/rubygem.yml w/o rspec
+#     # Convention over configuration, hence loading this file just only Ruby and RSpec defaults:
+#     rubocop-lts: rubocop-lts.yml # for the ruby + rspec
 
-# Removed as of 0.80.0
-# braces setting is for compatibility with Ruby 2.7+
-# See:
-#  * https://github.com/rubocop/rubocop/issues/7641
-#  * https://github.com/rubocop/rubocop/pull/7643
-Style/BracesAroundHashParameters:
-  Enabled: true
-  EnforcedStyle: context_dependent
+inherit_from:
+  - config/ruby_rspec.yml

@@ -1,11 +1,12 @@
-name: Legacy Ruby Support
+name: Ruby HEAD Support
 
 on:
   push:
     branches:
       - 'main'
-      - 'r*-even-v*'
-      - 'r*-odd-v*'
+      - '*-maintenance'
+      - '*-dev'
+      - '*-stable'
     tags:
       - '!*' # Do not execute on tags
   pull_request:
@@ -32,19 +33,13 @@ jobs:
         experimental: [false]
         gemfile:
           - vanilla
-          - rails4
-        rubygems:
-          - "2.7.11"
-        bundler:
-          - none
         ruby:
-          - "2.0"
-          - "2.1"
-          - "2.2"
-          - "2.3"
-          - "2.4"
-          - "2.5"
-          - "2.6"
+          - "ruby-head"
+          # NOTE: jruby-head is still @ Ruby 3.1 compat
+          - "jruby-head"
+          # NOTE: truffleruby-head is still @ Ruby 3.1 compat
+          - "truffleruby-head"
+
     runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.experimental || endsWith(matrix.ruby, 'head') }}
     steps:
@@ -57,7 +52,5 @@ jobs:
           rubygems: ${{ matrix.rubygems }}
           bundler: ${{ matrix.bundler }}
           bundler-cache: true
-      - name: Run RuboCop
-        run: bundle exec rubocop -DES
       - name: Run tests
         run: bundle exec rake test
