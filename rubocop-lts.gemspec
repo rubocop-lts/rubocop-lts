@@ -34,9 +34,9 @@ Gem::Specification.new do |spec|
   # Specify which files should be added to the gem when it is released.
   spec.files = Dir[
     # Splats (alphabetical)
+    "config/*.yml",
     "lib/**/*.rb",
     "sig/**/*.rbs",
-    "config/*.yml",
     # Files (alphabetical)
     "CHANGELOG.md",
     "CODE_OF_CONDUCT.md",
@@ -51,7 +51,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # linting
-  spec.add_dependency("rubocop-ruby2_0", [">= 2.0.3", "< 3"])       # >= 2.7.0
+  spec.add_dependency("rubocop-ruby2_1", [">= 2.0.3", "< 3"])       # >= 2.7.0
   spec.add_dependency("version_gem", [">= 1.1.2", "< 3"])           # >= 2.2.0
 
   # RubyGems adding this gem will need to explicitly add rubocop-packaging to their dependencies.
