@@ -10,23 +10,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
-## [18.2.0] - 2023-05-22
+## [20.2.0] - 2023-05-22
 ### Changed
-- Bumped dependency rubocop-ruby2_7 to ~> 2.0.4
+- Bumped dependency rubocop-ruby3_0 to ~> 2.0.4
 
-## [18.1.0] - 2023-03-16
+## [20.1.0] - 2023-03-17
 ### Added
 - Certificate for signing gem releases
 - Gemspec metadata
-    - funding_uri
+  - funding_uri
 - SHA256 and SHA512 Checksums for release
 ### Changed
-- Bumped dependency rubocop-ruby2_7 to ~> 1.1.3
-    - Allows rubocop ~> 1.48.1
-    - Compatible with rubocop-packaging ~> 0.5.2
+- Bumped dependency rubocop-ruby3_0 to ~> 1.1.2
+  - Allows rubocop ~> 1.48.1
+  - Compatible with rubocop-packaging ~> 0.5.2
 - Gem releases are now cryptographically signed
 
-## [18.0.1] - 2022-06-09
+## [20.0.1] - 2022-06-09
 ### Added
 - Improve, and dry up documentation
 ### Changed
@@ -34,12 +34,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Allow install up to Ruby < 4, which allows running against current Ruby HEAD @ 3.2-dev
 
-## [18.0.0] - 2022-05-23
+## [20.0.0] - 2022-05-23
 ### Added
-- Initial even release supporting Ruby >= 2.7
+- Initial even release supporting Ruby >= 3.0
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v18.2.0...HEAD
-[18.2.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v18.1.0...v18.2.0
-[18.1.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v18.0.1...v18.1.0
-[18.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v18.0.0...v18.0.1
-[18.0.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/tags/v18.0.0
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v20.2.0...HEAD
+[20.2.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v20.1.0...v20.2.0
+[20.1.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v20.0.1...v20.1.0
+[20.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v20.0.0...v20.0.1
+[20.0.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/tags/v20.0.0
