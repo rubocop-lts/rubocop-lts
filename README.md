@@ -123,7 +123,7 @@ Or add this line to your application's Gemfile:
 
 <!-- FIND VERSION -->
 ```ruby
-gem "rubocop-lts", "~> 0.1", require: false
+gem "rubocop-lts", "~> 4.1", require: false
 ```
 
 And then execute:
