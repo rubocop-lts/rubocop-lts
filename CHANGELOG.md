@@ -10,21 +10,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
-## [10.1.0] - 2023-05-22
+## [12.1.0] - 2023-05-22
 ### Removed
 - Support for installs on Ruby < 2.7. Minimum runtime version is Ruby 2.7.  Continues to analyze older Ruby.
 
-## [10.0.1] - 2022-06-09
+## [12.0.1] - 2022-06-09
 ### Fixed
 - Allow install up to Ruby < 4, which allows running against current Ruby HEAD @ 3.2-dev
 ### Added
 - Improve, and dry up documentation
 
-## [10.0.0] - 2022-05-23
+## [12.0.0] - 2022-05-23
 ### Added
-- Initial even release supporting Ruby >= 2.3
+- Initial even release supporting Ruby >= 2.4
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v10.1.0...HEAD
-[10.1.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v10.0.1...v10.1.0
-[10.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v10.0.0...v10.0.1
-[10.0.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/tags/v10.0.0
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v12.1.0...HEAD
+[12.1.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v12.0.1...v12.1.0
+[12.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v12.0.0...v12.0.1
+[12.0.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/tags/v12.0.0
