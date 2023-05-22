@@ -1,4 +1,4 @@
-rubocop-semver Organization Logo
+rubocop-lts Organization Logo
 
 Author: Yusuf Evli <https://unsplash.com/@yusufevli>
 Source: Unsplash <https://unsplash.com/photos/yaSLNLtKRIU>

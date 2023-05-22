@@ -3,44 +3,41 @@
 source "https://rubygems.org"
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
+git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 
+# Include dependencies from <gem name>.gemspec
 gemspec
 
-gem "rake", "~> 13.0"
+# rubocop:disable Layout/LeadingCommentSpace
+#noinspection RbsMissingTypeSignature
+RUBY_VER = Gem::Version.new(RUBY_VERSION)
+#noinspection RbsMissingTypeSignature
+IS_CI = !ENV["CI"].nil?
+#noinspection RbsMissingTypeSignature
+LOCAL_SUPPORTED = !IS_CI && Gem::Version.new("2.7") <= RUBY_VER && RUBY_ENGINE == "ruby"
+# rubocop:enable Layout/LeadingCommentSpace
 
-gem "rspec", "~> 3.0"
+if LOCAL_SUPPORTED || IS_CI
+  # Coverage
+  eval_gemfile "./gemfiles/contexts/coverage.gemfile"
 
-ruby_version = Gem::Version.new(RUBY_VERSION)
-minimum_version = ->(version, engine = "ruby") { ruby_version >= Gem::Version.new(version) && engine == RUBY_ENGINE }
-coverage = minimum_version.call("3.0")
-linting = minimum_version.call("3.0")
-debugging = minimum_version.call("3.0")
+  # Linting
+  eval_gemfile "./gemfiles/contexts/style.gemfile"
 
-gem "pry", platforms: %i[mri jruby]
+  # Testing
+  eval_gemfile "./gemfiles/contexts/testing.gemfile"
 
-platforms :mri do
-  if linting
-    gem "rubocop-md", "~> 1.0", require: false
-    gem "rubocop-packaging", "~> 0.5", require: false
-    gem "rubocop-performance", "~> 1.11", require: false
-    gem "rubocop-rake", "~> 0.6", require: false
-    gem "rubocop-rspec", require: false
-    gem "rubocop-thread_safety", "~> 0.4", require: false
+  # Documentation
+  eval_gemfile "./gemfiles/contexts/docs.gemfile"
+
+  # Debugging
+  platform :mri do
+    eval_gemfile "./gemfiles/contexts/mri/debug.gemfile"
   end
-  if coverage
-    gem "codecov", "~> 0.6"
-    gem "simplecov", "~> 0.21", require: false
-    gem "simplecov-cobertura" # XML for Jenkins
-    gem "simplecov-lcov", "~> 0.8", require: false
-  end
-  if debugging
-    # Add `byebug` to your code where you want to drop to REPL
-    gem "byebug"
-    gem "pry-byebug"
+
+  platform :jruby do
+    eval_gemfile "./gemfiles/contexts/jruby/debug.gemfile"
   end
 end
 
-platforms :jruby do
-  # Add `binding.pry` to your code where you want to drop to REPL
-  gem "pry-debugger-jruby"
-end
+eval_gemfile "./gemfiles/contexts/core.gemfile"
