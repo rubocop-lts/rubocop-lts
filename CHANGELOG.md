@@ -44,4 +44,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [4.0.3]: https://github.com/rubocop-lts/rubocop-lts/compare/v4.0.2...v4.0.3
 [4.0.2]: https://github.com/rubocop-lts/rubocop-lts/compare/v4.0.1...v4.0.2
 [4.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v4.0.0...v4.0.1
-[4.0.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v3.0.2...v4.0.0
+[4.0.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/tags/v4.0.0
