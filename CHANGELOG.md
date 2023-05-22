@@ -10,24 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
-## [22.1.0] - 2023-05-22
-### Changed
-- Bumped dependency rubocop-ruby3_1 to ~> 2.0.4
-
-## [22.0.1] - 2022-06-09
+## [24.0.0] - 2023-05-22
 ### Added
-- Improve, and dry up documentation
-### Changed
-- Bumped dependency rubocop-ruby3_1 to ~> 1.0.6
-### Fixed
-- Allow install up to Ruby < 4, which allows running against current Ruby HEAD @ 3.2-dev
+- Initial even release supporting Ruby >= 3.2
 
-## [22.0.0] - 2022-05-23
-### Added
-- Initial even release supporting Ruby >= 3.1
-
-
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v22.1.0...HEAD
-[22.1.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v22.0.1...v22.1.0
-[22.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v22.0.0...v22.0.1
-[22.0.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/tags/v22.0.0
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v24.0.0...HEAD
+[24.0.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/tags/v24.0.0
