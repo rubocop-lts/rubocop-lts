@@ -9,6 +9,8 @@ on:
   push:
     branches:
       - 'main'
+      - 'r*-even-v*'
+      - 'r*-odd-v*'
     tags:
       - '!*' # Do not execute on tags
   pull_request:
@@ -36,7 +38,7 @@ jobs:
         gemfile:
           - coverage
         ruby:
-          - "2.7"
+          - "3.0"
 
     runs-on: ubuntu-latest
     steps:
