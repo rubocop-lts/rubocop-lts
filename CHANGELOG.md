@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [0.1.1] - 2023-05-29
+### Added
+- `config/base.yml` for all shared configs
+
 ## [0.1.0] - 2023-05-22
 ### Added
 - Initial even release supporting analysis of Ruby >= 1.8
