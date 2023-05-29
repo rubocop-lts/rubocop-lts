@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.1.1] - 2023-05-29
 ### Added
 - `config/base.yml` for all shared configs
+- `Rubocop::Lts.install_tasks` to roll-up rake tasks from dependencies (e.g. rubocop_gradual)
 
 ## [2.1.0] - 2023-05-20
 ### Changed
