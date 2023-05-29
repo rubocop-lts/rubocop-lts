@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [14.1.1] - 2023-05-29
+### Added
+- `config/base.yml` for all shared configs
+
 ## [14.1.0] - 2023-05-22
 ### Removed
 - Support for installs on Ruby < 2.7. Minimum runtime version is Ruby 2.7.  Continues to analyze older Ruby.
