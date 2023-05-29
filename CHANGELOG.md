@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [6.1.1] - 2023-05-29
 ### Added
 - `config/base.yml` for all shared configs
+- `Rubocop::Lts.install_tasks` to roll-up rake tasks from dependencies (e.g. rubocop_gradual)
 
 ## [6.1.0] - 2023-05-22
 ### Removed
@@ -27,7 +28,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial even release supporting Ruby >= 2.1
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v6.1.0...HEAD
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v6.1.1...HEAD
+[6.1.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v6.1.0...v6.1.1
 [6.1.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v6.0.1...v6.1.0
 [6.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v6.0.0...v6.0.1
 [6.0.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/tags/v6.0.0

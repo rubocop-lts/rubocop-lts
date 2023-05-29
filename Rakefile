@@ -38,9 +38,9 @@ end
 
 defaults = %i[test]
 
-require "rubocop/ruby2_1"
+require "rubocop/lts"
 
-Rubocop::Ruby21.install_tasks
+Rubocop::Lts.install_tasks
 
 defaults << :rubocop_gradual
 

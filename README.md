@@ -16,39 +16,35 @@
     </a>
 </p>
 
-# RuboCop LTS
+# 🦾 RuboCop LTS
 
 ## PROJECT DOCUMENTATION
 
-* 🌱 [Why Build This?][Why-Build-This]
 * 🌱 [Convention > Configuration][Convention-Over-Configuration]
-    * 🌱 [Even Releases][Even-Major-Release] (use these!)
-    * 🌱 [Odd Releases][Odd-Major-Release] (deprecated)
+    * 🌱 [Releases][Even-Major-Release]
 * 🌱 [How to Upgrade Ruby (1.8 to 3.2)!][How-To-Upgrade-Ruby]
 * 👩‍💻 [Org Health][OrgHealth]
+* ✨ [Installation][Installation]
 * 🔧 [Usage][Usage]
-* 🧮 [Development][Development]
-    * ⚡️ [Contributing][Contributing]
-    * 🌈 [Contributors][Contributors]
+* ⚡️ [Contributing][Contributing]
+* 🌈 [Contributors][Contributors]
 * 📄 [License][License]
     * © [Copyright][Copyright]
 * 🤝 [Code of Conduct][Code of Conduct]
 * 📌 [Versioning][Versioning]
 
-[Why-Build-This]: https://github.com/rubocop-lts/.github/blob/main/profile/WHY_BUILD_THIS.md
-[Convention-Over-Configuration]: https://github.com/rubocop-lts/.github/blob/main/profile/CONV_OVER_CONF.md
-[Even-Major-Release]: https://github.com/rubocop-lts/.github/blob/main/profile/CONV_OVER_CONF.md#even-major-release
-[Odd-Major-Release]: https://github.com/rubocop-lts/.github/blob/main/profile/CONV_OVER_CONF.md#odd-major-release
-[How-To-Upgrade-Ruby]: https://github.com/rubocop-lts/.github/blob/main/profile/HOW_TO_UPGRADE_RUBY.md
-[OrgHealth]: https://github.com/rubocop-lts/.github/blob/main/profile/README.md#org-health-
-[Usage]: https://github.com/rubocop-lts/.github/blob/main/profile/README.md#usage-
-[Development]: https://github.com/rubocop-lts/.github/blob/main/profile/README.md#development-
-[Contributing]: https://github.com/rubocop-lts/.github/blob/main/profile/README.md#contributing-
-[Contributors]: https://github.com/rubocop-lts/.github/blob/main/profile/README.md#contributors-
-[License]: https://github.com/rubocop-lts/.github/blob/main/profile/README.md#license-
-[Copyright]: https://github.com/rubocop-lts/.github/blob/main/profile/README.md#copyright-
-[Code of Conduct]: https://github.com/rubocop-lts/.github/blob/main/profile/README.md#code-of-conduct-
-[Versioning]: https://github.com/rubocop-lts/.github/blob/main/profile/README.md#versioning-
+[Convention-Over-Configuration]: https://rubocop-lts.gitlab.io/CONV_OVER_CONF/
+[Even-Major-Release]: https://rubocop-lts.gitlab.io/CONV_OVER_CONF/#even-major-release
+[How-To-Upgrade-Ruby]: https://rubocop-lts.gitlab.io/HOW_TO_UPGRADE_RUBY/
+[OrgHealth]: https://rubocop-lts.gitlab.io/#org-health-
+[Installation]: https://rubocop-lts.gitlab.io/#installation-
+[Usage]: https://rubocop-lts.gitlab.io/#usage-
+[Contributing]: https://rubocop-lts.gitlab.io/#contributing-
+[Contributors]: https://rubocop-lts.gitlab.io/#contributors-
+[License]: https://rubocop-lts.gitlab.io/#license-
+[Copyright]: https://rubocop-lts.gitlab.io/#copyright-
+[Code of Conduct]: https://rubocop-lts.gitlab.io/#code-of-conduct-
+[Versioning]: https://rubocop-lts.gitlab.io/#versioning-
 
 ## This README
 
@@ -129,6 +125,101 @@ gem "rubocop-lts", "~> 6.1", require: false
 And then execute:
 
     $ bundle
+
+## Usage with RuboCop
+
+In your `.rubocop.yml` do the following:
+
+🔥 Delete the following line 🔥
+```yaml
+inherit_from: .rubocop_todo.yml
+```
+
+You can probably 🔥 delete 🔥 most of the other lines too.
+This tool is anti-bike-shedding.
+You no longer need to worry about the rules!
+
+🔥 Any of the following configs are no longer needed 🔥
+```yaml
+require:
+  - 'betterlint'
+  - 'rubocop-md'
+  - 'rubocop-packaging'
+  - 'rubocop-performance'
+  - 'rubocop-rake'
+  - 'rubocop-rspec'
+  - 'rubocop-rails'
+  - 'rubocop-thread_safety'
+  - 'rubocop/gradual/patch'
+  - 'standard'
+  - 'standard-custom'
+  - 'standard-performance'
+  - 'standard-rails'
+  - 'standard-rubocop-lts'
+
+AllCops:
+  NewCops: enable
+  DisplayCopNames: true
+  TargetRubyVersion: X.X
+```
+
+Then pick one of the following to add!
+
+### if Ruby with RSpec
+
+```yaml
+inherit_gem:
+  rubocop-lts: rubocop-lts.yml # for the ruby + rspec
+  # NOTE: this is the default, and as such, is equivalent to:
+  # rubocop-lts: config/ruby_rspec.yml
+```
+
+### if just Ruby (without RSpec)
+
+```yaml
+inherit_gem:
+  rubocop-lts: config/ruby.yml
+```
+
+### if Rails with RSpec
+
+```yaml
+inherit_gem:
+  rubocop-lts: config/rails_rspec.yml
+```
+
+### if just Rails (without RSpec)
+
+```yaml
+inherit_gem:
+  rubocop-lts: config/rails.yml
+```
+
+### if rubygem with RSpec
+
+```yaml
+inherit_gem:
+  rubocop-lts: config/rubygem_rspec.yml
+```
+
+### if just rubygem (without RSpec)
+
+```yaml
+inherit_gem:
+  rubocop-lts: config/rubygem.yml
+```
+
+### Load Rake Tasks
+
+NOTE: On Rails it is **automatic**, via Railtie, so you can skip this.
+
+In a non-Rails environment add the following to your `Rakefile`:
+```ruby
+require "rubocop/lts"
+Rubocop::Lts.install_tasks
+```
+
+This will load the `rubocop_gradual` rake task, and alias it as `rubocop`.
 
 ### Dependabot Noise Reduction
 
@@ -391,58 +482,33 @@ Add the following to `.github/dependabot.yml` if you use Github Actions.
 [⛳️32-g]: https://rubygems.org/gems/rubocop-ruby3_2
 [⛳️32-gh]: https://github.com/rubocop-lts/rubocop-ruby3_2
 
-[copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
-
-[gh_discussions]: https://github.com/rubocop-lts/rubocop-lts/discussions
-
-[conduct]: https://github.com/rubocop-lts/rubocop-lts/blob/main/CODE_OF_CONDUCT.md
-
-[contributing]: https://github.com/rubocop-lts/rubocop-lts/blob/main/CONTRIBUTING.md
-
-[security]: https://github.com/rubocop-lts/rubocop-lts/blob/main/SECURITY.md
-
-[license]: https://github.com/rubocop-lts/rubocop-lts/blob/main/LICENSE.txt
-
-[license-ref]: https://opensource.org/licenses/MIT
-
-[semver]: http://semver.org/
-
-[pvc]: http://guides.rubygems.org/patterns/#pessimistic-version-constraint
-
-[railsbling]: http://www.railsbling.com
-
-[peterboling]: http://www.peterboling.com
-
 [aboutme]: https://about.me/peter.boling
-
-[angelme]: https://angel.co/peter-boling
-
-[coderme]:http://coderwall.com/pboling
-
-[followme-img]: https://img.shields.io/twitter/follow/galtzo.svg?style=social&label=Follow
-
-[tweetme]: http://twitter.com/galtzo
-
-[documentation]: https://rubydoc.info/github/rubocop-lts/rubocop-lts/main
-
-[source]: https://github.com/rubocop-lts/rubocop-lts/
-
 [actions]: https://github.com/rubocop-lts/rubocop-lts/actions
-
-[issues]: https://github.com/rubocop-lts/rubocop-lts/issues
-
-[climate_maintainability]: https://codeclimate.com/github/rubocop-lts/rubocop-lts/maintainability
-
-[code_triage]: https://www.codetriage.com/rubocop-lts/rubocop-lts
-
+[angelme]: https://angel.co/peter-boling
 [blogpage]: http://www.railsbling.com/tags/rubocop-lts/
-
-[rubygems]: https://rubygems.org/gems/rubocop-lts
-
+[codecov_coverage]: https://codecov.io/gh/rubocop-lts/rubocop-lts
+[code_triage]: https://www.codetriage.com/rubocop-lts/rubocop-lts
 [chat]: https://gitter.im/rubocop-lts/rubocop-lts?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
-
-[maintenancee_policy]: https://guides.rubyonrails.org/maintenance_policy.html#security-issues
-
-[liberapay_donate]: https://liberapay.com/pboling/donate
-
+[climate_coverage]: https://codeclimate.com/github/rubocop-lts/rubocop-lts/test_coverage
+[climate_maintainability]: https://codeclimate.com/github/rubocop-lts/rubocop-lts/maintainability
+[copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
+[conduct]: https://gitlab.com/rubocop-lts/rubocop-lts/-/blob/main/CODE_OF_CONDUCT.md
+[contributing]: https://gitlab.com/rubocop-lts/rubocop-lts/-/blob/main/CONTRIBUTING.md
+[devto]: https://dev.to/galtzo
+[documentation]: https://rubydoc.info/github/rubocop-lts/rubocop-lts/main
+[followme]: https://img.shields.io/twitter/follow/galtzo.svg?style=social&label=Follow
+[gh_discussions]: https://github.com/rubocop-lts/rubocop-lts/discussions
 [gh_sponsors]: https://github.com/sponsors/pboling
+[issues]: https://github.com/rubocop-lts/rubocop-lts/issues
+[liberapay_donate]: https://liberapay.com/pboling/donate
+[license]: LICENSE.txt
+[license-ref]: https://opensource.org/licenses/MIT
+[license-img]: https://img.shields.io/badge/License-MIT-green.svg
+[peterboling]: http://www.peterboling.com
+[pvc]: http://guides.rubygems.org/patterns/#pessimistic-version-constraint
+[railsbling]: http://www.railsbling.com
+[rubygems]: https://rubygems.org/gems/rubocop-lts
+[security]: https://github.com/rubocop-lts/rubocop-lts/blob/main/SECURITY.md
+[semver]: http://semver.org/
+[source]: https://github.com/rubocop-lts/rubocop-lts/
+[tweetme]: http://twitter.com/galtzo
