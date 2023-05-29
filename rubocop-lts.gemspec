@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.2"
 
-  spec.metadata["homepage_uri"] = spec.homepage
+  spec.metadata["homepage_uri"] = "https://#{spec.name}.gitlab.io/"
   spec.metadata["source_code_uri"] = "#{spec.homepage}/-/tree/v#{spec.version}"
   spec.metadata["changelog_uri"] = "#{spec.homepage}/-/blob/v#{spec.version}/CHANGELOG.md"
   spec.metadata["bug_tracker_uri"] = "#{spec.homepage}/-/issues"
@@ -52,6 +52,7 @@ Gem::Specification.new do |spec|
 
   # linting
   spec.add_dependency("rubocop-ruby3_2", [">= 2.0.5", "< 3"])       # >= 2.7.0
+  spec.add_dependency("standard-rubocop-lts", [">= 1.0.3", "< 3"])  # >= 2.7.0
   spec.add_dependency("version_gem", [">= 1.1.2", "< 3"])           # >= 2.2.0
 
   # RubyGems adding this gem will need to explicitly add rubocop-packaging to their dependencies.
@@ -62,4 +63,5 @@ Gem::Specification.new do |spec|
   # Since it only applies to RSpec, which some people or projects don't use,
   #   we do not add it as a runtime dependency of this gem.
   spec.add_development_dependency("rubocop-rspec", "~> 2.22")     # >= 2.7.0
+  spec.add_development_dependency("rspec-block_is_expected", "~> 1.0")        # >= 0
 end
