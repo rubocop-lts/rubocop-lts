@@ -4,9 +4,7 @@ on:
   push:
     branches:
       - 'main'
-      - '*-maintenance'
-      - '*-dev'
-      - '*-stable'
+      - 'r*-even-v*'
     tags:
       - '!*' # Do not execute on tags
   pull_request:
@@ -35,10 +33,10 @@ jobs:
           - vanilla
         ruby:
           - "ruby-head"
-          # NOTE: jruby-head is still @ Ruby 3.1 compat
-          - "jruby-head"
-          # NOTE: truffleruby-head is still @ Ruby 3.1 compat
-          - "truffleruby-head"
+#          # NOTE: jruby-head is still @ Ruby 3.1 compat
+#          - "jruby-head"
+#          # NOTE: truffleruby-head is still @ Ruby 3.1 compat
+#          - "truffleruby-head"
 
     runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.experimental || endsWith(matrix.ruby, 'head') }}
