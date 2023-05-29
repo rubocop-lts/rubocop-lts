@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [18.2.1] - 2023-05-29
+### Added
+- `config/base.yml` for all shared configs
+
 ## [18.2.0] - 2023-05-22
 ### Changed
 - Bumped dependency rubocop-ruby2_7 to ~> 2.0.4
