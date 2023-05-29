@@ -3,7 +3,7 @@
 module Rubocop
   module Lts
     module Version
-      VERSION = "20.2.1"
+      VERSION = "20.2.2"
     end
   end
 end
