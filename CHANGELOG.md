@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [22.1.3] - 2023-05-30
+### Added
+- `config/base.yml` for all shared configs
+
 ## [22.1.2] - 2023-05-22
 ### Changed
 - Oops, minimum Ruby version is 3.1, for real this time.
