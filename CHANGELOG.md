@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [2.1.1] - 2023-05-29
+### Added
+- `config/base.yml` for all shared configs
+
 ## [2.1.0] - 2023-05-20
 ### Changed
 - Broadened scope of gem, updated `rubocop-ruby*_*` which configures many linting tools via `standard-rubocop-lts`
@@ -43,7 +47,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial even release supporting Ruby >= 1.9
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v2.1.0...HEAD
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v2.1.1...HEAD
+[2.1.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v2.1.0...v2.1.1
 [2.1.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v2.0.5...v2.1.0
 [2.0.5]: https://github.com/rubocop-lts/rubocop-lts/compare/v2.0.4...v2.0.5
 [2.0.4]: https://github.com/rubocop-lts/rubocop-lts/compare/v2.0.3...v2.0.4
