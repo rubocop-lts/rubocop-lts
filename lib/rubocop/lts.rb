@@ -3,13 +3,17 @@
 
 # external libs
 require "version_gem"
+require "rubocop/ruby1_8"
 
 require_relative "lts/version"
 
 module Rubocop
   module Lts
     class Error < StandardError; end
-    # Your code goes here...
+
+    module_function def install_tasks
+      Rubocop::Ruby18.install_tasks
+    end
   end
 end
 
