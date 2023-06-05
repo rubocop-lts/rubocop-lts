@@ -40,7 +40,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial even release supporting Ruby >= 2.2
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v8.1.1...HEAD
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v8.1.1...r2_2-even-v8
 [8.1.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v8.1.0...v8.1.1
 [8.1.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v8.0.2...v8.1.0
 [8.0.2]: https://github.com/rubocop-lts/rubocop-lts/compare/v8.0.1...v8.0.2
