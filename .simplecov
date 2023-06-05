@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 
 # To get coverage
-# On Local, default (HTML) output coverage is turned on with Ruby 2.6+:
+# On Local, default (HTML) output coverage is turned on with Ruby 2.7+:
 #   bundle exec rspec spec
 # On Local, all output formats with Ruby 3.0+:
 #   COVER_ALL=true bundle exec rspec spec
 #
-# On CI, all output formats, the ENV variables CI is always set,
+# On CI, all output formats, but coverage only runs for the coverage workflow.
+#   The ENV variable CI is always set,
 #   and COVER_ALL, and CI_CODECOV, are set in the coverage.yml workflow only,
 #   so coverage only runs in that workflow, and outputs all formats.
 #
@@ -19,24 +20,34 @@ if RUN_COVERAGE
 
     # Filters (skip these paths for coverage tracking)
     add_filter [
-      %r{^/test/},
-      %r{^/spec/},
-      %r{^/features/},
+      %r{^/bin/},
+      %r{^/certs/},
+      %r{^/checksums/},
       %r{^/config/},
+      %r{^/docs/},
+      %r{^/features/},
+      %r{^/gemfiles/},
+      %r{^/pkg/},
+      %r{^/results/},
+      %r{^/sig/},
+      %r{^/spec/},
+      %r{^/src/},
+      %r{^/test/},
       %r{^/vendor/},
-      "railtie.rb"
     ]
 
     # Setup Coverage Dir
-    SimpleCov.coverage_dir "results/coverage"
+    SimpleCov.coverage_dir("coverage")
 
     if ALL_FORMATTERS
       require "simplecov-rcov"
       require "simplecov-json"
       require "simplecov-lcov"
       require "simplecov-cobertura"
-      command_name "#{ENV.fetch("GITHUB_WORKFLOW",
-        nil)} Job #{ENV.fetch("GITHUB_RUN_ID", nil)}:#{ENV.fetch("GITHUB_RUN_NUMBER", nil)}"
+      command_name "#{ENV.fetch(
+        "GITHUB_WORKFLOW",
+        nil,
+      )} Job #{ENV.fetch("GITHUB_RUN_ID", nil)}:#{ENV.fetch("GITHUB_RUN_NUMBER", nil)}"
 
       SimpleCov::Formatter::LcovFormatter.config do |c|
         c.report_with_single_file = true
@@ -48,7 +59,7 @@ if RUN_COVERAGE
         SimpleCov::Formatter::CoberturaFormatter, # XML for Jenkins
         SimpleCov::Formatter::RcovFormatter, # For Hudson
         SimpleCov::Formatter::LcovFormatter,
-        SimpleCov::Formatter::JSONFormatter # For CodeClimate
+        SimpleCov::Formatter::JSONFormatter, # For CodeClimate
       ]
     else
       command_name "RSpec"
@@ -56,8 +67,8 @@ if RUN_COVERAGE
     end
 
     # Use Merging (merges RSpec + Cucumber Test Results)
-    SimpleCov.use_merging true
-    SimpleCov.merge_timeout 3600
+    SimpleCov.use_merging(true)
+    SimpleCov.merge_timeout(3600)
 
     minimum_coverage(line: 100, branch: 100)
   end

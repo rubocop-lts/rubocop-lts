@@ -1,13 +1,20 @@
 # frozen_string_literal: true
 
-%w[
-  bundler/gem_tasks
-  rake/testtask
-  rspec/core/rake_task
-].each { |f| require f }
+require "bundler/gem_tasks"
 
-RSpec::Core::RakeTask.new(:spec)
-desc "alias spec => test"
+defaults = []
+
+begin
+  require "rspec/core/rake_task"
+  RSpec::Core::RakeTask.new(:spec)
+  defaults << :spec
+rescue LoadError
+  desc("spec task stub")
+  task(:spec) do
+    warn("NOTE: rspec isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
+  end
+end
+desc "alias test task to spec"
 task test: :spec
 
 begin
@@ -16,27 +23,15 @@ begin
   YARD::Rake::YardocTask.new do |t|
     t.files = [
       # Splats (alphabetical)
-      "config/*.yml",
       "lib/**/*.rb",
-      "sig/**/*.rbs",
-      # Files (alphabetical)
-      "CHANGELOG.md",
-      "CODE_OF_CONDUCT.md",
-      "CONTRIBUTING.md",
-      "LICENSE.txt",
-      "README.md",
-      "rubocop-lts.yml",
-      "SECURITY.md"
     ]
-    t.options = ["-m", "markdown"] # optional
   end
+  defaults << :yard
 rescue LoadError
-  task :yard do
-    warn "NOTE: yard isn't installed, or is disabled for #{RUBY_VERSION} in the current environment"
+  task(:yard) do
+    warn("NOTE: yard isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
   end
 end
-
-defaults = %i[test]
 
 require "rubocop/lts"
 

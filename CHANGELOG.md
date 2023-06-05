@@ -6,8 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- Improved linting (via rubocop-rubyX_X)
+- (dev) Improved Gemfile context pattern
+- (dev) Dependencies
+  - yard-junk
+  - redcarpet
+  - pry, IRB alternative (and a binstub)
+  - pry-suite
+  - debase, for IDE debugging
 ### Changed
 ### Fixed
+- (dev) `yard` documentation task
 ### Removed
 
 ## [8.1.1] - 2023-05-30
