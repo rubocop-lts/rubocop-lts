@@ -122,6 +122,13 @@ Or add this line to your application's Gemfile:
 gem "rubocop-lts", "~> 8.1", require: false
 ```
 
+### Almost Done!
+
+Certain use cases **_require_** one or two more development dependencies added manually:
+
+- use with a [RubyGem](https://rubocop-lts.gitlab.io/#build-rubygem-)
+- use with a [Rails Application](https://rubocop-lts.gitlab.io/#build-rubygem-)
+
 And then execute:
 
     $ bundle
