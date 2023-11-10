@@ -20,6 +20,30 @@
 
 ## PROJECT DOCUMENTATION
 
+The complete documentation site is at [https://rubocop-lts.gitlab.io/][rlts]
+
+---
+
+<div id="badges">
+
+[![Liberapay Patrons][⛳liberapay-img]][⛳liberapay]
+[![Sponsor Me on Github][🖇sponsor-img]][🖇sponsor]
+<span class="badge-buymeacoffee">
+<a href="https://ko-fi.com/O5O86SNP4" target='_blank' title="Donate to my FLOSS or refugee efforts at ko-fi.com"><img src="https://img.shields.io/badge/buy%20me%20coffee-donate-yellow.svg" alt="Buy me coffee donation button" /></a>
+</span>
+<span class="badge-patreon">
+<a href="https://patreon.com/galtzo" title="Donate to my FLOSS or refugee efforts using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a>
+</span>
+
+</div>
+
+[⛳liberapay-img]: https://img.shields.io/liberapay/patrons/pboling.svg?logo=liberapay
+[⛳liberapay]: https://liberapay.com/pboling/donate
+[🖇sponsor-img]: https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&logo=github
+[🖇sponsor]: https://github.com/sponsors/pboling
+
+### Quick Links
+
 * 🌱 [Convention > Configuration][Convention-Over-Configuration]
     * 🌱 [Releases][Even-Major-Release]
 * 🌱 [How to Upgrade Ruby (1.8 to 3.2)!][How-To-Upgrade-Ruby]
@@ -45,12 +69,14 @@
 [Copyright]: https://rubocop-lts.gitlab.io/#copyright-
 [Code of Conduct]: https://rubocop-lts.gitlab.io/#code-of-conduct-
 [Versioning]: https://rubocop-lts.gitlab.io/#versioning-
+[rlts]: https://rubocop-lts.gitlab.io/
 
-## This README
+### This README
 
 * 🌳 [This Branch](#this-branch-)
 * ‍💻 [Project Health](#project-health-)
 * ✨ [Installation](#installation-)
+* ✨ [Usage](#usage-)
 
 ## This Branch 🌳
 
@@ -101,134 +127,21 @@ And optionally, if you are building a Rails app:
 | [`rubocop-ruby3_0`][⛳️30-gh] | [![Gem Version][⛳️30-vi]][⛳️30-g]   | [![Total DL][🖇️30-dti]][⛳️30-g] [![DL Rank][🏘️30-rti]][⛳️30-g]     | [![Current][🚎30-cwfi]][🚎30-cwf] [![Heads][🖐30-hwfi]][🖐30-hwf]     | [![Open Issues][📗30-ioi]][📗30-io] [![Closed Issues][🚀30-ici]][🚀30-ic] [![Open PRs][💄30-poi]][💄30-po] [![Closed PRs][👽30-pci]][👽30-pc]         |
 | [`rubocop-ruby3_1`][⛳️31-gh] | [![Gem Version][⛳️31-vi]][⛳️31-g]   | [![Total DL][🖇️31-dti]][⛳️31-g] [![DL Rank][🏘️31-rti]][⛳️31-g]     | [![Current][🚎31-cwfi]][🚎31-cwf] [![Heads][🖐31-hwfi]][🖐31-hwf]     | [![Open Issues][📗31-ioi]][📗31-io] [![Closed Issues][🚀31-ici]][🚀31-ic] [![Open PRs][💄31-poi]][💄31-po] [![Closed PRs][👽31-pci]][👽31-pc]         |
 | [`rubocop-ruby3_2`][⛳️32-gh] | [![Gem Version][⛳️32-vi]][⛳️32-g]   | [![Total DL][🖇️32-dti]][⛳️32-g] [![DL Rank][🏘️32-rti]][⛳️32-g]     | [![Current][🚎32-cwfi]][🚎32-cwf] [![Heads][🖐32-hwfi]][🖐32-hwf]     | [![Open Issues][📗32-ioi]][📗32-io] [![Closed Issues][🚀32-ici]][🚀32-ic] [![Open PRs][💄32-poi]][💄32-po] [![Closed PRs][👽32-pci]][👽32-pc]         |
+| [`standard-rubocop-lts`][⛳️stdrlts-gh] | [![Gem Version][⛳️stdrlts-vi]][⛳️stdrlts-g] | [![Total DL][🖇️stdrlts-dti]][⛳️stdrlts-g] [![DL Rank][🏘️stdrlts-rti]][⛳️stdrlts-g] | [![Current][🚎stdrlts-cwfi]][🚎stdrlts-cwf] [![Heads][🖐stdrlts-hwfi]][🖐stdrlts-hwf] | [![Open Issues][📗stdrlts-ioi]][📗stdrlts-io] [![Closed Issues][🚀stdrlts-ici]][🚀stdrlts-ic] [![Open PRs][💄stdrlts-poi]][💄stdrlts-po] [![Closed PRs][👽stdrlts-pci]][👽stdrlts-pc] |
 
 ## Installation ✨
 
-Install the gem and add to the application's Gemfile by executing:
+There are no specific installation notes for this version.
+Please see the primary installation documentation.
 
-    $ bundle add rubocop-lts -r false
+* ✨ Primary [Installation Documentation][Installation] .
 
-NOTE: If you are using **Rails** remove the `-r false`,
-so the Railtie will load and rake tasks will be loaded automatically.
+## Usage 🔧
 
-If bundler is not being used to manage dependencies, install the gem by executing:
+There are no specific usage notes for this version.
+Please see the primary usage documentation.
 
-    $ gem install rubocop-lts
-
-Or add this line to your application's Gemfile:
-
-<!-- FIND VERSION -->
-```ruby
-gem "rubocop-lts", "~> 24.0", require: false
-```
-
-And then execute:
-
-    $ bundle
-
-## Usage with RuboCop
-
-In your `.rubocop.yml` do the following:
-
-🔥 Delete the following line 🔥
-```yaml
-inherit_from: .rubocop_todo.yml
-```
-
-You can probably 🔥 delete 🔥 most of the other lines too.
-This tool is anti-bike-shedding.
-You no longer need to worry about the rules!
-
-🔥 Any of the following configs are no longer needed 🔥
-```yaml
-require:
-  - 'betterlint'
-  - 'rubocop-md'
-  - 'rubocop-packaging'
-  - 'rubocop-performance'
-  - 'rubocop-rake'
-  - 'rubocop-rspec'
-  - 'rubocop-rails'
-  - 'rubocop-thread_safety'
-  - 'rubocop/gradual/patch'
-  - 'standard'
-  - 'standard-custom'
-  - 'standard-performance'
-  - 'standard-rails'
-  - 'standard-rubocop-lts'
-
-AllCops:
-  NewCops: enable
-  DisplayCopNames: true
-  TargetRubyVersion: X.X
-```
-
-Then pick one of the following to add!
-
-### if Ruby with RSpec
-
-```yaml
-inherit_gem:
-  rubocop-lts: rubocop-lts.yml # for the ruby + rspec
-  # NOTE: this is the default, and as such, is equivalent to:
-  # rubocop-lts: config/ruby_rspec.yml
-```
-
-### if just Ruby (without RSpec)
-
-```yaml
-inherit_gem:
-  rubocop-lts: config/ruby.yml
-```
-
-### if Rails with RSpec
-
-```yaml
-inherit_gem:
-  rubocop-lts: config/rails_rspec.yml
-```
-
-### if just Rails (without RSpec)
-
-```yaml
-inherit_gem:
-  rubocop-lts: config/rails.yml
-```
-
-### if rubygem with RSpec
-
-```yaml
-inherit_gem:
-  rubocop-lts: config/rubygem_rspec.yml
-```
-
-### if just rubygem (without RSpec)
-
-```yaml
-inherit_gem:
-  rubocop-lts: config/rubygem.yml
-```
-
-### Load Rake Tasks
-
-NOTE: On Rails it is **automatic**, via Railtie, so you can skip this.
-
-In a non-Rails environment add the following to your `Rakefile`:
-```ruby
-require "rubocop/lts"
-Rubocop::Lts.install_tasks
-```
-
-This will load the `rubocop_gradual` rake task, and alias it as `rubocop`.
-
-### Dependabot Noise Reduction
-
-Add the following to `.github/dependabot.yml` if you use Github Actions.
-
-```yaml
-    ignore:
-      - dependency-name: "rubocop-lts"
-```
+* 🔧 Primary [Usage Documentation][Usage].
 
 <!-- columnar badge #s for Project Health table:
 ⛳️
@@ -481,6 +394,25 @@ Add the following to `.github/dependabot.yml` if you use Github Actions.
 [👽32-pci]: https://img.shields.io/github/issues-pr-closed/rubocop-lts/rubocop-ruby3_2
 [⛳️32-g]: https://rubygems.org/gems/rubocop-ruby3_2
 [⛳️32-gh]: https://github.com/rubocop-lts/rubocop-ruby3_2
+[⛳️stdrlts-vi]: http://img.shields.io/gem/v/standard-rubocop-lts.svg
+[🖇️stdrlts-dti]: https://img.shields.io/gem/dt/standard-rubocop-lts.svg
+[🏘️stdrlts-rti]: https://img.shields.io/gem/rt/standard-rubocop-lts.svg
+[🚎stdrlts-cwf]: https://github.com/rubocop-lts/standard-rubocop-lts/actions/workflows/current.yml
+[🚎stdrlts-cwfi]: https://github.com/rubocop-lts/standard-rubocop-lts/actions/workflows/current.yml/badge.svg
+[🖐stdrlts-hwf]: https://github.com/rubocop-lts/standard-rubocop-lts/actions/workflows/heads.yml
+[🖐stdrlts-hwfi]: https://github.com/rubocop-lts/standard-rubocop-lts/actions/workflows/heads.yml/badge.svg
+[🧮stdrlts-lwf]: https://github.com/rubocop-lts/standard-rubocop-lts/actions/workflows/legacy.yml
+[🧮stdrlts-lwfi]: https://github.com/rubocop-lts/standard-rubocop-lts/actions/workflows/legacy.yml/badge.svg
+[📗stdrlts-io]: https://github.com/rubocop-lts/standard-rubocop-lts/issues
+[📗stdrlts-ioi]: https://img.shields.io/github/issues-raw/rubocop-lts/standard-rubocop-lts
+[🚀stdrlts-ic]: https://github.com/rubocop-lts/standard-rubocop-lts/issues?q=is%3Aissue+is%3Aclosed
+[🚀stdrlts-ici]: https://img.shields.io/github/issues-closed-raw/rubocop-lts/standard-rubocop-lts
+[💄stdrlts-po]: https://github.com/rubocop-lts/standard-rubocop-lts/pulls
+[💄stdrlts-poi]: https://img.shields.io/github/issues-pr/rubocop-lts/standard-rubocop-lts
+[👽stdrlts-pc]: https://github.com/rubocop-lts/standard-rubocop-lts/pulls?q=is%3Apr+is%3Aclosed
+[👽stdrlts-pci]: https://img.shields.io/github/issues-pr-closed/rubocop-lts/standard-rubocop-lts
+[⛳️stdrlts-g]: https://rubygems.org/gems/standard-rubocop-lts
+[⛳️stdrlts-gh]: https://github.com/rubocop-lts/standard-rubocop-lts
 
 [aboutme]: https://about.me/peter.boling
 [actions]: https://github.com/rubocop-lts/rubocop-lts/actions
