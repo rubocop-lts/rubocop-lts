@@ -24,6 +24,26 @@ The complete documentation site is at [https://rubocop-lts.gitlab.io/][rlts]
 
 ---
 
+The **RuboCop LTS** family of gems is the distillation of almost 20 years
+of my own Ruby expertise and source code diving,
+built on the shoulders of the expertise of many others;
+organizing that expertise into per-Ruby-version sets of configurations.
+
+Although the situation has improved somewhat,
+it remains [_unsafe_ to upgrade RuboCop, or Standard][Why-Build-This],
+in a project that supports EOL Rubies.
+
+I hope it helps others avoid some of the challenges I've had with library maintenance,
+and supporting decade-old mission-critical applications.
+
+Avoid bike-shedding, use `rubocop-lts` in every project, and
+let it manage your linting complexity!
+
+If the `rubocop-lts` stack of libraries has helped you, or your organization,
+please support my efforts by making a donation, or becoming a sponsor.
+
+[Why-Build-This]: https://rubocop-lts.gitlab.io/about/#why-build-this-
+
 <div id="badges">
 
 [![Liberapay Patrons][⛳liberapay-img]][⛳liberapay]
