@@ -2,13 +2,27 @@
 /.yardoc
 /_yardoc/
 /coverage/
+/results/
 /doc/
 /pkg/
 /spec/reports/
 /tmp/
+
+# Packaging artifacts
+*.gem
+
+# IDEs
+/.idea/
+*.kate-swp
 
 # rspec failure tracking
 .rspec_status
 
 # Gemfile Lock files
 gemfiles/*.lock
+
+# Debugging
+.byebug_history
+
+# direnv - brew install direnv
+.env.local
