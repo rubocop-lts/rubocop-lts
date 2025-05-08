@@ -110,7 +110,6 @@ This gem configures many gems for you:
 - rubocop-gradual
 - rubocop-md
 - rubocop-rake
-- rubocop-shopify
 - rubocop-thread_safety
 - standard
 - standard-performance (incl. rubocop-performance)
