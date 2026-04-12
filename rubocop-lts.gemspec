@@ -51,9 +51,9 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # linting
-  spec.add_dependency("rubocop-ruby3_2", [">= 2.0.5", "< 3"])       # >= 2.7.0
-  spec.add_dependency("standard-rubocop-lts", [">= 1.0.3", "< 3"])  # >= 2.7.0
-  spec.add_dependency("version_gem", [">= 1.1.2", "< 3"])           # >= 2.2.0
+  spec.add_dependency("rubocop-ruby3_2", ">= 2.0.5", "< 3")       # >= 2.7.0
+  spec.add_dependency("standard-rubocop-lts", ">= 2.0.0", "< 3")  # >= 3.2.0
+  spec.add_dependency("version_gem", ">= 1.1.2", "< 3")           # >= 2.2.0
 
   # RubyGems adding this gem will need to explicitly add rubocop-packaging to their dependencies.
   # Since it only applies to rubygems we do not add it as a runtime dependency of this gem.
@@ -64,6 +64,6 @@ Gem::Specification.new do |spec|
 
   # RubyGems adding this gem will need to explicitly add rubocop-packaging to their dependencies.
   # Since it only applies to rubygems we do not add it as a runtime dependency of this gem.
-  spec.add_development_dependency("rubocop-packaging", "~> 0.5")  # >= 2.6.0
   spec.add_development_dependency("rspec-block_is_expected", "~> 1.0")        # >= 0
+  spec.add_development_dependency("rubocop-packaging", "~> 0.5")  # >= 2.6.0
 end

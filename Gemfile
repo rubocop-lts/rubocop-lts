@@ -12,19 +12,22 @@ gem "nomono", "~> 1.0", require: false
 
 require "nomono/bundler"
 
-rspec_companion_gems = %w[
+local_companion_gems = %w[
+  rubocop-ruby3_2
   rubocop-lts-rspec
+  standard-rubocop-lts
 ]
 
 if ENV.fetch("RUBOCOP_LTS_DEV", "false").casecmp("false").zero?
   gem "rubocop-lts-rspec", "~> 1.0", github: "rubocop-lts/rubocop-lts-rspec"
 else
-  local_rspec_companion_gems = nomono_gems(
-    gems: rspec_companion_gems,
+  local_companion_gems_by_name = nomono_gems(
+    gems: local_companion_gems,
     prefix: "RUBOCOP_LTS",
     root: %w[code src rubocop-lts]
   )
-  gem "rubocop-lts-rspec", "~> 1.0", path: local_rspec_companion_gems.fetch("rubocop-lts-rspec")
+  gem "rubocop-lts-rspec", "~> 1.0", path: local_companion_gems_by_name.fetch("rubocop-lts-rspec")
+  gem "rubocop-ruby3_2", path: local_companion_gems_by_name.fetch("rubocop-ruby3_2")
 end
 
 # rubocop:disable Layout/LeadingCommentSpace
