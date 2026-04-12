@@ -72,7 +72,7 @@ This gem configures many gems for you:
 
 And optionally, if you are using RSpec:
 
-- rubocop-rspec
+- rubocop-lts-rspec (which loads `rubocop-rspec`, `rubocop-rspec-extra`, `rubocop-env`, and `rubocop-factory_bot`)
 
 And optionally, if you are building a RubyGem:
 
