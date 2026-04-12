@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - pry-suite
   - debase, for IDE debugging
 ### Changed
+- Updated the `standard-rubocop-lts` dependency floor to `2.0.0`.
 ### Fixed
 - (dev) `yard` documentation task
 ### Removed
