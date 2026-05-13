@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - (dev) `yard` documentation task
 ### Removed
+- Removed remaining `rubocop-shopify` usage from the active development toolchain.
 
 ## [8.1.1] - 2023-05-30
 ### Added
