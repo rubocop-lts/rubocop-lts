@@ -51,7 +51,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # linting
-  spec.add_dependency("rubocop-ruby2_1", ">= 2.0.3", "< 3")       # >= 2.7.0
+  spec.add_dependency("rubocop-ruby2_1", ">= 3.0.0", "< 4")       # >= 2.7.0
   spec.add_dependency("standard-rubocop-lts", ">= 2.0.0", "< 3")  # >= 3.2.0
   spec.add_dependency("version_gem", ">= 1.1.2", "< 3")           # >= 2.2.0
 
