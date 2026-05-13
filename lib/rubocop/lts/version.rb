@@ -3,7 +3,7 @@
 module Rubocop
   module Lts
     module Version
-      VERSION = "18.2.2"
+      VERSION = "18.3.0"
     end
   end
 end
