@@ -1,51 +1,10 @@
-GIT
-  remote: https://github.com/pboling/simplecov-rcov
-  revision: 7a54f35d04e2bdb1052be698f00d6c7cc35ea529
-  branch: patch-1
-  specs:
-    simplecov-rcov (0.3.1)
-      simplecov (>= 0.4.1)
-
 PATH
   remote: .
   specs:
     rubocop-lts (24.1.0)
       rubocop-ruby3_2 (>= 3.0.0, < 4)
-      standard-rubocop-lts (>= 2.0.0, < 3)
+      standard-rubocop-lts (>= 2.0.2, < 3)
       version_gem (>= 1.1.2, < 3)
-
-PATH
-  remote: /home/pboling/code/src/rubocop-lts/rubocop-lts-rspec
-  specs:
-    rubocop-lts-rspec (1.0.0)
-      rubocop (~> 1.72, >= 1.72.1)
-      rubocop-env (~> 0.1, >= 0.1.0)
-      rubocop-factory_bot (~> 2.27, >= 2.27.1)
-      rubocop-rspec (~> 3.6, >= 3.6.0)
-      rubocop-rspec-extra (~> 0.2, >= 0.2.0)
-      standard (>= 1.38, < 2)
-      standard-rspec (~> 0.3, >= 0.3.1)
-      version_gem (>= 1.1.8, < 3)
-
-PATH
-  remote: /home/pboling/code/src/rubocop-lts/rubocop-ruby3_2
-  specs:
-    rubocop-ruby3_2 (3.0.0)
-      rubocop-gradual (~> 0.3, >= 0.3.4)
-      rubocop-md (~> 1.2, >= 1.2.1)
-      rubocop-rake (~> 0.6)
-      rubocop-thread_safety (~> 0.5, >= 0.5.1)
-      standard-rubocop-lts (~> 2.0, >= 2.0.0)
-      version_gem (>= 1.1.3, < 3)
-
-PATH
-  remote: /home/pboling/code/src/rubocop-lts/standard-rubocop-lts
-  specs:
-    standard-rubocop-lts (2.0.1)
-      standard (>= 1.35.1, < 2)
-      standard-custom (>= 1.0.2, < 2)
-      standard-performance (>= 1.3.1, < 2)
-      version_gem (>= 1.1.8, < 3)
 
 GEM
   remote: https://rubygems.org/
@@ -58,7 +17,7 @@ GEM
     diffy (3.4.4)
     docile (1.4.1)
     io-console (0.8.2)
-    json (2.19.5)
+    json (2.19.7)
     language_server-protocol (3.17.0.5)
     lint_roller (1.1.0)
     nomono (1.0.0)
@@ -117,6 +76,15 @@ GEM
       parallel (~> 1.10)
       rainbow (>= 2.2.2, < 4.0)
       rubocop (~> 1.0)
+    rubocop-lts-rspec (1.0.1)
+      rubocop (~> 1.72, >= 1.72.1)
+      rubocop-env (~> 0.1, >= 0.1.0)
+      rubocop-factory_bot (~> 2.27, >= 2.27.1)
+      rubocop-rspec (~> 3.6, >= 3.6.0)
+      rubocop-rspec-extra (~> 0.2, >= 0.2.0)
+      standard (>= 1.38, < 2)
+      standard-rspec (~> 0.3, >= 0.3.1)
+      version_gem (>= 1.1.9, < 3)
     rubocop-md (1.2.4)
       rubocop (>= 1.45)
     rubocop-packaging (0.6.0)
@@ -139,6 +107,13 @@ GEM
       lint_roller (~> 1.1)
       rubocop (~> 1.72, >= 1.72.1)
       rubocop-rspec (~> 3.5)
+    rubocop-ruby3_2 (3.0.0)
+      rubocop-gradual (~> 0.3, >= 0.3.4)
+      rubocop-md (~> 1.2, >= 1.2.1)
+      rubocop-rake (~> 0.6)
+      rubocop-thread_safety (~> 0.5, >= 0.5.1)
+      standard-rubocop-lts (~> 2.0, >= 2.0.2)
+      version_gem (>= 1.1.9, < 3)
     rubocop-thread_safety (0.7.3)
       lint_roller (~> 1.1)
       rubocop (~> 1.72, >= 1.72.1)
@@ -156,6 +131,8 @@ GEM
       json
       simplecov
     simplecov-lcov (0.9.0)
+    simplecov-rcov (0.3.7)
+      simplecov (>= 0.4.1)
     simplecov_json_formatter (0.1.4)
     standard (1.54.0)
       language_server-protocol (~> 3.17.0.2)
@@ -169,12 +146,17 @@ GEM
     standard-performance (1.9.0)
       lint_roller (~> 1.1)
       rubocop-performance (~> 1.26.0)
-    standard-rspec (0.4.0)
+    standard-rspec (0.5.0)
       lint_roller (>= 1.0)
-      rubocop-capybara (~> 2.22)
+      rubocop-capybara (~> 2.23)
       rubocop-factory_bot (~> 2.27)
       rubocop-rspec (~> 3.9)
       rubocop-rspec_rails (~> 2.31)
+    standard-rubocop-lts (2.0.2)
+      standard (>= 1.35.1, < 2)
+      standard-custom (>= 1.0.2, < 2)
+      standard-performance (>= 1.3.1, < 2)
+      version_gem (>= 1.1.9, < 3)
     unicode-display_width (3.2.0)
       unicode-emoji (~> 4.1)
     unicode-emoji (4.2.0)
@@ -195,19 +177,18 @@ DEPENDENCIES
   rspec-block_is_expected (~> 1.0)
   rubocop-gradual (~> 0.3)
   rubocop-lts!
-  rubocop-lts-rspec (~> 1.0)!
+  rubocop-lts-rspec (~> 1.0, >= 1.0.1)
   rubocop-md (~> 1.2)
   rubocop-packaging (~> 0.5)
   rubocop-rake (~> 0.6)
-  rubocop-ruby3_2!
   rubocop-thread_safety (~> 0.5)
   simplecov (~> 0.22)
   simplecov-cobertura
   simplecov-json (~> 0.2)
   simplecov-lcov (~> 0.8)
-  simplecov-rcov!
-  standard-rubocop-lts!
+  simplecov-rcov (~> 0.3, >= 0.3.7)
+  standard-rubocop-lts (>= 2.0.0, < 3)
   yard (~> 0.9, >= 0.9.34)
 
 BUNDLED WITH
-   2.6.8
+  4.0.12
