@@ -28,7 +28,7 @@ if RUN_COVERAGE
     ]
 
     # Setup Coverage Dir
-    SimpleCov.coverage_dir "results/coverage"
+    SimpleCov.coverage_dir "coverage"
 
     if ALL_FORMATTERS
       require "simplecov-rcov"
