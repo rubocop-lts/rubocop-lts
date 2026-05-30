@@ -19,7 +19,7 @@ local_companion_gems = %w[
 ]
 
 if ENV.fetch("RUBOCOP_LTS_DEV", "false").casecmp("false").zero?
-  gem "rubocop-lts-rspec", "~> 1.0", github: "rubocop-lts/rubocop-lts-rspec"
+  gem "rubocop-lts-rspec", "~> 1.0", ">= 1.0.1"
 else
   local_companion_gems_by_name = nomono_gems(
     gems: local_companion_gems,
