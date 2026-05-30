@@ -52,7 +52,7 @@ Gem::Specification.new do |spec|
 
   # linting
   spec.add_dependency("rubocop-ruby2_2", ">= 3.0.0", "< 4")       # >= 2.7.0
-  spec.add_dependency("standard-rubocop-lts", ">= 2.0.0", "< 3")  # >= 3.2.0
+  spec.add_dependency("standard-rubocop-lts", ">= 2.0.2", "< 3")  # >= 3.2.0
   spec.add_dependency("version_gem", ">= 1.1.9", "< 3")           # >= 2.2.0
 
   # RubyGems adding this gem will need to explicitly add rubocop-packaging to their dependencies.
@@ -62,6 +62,6 @@ Gem::Specification.new do |spec|
   # Code tested with RSpec should explicitly add rubocop-lts-rspec to their dependencies.
   # Since it only applies to projects using the `*_rspec.yml` entrypoints,
   #   we do not add it as a runtime dependency of this gem.
-  spec.add_development_dependency("rubocop-lts-rspec", "~> 1.0")  # >= 3.2.0
+  spec.add_development_dependency("rubocop-lts-rspec", "~> 1.0", ">= 1.0.1")  # >= 3.2.0
   spec.add_development_dependency("rspec-block_is_expected", "~> 1.0", ">= 1.0.6")        # >= 0
 end
