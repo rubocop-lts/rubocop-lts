@@ -58,6 +58,7 @@ Gem::Specification.new do |spec|
   # RubyGems adding this gem will need to explicitly add rubocop-packaging to their dependencies.
   # Since it only applies to rubygems we do not add it as a runtime dependency of this gem.
   spec.add_development_dependency("rubocop-packaging", "~> 0.5")  # >= 2.6.0
+  spec.add_development_dependency("kettle-soup-cover", "~> 1.1", ">= 1.1.3")      # >= 2.7.0
 
   # Code tested with RSpec should explicitly add rubocop-lts-rspec to their dependencies.
   # Since it only applies to projects using the `*_rspec.yml` entrypoints,
