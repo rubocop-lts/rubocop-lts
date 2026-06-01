@@ -6,18 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- Improved linting (via rubocop-rubyX_X)
-- (dev) Improved Gemfile context pattern
-- (dev) Dependencies
-  - yard-junk
-  - redcarpet
-  - pry, IRB alternative (and a binstub)
-  - pry-suite
-  - debase, for IDE debugging
+### Changed
+### Fixed
+### Removed
+
+## [8.2.0] - 2026-05-30
+### Added
 ### Changed
 - Updated the `standard-rubocop-lts` dependency floor to `2.0.0`.
 ### Fixed
-- (dev) `yard` documentation task
 ### Removed
 - Removed remaining `rubocop-shopify` usage from the active development toolchain.
 
@@ -42,9 +39,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial even release supporting Ruby >= 2.2
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v8.1.1...r2_2-even-v8
+[Unreleased]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v8.2.0...HEAD
 [8.1.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v8.1.0...v8.1.1
 [8.1.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v8.0.2...v8.1.0
 [8.0.2]: https://github.com/rubocop-lts/rubocop-lts/compare/v8.0.1...v8.0.2
 [8.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v8.0.0...v8.0.1
 [8.0.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/tags/v8.0.0
+[8.2.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v8.1.1...v8.2.0
