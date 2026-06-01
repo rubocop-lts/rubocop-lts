@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 ### Changed
+### Fixed
+### Removed
+
+## [0.2.0] - 2026-05-30
+### Added
+### Changed
 - Updated the `standard-rubocop-lts` dependency floor to `2.0.0`.
 ### Fixed
 ### Removed
@@ -22,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial even release supporting analysis of Ruby >= 1.8
 - Configures many linting tools via `standard-rubocop-lts`
 
-[Unreleased]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v0.1.1...HEAD
+[Unreleased]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v0.2.0...HEAD
 [0.1.1]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v0.1.0...v0.1.1
 [0.1.0]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/tags/v0.1.0
+[0.2.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v0.1.1...v0.2.0
