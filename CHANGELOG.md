@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 ### Changed
+### Fixed
+### Removed
+
+## [16.2.0] - 2026-05-30
+### Added
+### Changed
 - Updated the `standard-rubocop-lts` dependency floor to `2.0.0`.
 ### Fixed
 ### Removed
@@ -33,8 +39,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial even release supporting Ruby >= 2.6
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v16.1.1...HEAD
+[Unreleased]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v16.2.0...HEAD
 [16.1.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v16.1.0...v16.1.1
 [16.1.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v16.0.1...v16.1.0
 [16.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v16.0.0...v16.0.1
 [16.0.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/tags/v16.0.0
+[16.2.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v16.1.1...v16.2.0
