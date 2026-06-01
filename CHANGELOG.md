@@ -10,6 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [10.2.1] - 2026-06-01
+### Added
+### Changed
+- Prepared the 10.2.1 release.
+### Fixed
+### Removed
+
 ## [10.2.0] - 2026-05-30
 ### Added
 ### Changed
@@ -37,9 +44,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial even release supporting Ruby >= 2.3
 
-[Unreleased]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v10.2.0...HEAD
+[Unreleased]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v10.2.1...HEAD
 [10.1.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v10.1.0...v10.1.1
 [10.1.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v10.0.1...v10.1.0
 [10.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v10.0.0...v10.0.1
 [10.0.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/tags/v10.0.0
 [10.2.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v10.1.1...v10.2.0
+[10.2.1]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v10.2.0...v10.2.1
