@@ -10,6 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [8.2.1] - 2026-06-01
+### Added
+### Changed
+- Prepared the 8.2.1 release.
+### Fixed
+### Removed
+
 ## [8.2.0] - 2026-05-30
 ### Added
 ### Changed
@@ -39,10 +46,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial even release supporting Ruby >= 2.2
 
-[Unreleased]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v8.2.0...HEAD
+[Unreleased]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v8.2.1...HEAD
 [8.1.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v8.1.0...v8.1.1
 [8.1.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v8.0.2...v8.1.0
 [8.0.2]: https://github.com/rubocop-lts/rubocop-lts/compare/v8.0.1...v8.0.2
 [8.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v8.0.0...v8.0.1
 [8.0.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/tags/v8.0.0
 [8.2.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v8.1.1...v8.2.0
+[8.2.1]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v8.2.0...v8.2.1
