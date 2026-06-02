@@ -10,12 +10,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
-## [0.2.1] - 2026-06-01
+## [0.3.0] - 2026-06-01
 ### Added
 ### Changed
-- Added the missing previous release entry to the changelog.
+- Updated dependency floors to the latest RuboCop-LTS family releases.
+- Raised the minimum supported Ruby version to 3.2.
 ### Fixed
+- Added the missing previous release entry to the changelog.
 ### Removed
+- Removed support for running this gem on Ruby < 3.2.
 
 ## [0.2.0] - 2026-05-30
 ### Added
@@ -35,8 +38,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial even release supporting analysis of Ruby >= 1.8
 - Configures many linting tools via `standard-rubocop-lts`
 
-[Unreleased]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v0.2.1...HEAD
+[Unreleased]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v0.3.0...HEAD
 [0.1.1]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v0.1.0...v0.1.1
 [0.1.0]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/tags/v0.1.0
 [0.2.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v0.1.1...v0.2.0
-[0.2.1]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v0.2.0...v0.2.1
+[0.3.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v0.2.0...v0.3.0
