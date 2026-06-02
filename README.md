@@ -1,4 +1,4 @@
-<a href="https://github.com/kettle-rb"><img alt="rubocop-lts Logo by Aboling0, CC BY-SA 4.0" src="https://logos.galtzo.com/assets/images/rubocop-lts/avatar-192px.svg" width="14%" align="right"/></a>
+<a href="https://rubocop-lts.gitlab.io/"><img alt="rubocop-lts Logo by Aboling0, CC BY-SA 4.0" src="https://logos.galtzo.com/assets/images/rubocop-lts/avatar-192px.svg" width="20%" align="right"/></a>
 
 # 🦾 RuboCop LTS
 
