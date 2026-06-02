@@ -12,9 +12,21 @@ Gem::Specification.new do |spec|
   spec.authors = ["Peter Boling"]
   spec.email = ["peter.boling@gmail.com"]
 
+  # Linux distros may package ruby gems differently,
+  #   and securely certify them independently via alternate package management systems.
+  # Ref: https://gitlab.com/oauth-xx/version_gem/-/issues/3
+  # Hence, only enable signing if the cert_file is present.
   # See CONTRIBUTING.md
-  spec.cert_chain = ["certs/pboling.pem"]
-  spec.signing_key = File.expand_path("~/.ssh/gem-private_key.pem") if $PROGRAM_NAME.end_with?("gem")
+  default_user_cert = "certs/#{ENV.fetch("GEM_CERT_USER", ENV["USER"])}.pem"
+  default_user_cert_path = File.join(__dir__, default_user_cert)
+  cert_file_path = ENV.fetch("GEM_CERT_PATH", default_user_cert_path)
+  cert_chain = cert_file_path.split(",")
+  if cert_file_path && cert_chain.map { |fp| File.exist?(fp) }
+    spec.cert_chain = cert_chain
+    if $PROGRAM_NAME.end_with?("gem", "rake") && ARGV[0] == "build"
+      spec.signing_key = File.expand_path("~/.ssh/gem-private_key.pem")
+    end
+  end
 
   spec.summary = "Rules for Rubies: Rubocop + Standard + Betterlint + Gradual"
   spec.description = "Configure RuboCop + a bevy of friends to gradually lint Ruby code"
