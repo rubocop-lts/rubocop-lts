@@ -2,6 +2,8 @@
 
 # 🦾 RuboCop LTS
 
+The RuboCop LTS family of gems is the distillation of more than 20 years of my own Ruby expertise and source code diving, built on the shoulders of the expertise of many others — `rubocop`, `standard`, `rubocop-gradual` and others are runtime dependencies — not reinventing any wheels here); organizing that expertise into per-Ruby-version sets of configurations. Yes, I typed those emdashes, and wrote this entire README myself without AI — `ctrl`-`shift`-`u`-`2014`.
+
 ## PROJECT DOCUMENTATION
 
 * 🌱 [Convention > Configuration][Convention-Over-Configuration]
