@@ -10,12 +10,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
-## [16.2.1] - 2026-06-01
+## [16.3.0] - 2026-06-01
 ### Added
 ### Changed
-- Added the missing previous release entry to the changelog.
+- Updated dependency floors to the latest RuboCop-LTS family releases.
+- Raised the minimum supported Ruby version to 3.2.
 ### Fixed
+- Added the missing previous release entry to the changelog.
 ### Removed
+- Removed support for running this gem on Ruby < 3.2.
 
 ## [16.2.0] - 2026-05-30
 ### Added
@@ -46,10 +49,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial even release supporting Ruby >= 2.6
 
-[Unreleased]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v16.2.1...HEAD
+[Unreleased]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v16.3.0...HEAD
 [16.1.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v16.1.0...v16.1.1
 [16.1.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v16.0.1...v16.1.0
 [16.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v16.0.0...v16.0.1
 [16.0.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/tags/v16.0.0
 [16.2.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v16.1.1...v16.2.0
-[16.2.1]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v16.2.0...v16.2.1
+[16.3.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v16.2.0...v16.3.0
