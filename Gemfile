@@ -1,65 +1,48 @@
 # frozen_string_literal: true
 
-source "https://rubygems.org"
+# kettle-jem:freeze
+# To retain chunks of comments & code during kettle-jem templating:
+# Wrap custom sections with freeze markers (e.g., as above and below this comment chunk).
+# kettle-jem will then preserve content between those markers across template runs.
+# kettle-jem:unfreeze
 
+source "https://gem.coop"
+
+git_source(:codeberg) { |repo_name| "https://codeberg.org/#{repo_name}" }
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 
-# Include dependencies from <gem name>.gemspec
+#### IMPORTANT #######################################################
+# Gemfile is for local development ONLY; Gemfile is NOT loaded in CI #
+####################################################### IMPORTANT ####
+
+# Include dependencies from rubocop-lts.gemspec
 gemspec
 
-gem "nomono", "~> 1.0", require: false
+# Local workspace dependency wiring for *_local.gemfile overrides
+gem "nomono", "~> 1.0", ">= 1.0.2", require: false # ruby >= 2.2
 
-require "nomono/bundler"
+# Templating (env-switched: SMORG_RB_DEV=/path/to/structuredmerge/ruby/gems for local paths)
+eval_gemfile "gemfiles/modular/templating.gemfile" if ENV.fetch("K_JEM_TEMPLATING", "false").casecmp("true").zero?
 
-local_companion_gems = %w[
-  rubocop-ruby3_2
-  rubocop-lts-rspec
-  standard-rubocop-lts
-]
+# Debugging
+eval_gemfile "gemfiles/modular/debug.gemfile"
 
-if ENV.fetch("RUBOCOP_LTS_DEV", "false").casecmp("false").zero?
-  gem "rubocop-lts-rspec", "~> 1.0", ">= 1.0.1"
-else
-  local_companion_gems_by_name = nomono_gems(
-    gems: local_companion_gems,
-    prefix: "RUBOCOP_LTS",
-    root: %w[code src rubocop-lts]
-  )
-  gem "rubocop-lts-rspec", "~> 1.0", path: local_companion_gems_by_name.fetch("rubocop-lts-rspec")
-  gem "rubocop-ruby3_2", path: local_companion_gems_by_name.fetch("rubocop-ruby3_2")
-end
+# Code Coverage (env-switched: KETTLE_RB_DEV=true for local paths)
+eval_gemfile "gemfiles/modular/coverage.gemfile"
 
-# rubocop:disable Layout/LeadingCommentSpace
-#noinspection RbsMissingTypeSignature
-RUBY_VER = Gem::Version.new(RUBY_VERSION)
-#noinspection RbsMissingTypeSignature
-IS_CI = !ENV["CI"].nil?
-#noinspection RbsMissingTypeSignature
-LOCAL_SUPPORTED = !IS_CI && Gem::Version.new("3.0") <= RUBY_VER && RUBY_ENGINE == "ruby"
-# rubocop:enable Layout/LeadingCommentSpace
+# Linting
+eval_gemfile "gemfiles/modular/style.gemfile"
 
-if LOCAL_SUPPORTED || IS_CI
-  # Coverage
-  eval_gemfile "./gemfiles/contexts/coverage.gemfile"
+# Documentation
+eval_gemfile "gemfiles/modular/documentation.gemfile"
 
-  # Linting
-  eval_gemfile "./gemfiles/contexts/style.gemfile"
+# Optional
+eval_gemfile "gemfiles/modular/optional.gemfile"
 
-  # Testing
-  eval_gemfile "./gemfiles/contexts/testing.gemfile"
+### Std Lib Extracted Gems
+eval_gemfile "gemfiles/modular/x_std_libs.gemfile"
 
-  # Documentation
-  eval_gemfile "./gemfiles/contexts/docs.gemfile"
+# See unlocked_deps appraisal for more details on irb inclusion
+gem "irb", "~> 1.17" # ruby >= 2.7
 
-  # Debugging
-  platform :mri do
-    eval_gemfile "./gemfiles/contexts/mri/debug.gemfile"
-  end
-
-  platform :jruby do
-    eval_gemfile "./gemfiles/contexts/jruby/debug.gemfile"
-  end
-end
-
-eval_gemfile "./gemfiles/contexts/core.gemfile"
