@@ -1,5 +1,13 @@
 # frozen_string_literal: true
 
+# kettle-jem:freeze
+# To retain chunks of comments & code during rubocop-lts templating:
+# Wrap custom sections with freeze markers (e.g., as above and below this comment chunk).
+# rubocop-lts will then preserve content between those markers across template runs.
+# kettle-jem:unfreeze
+
+require "kettle/soup/cover/config"
+
 # To get coverage
 # On Local, default (HTML) output coverage is turned on with Ruby 2.6+:
 #   bundle exec rspec spec
