@@ -1,4 +1,3 @@
-# encoding: utf-8
 # frozen_string_literal: true
 
 module Rubocop
@@ -6,5 +5,6 @@ module Rubocop
     module Version
       VERSION = "2.3.0"
     end
+    VERSION = Version::VERSION # Traditional Constant Location
   end
 end
