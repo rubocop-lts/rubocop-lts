@@ -5,5 +5,6 @@ module Rubocop
     module Version
       VERSION = "14.3.0"
     end
+    VERSION = Version::VERSION # Traditional Constant Location
   end
 end
