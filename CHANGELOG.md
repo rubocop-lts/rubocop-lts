@@ -28,6 +28,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Corrected misspelled contact metadata to use `galtzo.com`.
+
 ### Security
 
 ## [24.2.0] - 2026-06-01
