@@ -41,7 +41,7 @@ if RUN_COVERAGE
       %r{^/spec/},
       %r{^/src/},
       %r{^/test/},
-      %r{^/vendor/},
+      %r{^/vendor/}
     ]
 
     # Setup Coverage Dir
@@ -54,7 +54,7 @@ if RUN_COVERAGE
       require "simplecov-cobertura"
       command_name "#{ENV.fetch(
         "GITHUB_WORKFLOW",
-        nil,
+        nil
       )} Job #{ENV.fetch("GITHUB_RUN_ID", nil)}:#{ENV.fetch("GITHUB_RUN_NUMBER", nil)}"
 
       SimpleCov::Formatter::LcovFormatter.config do |c|
@@ -67,7 +67,7 @@ if RUN_COVERAGE
         SimpleCov::Formatter::CoberturaFormatter, # XML for Jenkins
         SimpleCov::Formatter::RcovFormatter, # For Hudson
         SimpleCov::Formatter::LcovFormatter,
-        SimpleCov::Formatter::JSONFormatter, # For CodeClimate
+        SimpleCov::Formatter::JSONFormatter # For CodeClimate
       ]
     else
       command_name "RSpec"

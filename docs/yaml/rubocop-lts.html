@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Untitled</title>
+  <style>
+    /* minimal, namespaced styles */
+    .yyaml-page { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+    .yyaml-title { margin: 0.2em 0 0.4em; font-size: 1.6em; }
+    .yyaml-desc { color: #444; margin-bottom: 1em; }
+    .yyaml-body { line-height: 1.5; }
+  </style>
+</head>
+<body class="yyaml-page">
+  <h1 class="yyaml-title">Untitled</h1>
+  
+  <div class="yyaml-body"><p>Change the file you inherit if you:</p>
+
+<ul>
+  <li>
+    <p>use Rails,</p>
+  </li>
+  <li>
+    <p>are creating a RubyGem, or</p>
+  </li>
+  <li>
+    <p>don’t use RSpec</p>
+  </li>
+</ul>
+
+<p>As follows:</p>
+
+<p>inherit_gem:</p>
+
+<pre><code># Pick one:
+
+#  rubocop-lts: config/rails_rspec.yml # or config/rails.yml w/o rspec
+
+#  rubocop-lts: config/ruby_rspec.yml # or config/ruby.yml w/o rspec
+
+#  rubocop-lts: config/rubygem_rspec.yml # or config/rubygem.yml w/o rspec
+
+# Convention over configuration, hence loading this file just only Ruby and RSpec defaults:
+
+rubocop-lts: rubocop-lts.yml # for the ruby + rspec
+</code></pre>
+
+<pre><code class="language-yaml">inherit_from:
+  - config/ruby_rspec.yml
+</code></pre>
+<hr />
+
+<p>Produced by <a href="https://github.com/kettle-rb/yaml-converter">yaml-converter</a></p>
+</div>
+</body>
+</html>
