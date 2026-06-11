@@ -5,9 +5,9 @@
 
 require "nomono/bundler" unless defined?(Nomono)
 
-local_gems = %w[kettle-dev kettle-test kettle-soup-cover kettle-drift]
+local_gems = ["kettle-dev", "kettle-test", "kettle-soup-cover", "kettle-drift"]
 declared_gems = instance_variable_get(:@dependencies).to_a.map(&:name)
-local_gems_to_eval = local_gems - %w[rubocop-lts] - declared_gems
+local_gems_to_eval = local_gems - ["rubocop-lts"] - declared_gems
 
 # export KETTLE_RB_DEV=/path/to/kettle-rb
 platform :mri do
@@ -22,7 +22,7 @@ platform :mri do
 
   if ENV.fetch("GALTZO_FLOSS_DEV", "false").casecmp("false") != 0
     eval_nomono_gems(
-      gems: %w[turbo_tests2],
+      gems: ["turbo_tests2"],
       prefix: "GALTZO_FLOSS",
       path_env: "GALTZO_FLOSS_DEV",
       vendored_gems_env: "GALTZO_FLOSS_VENDORED_GEMS",
