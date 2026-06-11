@@ -9,8 +9,8 @@
 Gem::Specification.new do |spec|
   spec.name = "rubocop-lts"
   spec.version = Module.new.tap { |mod| Kernel.load("#{__dir__}/lib/rubocop/lts/version.rb", mod) }::Rubocop::Lts::Version::VERSION
-  spec.authors = ["Peter Boling"]
-  spec.email = ["peter.boling@gmail.com"]
+  spec.authors = ["Peter H. Boling"]
+  spec.email = ["floss@galtzo.com"]
 
   spec.summary = "🦾 Rules for Rubies: Rubocop + Standard + Betterlint + Shopify + Gradual"
   spec.description = "🦾 Configure RuboCop + a bevy of friends to gradually lint Ruby code"
@@ -41,7 +41,7 @@ Gem::Specification.new do |spec|
   spec.metadata["changelog_uri"] = "#{spec.homepage}/blob/v#{spec.version}/CHANGELOG.md"
   spec.metadata["bug_tracker_uri"] = "#{spec.homepage}/issues"
   spec.metadata["documentation_uri"] = "https://www.rubydoc.info/gems/#{spec.name}/#{spec.version}"
-  spec.metadata["funding_uri"] = "https://github.com/sponsors/rubocop-lts"
+  spec.metadata["funding_uri"] = "https://github.com/sponsors/pboling"
   spec.metadata["wiki_uri"] = "#{spec.homepage}/wiki"
   spec.metadata["news_uri"] = "https://www.railsbling.com/tags/#{spec.name}"
   spec.metadata["discord_uri"] = "https://discord.gg/3qme4XHNKN"
@@ -113,7 +113,7 @@ Gem::Specification.new do |spec|
   #       and preferably a modular one (see gemfiles/modular/*.gemfile).
 
   # Dev, Test, & Release Tasks
-  spec.add_development_dependency("kettle-dev", "~> 2.1", ">= 2.1.1")      # ruby >= 3.2
+  spec.add_development_dependency("kettle-dev", "~> 2.2", ">= 2.2.3")      # ruby >= 3.2
 
   # Security
   spec.add_development_dependency("bundler-audit", "~> 0.9.3")                      # ruby >= 2.0.0
@@ -125,9 +125,9 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("require_bench", "~> 1.0", ">= 1.0.4")            # ruby >= 2.2.0
 
   # Testing
-  spec.add_development_dependency("appraisal2", "~> 3.1", ">= 3.1.1")               # ruby >= 1.8.7, for testing against multiple versions of dependencies
-  spec.add_development_dependency("kettle-test", "~> 2.0", ">= 2.0.3")             # ruby >= 3.2
-  spec.add_development_dependency("turbo_tests2", "~> 3.1", ">= 3.1.1")            # ruby >= 2.4.0, default kettle-test runner
+  spec.add_development_dependency("appraisal2", "~> 3.1", ">= 3.1.2")               # ruby >= 1.8.7, for testing against multiple versions of dependencies
+  spec.add_development_dependency("kettle-test", "~> 2.0", ">= 2.0.5")             # ruby >= 3.2
+  spec.add_development_dependency("turbo_tests2", "~> 3.1", ">= 3.1.2")            # ruby >= 2.4.0, default kettle-test runner
 
   # Releasing
   spec.add_development_dependency("ruby-progressbar", "~> 1.13")                    # ruby >= 0
@@ -151,7 +151,7 @@ Gem::Specification.new do |spec|
   # See: https://github.com/vcr/vcr/issues/1057
   # spec.add_development_dependency("vcr", ">= 4")                        # 6.0 claims to support ruby >= 2.3, but fails on ruby 2.4
   # spec.add_development_dependency("webmock", ">= 3")                    # Last version to support ruby >= 2.3
-  spec.add_development_dependency("rubocop-packaging", "~> 0.6", ">= 0.6.0")  # >= 2.7.0
-  spec.add_development_dependency("rubocop-lts-rspec", "~> 1.0", ">= 1.0.2")  # >= 3.2.0
   spec.add_development_dependency("rspec-block_is_expected", "~> 1.0", ">= 1.0.6")  # >= 1.8.7
+  spec.add_development_dependency("rubocop-lts-rspec", "~> 1.0", ">= 1.0.2")  # >= 3.2.0
+  spec.add_development_dependency("rubocop-packaging", "~> 0.6", ">= 0.6.0")  # >= 2.7.0
 end
