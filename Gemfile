@@ -23,6 +23,50 @@ gemspec
 nomono_requirements = ["~> 1.0", ">= 1.0.6"]
 gem "nomono", *nomono_requirements, require: false # ruby >= 2.2
 
+# Direct sibling dependencies (env-switched via RUBOCOP_LTS_DEV)
+direct_sibling_gems = %w[
+  rubocop-ruby2_2
+  standard-rubocop-lts
+]
+direct_sibling_dev = ENV.fetch("RUBOCOP_LTS_DEV", "")
+direct_sibling_local =
+  !direct_sibling_dev.empty? && !%w[false 0 no off].include?(direct_sibling_dev.downcase)
+direct_sibling_templating = ENV.fetch("K_JEM_TEMPLATING", "false").casecmp("true").zero?
+
+if direct_sibling_gems.any? &&
+    (direct_sibling_local ||
+      ENV.fetch("K_JEM_TEMPLATING", "false").casecmp("true").zero?)
+  begin
+    nomono_activation_requirements = nomono_requirements
+    nomono_lockfile = File.expand_path("Gemfile.lock", __dir__)
+    if File.file?(nomono_lockfile)
+      nomono_locked_spec = Bundler::LockfileParser
+        .new(Bundler.read_file(nomono_lockfile))
+        .specs
+        .find { |spec| spec.name == "nomono" }
+      nomono_locked = nomono_locked_spec &&
+        Gem::Requirement.new(nomono_requirements).satisfied_by?(nomono_locked_spec.version)
+      if nomono_locked
+        nomono_activation_requirements = ["= #{nomono_locked_spec.version}"]
+      end
+    end
+    Kernel.send(:gem, "nomono", *nomono_activation_requirements)
+    require "nomono/bundler"
+    if direct_sibling_templating && !direct_sibling_local
+      ENV["RUBOCOP_LTS_DEV"] = File.expand_path("..", __dir__)
+    end
+
+    eval_nomono_gems(
+      gems: direct_sibling_gems,
+      prefix: "RUBOCOP_LTS",
+      path_env: "RUBOCOP_LTS_DEV",
+      root: ["src", "my", "rubocop-lts"]
+    )
+  rescue LoadError
+    warn "Install nomono to enable RUBOCOP_LTS_DEV local sibling-gem dependencies."
+  end
+end
+
 # Templating (env-switched: SMORG_RB_DEV=/path/to/structuredmerge/ruby/gems for local paths)
 eval_gemfile "gemfiles/modular/templating.gemfile" if ENV.fetch("K_JEM_TEMPLATING", "false").casecmp("true").zero?
 
