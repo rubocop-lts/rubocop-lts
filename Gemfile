@@ -23,12 +23,12 @@ gemspec
 nomono_requirements = ["~> 1.0", ">= 1.0.6"]
 gem "nomono", *nomono_requirements, require: false # ruby >= 2.2
 
-# Direct sibling dependencies (env-switched via PBOLING_DEV)
+# Direct sibling dependencies (env-switched via RUBOCOP_LTS_DEV)
 direct_sibling_gems = %w[
   rubocop-ruby3_2
   standard-rubocop-lts
 ]
-direct_sibling_dev = ENV.fetch("PBOLING_DEV", "")
+direct_sibling_dev = ENV.fetch("RUBOCOP_LTS_DEV", "")
 direct_sibling_local =
   !direct_sibling_dev.empty? && !%w[false 0 no off].include?(direct_sibling_dev.downcase)
 direct_sibling_templating = ENV.fetch("K_JEM_TEMPLATING", "false").casecmp("true").zero?
@@ -53,17 +53,17 @@ if direct_sibling_gems.any? &&
     Kernel.send(:gem, "nomono", *nomono_activation_requirements)
     require "nomono/bundler"
     if direct_sibling_templating && !direct_sibling_local
-      ENV["PBOLING_DEV"] = File.expand_path("..", __dir__)
+      ENV["RUBOCOP_LTS_DEV"] = File.expand_path("..", __dir__)
     end
 
     eval_nomono_gems(
       gems: direct_sibling_gems,
-      prefix: "PBOLING",
-      path_env: "PBOLING_DEV",
-      root: ["src", "my", "pboling"]
+      prefix: "RUBOCOP_LTS",
+      path_env: "RUBOCOP_LTS_DEV",
+      root: ["src", "my", "rubocop-lts"]
     )
   rescue LoadError
-    warn "Install nomono to enable PBOLING_DEV local sibling-gem dependencies."
+    warn "Install nomono to enable RUBOCOP_LTS_DEV local sibling-gem dependencies."
   end
 end
 

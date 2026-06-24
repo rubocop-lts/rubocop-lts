@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
 
   spec.summary = "🦾 Rules for Rubies: Rubocop + Standard + Betterlint + Shopify + Gradual"
   spec.description = "🦾 Configure RuboCop + a bevy of friends to gradually lint Ruby code"
-  spec.homepage = "https://github.com/pboling/rubocop-lts"
+  spec.homepage = "https://github.com/rubocop-lts/rubocop-lts"
   spec.licenses = ["MIT"]
   spec.required_ruby_version = ">= 3.2"
 
