@@ -3,7 +3,7 @@
 module Rubocop
   module Lts
     module Version
-      VERSION = "22.3.0"
+      VERSION = "4.3.1"
     end
     VERSION = Version::VERSION # Traditional Constant Location
   end
