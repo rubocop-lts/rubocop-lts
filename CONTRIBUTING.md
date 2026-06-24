@@ -198,7 +198,7 @@ Your picture could be here!
 
 Made with [contributors-img][🖐contrib-rocks].
 
-Also see GitLab Contributors: [https://gitlab.com/pboling/rubocop-lts/-/graphs/main][🚎contributors-gl]
+Also see GitLab Contributors: [https://gitlab.com/rubocop-lts/rubocop-lts/-/graphs/main][🚎contributors-gl]
 
 ## For Maintainers
 
@@ -249,15 +249,15 @@ NOTE: To build without signing the gem set `SKIP_GEM_SIGNING` to any value in th
 14. Run `bundle exec rake release` which will create a git tag for the version,
     push git commits and tags, and push the `.gem` file to the gem host configured in the gemspec.
 
-[📜src-gl]: https://gitlab.com/pboling/rubocop-lts
-[📜src-cb]: https://codeberg.org/pboling/rubocop-lts
-[📜src-gh]: https://github.com/pboling/rubocop-lts
-[🧪build]: https://github.com/pboling/rubocop-lts/actions
-[🤝conduct]: https://github.com/pboling/rubocop-lts/blob/main/CODE_OF_CONDUCT.md
+[📜src-gl]: https://gitlab.com/rubocop-lts/rubocop-lts
+[📜src-cb]: https://codeberg.org/rubocop-lts/rubocop-lts
+[📜src-gh]: https://github.com/rubocop-lts/rubocop-lts
+[🧪build]: https://github.com/rubocop-lts/rubocop-lts/actions
+[🤝conduct]: https://github.com/rubocop-lts/rubocop-lts/blob/main/CODE_OF_CONDUCT.md
 [🖐contrib-rocks]: https://contrib.rocks
-[🖐contributors]: https://github.com/pboling/rubocop-lts/graphs/contributors
-[🚎contributors-gl]: https://gitlab.com/pboling/rubocop-lts/-/graphs/main
-[🖐contributors-img]: https://contrib.rocks/image?repo=pboling/rubocop-lts
+[🖐contributors]: https://github.com/rubocop-lts/rubocop-lts/graphs/contributors
+[🚎contributors-gl]: https://gitlab.com/rubocop-lts/rubocop-lts/-/graphs/main
+[🖐contributors-img]: https://contrib.rocks/image?repo=rubocop-lts/rubocop-lts
 [💎gem-coop]: https://gem.coop
 [🔒️rubygems-security-guide]: https://guides.rubygems.org/security/#building-gems
 [🔒️rubygems-checksums-pr]: https://github.com/rubygems/rubygems/pull/6022
