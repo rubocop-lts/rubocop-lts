@@ -20,45 +20,45 @@ end
 Kernel.send(:gem, "nomono", *nomono_activation_requirements)
 require "nomono/bundler"
 
-smorg_rb_local_gems = %w[
-  tree_haver
-  ast-merge
-  ast-merge-git
-  ast-template
-  bash-merge
-  binary-merge
-  commonmarker-merge
-  citrus-toml-merge
-  dotenv-merge
-  go-merge
-  json-merge
-  kettle-jem
-  kramdown-merge
-  markdown-merge
-  markly-merge
-  parslet-toml-merge
-  plain-merge
-  prism-merge
-  psych-merge
-  rbs-merge
-  ruby-merge
-  rust-merge
-  smorg-rb
-  typescript-merge
-  toml-merge
-  yaml-merge
-  zip-merge
-  ast-crispr
-  ast-crispr-markdown-markly
-  ast-crispr-ruby-prism
+smorg_rb_local_gems = [
+  "tree_haver",
+  "ast-merge",
+  "ast-merge-git",
+  "ast-template",
+  "bash-merge",
+  "binary-merge",
+  "commonmarker-merge",
+  "citrus-toml-merge",
+  "dotenv-merge",
+  "go-merge",
+  "json-merge",
+  "kettle-jem",
+  "kramdown-merge",
+  "markdown-merge",
+  "markly-merge",
+  "parslet-toml-merge",
+  "plain-merge",
+  "prism-merge",
+  "psych-merge",
+  "rbs-merge",
+  "ruby-merge",
+  "rust-merge",
+  "smorg-rb",
+  "typescript-merge",
+  "toml-merge",
+  "yaml-merge",
+  "zip-merge",
+  "ast-crispr",
+  "ast-crispr-markdown-markly",
+  "ast-crispr-ruby-prism"
 ]
 
-kettle_rb_local_gems = %w[
-  kettle-dev kettle-test kettle-soup-cover kettle-drift
+kettle_rb_local_gems = [
+  "kettle-dev", "kettle-test", "kettle-soup-cover", "kettle-drift"
 ]
 declared_gems = instance_variable_get(:@dependencies).to_a.map(&:name)
-smorg_rb_local_gems_to_eval = smorg_rb_local_gems - %w[rubocop-lts] - declared_gems
-kettle_rb_local_gems_to_eval = kettle_rb_local_gems - %w[rubocop-lts] - declared_gems
+smorg_rb_local_gems_to_eval = smorg_rb_local_gems - ["rubocop-lts"] - declared_gems
+kettle_rb_local_gems_to_eval = kettle_rb_local_gems - ["rubocop-lts"] - declared_gems
 
 tree_sitter_language_pack_dev = ENV.fetch("TREE_SITTER_LANGUAGE_PACK_DEV", nil)
 if tree_sitter_language_pack_dev.to_s.empty? && ENV.fetch("SMORG_RB_DEV", "false").casecmp("false") != 0
