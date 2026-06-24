@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Updated the `standard-rubocop-lts` dependency floor to `2.0.0`.
 ### Fixed
+- Updated main-branch CI workflow action pins.
 ### Removed
 - Removed remaining `rubocop-shopify` usage from the active development toolchain.
 
