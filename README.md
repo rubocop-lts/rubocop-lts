@@ -130,32 +130,6 @@ And optionally, if you are building a Rails app:
 | [`rubocop-ruby3_2`][⛳️32-gh] | [![Gem Version][⛳️32-vi]][⛳️32-g]   | [![Total DL][🖇️32-dti]][⛳️32-g] [![DL Rank][🏘️32-rti]][⛳️32-g]     | [![Current][🚎32-cwfi]][🚎32-cwf] [![Heads][🖐32-hwfi]][🖐32-hwf]     | [![Open Issues][📗32-ioi]][📗32-io] [![Closed Issues][🚀32-ici]][🚀32-ic] [![Open PRs][💄32-poi]][💄32-po] [![Closed PRs][👽32-pci]][👽32-pc]         |
 | [`standard-rubocop-lts`][⛳️stdrlts-gh] | [![Gem Version][⛳️stdrlts-vi]][⛳️stdrlts-g] | [![Total DL][🖇️stdrlts-dti]][⛳️stdrlts-g] [![DL Rank][🏘️stdrlts-rti]][⛳️stdrlts-g] | [![Current][🚎stdrlts-cwfi]][🚎stdrlts-cwf] [![Heads][🖐stdrlts-hwfi]][🖐stdrlts-hwf] | [![Open Issues][📗stdrlts-ioi]][📗stdrlts-io] [![Closed Issues][🚀stdrlts-ici]][🚀stdrlts-ic] [![Open PRs][💄stdrlts-poi]][💄stdrlts-po] [![Closed PRs][👽stdrlts-pci]][👽stdrlts-pc] |
 
-## Installation
-
-There are no specific installation notes for this version.
-Please see the primary installation documentation.
-
-* ✨ Primary [Installation Documentation][Installation] .
-
-## Basic Usage
-
-There are no specific usage notes for this version.
-Please see the primary usage documentation.
-
-* 🔧 Primary [Usage Documentation][Usage].
-
-<!-- columnar badge #s for Project Health table:
-⛳️
-🖇
-🏘
-🚎
-🖐
-🧮
-📗
-🚀
-💄
-👽
--->
 
 [⛳️lts-vi]: http://img.shields.io/gem/v/rubocop-lts.svg
 [🖇️lts-dti]: https://img.shields.io/gem/dt/rubocop-lts.svg
@@ -445,3 +419,17 @@ Please see the primary usage documentation.
 [semver]: http://semver.org/
 [source]: https://github.com/rubocop-lts/rubocop-lts/
 [tweetme]: http://twitter.com/galtzo
+
+## Installation
+
+There are no specific installation notes for this version.
+Please see the primary installation documentation.
+
+* ✨ Primary [Installation Documentation][Installation] .
+
+## Basic Usage
+
+There are no specific usage notes for this version.
+Please see the primary usage documentation.
+
+* 🔧 Primary [Usage Documentation][Usage].
