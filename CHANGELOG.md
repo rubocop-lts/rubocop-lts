@@ -30,6 +30,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Restored the destination `spec.files` package declaration so the built gem
+  includes its `config/*.yml` RuboCop configuration files.
+
 ### Security
 
 ## [12.3.0] - 2026-06-01
