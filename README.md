@@ -142,9 +142,7 @@ And optionally, if you are building a Rails app:
 Each even-numbered `rubocop-lts` major version is maintained on a branch named
 for the Ruby syntax and style it teaches RuboCop to enforce. This is a linting
 target, not a promise that the gem's own runtime dependencies execute on that
-Ruby. Newer branches inherit the same README structure, but the branch-specific
-style target changes.
-
+Ruby. 
 | Ruby Style Enforced | `rubocop-lts` line | Branch |
 |---------------------|--------------------|--------|
 | Ruby 1.8 | 0.x | [`r1_8-even-v0`](https://github.com/rubocop-lts/rubocop-lts/tree/r1_8-even-v0) |
