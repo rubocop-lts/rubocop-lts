@@ -243,7 +243,7 @@ For most applications, prefer the [Pessimistic Version Constraint][📌pvc] with
 For example:
 
 ```ruby
-spec.add_dependency("rubocop-lts", "~> 18.0")
+spec.add_dependency("rubocop-lts", "~> 4.0")
 ```
 
 <details markdown="1">
