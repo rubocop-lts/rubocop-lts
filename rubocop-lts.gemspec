@@ -53,16 +53,19 @@ Gem::Specification.new do |spec|
     end
   end
 
-  # Specify which files are part of the released package.
-  spec.files = [
-    # Code / tasks / data (NOTE: exe/ is specified via spec.bindir and spec.executables below)
-    *enumerate_package_files.call("lib"),
-    # Executables and executable support scripts
-    *enumerate_package_files.call("exe"),
-    # Public certs for gem signing
-    *enumerate_package_files.call("certs"),
-    # Signatures
-    *enumerate_package_files.call("sig")
+  spec.files = Dir[
+    # Splats (alphabetical)
+    "config/*.yml",
+    "lib/**/*.rb",
+    "sig/**/*.rbs",
+    # Files (alphabetical)
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE.md",
+    "README.md",
+    "rubocop-lts.yml",
+    "SECURITY.md"
   ]
 
   # Automatically included with gem package, no need to list again in files.
