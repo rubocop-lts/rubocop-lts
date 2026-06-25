@@ -13,6 +13,26 @@ PATH
       standard-rubocop-lts (~> 2.0, >= 2.0.3)
       version_gem (~> 1.1, >= 1.1.13)
 
+PATH
+  remote: /var/home/pboling/src/my/rubocop-lts/rubocop-ruby3_0
+  specs:
+    rubocop-ruby3_0 (3.0.4)
+      rubocop-gradual (~> 0.3, >= 0.3.6)
+      rubocop-md (~> 2.0, >= 2.0.4)
+      rubocop-rake (~> 0.7, >= 0.7.1)
+      rubocop-thread_safety (~> 0.7, >= 0.7.3)
+      standard-rubocop-lts (~> 2.0, >= 2.0.3)
+      version_gem (~> 1.1, >= 1.1.13)
+
+PATH
+  remote: /var/home/pboling/src/my/rubocop-lts/standard-rubocop-lts
+  specs:
+    standard-rubocop-lts (2.0.7)
+      standard (~> 1.54, >= 1.54.0)
+      standard-custom (~> 1.0, >= 1.0.2)
+      standard-performance (~> 1.9, >= 1.9.0)
+      version_gem (~> 1.1, >= 1.1.13)
+
 GEM
   remote: https://gem.coop/
   specs:
@@ -92,17 +112,17 @@ GEM
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     json (2.20.0)
-    kettle-dev (2.2.15)
+    kettle-dev (2.2.18)
       kettle-test (~> 2.0, >= 2.0.4)
-      version_gem (~> 1.1, >= 1.1.12)
-    kettle-soup-cover (3.0.0.rc4)
+      version_gem (~> 1.1, >= 1.1.13)
+    kettle-soup-cover (3.0.0.rc5)
       simplecov (>= 1.0.pre)
       simplecov-cobertura (>= 4.0.pre)
       simplecov-console (~> 0.9, >= 0.9.5)
       simplecov-rcov (~> 0.3, >= 0.3.7)
       simplecov_lcov_formatter (~> 0.9, >= 0.9.0)
-      version_gem (~> 1.1, >= 1.1.12)
-    kettle-test (2.0.6)
+      version_gem (~> 1.1, >= 1.1.13)
+    kettle-test (2.0.7)
       appraisal2 (~> 3.0, >= 3.0.6)
       backports (~> 3.0)
       rspec (~> 3.0)
@@ -113,7 +133,7 @@ GEM
       silent_stream (~> 1.0, >= 1.0.12)
       timecop-rspec (~> 1.0, >= 1.0.3)
       turbo_tests2 (~> 3.1, >= 3.1.4)
-      version_gem (~> 1.1, >= 1.1.12)
+      version_gem (~> 1.1, >= 1.1.13)
     kramdown (2.5.2)
       rexml (>= 3.4.4)
     kramdown-parser-gfm (1.1.0)
@@ -259,13 +279,6 @@ GEM
       lint_roller (~> 1.1)
       rubocop (~> 1.72, >= 1.72.1)
       rubocop-rspec (~> 3.5)
-    rubocop-ruby3_0 (3.0.2)
-      rubocop-gradual (~> 0.3, >= 0.3.6)
-      rubocop-md (~> 2.0, >= 2.0.4)
-      rubocop-rake (~> 0.7, >= 0.7.1)
-      rubocop-thread_safety (~> 0.7, >= 0.7.3)
-      standard-rubocop-lts (~> 2.0, >= 2.0.3)
-      version_gem (~> 1.1, >= 1.1.9)
     rubocop-ruby3_2 (3.0.2)
       rubocop-gradual (~> 0.3, >= 0.3.6)
       rubocop-md (~> 2.0, >= 2.0.4)
@@ -312,11 +325,6 @@ GEM
       rubocop-factory_bot (~> 2.27)
       rubocop-rspec (~> 3.9)
       rubocop-rspec_rails (~> 2.31)
-    standard-rubocop-lts (2.0.5)
-      standard (~> 1.54, >= 1.54.0)
-      standard-custom (~> 1.0, >= 1.0.2)
-      standard-performance (~> 1.9, >= 1.9.0)
-      version_gem (~> 1.1, >= 1.1.11)
     stone_checksums (1.0.3)
       version_gem (~> 1.1, >= 1.1.9)
     stringio (3.2.0)
@@ -380,9 +388,9 @@ DEPENDENCIES
   gem_bench (~> 2.0, >= 2.0.5)
   gitmoji-regex (~> 2.0, >= 2.0.3)
   irb (~> 1.17)
-  kettle-dev (~> 2.2, >= 2.2.15)
-  kettle-soup-cover (~> 3.0.a, >= 3.0.0.rc4)
-  kettle-test (~> 2.0, >= 2.0.6)
+  kettle-dev (~> 2.2, >= 2.2.18)
+  kettle-soup-cover (~> 3.0.a, >= 3.0.0.rc5)
+  kettle-test (~> 2.0, >= 2.0.7)
   kramdown (~> 2.5, >= 2.5.1)
   kramdown-parser-gfm (~> 1.1)
   mutex_m (~> 0.2)
@@ -399,10 +407,12 @@ DEPENDENCIES
   rubocop-minitest (~> 0.38, >= 0.38.1)
   rubocop-on-rbs (~> 2.0, >= 2.0.0)
   rubocop-packaging (~> 0.6, >= 0.6.0)
+  rubocop-ruby3_0!
   rubocop-ruby3_2 (~> 3.0, >= 3.0.2)
   ruby-progressbar (~> 1.13)
   simplecov!
   standard (~> 1.54, >= 1.54.0)
+  standard-rubocop-lts!
   stone_checksums (~> 1.0, >= 1.0.3)
   stringio (>= 3.0)
   turbo_tests2 (~> 3.1, >= 3.1.5)
