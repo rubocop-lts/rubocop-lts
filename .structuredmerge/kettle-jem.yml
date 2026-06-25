@@ -217,13 +217,17 @@ readme:
   #   summary → synopsis, usage → basic usage,
   #   configuration options → configuration, setup → basic usage
   #
-  # preserve_sections:
-  #   - synopsis
-  #   - configuration
-  #   - basic usage
-  #   - usage
-  #   - summary
-  #
+  preserve_sections:
+    - synopsis
+    - this readme
+    - this branch
+    - branch stack
+    - project health
+    - configuration
+    - basic usage
+    - usage
+    - summary
+
   # Glob patterns for additional sections to preserve (e.g. Note:* headings).
   # Default when absent: ["note:*"]
   #

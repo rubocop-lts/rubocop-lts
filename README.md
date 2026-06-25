@@ -90,15 +90,27 @@ please support my efforts by making a donation, or becoming a sponsor.
 
 ### This README
 
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
 * 🌳 [This Branch](#this-branch-)
-* ‍💻 [Project Health](#project-health-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
 * ✨ [Installation](#installation-)
-* ✨ [Usage](#usage-)
+* 🔧 [Usage](#basic-usage-)
 
 ### This Branch 🌳
 
 <!-- FIND VERSION -->
-**This README is for the even release of `rubocop-lts` supporting Ruby >= 3.2.**
+**This README is for the default branch of `rubocop-lts`, currently aligned with
+the Ruby >= 3.2 / `rubocop-lts` 24.x line.**
+
+Use this branch when you are working on the current template shape or preparing
+the next branch in the stack. For released applications, choose the branch and
+major version line from the table below.
 
 This gem configures many gems for you:
 
@@ -124,6 +136,32 @@ And optionally, if you are building a Rails app:
 
 - standard-rails (incl. rubocop-rails)
 - betterlint
+
+### Branch Stack 🧭
+
+Each even-numbered `rubocop-lts` major version is maintained on a branch named
+for the oldest Ruby it supports. Newer branches inherit the same README
+structure, but the branch-specific compatibility floor changes.
+
+| Oldest Ruby supported | `rubocop-lts` line | Branch |
+|-----------------------|--------------------|--------|
+| Ruby 1.8 | 0.x | [`r1_8-even-v0`](https://github.com/rubocop-lts/rubocop-lts/tree/r1_8-even-v0) |
+| Ruby 1.9 | 2.x | [`r1_9-even-v2`](https://github.com/rubocop-lts/rubocop-lts/tree/r1_9-even-v2) |
+| Ruby 2.0 | 4.x | [`r2_0-even-v4`](https://github.com/rubocop-lts/rubocop-lts/tree/r2_0-even-v4) |
+| Ruby 2.1 | 6.x | [`r2_1-even-v6`](https://github.com/rubocop-lts/rubocop-lts/tree/r2_1-even-v6) |
+| Ruby 2.2 | 8.x | [`r2_2-even-v8`](https://github.com/rubocop-lts/rubocop-lts/tree/r2_2-even-v8) |
+| Ruby 2.3 | 10.x | [`r2_3-even-v10`](https://github.com/rubocop-lts/rubocop-lts/tree/r2_3-even-v10) |
+| Ruby 2.4 | 12.x | [`r2_4-even-v12`](https://github.com/rubocop-lts/rubocop-lts/tree/r2_4-even-v12) |
+| Ruby 2.5 | 14.x | [`r2_5-even-v14`](https://github.com/rubocop-lts/rubocop-lts/tree/r2_5-even-v14) |
+| Ruby 2.6 | 16.x | [`r2_6-even-v16`](https://github.com/rubocop-lts/rubocop-lts/tree/r2_6-even-v16) |
+| Ruby 2.7 | 18.x | [`r2_7-even-v18`](https://github.com/rubocop-lts/rubocop-lts/tree/r2_7-even-v18) |
+| Ruby 3.0 | 20.x | [`r3_0-even-v20`](https://github.com/rubocop-lts/rubocop-lts/tree/r3_0-even-v20) |
+| Ruby 3.1 | 22.x | [`r3_1-even-v22`](https://github.com/rubocop-lts/rubocop-lts/tree/r3_1-even-v22) |
+| Ruby 3.2+ | 24.x | [`r3_2-even-v24`](https://github.com/rubocop-lts/rubocop-lts/tree/r3_2-even-v24) |
+
+`main` is intentionally part of templating work so it can seed the next stacked
+branch, but release and install workflows should use the released branch line
+that matches your Ruby floor.
 
 ### Project Health 👩‍💻
 
