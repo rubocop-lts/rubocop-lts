@@ -33,6 +33,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Restored the destination `spec.files` package declaration so the built gem
+  includes its `config/*.yml` RuboCop configuration files.
 - Restored `docs/CNAME` so the generated documentation site keeps its custom domain.
 - Corrected misspelled contact metadata to use `galtzo.com`.
 
