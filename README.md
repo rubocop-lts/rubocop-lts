@@ -105,11 +105,11 @@ This README has two jobs:
 ### This Branch 🌳
 
 <!-- FIND VERSION -->
-**This README is for the `rubocop-lts` 6.x line supporting Ruby >= 2.1.**
+**This README is for the `rubocop-lts` 6.x line enforcing Ruby 2.1 style.**
 
-Use this branch for released applications whose oldest supported Ruby is 2.1.
-For a different Ruby floor, choose the matching branch and major version line
-from the table below.
+Use this branch when you want RuboCop to enforce syntax and style compatible
+with Ruby 2.1. For a different linting target, choose the matching
+branch and major version line from the table below.
 
 This gem configures many gems for you:
 
@@ -139,11 +139,13 @@ And optionally, if you are building a Rails app:
 ### Branch Stack 🧭
 
 Each even-numbered `rubocop-lts` major version is maintained on a branch named
-for the oldest Ruby it supports. Newer branches inherit the same README
-structure, but the branch-specific compatibility floor changes.
+for the Ruby syntax and style it teaches RuboCop to enforce. This is a linting
+target, not a promise that the gem's own runtime dependencies execute on that
+Ruby. Newer branches inherit the same README structure, but the branch-specific
+style target changes.
 
-| Oldest Ruby supported | `rubocop-lts` line | Branch |
-|-----------------------|--------------------|--------|
+| Ruby Style Enforced | `rubocop-lts` line | Branch |
+|---------------------|--------------------|--------|
 | Ruby 1.8 | 0.x | [`r1_8-even-v0`](https://github.com/rubocop-lts/rubocop-lts/tree/r1_8-even-v0) |
 | Ruby 1.9 | 2.x | [`r1_9-even-v2`](https://github.com/rubocop-lts/rubocop-lts/tree/r1_9-even-v2) |
 | Ruby 2.0 | 4.x | [`r2_0-even-v4`](https://github.com/rubocop-lts/rubocop-lts/tree/r2_0-even-v4) |
@@ -156,7 +158,7 @@ structure, but the branch-specific compatibility floor changes.
 | Ruby 2.7 | 18.x | [`r2_7-even-v18`](https://github.com/rubocop-lts/rubocop-lts/tree/r2_7-even-v18) |
 | Ruby 3.0 | 20.x | [`r3_0-even-v20`](https://github.com/rubocop-lts/rubocop-lts/tree/r3_0-even-v20) |
 | Ruby 3.1 | 22.x | [`r3_1-even-v22`](https://github.com/rubocop-lts/rubocop-lts/tree/r3_1-even-v22) |
-| Ruby 3.2+ | 24.x | [`r3_2-even-v24`](https://github.com/rubocop-lts/rubocop-lts/tree/r3_2-even-v24) |
+| Ruby 3.2 | 24.x | [`r3_2-even-v24`](https://github.com/rubocop-lts/rubocop-lts/tree/r3_2-even-v24) |
 
 `main` is intentionally part of templating work so it can seed the next stacked
 branch, but release and install workflows should use the released branch line
@@ -489,12 +491,12 @@ that matches your Ruby floor.
 
 ### Compatibility
 
-Compatible with MRI Ruby 2.1+ for this release line, and concordant
-releases of JRuby and TruffleRuby.
+This release line enforces MRI Ruby 2.1 syntax and style, with concordant
+JRuby and TruffleRuby expectations where those engines expose the same language level.
 CI workflows and Appraisals may run on newer Rubies when the current toolchain
-cannot run on the oldest supported interpreter.
-This branch is intended to protect projects whose dependency floor still
-includes Ruby 2.1.
+cannot run on the style target interpreter.
+This branch is intended to protect projects whose codebase still needs
+Ruby 2.1-compatible linting.
 
 <a href="https://github.com/kettle-dev"><img alt="kettle-dev Logo by Aboling0, CC BY-SA 4.0" src="https://logos.galtzo.com/assets/images/kettle-dev/avatar-128px.svg" width="14%" align="right"/></a>
 
