@@ -4,7 +4,7 @@
 
 The RuboCop LTS family of gems is the distillation of more than 20 years of my own Ruby expertise and source code diving, built on the shoulders of the expertise of many others — `rubocop`, `standard`, `rubocop-gradual` and others are runtime dependencies — not reinventing any wheels here); organizing that expertise into per-Ruby-version sets of configurations. Yes, I typed those emdashes, and wrote this entire README myself without AI — `ctrl`-`shift`-`u`-`2014`.
 
-## PROJECT DOCUMENTATION
+## Synopsis
 
 The complete documentation site is at [https://rubocop-lts.gitlab.io/][rlts]
 
@@ -80,7 +80,7 @@ please support my efforts by making a donation, or becoming a sponsor.
 * ✨ [Installation](#installation-)
 * ✨ [Usage](#usage-)
 
-## This Branch 🌳
+### This Branch 🌳
 
 <!-- FIND VERSION -->
 **This README is for the even release of `rubocop-lts` supporting Ruby >= 3.2.**
@@ -110,7 +110,7 @@ And optionally, if you are building a Rails app:
 - standard-rails (incl. rubocop-rails)
 - betterlint
 
-## Project Health 👩‍💻
+### Project Health 👩‍💻
 
 | Gem Name                     | Version                             | Downloads                                                            | CI                                                                    | Activity                                                                                                                                              |
 |------------------------------|-------------------------------------|----------------------------------------------------------------------|-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -130,14 +130,14 @@ And optionally, if you are building a Rails app:
 | [`rubocop-ruby3_2`][⛳️32-gh] | [![Gem Version][⛳️32-vi]][⛳️32-g]   | [![Total DL][🖇️32-dti]][⛳️32-g] [![DL Rank][🏘️32-rti]][⛳️32-g]     | [![Current][🚎32-cwfi]][🚎32-cwf] [![Heads][🖐32-hwfi]][🖐32-hwf]     | [![Open Issues][📗32-ioi]][📗32-io] [![Closed Issues][🚀32-ici]][🚀32-ic] [![Open PRs][💄32-poi]][💄32-po] [![Closed PRs][👽32-pci]][👽32-pc]         |
 | [`standard-rubocop-lts`][⛳️stdrlts-gh] | [![Gem Version][⛳️stdrlts-vi]][⛳️stdrlts-g] | [![Total DL][🖇️stdrlts-dti]][⛳️stdrlts-g] [![DL Rank][🏘️stdrlts-rti]][⛳️stdrlts-g] | [![Current][🚎stdrlts-cwfi]][🚎stdrlts-cwf] [![Heads][🖐stdrlts-hwfi]][🖐stdrlts-hwf] | [![Open Issues][📗stdrlts-ioi]][📗stdrlts-io] [![Closed Issues][🚀stdrlts-ici]][🚀stdrlts-ic] [![Open PRs][💄stdrlts-poi]][💄stdrlts-po] [![Closed PRs][👽stdrlts-pci]][👽stdrlts-pc] |
 
-## Installation ✨
+## Installation
 
 There are no specific installation notes for this version.
 Please see the primary installation documentation.
 
 * ✨ Primary [Installation Documentation][Installation] .
 
-## Usage 🔧
+## Basic Usage
 
 There are no specific usage notes for this version.
 Please see the primary usage documentation.
