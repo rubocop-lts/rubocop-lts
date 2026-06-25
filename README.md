@@ -532,12 +532,16 @@ gem install rubocop-lts
 
 ## ⚙️ Configuration
 
+Please see the primary configuration and usage documentation.
+
+* 🔧 Primary [Configuration and Usage Documentation][Usage].
+
 ## 🔧 Basic Usage
 
-There are no specific usage notes for this version.
-Please see the primary usage documentation.
+Please see the primary configuration and usage documentation.
 
-* 🔧 Primary [Usage Documentation][Usage].
+* 🔧 Primary [Configuration and Usage Documentation][Usage].
+
 ## 🦷 FLOSS Funding
 
 While rubocop-lts tools are free software and will always be, the project would benefit immensely from some funding.
