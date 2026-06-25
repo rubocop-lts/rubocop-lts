@@ -8,6 +8,35 @@
 #  # Also, convention over configuration, so obviously:
 #  rubocop-lts: rubocop.yml # for the ruby + rspec
 
+inherit_gem:
+  rubocop-lts: config/rubygem_rspec.yml
 # But we are inside the gem, so we need a different paradigm here.
 inherit_from:
   - config/rubygem_rspec.yml
+plugins:
+  - rubocop-on-rbs
+  - rubocop-packaging
+# This tells RuboCop to add the exclusions in this file
+# to the default exclusions (and those from other inherited files),
+# rather than overwriting them.
+inherit_mode:
+  merge:
+    - Exclude
+AllCops:
+  Exclude:
+    - certs/**/*
+    - checksums/**/*
+    - docs/**/*
+    - examples/**/*
+    - fixtures/**/*
+    - gemfiles/*.gemfile
+    - pkg/**/*
+    - results/**/*
+    - spec/fixtures/**/*
+    - tmp/**/*
+    - vendor/**/*
+    - AGENTS.md
+RBS:
+  Enabled: true
+Layout/IndentationConsistency:
+  Exclude: ['*.md']

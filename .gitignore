@@ -1,28 +1,52 @@
-/.bundle/
-/.yardoc
-/_yardoc/
-/coverage/
-/results/
-/doc/
+# Build Artifacts
 /pkg/
-/spec/reports/
-/tmp/
-
-# Packaging artifacts
+/tmp/*
+!/tmp/.gitignore
 *.gem
 
-# IDEs
-/.idea/
-*.kate-swp
+# Bundler
+/vendor/bundle/
+/.bundle/
+/gemfiles/*.lock
+/gemfiles/.bundle/
+/gemfiles/.bundle/config
+/gemfiles/vendor/
+Appraisal.*.gemfile.lock
 
-# rspec failure tracking
+# Specs
 .rspec_status
+/coverage/
+/spec/reports/
+/results/
+.output.txt
 
-# Gemfile Lock files
-gemfiles/*.lock
+# Documentation
+/.yardoc/
+/_yardoc/
+/rdoc/
+/doc/
 
-# Debugging
+# Ruby Version Managers (RVM, rbenv, etc)
+# Ignored because we currently use mise.toml
+.rvmrc
+.ruby-version
+.ruby-gemset
+.tool-versions
+
+# Benchmarking
+/measurement/
+
+# Debugger detritus
 .byebug_history
 
-# direnv - brew install direnv
+# Local environment overrides (KEY=value, loaded by mise via dotenvy)
 .env.local
+
+# OS Detritus
+.DS_Store
+
+# Editors
+*~
+
+# Sentinels
+.floss_funding.*.lock
