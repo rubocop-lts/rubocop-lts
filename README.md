@@ -559,13 +559,13 @@ Alternatively:
 Install the gem and add to the application's Gemfile by executing:
 
 ```console
-bundle add rubocop-lts
+bundle add rubocop-lts --version "~> 24.0"
 ```
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
 ```console
-gem install rubocop-lts
+gem install rubocop-lts --version "~> 24.0"
 ```
 
 ## ⚙️ Configuration
