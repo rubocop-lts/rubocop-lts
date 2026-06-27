@@ -36,7 +36,7 @@ Gem::Specification.new do |spec|
     end
   end
 
-  spec.metadata["homepage_uri"] = "https://rubocop-lts.galtzo.com"
+  spec.metadata["homepage_uri"] = "https://rubocop-lts.gitlab.io/"
   spec.metadata["source_code_uri"] = "#{spec.homepage}/tree/v#{spec.version}"
   spec.metadata["changelog_uri"] = "#{spec.homepage}/blob/v#{spec.version}/CHANGELOG.md"
   spec.metadata["bug_tracker_uri"] = "#{spec.homepage}/issues"
@@ -53,7 +53,8 @@ Gem::Specification.new do |spec|
     end
   end
 
-  spec.files = Dir[
+  # Specify which files are part of the released package.
+  spec.files = [
     # Splats (alphabetical)
     "config/*.yml",
     "lib/**/*.rb",
@@ -65,7 +66,15 @@ Gem::Specification.new do |spec|
     "LICENSE.md",
     "README.md",
     "rubocop-lts.yml",
-    "SECURITY.md"
+    "SECURITY.md",
+    # Code / tasks / data (NOTE: exe/ is specified via spec.bindir and spec.executables below)
+    *enumerate_package_files.call("lib"),
+    # Executables and executable support scripts
+    *enumerate_package_files.call("exe"),
+    # Public certs for gem signing
+    *enumerate_package_files.call("certs"),
+    # Signatures
+    *enumerate_package_files.call("sig")
   ]
 
   # Automatically included with gem package, no need to list again in files.
@@ -116,7 +125,7 @@ Gem::Specification.new do |spec|
   #       and preferably a modular one (see gemfiles/modular/*.gemfile).
 
   # Dev, Test, & Release Tasks
-  spec.add_development_dependency("kettle-dev", "~> 2.2", ">= 2.2.18")     # ruby >= 3.2
+  spec.add_development_dependency("kettle-dev", "~> 2.2", ">= 2.2.19")     # ruby >= 3.2
 
   # Security
   spec.add_development_dependency("bundler-audit", "~> 0.9.3")                      # ruby >= 2.0.0
@@ -136,23 +145,9 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("ruby-progressbar", "~> 1.13")                    # ruby >= 0
   spec.add_development_dependency("stone_checksums", "~> 1.0", ">= 1.0.3")          # ruby >= 2.2.0
 
-  # Git integration (optional)
-  # The 'git' gem is optional; rubocop-lts falls back to shelling out to `git` if it is not present.
-  # The current release of the git gem depends on activesupport, which makes it too heavy to depend on directly
-  # spec.add_dependency("git", ">= 1.19.1")                               # ruby >= 2.3
-
-  # Development tasks
-  # The cake is a lie. erb v2.2, the oldest release, was never compatible with Ruby 2.3.
-  # This means we have no choice but to use the erb that shipped with Ruby 2.3
-  # /opt/hostedtoolcache/Ruby/2.3.8/x64/lib/ruby/gems/2.3.0/gems/erb-2.2.2/lib/erb.rb:670:in `prepare_trim_mode': undefined method `match?' for "-":String (NoMethodError)
   # spec.add_development_dependency("erb", ">= 2.2")                                  # ruby >= 2.3.0, not SemVer, old rubies get dropped in a patch.
   spec.add_development_dependency("gitmoji-regex", "~> 2.0", ">= 2.0.3")            # ruby >= 2.4
 
-  # HTTP recording for deterministic specs
-  # In Ruby 3.5 (HEAD) the CGI library has been pared down, so we also need to depend on gem "cgi" for ruby@head
-  # This is done in the "head" appraisal.
-  # See: https://github.com/vcr/vcr/issues/1057
-  # spec.add_development_dependency("vcr", ">= 4")                        # 6.0 claims to support ruby >= 2.3, but fails on ruby 2.4
   # spec.add_development_dependency("webmock", ">= 3")                    # Last version to support ruby >= 2.3
   spec.add_development_dependency("rspec-block_is_expected", "~> 1.0", ">= 1.0.6")  # >= 1.8.7
   spec.add_development_dependency("rubocop-lts-rspec", "~> 1.0", ">= 1.0.2")  # >= 3.2.0
