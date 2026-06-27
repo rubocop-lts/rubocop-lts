@@ -906,6 +906,454 @@ This README has two jobs:
 * ✨ [Installation](#installation-)
 * 🔧 [Usage](#basic-usage-)
 
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
 ## 💡 Info you can shake a stick at
 
 | Tokens to Remember | [![Gem name][⛳️name-img]][⛳️gem-name] [![Gem namespace][⛳️namespace-img]][⛳️gem-namespace] |
@@ -1355,7 +1803,7 @@ Thanks for RTFM. ☺️
 [📌gitmoji]: https://gitmoji.dev
 [📌gitmoji-img]: https://img.shields.io/badge/gitmoji_commits-%20%F0%9F%98%9C%20%F0%9F%98%8D-34495e.svg?style=flat-square
 [🧮kloc]: https://www.youtube.com/watch?v=dQw4w9WgXcQ
-[🧮kloc-img]: https://img.shields.io/badge/KLOC-0.015-FFDD67.svg?style=for-the-badge&logo=YouTube&logoColor=blue
+[🧮kloc-img]: https://img.shields.io/badge/KLOC-5.053-FFDD67.svg?style=for-the-badge&logo=YouTube&logoColor=blue
 [🔐security]: https://github.com/rubocop-lts/rubocop-lts/blob/main/SECURITY.md
 [🔐security-img]: https://img.shields.io/badge/security-policy-259D6C.svg?style=flat
 [📄copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
