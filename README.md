@@ -472,6 +472,20 @@ that matches your Ruby floor.
 [source]: https://github.com/rubocop-lts/rubocop-lts/
 [tweetme]: http://twitter.com/galtzo
 
+### This README
+
+This README has two jobs:
+
+1. Describe the branch you are reading right now.
+2. Index the `rubocop-lts` branch stack so you can jump to the release line
+   matching the oldest Ruby you still support.
+
+* 🌳 [This Branch](#this-branch-)
+* 🧭 [Branch Stack](#branch-stack-)
+* 👩‍💻 [Project Health](#project-health-)
+* ✨ [Installation](#installation-)
+* 🔧 [Usage](#basic-usage-)
+
 ## 💡 Info you can shake a stick at
 
 | Tokens to Remember | [![Gem name][⛳️name-img]][⛳️gem-name] [![Gem namespace][⛳️namespace-img]][⛳️gem-namespace] |
@@ -490,12 +504,11 @@ that matches your Ruby floor.
 
 ### Compatibility
 
-This release line enforces MRI Ruby 2.2 syntax and style, with concordant
-JRuby and TruffleRuby expectations where those engines expose the same language level.
-CI workflows and Appraisals may run on newer Rubies when the current toolchain
-cannot run on the style target interpreter.
-This branch is intended to protect projects whose codebase still needs
-Ruby 2.2-compatible linting.
+Compatible with MRI Ruby 3.2+, and concordant releases of JRuby, and TruffleRuby.
+CI workflows and Appraisals are generated for MRI Ruby 3.2+.
+This test floor is configured by `ruby.test_minimum` in `.kettle-jem.yml` and
+may be higher than the gem's runtime compatibility floor when legacy Rubies are
+not practical for the current toolchain.
 
 <a href="https://github.com/kettle-dev"><img alt="kettle-dev Logo by Aboling0, CC BY-SA 4.0" src="https://logos.galtzo.com/assets/images/kettle-dev/avatar-128px.svg" width="14%" align="right"/></a>
 
@@ -560,13 +573,13 @@ Alternatively:
 Install the gem and add to the application's Gemfile by executing:
 
 ```console
-bundle add rubocop-lts --version "~> 8.0"
+bundle add rubocop-lts
 ```
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
 ```console
-gem install rubocop-lts --version "~> 8.0"
+gem install rubocop-lts
 ```
 
 ## ⚙️ Configuration
@@ -703,7 +716,7 @@ For most applications, prefer the [Pessimistic Version Constraint][📌pvc] with
 For example:
 
 ```ruby
-spec.add_dependency("rubocop-lts", "~> 8.0")
+spec.add_dependency("rubocop-lts", "~> 4.0")
 ```
 
 <details markdown="1">
@@ -733,7 +746,7 @@ See [LICENSE.md][📄license] for the official copyright notice.
 <details markdown="1">
 <summary>Copyright holders</summary>
 
-- Copyright (c) 2022-2023, 2025-2026 Peter Boling
+- Copyright (c) 2022-2023, 2026 Peter H. Boling
 
 </details>
 
