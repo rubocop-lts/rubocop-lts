@@ -65,7 +65,7 @@ tslp_dev = ENV.fetch("TSLP_DEV", nil)
 # export VENDORED_GEMS=
 platform :mri do
   unless tslp_dev.to_s.empty?
-    gem "tree_sitter_language_pack", path: tslp_dev
+    gem "tree_sitter_language_pack", :path => tslp_dev
   end
 
   if ENV.fetch("SMORG_RB_DEV", "false").casecmp("false") != 0
