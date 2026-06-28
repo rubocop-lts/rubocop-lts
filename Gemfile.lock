@@ -25,7 +25,18 @@ PATH
       version_gem (~> 1.1, >= 1.1.13)
 
 PATH
-  remote: /home/pboling/src/my/rubocop-lts/standard-rubocop-lts
+  remote: /var/home/pboling/src/my/rubocop-lts/rubocop-ruby1_8
+  specs:
+    rubocop-ruby1_8 (2.0.5)
+      rubocop-gradual (~> 0.3, >= 0.3.6)
+      rubocop-md (~> 2.0, >= 2.0.4)
+      rubocop-rake (~> 0.7, >= 0.7.1)
+      rubocop-thread_safety (~> 0.7, >= 0.7.3)
+      standard-rubocop-lts (~> 2.0, >= 2.0.3)
+      version_gem (~> 1.1, >= 1.1.13)
+
+PATH
+  remote: /var/home/pboling/src/my/rubocop-lts/standard-rubocop-lts
   specs:
     standard-rubocop-lts (2.0.8)
       standard (~> 1.54, >= 1.54.0)
@@ -112,7 +123,7 @@ GEM
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     json (2.20.0)
-    kettle-dev (2.2.20)
+    kettle-dev (2.2.21)
       kettle-rb (~> 0.1, >= 0.1.0)
       kettle-test (~> 2.0, >= 2.0.4)
       version_gem (~> 1.1, >= 1.1.13)
@@ -281,13 +292,6 @@ GEM
       lint_roller (~> 1.1)
       rubocop (~> 1.72, >= 1.72.1)
       rubocop-rspec (~> 3.5)
-    rubocop-ruby1_8 (2.0.5)
-      rubocop-gradual (~> 0.3, >= 0.3.6)
-      rubocop-md (~> 2.0, >= 2.0.4)
-      rubocop-rake (~> 0.7, >= 0.7.1)
-      rubocop-thread_safety (~> 0.7, >= 0.7.3)
-      standard-rubocop-lts (~> 2.0, >= 2.0.3)
-      version_gem (~> 1.1, >= 1.1.13)
     rubocop-thread_safety (0.7.3)
       lint_roller (~> 1.1)
       rubocop (~> 1.72, >= 1.72.1)
@@ -390,7 +394,7 @@ DEPENDENCIES
   gem_bench (~> 2.0, >= 2.0.5)
   gitmoji-regex (~> 2.0, >= 2.0.3)
   irb (~> 1.17)
-  kettle-dev (~> 2.2, >= 2.2.20)
+  kettle-dev (~> 2.2, >= 2.2.21)
   kettle-soup-cover (~> 3.0.a, >= 3.0.0.rc5)
   kettle-test (~> 2.0, >= 2.0.8)
   kramdown (~> 2.5, >= 2.5.1)
@@ -409,6 +413,7 @@ DEPENDENCIES
   rubocop-minitest (~> 0.38, >= 0.38.1)
   rubocop-on-rbs (~> 2.0, >= 2.0.0)
   rubocop-packaging (~> 0.6, >= 0.6.0)
+  rubocop-ruby1_8!
   rubocop-ruby3_2!
   ruby-progressbar (~> 1.13)
   simplecov!
