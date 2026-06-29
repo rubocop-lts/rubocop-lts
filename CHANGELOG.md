@@ -32,6 +32,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Removed stale Shopify wording from gem metadata and retired legacy context Gemfiles.
+- Refreshed the locked dependency set to use released RuboCop-LTS RSpec tooling.
 - Restored the destination `spec.files` package declaration so the built gem
   includes its `config/*.yml` RuboCop configuration files.
 - Updated main-branch CI workflow action pins.
