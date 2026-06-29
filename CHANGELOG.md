@@ -28,6 +28,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Removed stale Shopify wording from gem metadata and retired legacy context Gemfiles.
+- Refreshed the locked dependency set to use released RuboCop-LTS RSpec tooling.
 ### Security
 
 ## [24.2.2] - 2026-06-29
