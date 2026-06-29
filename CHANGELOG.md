@@ -20,8 +20,6 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
-- Added support for JRuby 10.1 and TruffleRuby 34.0.
-
 ### Changed
 
 ### Deprecated
@@ -30,54 +28,97 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+### Security
+
+## [16.3.1] - 2026-06-28
+
+- TAG: [v16.3.1][16.3.1t]
+- COVERAGE: 100.00% -- 15/15 lines in 2 files
+- BRANCH COVERAGE: 0.00% -- 0/0 branches in 2 files
+- 14.29% documented
+
+### Added
+
+- Added support for JRuby 10.1 and TruffleRuby 34.0.
+
+### Fixed
+
 - Restored the destination `spec.files` package declaration so the built gem
   includes its `config/*.yml` RuboCop configuration files.
 
-### Security
-
 ## [16.3.0] - 2026-06-01
+
 ### Added
+
 ### Changed
+
 - Updated dependency floors to the latest RuboCop-LTS family releases.
 - Raised the minimum supported Ruby version to 3.2.
+
 ### Fixed
+
 - Added the missing previous release entry to the changelog.
+
 ### Removed
+
 - Removed support for running this gem on Ruby < 3.2.
 
 ## [16.2.0] - 2026-05-30
+
 ### Added
+
 ### Changed
+
 - Updated the `standard-rubocop-lts` dependency floor to `2.0.0`.
+
 ### Fixed
+
 ### Removed
+
 - Removed remaining `rubocop-shopify` usage from the active development toolchain.
 
 ## [16.1.1] - 2023-05-30
+
 ### Added
+
 - `config/base.yml` for all shared configs
 - `Rubocop::Lts.install_tasks` to roll-up rake tasks from dependencies (e.g. rubocop_gradual)
 
 ## [16.1.0] - 2023-05-22
+
 ### Removed
+
 - Support for installs on Ruby < 2.7. Minimum runtime version is Ruby 2.7.  Continues to analyze older Ruby.
 
 ## [16.0.1] - 2022-06-09
+
 ### Added
+
 - Improve, and dry up documentation
+
 ### Changed
+
 - Bumped dependency rubocop-ruby2_6 to ~> 1.0.7
+
 ### Fixed
+
 - Allow install up to Ruby < 4, which allows running against current Ruby HEAD @ 3.2-dev
 
 ## [16.0.0] - 2022-05-23
+
+- TAG: [v16.0.0][16.0.0t]
+
 ### Added
+
 - Initial even release supporting Ruby >= 2.6
 
-[Unreleased]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v16.3.0...HEAD
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v16.3.1...HEAD
+[16.3.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v16.3.0...v16.3.1
+[16.3.1t]: https://github.com/rubocop-lts/rubocop-lts/releases/tag/v16.3.1
+[16.3.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v16.2.0...v16.3.0
+[16.2.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v16.1.1...v16.2.0
 [16.1.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v16.1.0...v16.1.1
 [16.1.0]: https://github.com/rubocop-lts/rubocop-lts/compare/v16.0.1...v16.1.0
 [16.0.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v16.0.0...v16.0.1
-[16.0.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/tags/v16.0.0
-[16.2.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v16.1.1...v16.2.0
-[16.3.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v16.2.0...v16.3.0
+[16.0.0]: https://github.com/rubocop-lts/rubocop-lts/releases/tag/v16.0.0
+[16.0.0t]: https://github.com/rubocop-lts/rubocop-lts/releases/tag/v16.0.0
