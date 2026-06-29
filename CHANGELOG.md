@@ -20,16 +20,37 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [24.2.2] - 2026-06-29
+
+- TAG: [v24.2.2][24.2.2t]
+- COVERAGE: 100.00% -- 15/15 lines in 2 files
+- BRANCH COVERAGE: 0.00% -- 0/0 branches in 2 files
+- 14.29% documented
+
+### Changed
+
+- Added changelog entries
+
+## [24.2.1] - 2026-06-29
+
+### Added
+
 - Added support for JRuby 10.1 and TruffleRuby 34.0.
 
 ### Changed
 
 - Retemplated generated project metadata, support documentation, CI workflows,
   binstubs, and development dependency floors with `kettle-jem` v7.0.0.
-
-### Deprecated
-
-### Removed
 
 ### Fixed
 
@@ -41,39 +62,63 @@ Please file a bug if you notice a violation of semantic versioning.
 ### Security
 
 ## [24.2.0] - 2026-06-01
+
 ### Added
+
 ### Changed
+
 - Updated dependency floors to the latest RuboCop-LTS family releases.
 - Raised the minimum supported Ruby version to 3.2.
+
 ### Fixed
+
 - Added the missing previous release entry to the changelog.
+
 ### Removed
+
 - Removed support for running this gem on Ruby < 3.2.
 
 ## [24.1.0] - 2026-05-30
+
 ### Added
+
 ### Changed
+
 - Updated the `standard-rubocop-lts` dependency floor to `2.0.0`.
+
 ### Fixed
+
 ### Removed
+
 - Removed remaining `rubocop-shopify` usage from the active development toolchain.
 
 ## [24.0.2] - 2023-05-30
+
 ### Added
+
 - `config/base.yml` for all shared configs
 - `Rubocop::Lts.install_tasks` to roll-up rake tasks from dependencies (e.g. rubocop_gradual)
 
 ## [24.0.1] - 2023-05-22
+
 ### Changed
+
 - Minimum Ruby version is 3.2
 
 ## [24.0.0] - 2023-05-22
+
+- TAG: [v24.0.0][24.0.0t]
+
 ### Added
+
 - Initial even release supporting Ruby >= 3.2
 
-[Unreleased]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v24.2.0...HEAD
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v24.2.2...HEAD
+[24.2.2]: https://github.com/rubocop-lts/rubocop-lts/compare/v24.2.0...v24.2.2
+[24.2.2t]: https://github.com/rubocop-lts/rubocop-lts/releases/tag/v24.2.2
+[24.2.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v24.1.0...v24.2.0
+[24.1.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v24.0.2...v24.1.0
 [24.0.2]: https://gitlab.com/rubocop-lts/rubocop-lts/compare/v24.0.1...v24.0.2
 [24.0.1]: https://gitlab.com/rubocop-lts/rubocop-lts/compare/v24.0.0...v24.0.1
-[24.0.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/tags/v24.0.0
-[24.1.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v24.0.2...v24.1.0
-[24.2.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v24.1.0...v24.2.0
+[24.0.0]: https://github.com/rubocop-lts/rubocop-lts/releases/tag/v24.0.0
+[24.0.0t]: https://github.com/rubocop-lts/rubocop-lts/releases/tag/v24.0.0
