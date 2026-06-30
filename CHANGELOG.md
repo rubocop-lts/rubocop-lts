@@ -38,6 +38,8 @@ Please file a bug if you notice a violation of semantic versioning.
   includes its `config/*.yml` RuboCop configuration files.
 - Updated main-branch CI workflow action pins.
 
+- Package configured license files in gem release file lists.
+
 ### Security
 
 ## [24.0.2] - 2023-05-30
