@@ -19,7 +19,7 @@ git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 gemspec
 
 # Local workspace dependency wiring for *_local.gemfile overrides
-nomono_requirements = ["~> 1.0", ">= 1.0.6"]
+nomono_requirements = ["~> 1.0", ">= 1.0.7"]
 gem "nomono", *nomono_requirements, :require => false # ruby >= 2.2
 
 # Direct sibling dependencies (env-switched via RUBOCOP_LTS_DEV)
@@ -35,6 +35,8 @@ direct_sibling_templating = ENV.fetch("K_JEM_TEMPLATING", "false").casecmp("true
 if direct_sibling_gems.any? &&
     (direct_sibling_local ||
       ENV.fetch("K_JEM_TEMPLATING", "false").casecmp("true").zero?)
+  direct_sibling_dev_was_set = ENV.key?("RUBOCOP_LTS_DEV")
+  direct_sibling_dev_original = ENV.fetch("RUBOCOP_LTS_DEV", nil)
   begin
     nomono_activation_requirements = nomono_requirements
     nomono_lockfile = File.expand_path("Gemfile.lock", __dir__)
@@ -63,6 +65,14 @@ if direct_sibling_gems.any? &&
     )
   rescue LoadError
     warn "Install nomono to enable RUBOCOP_LTS_DEV local sibling-gem dependencies."
+  ensure
+    if direct_sibling_templating && !direct_sibling_local
+      if direct_sibling_dev_was_set
+        ENV["RUBOCOP_LTS_DEV"] = direct_sibling_dev_original
+      else
+        ENV.delete("RUBOCOP_LTS_DEV")
+      end
+    end
   end
 end
 
