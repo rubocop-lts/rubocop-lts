@@ -59,24 +59,25 @@ Gem::Specification.new do |spec|
     "config/*.yml",
     "lib/**/*.rb",
     "sig/**/*.rbs"
-  ] + [
-    # Files (alphabetical)
-    "CHANGELOG.md",
-    "CODE_OF_CONDUCT.md",
-    "CONTRIBUTING.md",
-    "LICENSE.md",
-    "README.md",
-    "rubocop-lts.yml",
-    "SECURITY.md",
-    # Code / tasks / data (NOTE: exe/ is specified via spec.bindir and spec.executables below)
-    *enumerate_package_files.call("lib"),
-    # Executables and executable support scripts
-    *enumerate_package_files.call("exe"),
-    # Public certs for gem signing
-    *enumerate_package_files.call("certs"),
-    # Signatures
-    *enumerate_package_files.call("sig")
-  ]
+] + [
+  "LICENSE.md",
+  "MIT.md",
+  # Code / tasks / data (NOTE: exe/ is specified via spec.bindir and spec.executables below)
+  *enumerate_package_files.call("lib"),
+  # Executables and executable support scripts
+  *enumerate_package_files.call("exe"),
+  # Public certs for gem signing
+  *enumerate_package_files.call("certs"),
+  # Signatures
+  *enumerate_package_files.call("sig"),
+  # Files (alphabetical)
+  "CHANGELOG.md",
+  "CODE_OF_CONDUCT.md",
+  "CONTRIBUTING.md",
+  "README.md",
+  "rubocop-lts.yml",
+  "SECURITY.md"
+]
 
   # Automatically included with gem package, no need to list again in files.
   spec.extra_rdoc_files = Dir[
@@ -126,7 +127,7 @@ Gem::Specification.new do |spec|
   #       and preferably a modular one (see gemfiles/modular/*.gemfile).
 
   # Dev, Test, & Release Tasks
-  spec.add_development_dependency("kettle-dev", "~> 2.2", ">= 2.2.24")     # ruby >= 3.2
+  spec.add_development_dependency("kettle-dev", "~> 2.3", ">= 2.3.0")     # ruby >= 3.2
 
   # Security
   spec.add_development_dependency("bundler-audit", "~> 0.9.3")                      # ruby >= 2.0.0
@@ -138,16 +139,16 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("require_bench", "~> 1.0", ">= 1.0.4")            # ruby >= 2.2.0
 
   # Testing
-  spec.add_development_dependency("appraisal2", "~> 3.1", ">= 3.1.3")               # ruby >= 1.8.7, for testing against multiple versions of dependencies
-  spec.add_development_dependency("kettle-test", "~> 2.0", ">= 2.0.8")             # ruby >= 3.2
-  spec.add_development_dependency("turbo_tests2", "~> 3.1", ">= 3.1.5")            # ruby >= 2.4.0, default kettle-test runner
+  spec.add_development_dependency("appraisal2", "~> 3.1", ">= 3.1.4")               # ruby >= 1.8.7, for testing against multiple versions of dependencies
+  spec.add_development_dependency("kettle-test", "~> 2.0", ">= 2.0.9")             # ruby >= 3.2
+  spec.add_development_dependency("turbo_tests2", "~> 3.1", ">= 3.1.6")            # ruby >= 2.4.0, default kettle-test runner
 
   # Releasing
   spec.add_development_dependency("ruby-progressbar", "~> 1.13")                    # ruby >= 0
-  spec.add_development_dependency("stone_checksums", "~> 1.0", ">= 1.0.4")          # ruby >= 2.2.0
+  spec.add_development_dependency("stone_checksums", "~> 1.0", ">= 1.0.5")          # ruby >= 2.2.0
 
   # spec.add_development_dependency("erb", ">= 2.2")                                  # ruby >= 2.3.0, not SemVer, old rubies get dropped in a patch.
-  spec.add_development_dependency("gitmoji-regex", "~> 2.0", ">= 2.0.3")            # ruby >= 2.4
+  spec.add_development_dependency("gitmoji-regex", "~> 2.0", ">= 2.0.4")            # ruby >= 2.4
 
   # spec.add_development_dependency("webmock", ">= 3")                    # Last version to support ruby >= 2.3
   spec.add_development_dependency("rspec-block_is_expected", "~> 1.0", ">= 1.0.6")  # >= 1.8.7
