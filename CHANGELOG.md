@@ -28,6 +28,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Allow release branch-stack pushes to start the managed GitHub Actions workflows.
+
 ### Security
 
 ## [0.3.2] - 2026-07-03
