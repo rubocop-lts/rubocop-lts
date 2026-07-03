@@ -8,6 +8,7 @@ on:
     branches:
       - 'main'
       - '*-stable'
+      - 'r*_*-*-v*'
     tags:
       - '!*' # Do not execute on tags
   pull_request:
