@@ -28,12 +28,21 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+### Security
+
+## [0.3.2] - 2026-07-03
+
+- TAG: [v0.3.2][0.3.2t]
+- COVERAGE: 100.00% -- 15/15 lines in 2 files
+- BRANCH COVERAGE: 0.00% -- 0/0 branches in 2 files
+- 14.29% documented
+
+### Fixed
+
 - Removed stale Shopify wording from gem metadata and retired legacy context Gemfiles.
 - Refreshed the locked dependency set to use released RuboCop-LTS RSpec tooling.
 
 - Package configured license files in gem release file lists.
-
-### Security
 
 ## [0.3.1] - 2026-06-28
 
@@ -98,7 +107,9 @@ Please file a bug if you notice a violation of semantic versioning.
 - Initial even release supporting analysis of Ruby >= 1.8
 - Configures many linting tools via `standard-rubocop-lts`
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v0.3.1...HEAD
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v0.3.2...HEAD
+[0.3.2]: https://github.com/rubocop-lts/rubocop-lts/compare/v0.3.1...v0.3.2
+[0.3.2t]: https://github.com/rubocop-lts/rubocop-lts/releases/tag/v0.3.2
 [0.3.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v0.3.0...v0.3.1
 [0.3.1t]: https://github.com/rubocop-lts/rubocop-lts/releases/tag/v0.3.1
 [0.3.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v0.2.0...v0.3.0
