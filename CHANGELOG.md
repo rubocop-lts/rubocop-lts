@@ -32,6 +32,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Allow release branch-stack pushes to start the managed GitHub Actions workflows.
+
 - Removed stale Shopify wording from gem metadata and retired legacy context Gemfiles.
 - Refreshed the locked dependency set to use released RuboCop-LTS RSpec tooling.
 - Restored the destination `spec.files` package declaration so the built gem
