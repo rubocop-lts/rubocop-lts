@@ -28,8 +28,6 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
-- Allow release branch-stack pushes to start the managed GitHub Actions workflows.
-
 ### Security
 
 ## [0.3.2] - 2026-07-03
@@ -45,6 +43,8 @@ Please file a bug if you notice a violation of semantic versioning.
 - Refreshed the locked dependency set to use released RuboCop-LTS RSpec tooling.
 
 - Package configured license files in gem release file lists.
+
+- Allow release branch-stack pushes to start the managed GitHub Actions workflows.
 
 ## [0.3.1] - 2026-06-28
 
