@@ -28,14 +28,23 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+### Security
+
+## [10.3.2] - 2026-07-03
+
+- TAG: [v10.3.2][10.3.2t]
+- COVERAGE: 100.00% -- 15/15 lines in 2 files
+- BRANCH COVERAGE: 0.00% -- 0/0 branches in 2 files
+- 14.29% documented
+
+### Fixed
+
 - Allow release branch-stack pushes to start the managed GitHub Actions workflows.
 
 - Removed stale Shopify wording from gem metadata and retired legacy context Gemfiles.
 - Refreshed the locked dependency set to use released RuboCop-LTS RSpec tooling.
 
 - Package configured license files in gem release file lists.
-
-### Security
 
 ## [10.3.1] - 2026-06-28
 
@@ -115,7 +124,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial even release supporting Ruby >= 2.3
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v10.3.1...HEAD
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v10.3.2...HEAD
+[10.3.2]: https://github.com/rubocop-lts/rubocop-lts/compare/v10.3.1...v10.3.2
+[10.3.2t]: https://github.com/rubocop-lts/rubocop-lts/releases/tag/v10.3.2
 [10.3.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v10.3.0...v10.3.1
 [10.3.1t]: https://github.com/rubocop-lts/rubocop-lts/releases/tag/v10.3.1
 [10.3.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v10.2.0...v10.3.0
