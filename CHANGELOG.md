@@ -28,14 +28,23 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+### Security
+
+## [20.4.2] - 2026-07-03
+
+- TAG: [v20.4.2][20.4.2t]
+- COVERAGE: 100.00% -- 15/15 lines in 2 files
+- BRANCH COVERAGE: 0.00% -- 0/0 branches in 2 files
+- 14.29% documented
+
+### Fixed
+
 - Allow release branch-stack pushes to start the managed GitHub Actions workflows.
 
 - Removed stale Shopify wording from gem metadata and retired legacy context Gemfiles.
 - Refreshed the locked dependency set to use released RuboCop-LTS RSpec tooling.
 
 - Package configured license files in gem release file lists.
-
-### Security
 
 ## [20.4.1] - 2026-06-28
 
@@ -141,7 +150,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial even release supporting Ruby >= 3.0
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v20.4.1...HEAD
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v20.4.2...HEAD
+[20.4.2]: https://github.com/rubocop-lts/rubocop-lts/compare/v20.4.1...v20.4.2
+[20.4.2t]: https://github.com/rubocop-lts/rubocop-lts/releases/tag/v20.4.2
 [20.4.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v20.4.0...v20.4.1
 [20.4.1t]: https://github.com/rubocop-lts/rubocop-lts/releases/tag/v20.4.1
 [20.4.0]: https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v20.3.0...v20.4.0
