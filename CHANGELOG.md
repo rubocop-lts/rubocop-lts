@@ -28,16 +28,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
-- Allow release branch-stack pushes to start the managed GitHub Actions workflows.
-
-- Removed stale Shopify wording from gem metadata and retired legacy context Gemfiles.
-- Refreshed the locked dependency set to use released RuboCop-LTS RSpec tooling.
-
-- Package configured license files in gem release file lists.
-
 ### Security
 
-## [24.2.2] - 2026-06-29
+## [24.2.2] - 2026-07-03
 
 - TAG: [v24.2.2][24.2.2t]
 - COVERAGE: 100.00% -- 15/15 lines in 2 files
@@ -47,6 +40,15 @@ Please file a bug if you notice a violation of semantic versioning.
 ### Changed
 
 - Added changelog entries
+
+### Fixed
+
+- Allow release branch-stack pushes to start the managed GitHub Actions workflows.
+
+- Removed stale Shopify wording from gem metadata and retired legacy context Gemfiles.
+- Refreshed the locked dependency set to use released RuboCop-LTS RSpec tooling.
+
+- Package configured license files in gem release file lists.
 
 ## [24.2.1] - 2026-06-29
 
