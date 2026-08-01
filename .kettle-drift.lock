@@ -1,11 +1,74 @@
 {
+  "#   The ENV variable CI is always set,\n#   and COVER_ALL, and CI_CODECOV, are set in the coverage.yml workflow only,": [
+    {
+      "file": ".simplecov",
+      "lines": [
+        24,
+        36
+      ]
+    }
+  ],
+  "#   and COVER_ALL, and CI_CODECOV, are set in the coverage.yml workflow only,\n#   so coverage only runs in that workflow, and outputs all formats.": [
+    {
+      "file": ".simplecov",
+      "lines": [
+        25,
+        37
+      ]
+    }
+  ],
+  "#   bundle exec rspec spec\n# On Local, all output formats with Ruby 3.0+:": [
+    {
+      "file": ".simplecov",
+      "lines": [
+        19,
+        31
+      ]
+    }
+  ],
+  "# On CI, all output formats, but coverage only runs for the coverage workflow.\n#   The ENV variable CI is always set,": [
+    {
+      "file": ".simplecov",
+      "lines": [
+        23,
+        35
+      ]
+    }
+  ],
+  "# On Local, all output formats with Ruby 3.0+:\n#   COVER_ALL=true bundle exec rspec spec": [
+    {
+      "file": ".simplecov",
+      "lines": [
+        20,
+        32
+      ]
+    }
+  ],
+  "# On Local, default (HTML) output coverage is turned on with Ruby 2.7+:\n#   bundle exec rspec spec": [
+    {
+      "file": ".simplecov",
+      "lines": [
+        18,
+        30
+      ]
+    }
+  ],
+  "# To get coverage\n# On Local, default (HTML) output coverage is turned on with Ruby 2.7+:": [
+    {
+      "file": ".simplecov",
+      "lines": [
+        17,
+        29
+      ]
+    }
+  ],
   "appraisal: \"dep-heads\"\nexec_cmd: \"kettle-test\"": [
     {
       "file": ".github/workflows/dep-heads.yml",
       "lines": [
-        44,
-        51,
-        58
+        43,
+        100,
+        157
       ]
     }
   ],
@@ -14,25 +77,28 @@
       "file": ".github/workflows/heads.yml",
       "lines": [
         43,
-        50,
-        57
+        104,
+        162
+      ]
+    }
+  ],
+  "exec_cmd: \"kettle-test\"\n# Run directly from the generated appraisal Gemfile so setup-ruby": [
+    {
+      "file": ".github/workflows/dep-heads.yml",
+      "lines": [
+        44,
+        101,
+        158
       ]
     }
   ],
   "exec_cmd: \"kettle-test\"\nrubygems: default": [
     {
-      "file": ".github/workflows/dep-heads.yml",
-      "lines": [
-        52,
-        59
-      ]
-    },
-    {
       "file": ".github/workflows/heads.yml",
       "lines": [
         44,
-        51,
-        58
+        105,
+        163
       ]
     }
   ]
