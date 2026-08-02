@@ -22,7 +22,6 @@ end
 # External RSpec & related config
 require "kettle/test/rspec"
 # `kettle/test/rspec` installs harness helpers documented in spec/README.md.
-
 DEBUG = ENV.fetch("DEBUG", nil) == "true"
 
 # external gems
