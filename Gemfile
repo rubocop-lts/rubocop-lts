@@ -20,17 +20,18 @@ gemspec
 
 gem "kettle-family", "~> 1.2", ">= 1.2.17"
 
+
 # Local workspace dependency wiring for *_local.gemfile overrides
 gem "nomono", "~> 1.1", ">= 1.1.2", require: false # ruby >= 3.2.0
 
 # Direct sibling dependencies (env-switched via RUBOCOP_LTS_DEV)
-direct_sibling_gems = [
-  "rubocop-ruby1_9",
-  "standard-rubocop-lts"
+direct_sibling_gems = %w[
+  rubocop-ruby1_9
+  standard-rubocop-lts
 ]
 direct_sibling_dev = ENV.fetch("RUBOCOP_LTS_DEV", "")
 direct_sibling_local =
-  !direct_sibling_dev.empty? && !["false", "0", "no", "off"].include?(direct_sibling_dev.downcase)
+  !direct_sibling_dev.empty? && !%w[false 0 no off].include?(direct_sibling_dev.downcase)
 direct_sibling_templating = ENV.fetch("K_JEM_TEMPLATING", "false").casecmp("true").zero?
 
 if direct_sibling_gems.any? &&

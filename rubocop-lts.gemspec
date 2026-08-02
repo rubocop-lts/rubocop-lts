@@ -62,11 +62,11 @@ Gem::Specification.new do |spec|
   enumerate_package_files = lambda do |root|
     enumerate_package_glob.call(File.join(gemspec_root, root, "**", "*"))
   end
-  package_metadata_files = [
-    "CHANGELOG.md",
-    "LICENSE.md",
-    "README.md",
-    "sig/rubocop/lts.rbs"
+  package_metadata_files = %w[
+    CHANGELOG.md
+    LICENSE.md
+    README.md
+    sig/rubocop/lts.rbs
   ].select { |path| File.exist?(File.join(gemspec_root, path)) }
 
   # Specify which files are part of the released package.
