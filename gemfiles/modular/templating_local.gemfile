@@ -22,4 +22,3 @@ if !nomono_already_activated || !nomono_requirement.satisfied_by?(nomono_already
 end
 Kernel.send(:gem, "nomono", *nomono_activation_requirements)
 require "nomono/bundler"
-
