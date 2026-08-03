@@ -45,7 +45,7 @@ ALL_FORMATTERS = actual_minor && (ENV.fetch("COVER_ALL", nil) || ENV.fetch("CI_C
 
 if DEBUG
   if debugging
-    require "byebug"
+    require "debug"
   elsif VersionGem::Ruby.gte_minimum_version?(version, "jruby")
     require "pry-debugger-jruby"
   end

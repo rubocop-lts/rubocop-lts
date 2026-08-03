@@ -1,59 +1,28 @@
 {
-  "appraisal: \"dep-heads\"\nexec_cmd: \"kettle-test\"": [
+  "action: keep_both\nreason: \"The gemspec owns this development dependency and the MRI style Gemfile retains the compatible declaration for the framework matrix.\"": [
     {
-      "file": ".github/workflows/dep-heads.yml",
+      "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        43,
-        102,
-        161
+        101,
+        106
       ]
     }
   ],
-  "appraisal: \"head\"\nexec_cmd: \"kettle-test\"": [
+  "direct: rubocop-lts.gemspec\nmodular: gemfiles/modular/style.gemfile": [
     {
-      "file": ".github/workflows/heads.yml",
+      "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        43,
-        106,
-        166
+        99,
+        104
       ]
     }
   ],
-  "exec_cmd: \"kettle-test\"\n# Run directly from the generated appraisal Gemfile so setup-ruby": [
+  "modular: gemfiles/modular/style.gemfile\naction: keep_both": [
     {
-      "file": ".github/workflows/dep-heads.yml",
+      "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        44,
-        103,
-        162
-      ]
-    }
-  ],
-  "exec_cmd: \"kettle-test\"\nrubygems: default": [
-    {
-      "file": ".github/workflows/heads.yml",
-      "lines": [
-        44,
-        107,
-        167
-      ]
-    }
-  ],
-  "if: ${{ !env.ACT }}\nuses: appraisal-rb/setup-ruby-flash@b22cb587431e9611d9e0a624a43872e2bbfbcd66 # v2.0": [
-    {
-      "file": ".github/workflows/dep-heads.yml",
-      "lines": [
-        63,
-        122,
-        182
-      ]
-    },
-    {
-      "file": ".github/workflows/heads.yml",
-      "lines": [
-        56,
-        119,
-        179
+        100,
+        105
       ]
     }
   ]
