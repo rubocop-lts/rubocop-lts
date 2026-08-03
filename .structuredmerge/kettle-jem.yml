@@ -71,6 +71,40 @@
 #
 # Everything else should be set explicitly here or via ENV.
 
+# Direct dependency ownership decisions.
+# On first templating, kettle-jem discovers dependencies declared directly by
+# Gemfile/gemspec and also by modular Gemfiles, and writes them here for review.
+# Resolve each entry by choosing one supported action, then add a reason.
+#
+# Every entry must include gem, direct, modular, action, and reason:
+# dependency_conflicts:
+#   resolve:
+#     - gem: yard-relative_markdown_links
+#       direct: shields-badge.gemspec
+#       modular: gemfiles/modular/documentation.gemfile
+#       action: remove_modular_gem
+#       reason: "The gemspec owns the project's documentation integration."
+# Supported actions (the destination project must explicitly choose one):
+#   remove_modular_gem       - remove the modular Gemfile's direct gem call.
+#   remove_x_std_lib_eval    - remove x_std_libs eval references for the gem.
+#   keep_both                - retain both declarations when their requirements
+#                              overlap. This is intended for a broad direct
+#                              requirement narrowed by framework/engine Gemfiles;
+#                              incompatible ranges remain an error.
+dependency_conflicts:
+  # Review each entry and choose a supported action.
+  # keep_both is for a broad direct requirement plus a compatible modular narrowing.
+  resolve:
+    - gem: rubocop-lts-rspec
+      direct: rubocop-lts.gemspec
+      modular: gemfiles/modular/style.gemfile
+      action: keep_both
+      reason: "The gemspec owns this development dependency and the MRI style Gemfile retains the compatible declaration for the framework matrix."
+    - gem: rubocop-packaging
+      direct: rubocop-lts.gemspec
+      modular: gemfiles/modular/style.gemfile
+      action: keep_both
+      reason: "The gemspec owns this development dependency and the MRI style Gemfile retains the compatible declaration for the framework matrix."
 # This project's identifying emoji.
 # Used as the leading emoji in the README H1 heading and in the gemspec
 # summary and description. Every gem should have its own unique emoji.
@@ -330,7 +364,7 @@ machine_users:
 # Divergence is currently measured as the percent of produced files that would
 # change or be added during templating (100 - unchanged-file score).
 # ENV override: KJ_MIN_DIVERGENCE_THRESHOLD
-min_divergence_threshold: 
+min_divergence_threshold: ""
 
 # Hostname used for generated YARD documentation links.
 # Defaults to <gem-name>.<author-email-domain>.
