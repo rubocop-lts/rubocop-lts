@@ -3,7 +3,6 @@
 # external libs
 require "version_gem"
 require "rubocop/ruby2_1"
-
 require_relative "lts/version"
 
 module Rubocop
