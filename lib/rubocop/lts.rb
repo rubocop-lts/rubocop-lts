@@ -4,7 +4,6 @@
 # external libs
 require "version_gem"
 require "rubocop/ruby1_8"
-
 require_relative "lts/version"
 
 module Rubocop

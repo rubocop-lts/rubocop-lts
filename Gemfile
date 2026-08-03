@@ -18,20 +18,19 @@ git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 # Include dependencies from rubocop-lts.gemspec
 gemspec
 
-gem "kettle-family", "~> 1.2", ">= 1.2.17"
-
+gem "kettle-family", "~> 1.2", ">= 1.2.23"
 
 # Local workspace dependency wiring for *_local.gemfile overrides
-gem "nomono", "~> 1.1", ">= 1.1.4", require: false # ruby >= 3.2.0
+gem "nomono", "~> 1.1", ">= 1.1.4", :require => false # ruby >= 3.2.0
 
 # Direct sibling dependencies (env-switched via RUBOCOP_LTS_DEV)
-direct_sibling_gems = %w[
-  rubocop-ruby1_8
-  standard-rubocop-lts
+direct_sibling_gems = [
+  "rubocop-ruby1_8",
+  "standard-rubocop-lts"
 ]
 direct_sibling_dev = ENV.fetch("RUBOCOP_LTS_DEV", "")
 direct_sibling_local =
-  !direct_sibling_dev.empty? && !%w[false 0 no off].include?(direct_sibling_dev.downcase)
+  !direct_sibling_dev.empty? && !["false", "0", "no", "off"].include?(direct_sibling_dev.downcase)
 direct_sibling_templating = ENV.fetch("K_JEM_TEMPLATING", "false").casecmp("true").zero?
 
 if direct_sibling_gems.any? &&
@@ -44,10 +43,10 @@ if direct_sibling_gems.any? &&
     ENV["RUBOCOP_LTS_DEV"] = File.expand_path("..", __dir__) if direct_sibling_templating && !direct_sibling_local
 
     eval_nomono_gems(
-      gems: direct_sibling_gems,
-      prefix: "RUBOCOP_LTS",
-      path_env: "RUBOCOP_LTS_DEV",
-      root: ["src", "my", "rubocop-lts"]
+      :gems => direct_sibling_gems,
+      :prefix => "RUBOCOP_LTS",
+      :path_env => "RUBOCOP_LTS_DEV",
+      :root => ["src", "my", "rubocop-lts"]
     )
   ensure
     if direct_sibling_templating && !direct_sibling_local
