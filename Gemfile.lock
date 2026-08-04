@@ -6,26 +6,6 @@ PATH
       standard-rubocop-lts (~> 2.0, >= 2.0.3)
       version_gem (~> 1.1, >= 1.1.15)
 
-PATH
-  remote: /var/home/pboling/src/my/rubocop-lts/rubocop-ruby1_8
-  specs:
-    rubocop-ruby1_8 (2.0.6)
-      rubocop-gradual (~> 0.3, >= 0.3.6)
-      rubocop-md (~> 2.0, >= 2.0.4)
-      rubocop-rake (~> 0.7, >= 0.7.1)
-      rubocop-thread_safety (~> 0.7, >= 0.7.3)
-      standard-rubocop-lts (~> 2.0, >= 2.0.9)
-      version_gem (~> 1.1, >= 1.1.15)
-
-PATH
-  remote: /var/home/pboling/src/my/rubocop-lts/standard-rubocop-lts
-  specs:
-    standard-rubocop-lts (2.0.10)
-      standard (~> 1.54, >= 1.54.0)
-      standard-custom (~> 1.0, >= 1.0.2)
-      standard-performance (~> 1.9, >= 1.9.0)
-      version_gem (~> 1.1, >= 1.1.15)
-
 GEM
   remote: https://gem.coop/
   specs:
@@ -126,8 +106,6 @@ GEM
       kettle-test (~> 2.0, >= 2.0.18)
       ruby-progressbar (~> 1.13)
       tty-progressbar (~> 0.18)
-    kettle-drift (1.0.11)
-      version_gem (~> 1.1, >= 1.1.15)
     kettle-family (1.2.23)
       command_kit (~> 0.6)
       command_kit-completion (~> 0.1)
@@ -322,6 +300,13 @@ GEM
       lint_roller (~> 1.1)
       rubocop (~> 1.72, >= 1.72.1)
       rubocop-rspec (~> 3.5)
+    rubocop-ruby1_8 (2.0.6)
+      rubocop-gradual (~> 0.3, >= 0.3.6)
+      rubocop-md (~> 2.0, >= 2.0.4)
+      rubocop-rake (~> 0.7, >= 0.7.1)
+      rubocop-thread_safety (~> 0.7, >= 0.7.3)
+      standard-rubocop-lts (~> 2.0, >= 2.0.9)
+      version_gem (~> 1.1, >= 1.1.13)
     rubocop-thread_safety (0.7.3)
       lint_roller (~> 1.1)
       rubocop (~> 1.72, >= 1.72.1)
@@ -362,6 +347,11 @@ GEM
       rubocop-factory_bot (~> 2.27)
       rubocop-rspec (~> 3.9)
       rubocop-rspec_rails (~> 2.31)
+    standard-rubocop-lts (2.0.10)
+      standard (~> 1.54, >= 1.54.0)
+      standard-custom (~> 1.0, >= 1.0.2)
+      standard-performance (~> 1.9, >= 1.9.0)
+      version_gem (~> 1.1, >= 1.1.13)
     stone_checksums (1.0.8)
     stringio (3.2.0)
     strings-ansi (0.2.0)
@@ -441,7 +431,6 @@ DEPENDENCIES
   gitmoji-regex (~> 2.0, >= 2.0.11)
   irb (~> 1.17)
   kettle-dev (~> 2.5, >= 2.5.17)
-  kettle-drift (~> 1.0, >= 1.0.11)
   kettle-family (~> 1.2, >= 1.2.23)
   kettle-soup-cover (~> 3.0, >= 3.0.9)
   kettle-test (~> 2.0, >= 2.0.19)
@@ -460,10 +449,8 @@ DEPENDENCIES
   rubocop-minitest (~> 0.40, >= 0.40.0)
   rubocop-on-rbs (~> 2.0, >= 2.0.0)
   rubocop-packaging (~> 0.6, >= 0.6.0)
-  rubocop-ruby1_8!
   ruby-progressbar (~> 1.13)
   standard (~> 1.56, >= 1.56.0)
-  standard-rubocop-lts!
   stone_checksums (~> 1.0, >= 1.0.8)
   stringio (>= 3.0)
   turbo_tests2 (~> 3.2, >= 3.2.4)
@@ -519,7 +506,6 @@ CHECKSUMS
   irb (1.18.0) sha256=de9454a0703a54704b9811a5ef31a60c86949fbf4013fcf244fabc7c775248e3
   json (2.21.2) sha256=1f1d3b7cf2b3ba1a69beca0bb6db13d5438b80bff3cd54cdaaa620b9b07c1c6a
   kettle-dev (2.5.18)
-  kettle-drift (1.0.11)
   kettle-family (1.2.23)
   kettle-gha-pins (0.3.6)
   kettle-ndjson (0.1.11)
