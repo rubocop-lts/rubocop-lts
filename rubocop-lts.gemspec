@@ -99,7 +99,7 @@ Gem::Specification.new do |spec|
 
   # Utilities
   spec.add_dependency("rubocop-ruby3_2", "~> 3.0", ">= 3.0.1")  # >= 2.7.0
-  spec.add_dependency("standard-rubocop-lts", "~> 2.0", ">= 2.0.3")  # >= 3.2.0
+  spec.add_dependency("standard-rubocop-lts", "~> 2.0", ">= 2.0.11")  # >= 3.2.0
   spec.add_dependency("version_gem", "~> 1.1", ">= 1.1.15")              # ruby >= 2.2.0
 
   # NOTE: It is preferable to list development dependencies in the gemspec due to increased

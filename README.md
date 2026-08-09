@@ -122,6 +122,7 @@ This gem configures many gems for you:
 - standard-performance (incl. rubocop-performance)
 - standard-custom
 - standard-rubocop-lts (ruby version-specific rules)
+- rubocop-lts-ruby (Ruby core and standard library API availability checks)
 
 And optionally, if you are using RSpec:
 

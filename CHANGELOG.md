@@ -44,6 +44,8 @@ Please file a bug if you notice a violation of semantic versioning.
 - kettle-jem-template-20260801-001 - Generated README gem dashboard links now
   use ClickGems instead of BestGems.
 
+- The umbrella RuboCop configuration now requires the standard profile release that enables rubocop-lts-ruby API availability checks.
+
 ### Deprecated
 
 ### Removed
