@@ -266,6 +266,15 @@ NOTE: To build without signing the gem set `SKIP_GEM_SIGNING` to any value in th
 14. Run `bundle exec rake release` which will create a git tag for the version,
     push git commits and tags, and push the `.gem` file to the gem host configured in the gemspec.
 
+The automated `kettle-release` flow runs the build and release tasks with a
+temporary `BUNDLE_LOCKFILE`. Bundler can rewrite a tracked lockfile while
+reconciling the host platform even after the release lockfile has been
+normalized with `bundle lock --add-platform`; that rewrite trips the clean-tree
+guard in `bundler/gem_tasks`. The disposable lockfile preserves the committed
+release inputs while allowing Bundler's runtime reconciliation. Do not replace
+this with `BUNDLE_FROZEN=true`: frozen mode fails when Bundler needs that
+reconciliation.
+
 [📜src-gl]: https://gitlab.com/rubocop-lts/rubocop-lts
 [📜src-cb]: https://codeberg.org/rubocop-lts/rubocop-lts
 [📜src-gh]: https://github.com/rubocop-lts/rubocop-lts
@@ -287,5 +296,6 @@ NOTE: To build without signing the gem set `SKIP_GEM_SIGNING` to any value in th
 [🚎appraisal2]: https://github.com/appraisal-rb/appraisal2
 [🏃‍♂️runner-tool-cache]: https://github.com/ruby/ruby-builder/releases/tag/toolcache
 [✉️discord-invite]: https://discord.gg/3qme4XHNKN
+[✉️discord-invite-img]: https://img.shields.io/discord/1373797679469170758?style=flat&logo=discord
 [✉️ruby-forum]: https://www.rubyforum.org/tag/rubocop-lts
 [✉️ruby-forum-img]: https://img.shields.io/discourse/topics?server=https%3A%2F%2Fwww.rubyforum.org&style=flat&logo=discourse&label=Ruby%20Users%20Forum
