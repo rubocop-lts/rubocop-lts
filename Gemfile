@@ -8,6 +8,7 @@
 
 source "https://gem.coop"
 
+git_source(:github) { |repo_name| "git@github.com:#{repo_name}.git" }
 git_source(:codeberg) { |repo_name| "https://codeberg.org/#{repo_name}" }
 git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 
@@ -18,46 +19,10 @@ git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 # Include dependencies from rubocop-lts.gemspec
 gemspec
 
-gem "kettle-family", "~> 1.2", ">= 1.2.23"
+gem "kettle-family", "~> 1.2", ">= 1.2.95"
 
 # Local workspace dependency wiring for *_local.gemfile overrides
-gem "nomono", "~> 1.1", ">= 1.1.4", require: false # ruby >= 3.2.0
-
-# Direct sibling dependencies (env-switched via RUBOCOP_LTS_DEV)
-direct_sibling_gems = %w[
-  rubocop-ruby3_1
-  standard-rubocop-lts
-]
-direct_sibling_dev = ENV.fetch("RUBOCOP_LTS_DEV", "")
-direct_sibling_local =
-  !direct_sibling_dev.empty? && !%w[false 0 no off].include?(direct_sibling_dev.downcase)
-direct_sibling_templating = ENV.fetch("K_JEM_TEMPLATING", "false").casecmp("true").zero?
-
-if direct_sibling_gems.any? &&
-    (direct_sibling_local ||
-      ENV.fetch("K_JEM_TEMPLATING", "false").casecmp("true").zero?)
-  direct_sibling_dev_was_set = ENV.key?("RUBOCOP_LTS_DEV")
-  direct_sibling_dev_original = ENV.fetch("RUBOCOP_LTS_DEV", nil)
-  require "nomono/bundler"
-  begin
-    ENV["RUBOCOP_LTS_DEV"] = File.expand_path("..", __dir__) if direct_sibling_templating && !direct_sibling_local
-
-    eval_nomono_gems(
-      gems: direct_sibling_gems,
-      prefix: "RUBOCOP_LTS",
-      path_env: "RUBOCOP_LTS_DEV",
-      root: ["src", "my", "rubocop-lts"]
-    )
-  ensure
-    if direct_sibling_templating && !direct_sibling_local
-      if direct_sibling_dev_was_set
-        ENV["RUBOCOP_LTS_DEV"] = direct_sibling_dev_original
-      else
-        ENV.delete("RUBOCOP_LTS_DEV")
-      end
-    end
-  end
-end
+gem "nomono", "~> 1.1", ">= 1.1.5", require: false # ruby >= 3.2.0
 
 # Templating (env-switched: STRUCTUREDMERGE_DEV=/path/to/structuredmerge/ruby/gems for local paths)
 eval_gemfile "gemfiles/modular/templating.gemfile" if ENV.fetch("K_JEM_TEMPLATING", "false").casecmp("true").zero?
@@ -73,6 +38,9 @@ eval_gemfile "gemfiles/modular/style.gemfile"
 
 # Documentation
 eval_gemfile "gemfiles/modular/documentation.gemfile"
+
+# Changelog release tooling (available on Ruby versions supported by kettle-changelog)
+eval_gemfile "gemfiles/modular/changelog.gemfile"
 
 # Optional
 eval_gemfile "gemfiles/modular/optional.gemfile"
