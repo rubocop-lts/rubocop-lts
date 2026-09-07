@@ -46,6 +46,14 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - The umbrella RuboCop configuration now requires the standard profile release that enables rubocop-lts-ruby API availability checks.
 
+- [kc] kettle-jem/prepare: updated 15 project files:
+  - configuration (1)
+  - dependencies (14)
+
+- [kc] kettle-jem/template: updated 3 project files:
+  - dependencies (2)
+  - other (1)
+
 ### Deprecated
 
 ### Removed

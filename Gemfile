@@ -8,6 +8,7 @@
 
 source "https://gem.coop"
 
+git_source(:github) { |repo_name| "git@github.com:#{repo_name}.git" }
 git_source(:codeberg) { |repo_name| "https://codeberg.org/#{repo_name}" }
 git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 
@@ -18,15 +19,16 @@ git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 # Include dependencies from rubocop-lts.gemspec
 gemspec
 
-gem "kettle-family", "~> 1.2", ">= 1.2.23"
+gem "kettle-family", "~> 1.2", ">= 1.2.95"
 
 # Local workspace dependency wiring for *_local.gemfile overrides
-gem "nomono", "~> 1.1", ">= 1.1.4", require: false # ruby >= 3.2.0
+gem "nomono", "~> 1.1", ">= 1.1.5", require: false # ruby >= 3.2.0
 
 # Direct sibling dependencies (env-switched via RUBOCOP_LTS_DEV)
 direct_sibling_gems = %w[
   rubocop-ruby3_2
   standard-rubocop-lts
+  rubocop-lts-ruby
 ]
 direct_sibling_dev = ENV.fetch("RUBOCOP_LTS_DEV", "")
 direct_sibling_local =
@@ -73,6 +75,9 @@ eval_gemfile "gemfiles/modular/style.gemfile"
 
 # Documentation
 eval_gemfile "gemfiles/modular/documentation.gemfile"
+
+# Changelog release tooling (available on Ruby versions supported by kettle-changelog)
+eval_gemfile "gemfiles/modular/changelog.gemfile"
 
 # Optional
 eval_gemfile "gemfiles/modular/optional.gemfile"
