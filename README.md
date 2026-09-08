@@ -10,7 +10,7 @@
 
 `if ci_badges.map(&:color).all? { it == "green"}` 👇️ send money so I can do more of this. FLOSS maintenance is now my full-time job.
 
-[![OpenCollective Backers][🖇osc-backers-i]][🖇osc-backers] [![OpenCollective Sponsors][🖇osc-sponsors-i]][🖇osc-sponsors] [![Sponsor Me on Github][🖇sponsor-img]][🖇sponsor] [![Liberapay Goal Progress][⛳liberapay-img]][⛳liberapay] [![Donate on PayPal][🖇paypal-img]][🖇paypal] [![Buy me a coffee][🖇buyme-small-img]][🖇buyme] [![Donate at ko-fi.com][🖇kofi-img]][🖇kofi]
+[![OpenCollective Backers][🖇osc-backers-i]][🖇osc-backers] [![OpenCollective Sponsors][🖇osc-sponsors-i]][🖇osc-sponsors] [![Sponsor Me on Github][🖇sponsor-top-img]][🖇sponsor-top] [![Liberapay Goal Progress][⛳liberapay-top-img]][⛳liberapay-top] [![Donate on PayPal][🖇paypal-img]][🖇paypal] [![Buy me a coffee][🖇buyme-small-img]][🖇buyme] [![Donate at ko-fi.com][🖇kofi-img]][🖇kofi]
 
 <details markdown="1">
  <summary>👣 How will this project approach the September 2025 hostile takeover of RubyGems? 🚑️</summary>
@@ -42,8 +42,8 @@ please support my efforts by making a donation, or becoming a sponsor.
 
 <div id="badges">
 
-[![Liberapay Patrons][⛳liberapay-img]][⛳liberapay]
-[![Sponsor Me on Github][🖇sponsor-img]][🖇sponsor]
+[![Liberapay Patrons][⛳liberapay-top-img]][⛳liberapay-top]
+[![Sponsor Me on Github][🖇sponsor-top-img]][🖇sponsor-top]
 
 <span class="badge-buymeacoffee">
 <a href="https://ko-fi.com/O5O86SNP4" target='_blank' title="Donate to my FLOSS or refugee efforts at ko-fi.com"><img src="https://img.shields.io/badge/buy%20me%20coffee-donate-yellow.svg" alt="Buy me coffee donation button" /></a>
@@ -54,10 +54,10 @@ please support my efforts by making a donation, or becoming a sponsor.
 
 </div>
 
-[⛳liberapay-img]: https://img.shields.io/liberapay/patrons/pboling.svg?logo=liberapay
-[⛳liberapay]: https://liberapay.com/pboling/donate
-[🖇sponsor-img]: https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&logo=github
-[🖇sponsor]: https://github.com/sponsors/pboling
+[⛳liberapay-top-img]: https://img.shields.io/liberapay/patrons/pboling.svg?logo=liberapay
+[⛳liberapay-top]: https://liberapay.com/pboling/donate
+[🖇sponsor-top-img]: https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&logo=github
+[🖇sponsor-top]: https://github.com/sponsors/pboling
 
 ### Quick Links
 
@@ -96,11 +96,11 @@ This README has two jobs:
 2. Index the `rubocop-lts` branch stack so you can jump to the release line
    matching the oldest Ruby you still support.
 
-* 🌳 [This Branch](#this-branch-)
-* 🧭 [Branch Stack](#branch-stack-)
-* 👩‍💻 [Project Health](#project-health-)
-* ✨ [Installation](#installation-)
-* 🔧 [Usage](#basic-usage-)
+* 🌳 [This Branch](#this-branch)
+* 🧭 [Branch Stack](#branch-stack)
+* 👩‍💻 [Project Health](#project-health)
+* ✨ [Installation](#installation)
+* 🔧 [Usage](#basic-usage)
 
 ### This Branch 🌳
 
@@ -453,7 +453,6 @@ that matches your Ruby floor.
 [climate_maintainability]: https://codeclimate.com/github/rubocop-lts/rubocop-lts/maintainability
 [copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
 [conduct]: https://gitlab.com/rubocop-lts/rubocop-lts/-/blob/main/CODE_OF_CONDUCT.md
-[contributing]: https://gitlab.com/rubocop-lts/rubocop-lts/-/blob/main/CONTRIBUTING.md
 [devto]: https://dev.to/galtzo
 [documentation]: https://rubydoc.info/github/rubocop-lts/rubocop-lts/main
 [followme]: https://img.shields.io/twitter/follow/galtzo.svg?style=social&label=Follow
@@ -461,7 +460,6 @@ that matches your Ruby floor.
 [gh_sponsors]: https://github.com/sponsors/pboling
 [issues]: https://github.com/rubocop-lts/rubocop-lts/issues
 [liberapay_donate]: https://liberapay.com/pboling/donate
-[license]: LICENSE.txt
 [license-ref]: https://opensource.org/licenses/MIT
 [license-img]: https://img.shields.io/badge/License-MIT-green.svg
 [peterboling]: http://www.peterboling.com
