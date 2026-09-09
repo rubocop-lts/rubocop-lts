@@ -102,6 +102,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Fix README reference definitions and local navigation links so release validation succeeds.
 
+- Run CI on branch-stack release targets.
+
 ### Security
 
 ## [22.3.2] - 2026-07-03
