@@ -98,8 +98,8 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Utilities
-  spec.add_dependency("rubocop-ruby3_1", "~> 3.0", ">= 3.0.1")  # >= 2.7.0
-  spec.add_dependency("standard-rubocop-lts", "~> 2.0", ">= 2.0.3")  # >= 3.2.0
+  spec.add_dependency("rubocop-ruby3_1", "~> 3.0", ">= 3.0.7")  # >= 2.7.0
+  spec.add_dependency("standard-rubocop-lts", "~> 2.0", ">= 2.0.13")  # >= 3.2.0
   spec.add_dependency("version_gem", "~> 1.1", ">= 1.1.15")              # ruby >= 2.2.0
 
   # NOTE: It is preferable to list development dependencies in the gemspec due to increased
@@ -152,6 +152,6 @@ Gem::Specification.new do |spec|
   # spec.add_development_dependency("vcr", ">= 4")                        # 6.0 claims to support ruby >= 2.3, but fails on ruby 2.4
   # spec.add_development_dependency("webmock", ">= 3")                    # Last version to support ruby >= 2.3
   spec.add_development_dependency("rspec-block_is_expected", "~> 1.0", ">= 1.0.6")  # >= 1.8.7
-  spec.add_development_dependency("rubocop-lts-rspec", "~> 1.0", ">= 1.0.2")  # >= 3.2.0
+  spec.add_development_dependency("rubocop-lts-rspec", "~> 1.0", ">= 1.0.6")  # >= 3.2.0
   spec.add_development_dependency("rubocop-packaging", "~> 0.6", ">= 0.6.0")  # >= 2.7.0
 end
