@@ -20,6 +20,25 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [0.3.3] - 2026-09-09
+
+- TAG: [v0.3.3][0.3.3t]
+- COVERAGE: 100.00% -- 15/15 lines in 2 files
+- BRANCH COVERAGE: 0.00% -- 0/0 branches in 2 files
+- 42.86% documented
+
+### Added
+
 - kettle-jem-template-20260720-005 - README Support & Community links now
   include RubyForum.
 - kettle-jem-template-20260726-001 - Projects now include YARD lint
@@ -55,10 +74,6 @@ Please file a bug if you notice a violation of semantic versioning.
   - documentation (2)
   - other (22)
   - workflows (19)
-
-### Deprecated
-
-### Removed
 
 ### Fixed
 
@@ -101,8 +116,6 @@ Please file a bug if you notice a violation of semantic versioning.
   preserving comments and trailing commas during template updates.
 
 - Fix README reference definitions and local navigation links so release validation succeeds.
-
-### Security
 
 ## [0.3.2] - 2026-07-03
 
@@ -183,7 +196,9 @@ Please file a bug if you notice a violation of semantic versioning.
 - Initial even release supporting analysis of Ruby >= 1.8
 - Configures many linting tools via `standard-rubocop-lts`
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v0.3.2...HEAD
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v0.3.3...HEAD
+[0.3.3]: https://github.com/rubocop-lts/rubocop-lts/compare/v0.3.2...v0.3.3
+[0.3.3t]: https://github.com/rubocop-lts/rubocop-lts/releases/tag/v0.3.3
 [0.3.2]: https://github.com/rubocop-lts/rubocop-lts/compare/v0.3.1...v0.3.2
 [0.3.2t]: https://github.com/rubocop-lts/rubocop-lts/releases/tag/v0.3.2
 [0.3.1]: https://github.com/rubocop-lts/rubocop-lts/compare/v0.3.0...v0.3.1

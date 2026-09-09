@@ -73,11 +73,8 @@ GEM
     command_kit-completion (0.3.0)
       command_kit (~> 0.1)
       completely (~> 0.6)
-    commonmarker (2.10.0)
-      rb_sys (~> 0.9)
     commonmarker (2.10.0-aarch64-linux)
     commonmarker (2.10.0-aarch64-linux-musl)
-    commonmarker (2.10.0-arm-linux-gnu)
     commonmarker (2.10.0-arm64-darwin)
     commonmarker (2.10.0-x86_64-darwin)
     commonmarker (2.10.0-x86_64-linux)
@@ -258,22 +255,14 @@ GEM
       markdown-merge (= 7.1.8)
       markly (~> 0.9)
       version_gem (~> 1.1, >= 1.1.15)
-    mini_portile2 (2.8.9)
     mister_bin (0.9.0)
       colsole (~> 1.0.0)
       docopt_ng (~> 0.7.1)
       reline (~> 0.6)
     mutex_m (0.3.0)
-    nokogiri (1.19.4)
-      mini_portile2 (~> 2.8.2)
-      racc (~> 1.4)
     nokogiri (1.19.4-aarch64-linux-gnu)
       racc (~> 1.4)
     nokogiri (1.19.4-aarch64-linux-musl)
-      racc (~> 1.4)
-    nokogiri (1.19.4-arm-linux-gnu)
-      racc (~> 1.4)
-    nokogiri (1.19.4-arm-linux-musl)
       racc (~> 1.4)
     nokogiri (1.19.4-arm64-darwin)
       racc (~> 1.4)
@@ -319,9 +308,6 @@ GEM
     racc (1.8.1)
     rainbow (3.1.1)
     rake (13.4.2)
-    rake-compiler-dock (1.12.0)
-    rb_sys (0.9.130)
-      rake-compiler-dock (= 1.12.0)
     rbs (4.2.0)
       logger
       prism (>= 1.6.0)
@@ -534,9 +520,6 @@ GEM
       parslet (~> 2.0)
       tree_sitter_language_pack (>= 1.16.2, < 2.0)
       version_gem (~> 1.1, >= 1.1.15)
-    tree_sitter_language_pack (1.16.2)
-      rb_sys (>= 0.9.130, < 0.10)
-      sorbet-runtime (~> 0.5)
     tree_sitter_language_pack (1.16.2-aarch64-linux)
       sorbet-runtime (~> 0.5)
     tree_sitter_language_pack (1.16.2-arm64-darwin)
@@ -667,7 +650,7 @@ CHECKSUMS
   bash-merge (7.1.8) sha256=d2ebebd32ecc03ac83dedc76b0b5bd0166af24fa3e26689a5c260749d4d184f2
   benchmark (0.5.0) sha256=465df122341aedcb81a2a24b4d3bd19b6c67c1530713fd533f3ff034e419236c
   bigdecimal (4.1.2) sha256=53d217666027eab4280346fba98e7d5b66baaae1b9c3c1c0ffe89d48188a3fbd
-  bundler (4.1.0.beta1) sha256=8a2dac8ca276ff4eff5efc2c6457b0044080fc1e431534ad7c5cc6187232b800
+  bundler (4.0.17) sha256=214e21431b5665dd2f99df8a5511c6b151d7a72e8015c8b38f8b775b61cbb6c1
   bundler-audit (0.9.3) sha256=81c8766c71e47d0d28a0f98c7eed028539f21a6ea3cd8f685eb6f42333c9b4e9
   cgi (0.5.2) sha256=61ca30298171190fd4fa0d8018e57ada456eae9b7a2b78526debf7f0a0e6f8bb
   citrus (3.0.2) sha256=4ec2412fc389ad186735f4baee1460f7900a8e130ffe3f216b30d4f9c684f650
@@ -676,10 +659,8 @@ CHECKSUMS
   colsole (1.0.1) sha256=7632a300ace2db877c024ffe413c684954cf37e41264b75ace9f456c9d657b02
   command_kit (0.6.0) sha256=e57f29cf5aee4f571c210041d910ff87f85749e42dfe75139c57cc93d84afa90
   command_kit-completion (0.3.0) sha256=d9c498555125bcdd0c9d869f2a64a25a2f0205102a7f28c81c7937ae633ea737
-  commonmarker (2.10.0) sha256=1884529957bf59bcd4f19fcc29e931f2042760ced273353e8010a20fe4ae68cb
   commonmarker (2.10.0-aarch64-linux) sha256=eeb167dea203dee066eb0dd99b3fd2deb526c8b5e7297ad385f7a5d60f869478
   commonmarker (2.10.0-aarch64-linux-musl) sha256=e95d9e87ea6306e21ffa11855a7bb55518538143b23a227fe3bb00b41873ce25
-  commonmarker (2.10.0-arm-linux-gnu) sha256=2165642969df6816625c5fa4470a8959345d715daf96dd063fc56913fdbb1b90
   commonmarker (2.10.0-arm64-darwin) sha256=39ecc891d1e4308b5233cc28b40383de854a2bfbefe17d68e49174347a8aa79e
   commonmarker (2.10.0-x86_64-darwin) sha256=01e0830ed0319825ecdc16411c90acd3f661d1568dfc178731b3f64d0ce2363d
   commonmarker (2.10.0-x86_64-linux) sha256=945c510c0bfca9022245928e2248468fe3ddad58c939be0c37b20082cc392880
@@ -730,14 +711,10 @@ CHECKSUMS
   markdown-merge (7.1.8) sha256=9b5ed7af2fcb1395f9a7906e513c30e4b739708ac20c65bb075f7e1555ea2a9e
   markly (0.18.0) sha256=57f182fff58200a95a215ac20ff560a1ad9252e757dafaae826b034cc44eab7f
   markly-merge (7.1.8) sha256=48782850345bb7af0922bdc6a65f5b8e0ee4ae757c39fa2040efd652c68b97a0
-  mini_portile2 (2.8.9) sha256=0cd7c7f824e010c072e33f68bc02d85a00aeb6fce05bb4819c03dfd3c140c289
   mister_bin (0.9.0) sha256=624fe401db4faf1978e84c17e0b320827697a13a6cba4fe656001269079be7d3
   mutex_m (0.3.0) sha256=cfcb04ac16b69c4813777022fdceda24e9f798e48092a2b817eb4c0a782b0751
-  nokogiri (1.19.4) sha256=50c951611c92bca05c51411aef45f1cbc50f2821c4802758c5c6d34696533ab5
   nokogiri (1.19.4-aarch64-linux-gnu) sha256=1269fb644a6de405057a53dd5c762b1209b43ca7424f839454d3dbc677c31a8f
   nokogiri (1.19.4-aarch64-linux-musl) sha256=35c65b9ce72b3bb03207bdbe7067915019dc18c1b9b59139684bd6690fdd01af
-  nokogiri (1.19.4-arm-linux-gnu) sha256=a301313e38bb065d68239e79734bcd6f56fb6efaacebde29e9abf2a4735340ca
-  nokogiri (1.19.4-arm-linux-musl) sha256=588923c101bcfa78869734d247d25b598674323e7f22474fc468f6e5647311eb
   nokogiri (1.19.4-arm64-darwin) sha256=a46db9853286e6597b36ebc6953817d15acf3a299583eb3f89fdc6f91dd63527
   nokogiri (1.19.4-x86_64-darwin) sha256=7fd17057d3e1f00e9954a74b3cd76595d3d4a5ef233b7ed9599047c204f70551
   nokogiri (1.19.4-x86_64-linux-gnu) sha256=379fae440b28915e3f19d752ce2dcf8465ed2b2fbefd2a7ca0dd497bc981a06a
@@ -760,8 +737,6 @@ CHECKSUMS
   racc (1.8.1) sha256=4a7f6929691dbec8b5209a0b373bc2614882b55fc5d2e447a21aaa691303d62f
   rainbow (3.1.1) sha256=039491aa3a89f42efa1d6dec2fc4e62ede96eb6acd95e52f1ad581182b79bc6a
   rake (13.4.2) sha256=cb825b2bd5f1f8e91ca37bddb4b9aaf345551b4731da62949be002fa89283701
-  rake-compiler-dock (1.12.0) sha256=f13205c2738f3d2053afcd03491a9e4541b22a59a0bfc53fc8bc883bd8188023
-  rb_sys (0.9.130) sha256=7d486d99c1da02635515deaf9860fc5aea90bb4ab2589b2deec7fdc7d3548615
   rbs (4.2.0) sha256=51f7b886dcc05bc09e10b901daa6a81829f6adc03101d6ca9ea4aac6103e0674
   rbs-merge (7.1.8) sha256=0b64520e32e61491571ceabfd7d590a5d048358ea601de6849cf7a8f4fe77373
   rdoc (7.2.0) sha256=8650f76cd4009c3b54955eb5d7e3a075c60a57276766ebf36f9085e8c9f23192
@@ -829,7 +804,6 @@ CHECKSUMS
   toml-merge (7.1.8) sha256=7c99f8b73b75d4a2e5c38679ec8930aac7902180b404b56c205d5fb82ea97193
   toml-rb (4.2.1) sha256=e6c40e27905e86a7d38cc252eb4bc12d72c61576c826a358390c30f5de0b9dbb
   tree_haver (7.1.8) sha256=eb97ea82ab65ab138b917659e9b66791d9c17cda304c742362d876d727d60c59
-  tree_sitter_language_pack (1.16.2) sha256=38501f5e6387c3112ecddb3a5a715f00a5027156bacd4c879d0b70fd130f778a
   tree_sitter_language_pack (1.16.2-aarch64-linux) sha256=f44b6de8a7ac74b5115b0c155cd384e7df29a7b0d3c65bae2a5e78fd2e232652
   tree_sitter_language_pack (1.16.2-arm64-darwin) sha256=c673c3cef003761d2e6ed818f338e21664860e0b80a4d1f20c4993cd7e88b8d6
   tree_sitter_language_pack (1.16.2-x86_64-darwin) sha256=f7457f90ec51d70ed2b1c1de452e665c7ee6e6f17d2dd7cd30e2c082877f75e6
