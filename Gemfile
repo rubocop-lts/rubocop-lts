@@ -8,7 +8,6 @@
 
 source "https://gem.coop"
 
-git_source(:github) { |repo_name| "git@github.com:#{repo_name}.git" }
 git_source(:codeberg) { |repo_name| "https://codeberg.org/#{repo_name}" }
 git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 
@@ -19,7 +18,7 @@ git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 # Include dependencies from rubocop-lts.gemspec
 gemspec
 
-gem "kettle-family", "~> 1.2", ">= 1.2.97"
+gem "kettle-family", "~> 1.3", ">= 1.3.1"
 
 # Local workspace dependency wiring for *_local.gemfile overrides
 gem "nomono", "~> 1.1", ">= 1.1.5", require: false # ruby >= 3.2.0
