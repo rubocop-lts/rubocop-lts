@@ -28,6 +28,13 @@ Please file a bug if you notice a violation of semantic versioning.
 - kettle-jem-template-20260727-001 - Spec harness documentation now lists the
   RSpec helpers provided by `kettle-test`.
 
+- kettle-jem-template-20260913-001 - Templating now also surfaces a review
+  entry in `dependency_conflicts.resolve` when a direct development
+  dependency doesn't support one or more of this project's declared
+  `engines:` and has no template-managed modular home (e.g. `sqlite3` on
+  `jruby`). Review each entry and pick a resolution per the project's own
+  engine support needs.
+
 ### Changed
 
 - Updated the `standard-rubocop-lts` dependency floor to `2.0.0`.
@@ -46,17 +53,14 @@ Please file a bug if you notice a violation of semantic versioning.
 - kettle-jem-template-20260801-001 - Generated README gem dashboard links now
   use ClickGems instead of BestGems.
 
-- [kc] kettle-jem/prepare: updated 28 project files:
-  - configuration (1)
-  - dependencies (27)
+- [kc] kettle-jem/prepare: updated 12 project files:
+  - dependencies (12)
 
-- [kc] kettle-jem/template: updated 36 project files:
-  - code and tests (3)
-  - configuration (1)
-  - dependencies (11)
-  - documentation (3)
-  - other (17)
-  - workflows (1)
+- [kc] kettle-jem/template: updated 24 project files:
+  - code and tests (1)
+  - dependencies (1)
+  - other (4)
+  - workflows (18)
 
 ### Deprecated
 
