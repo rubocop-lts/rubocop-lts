@@ -47,6 +47,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Local branch-stack templating now resolves every Ruby-target sibling gem through workspace paths instead of requiring registry versions to be preinstalled.
+
 ### Security
 
 ## [24.2.3] - 2026-09-09

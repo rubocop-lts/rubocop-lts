@@ -23,8 +23,22 @@ gem "kettle-family", "~> 1.3", ">= 1.3.1"
 # Local workspace dependency wiring for *_local.gemfile overrides
 gem "nomono", "~> 1.1", ">= 1.1.5", require: false # ruby >= 3.2.0
 
-# Direct sibling dependencies (env-switched via RUBOCOP_LTS_DEV)
+# Every branch-stack target depends on a different leaf gem. Include the whole
+# stack here so branch worktrees use sibling paths instead of requiring each
+# target version to be preinstalled in the local gem system.
 direct_sibling_gems = %w[
+  rubocop-ruby1_8
+  rubocop-ruby1_9
+  rubocop-ruby2_0
+  rubocop-ruby2_1
+  rubocop-ruby2_2
+  rubocop-ruby2_3
+  rubocop-ruby2_4
+  rubocop-ruby2_5
+  rubocop-ruby2_6
+  rubocop-ruby2_7
+  rubocop-ruby3_0
+  rubocop-ruby3_1
   rubocop-ruby3_2
   standard-rubocop-lts
   rubocop-lts-ruby
