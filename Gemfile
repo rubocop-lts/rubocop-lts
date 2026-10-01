@@ -7,26 +7,26 @@
 
 # Branch-stack targets depend on different Ruby leaf gems. Resolve all leaves
 # through sibling paths so worktrees do not require unreleased versions locally.
-direct_sibling_gems = %w[
-  rubocop-ruby1_8
-  rubocop-ruby1_9
-  rubocop-ruby2_0
-  rubocop-ruby2_1
-  rubocop-ruby2_2
-  rubocop-ruby2_3
-  rubocop-ruby2_4
-  rubocop-ruby2_5
-  rubocop-ruby2_6
-  rubocop-ruby2_7
-  rubocop-ruby3_0
-  rubocop-ruby3_1
-  rubocop-ruby3_2
-  standard-rubocop-lts
-  rubocop-lts-ruby
+direct_sibling_gems = [
+  "rubocop-ruby1_8",
+  "rubocop-ruby1_9",
+  "rubocop-ruby2_0",
+  "rubocop-ruby2_1",
+  "rubocop-ruby2_2",
+  "rubocop-ruby2_3",
+  "rubocop-ruby2_4",
+  "rubocop-ruby2_5",
+  "rubocop-ruby2_6",
+  "rubocop-ruby2_7",
+  "rubocop-ruby3_0",
+  "rubocop-ruby3_1",
+  "rubocop-ruby3_2",
+  "standard-rubocop-lts",
+  "rubocop-lts-ruby"
 ]
 direct_sibling_dev = ENV.fetch("RUBOCOP_LTS_DEV", "")
 direct_sibling_local =
-  !direct_sibling_dev.empty? && !%w[false 0 no off].include?(direct_sibling_dev.downcase)
+  !direct_sibling_dev.empty? && !["false", "0", "no", "off"].include?(direct_sibling_dev.downcase)
 direct_sibling_templating = ENV.fetch("K_JEM_TEMPLATING", "false").casecmp("true").zero?
 
 if direct_sibling_local || direct_sibling_templating
