@@ -23,6 +23,54 @@ gem "kettle-family", "~> 1.3", ">= 1.3.1"
 # Local workspace dependency wiring for *_local.gemfile overrides
 gem "nomono", "~> 1.1", ">= 1.1.5", :require => false # ruby >= 3.2.0
 
+# Branch-stack targets depend on different Ruby leaf gems. Resolve all leaves
+# through sibling paths so worktrees do not require unreleased versions locally.
+direct_sibling_gems = %w[
+  rubocop-ruby1_8
+  rubocop-ruby1_9
+  rubocop-ruby2_0
+  rubocop-ruby2_1
+  rubocop-ruby2_2
+  rubocop-ruby2_3
+  rubocop-ruby2_4
+  rubocop-ruby2_5
+  rubocop-ruby2_6
+  rubocop-ruby2_7
+  rubocop-ruby3_0
+  rubocop-ruby3_1
+  rubocop-ruby3_2
+  standard-rubocop-lts
+  rubocop-lts-ruby
+]
+direct_sibling_dev = ENV.fetch("RUBOCOP_LTS_DEV", "")
+direct_sibling_local =
+  !direct_sibling_dev.empty? && !%w[false 0 no off].include?(direct_sibling_dev.downcase)
+direct_sibling_templating = ENV.fetch("K_JEM_TEMPLATING", "false").casecmp("true").zero?
+
+if direct_sibling_local || direct_sibling_templating
+  direct_sibling_dev_was_set = ENV.key?("RUBOCOP_LTS_DEV")
+  direct_sibling_dev_original = ENV.fetch("RUBOCOP_LTS_DEV", nil)
+  require "nomono/bundler"
+  begin
+    ENV["RUBOCOP_LTS_DEV"] = File.expand_path("..", __dir__) if direct_sibling_templating && !direct_sibling_local
+
+    eval_nomono_gems(
+      gems: direct_sibling_gems,
+      prefix: "RUBOCOP_LTS",
+      path_env: "RUBOCOP_LTS_DEV",
+      root: ["src", "my", "rubocop-lts"]
+    )
+  ensure
+    if direct_sibling_templating && !direct_sibling_local
+      if direct_sibling_dev_was_set
+        ENV["RUBOCOP_LTS_DEV"] = direct_sibling_dev_original
+      else
+        ENV.delete("RUBOCOP_LTS_DEV")
+      end
+    end
+  end
+end
+
 # Templating (env-switched: STRUCTUREDMERGE_DEV=/path/to/structuredmerge/ruby/gems for local paths)
 eval_gemfile "gemfiles/modular/templating.gemfile" if ENV.fetch("K_JEM_TEMPLATING", "false").casecmp("true").zero?
 
