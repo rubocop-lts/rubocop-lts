@@ -744,9 +744,7 @@ Many parts of this project are actively managed by a [kettle-jem](https://github
 
 Thanks for RTFM. ☺️
 
-[⛳liberapay-img]: https://img.shields.io/liberapay/goal/pboling.svg?logo=liberapay&color=a51611&style=flat
 [⛳liberapay-bottom-img]: https://img.shields.io/liberapay/goal/pboling.svg?style=for-the-badge&logo=liberapay&color=a51611
-[⛳liberapay]: https://liberapay.com/pboling/donate
 [🖇osc-all-img]: https://img.shields.io/opencollective/all/rubocop-lts
 [🖇osc-sponsors-img]: https://img.shields.io/opencollective/sponsors/rubocop-lts
 [🖇osc-backers-img]: https://img.shields.io/opencollective/backers/rubocop-lts
@@ -758,9 +756,7 @@ Thanks for RTFM. ☺️
 [🖇osc-sponsors-bottom-img]: https://img.shields.io/opencollective/sponsors/rubocop-lts?style=for-the-badge
 [🖇osc-backers-bottom-img]: https://img.shields.io/opencollective/backers/rubocop-lts?style=for-the-badge
 [🖇osc]: https://opencollective.com/rubocop-lts
-[🖇sponsor-img]: https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&logo=github
 [🖇sponsor-bottom-img]: https://img.shields.io/badge/Sponsor_Me!-pboling-blue?style=for-the-badge&logo=github
-[🖇sponsor]: https://github.com/sponsors/pboling
 [🖇kofi-img]: https://img.shields.io/badge/ko--fi-%E2%9C%93-a51611.svg?style=flat
 [🖇kofi]: https://ko-fi.com/pboling
 [🖇buyme-small-img]: https://img.shields.io/badge/buy_me_a_coffee-%E2%9C%93-a51611.svg?style=flat
