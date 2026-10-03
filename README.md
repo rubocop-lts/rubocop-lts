@@ -54,10 +54,6 @@ please support my efforts by making a donation, or becoming a sponsor.
 
 </div>
 
-* 🔧 [Usage][Usage]
-* ⚡️ [Contributing][Contributing]
-* 🌈 [Contributors][Contributors]
-* 📄 [License][License]
     * © [Copyright][Copyright]
 * 🤝 [Code of Conduct][Code of Conduct]
 * 📌 [Versioning][Versioning]
