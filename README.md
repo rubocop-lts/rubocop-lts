@@ -54,10 +54,6 @@ please support my efforts by making a donation, or becoming a sponsor.
 
 </div>
 
-### This Branch 🌳
-
-<!-- FIND VERSION -->
-**This README is for the `rubocop-lts` 6.x line enforcing Ruby 2.1 style.**
 
 Use this branch when you want RuboCop to enforce syntax and style compatible
 with Ruby 2.1. For a different linting target, choose the matching
