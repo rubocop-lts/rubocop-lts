@@ -54,10 +54,6 @@ please support my efforts by making a donation, or becoming a sponsor.
 
 </div>
 
-   matching the oldest Ruby you still support.
-
-* 🌳 [This Branch](#this-branch)
-* 🧭 [Branch Stack](#branch-stack)
 * 👩‍💻 [Project Health](#project-health)
 * ✨ [Installation](#installation)
 * 🔧 [Usage](#basic-usage)
