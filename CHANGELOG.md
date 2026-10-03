@@ -20,6 +20,25 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [4.3.7] - 2026-10-03
+
+- TAG: [v4.3.7][4.3.7t]
+- COVERAGE: 100.00% -- 15/15 lines in 2 files
+- BRANCH COVERAGE: 0.00% -- 0/0 branches in 2 files
+- 42.86% documented
+
+### Added
+
 - kettle-jem-template-20260913-001 - Templating now also surfaces a review
   entry in `dependency_conflicts.resolve` when a direct development
   dependency doesn't support one or more of this project's declared
@@ -38,14 +57,6 @@ Please file a bug if you notice a violation of semantic versioning.
   - documentation (1)
   - other (4)
   - workflows (19)
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
 
 ## [4.3.4] - 2026-09-09
 
@@ -253,7 +264,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial even release supporting Ruby >= 2.0
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v4.3.4...HEAD
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v4.3.7...HEAD
+[4.3.7]: https://github.com/rubocop-lts/rubocop-lts/compare/v4.3.4...v4.3.7
+[4.3.7t]: https://github.com/rubocop-lts/rubocop-lts/releases/tag/v4.3.7
 [4.3.4]: https://github.com/rubocop-lts/rubocop-lts/compare/v4.3.3...v4.3.4
 [4.3.4t]: https://github.com/rubocop-lts/rubocop-lts/releases/tag/v4.3.4
 [4.3.3]: https://github.com/rubocop-lts/rubocop-lts/compare/v4.3.2...v4.3.3
