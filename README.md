@@ -54,10 +54,6 @@ please support my efforts by making a donation, or becoming a sponsor.
 
 </div>
 
-[License]: https://rubocop-lts.gitlab.io/#license-
-[Copyright]: https://rubocop-lts.gitlab.io/#copyright-
-[Code of Conduct]: https://rubocop-lts.gitlab.io/#code-of-conduct-
-[Versioning]: https://rubocop-lts.gitlab.io/#versioning-
 [rlts]: https://rubocop-lts.gitlab.io/
 
 ### This README
