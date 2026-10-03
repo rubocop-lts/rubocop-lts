@@ -30,6 +30,13 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Security
 
+## [0.3.5] - 2026-10-03
+
+- TAG: [v0.3.5][0.3.5t]
+- COVERAGE: 100.00% -- 15/15 lines in 2 files
+- BRANCH COVERAGE: 0.00% -- 0/0 branches in 2 files
+- 42.86% documented
+
 ## [0.3.4] - 2026-10-02
 
 - TAG: [v0.3.4][0.3.4t]
@@ -224,7 +231,9 @@ Please file a bug if you notice a violation of semantic versioning.
 - Initial even release supporting analysis of Ruby >= 1.8
 - Configures many linting tools via `standard-rubocop-lts`
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v0.3.4...HEAD
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v0.3.5...HEAD
+[0.3.5]: https://github.com/rubocop-lts/rubocop-lts/compare/v0.3.4...v0.3.5
+[0.3.5t]: https://github.com/rubocop-lts/rubocop-lts/releases/tag/v0.3.5
 [0.3.4]: https://github.com/rubocop-lts/rubocop-lts/compare/v0.3.3...v0.3.4
 [0.3.4t]: https://github.com/rubocop-lts/rubocop-lts/releases/tag/v0.3.4
 [0.3.3]: https://github.com/rubocop-lts/rubocop-lts/compare/v0.3.2...v0.3.3
