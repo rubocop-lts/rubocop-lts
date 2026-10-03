@@ -54,10 +54,6 @@ please support my efforts by making a donation, or becoming a sponsor.
 
 </div>
 
-[rlts]: https://rubocop-lts.gitlab.io/
-
-### This README
-
 This README has two jobs:
 
 1. Describe the branch you are reading right now.
