@@ -54,10 +54,6 @@ please support my efforts by making a donation, or becoming a sponsor.
 
 </div>
 
-[Convention-Over-Configuration]: https://rubocop-lts.gitlab.io/CONV_OVER_CONF/
-[Even-Major-Release]: https://rubocop-lts.gitlab.io/CONV_OVER_CONF/#even-major-release
-[How-To-Upgrade-Ruby]: https://rubocop-lts.gitlab.io/HOW_TO_UPGRADE_RUBY/
-[OrgHealth]: https://rubocop-lts.gitlab.io/#org-health-
 [Installation]: https://rubocop-lts.gitlab.io/#installation-
 [Usage]: https://rubocop-lts.gitlab.io/#usage-
 [Contributing]: https://rubocop-lts.gitlab.io/#contributing-
