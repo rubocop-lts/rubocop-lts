@@ -70,7 +70,7 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
 and <a href="https://tom.preston-werner.com/2022/05/23/major-version-numbers-are-not-sacred.html">yes</a>, platform and engine support are part of the <a href="https://github.com/semver/semver/issues/716#issuecomment-869336139">public API</a>.<br>
 Please file a bug if you notice a violation of semantic versioning.</p>
 
-<h2 id="unreleased"><a href="https://github.com/rubocop-lts/rubocop-lts/compare/v2.3.3...HEAD">Unreleased</a></h2>
+<h2 id="unreleased"><a href="https://github.com/rubocop-lts/rubocop-lts/compare/v2.3.5...HEAD">Unreleased</a></h2>
 
 <h3 id="added">Added</h3>
 
@@ -84,6 +84,47 @@ Please file a bug if you notice a violation of semantic versioning.</p>
 
 <h3 id="security">Security</h3>
 
+<h2 id="235---2026-10-03">
+<a href="https://github.com/rubocop-lts/rubocop-lts/compare/v2.3.3...v2.3.5">2.3.5</a> - 2026-10-03</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/rubocop-lts/rubocop-lts/releases/tag/v2.3.5">v2.3.5</a>
+</li>
+  <li>COVERAGE: 100.00% – 15/15 lines in 2 files</li>
+  <li>BRANCH COVERAGE: 0.00% – 0/0 branches in 2 files</li>
+  <li>42.86% documented</li>
+</ul>
+
+<h3 id="added-1">Added</h3>
+
+<ul>
+  <li>kettle-jem-template-20260913-001 - Templating now also surfaces a review<br>
+entry in <code>dependency_conflicts.resolve</code> when a direct development<br>
+dependency doesn’t support one or more of this project’s declared<br>
+<code>engines:</code> and has no template-managed modular home (e.g. <code>sqlite3</code> on<br>
+<code>jruby</code>). Review each entry and pick a resolution per the project’s own<br>
+engine support needs.</li>
+</ul>
+
+<h3 id="changed-1">Changed</h3>
+
+<ul>
+  <li>[kc] kettle-jem/prepare: updated 14 project files:
+    <ul>
+      <li>dependencies (14)</li>
+    </ul>
+  </li>
+  <li>[kc] kettle-jem/template: updated 27 project files:
+    <ul>
+      <li>code and tests (1)</li>
+      <li>dependencies (2)</li>
+      <li>documentation (1)</li>
+      <li>other (4)</li>
+      <li>workflows (19)</li>
+    </ul>
+  </li>
+</ul>
+
 <h2 id="233---2026-09-09">
 <a href="https://github.com/rubocop-lts/rubocop-lts/compare/v2.3.2...v2.3.3">2.3.3</a> - 2026-09-09</h2>
 
@@ -95,7 +136,7 @@ Please file a bug if you notice a violation of semantic versioning.</p>
   <li>42.86% documented</li>
 </ul>
 
-<h3 id="added-1">Added</h3>
+<h3 id="added-2">Added</h3>
 
 <ul>
   <li>kettle-jem-template-20260720-005 - README Support &amp; Community links now<br>
@@ -107,7 +148,7 @@ before generated docs are refreshed.</li>
 RSpec helpers provided by <code>kettle-test</code>.</li>
 </ul>
 
-<h3 id="changed-1">Changed</h3>
+<h3 id="changed-2">Changed</h3>
 
 <ul>
   <li>kettle-jem-template-20260716-002 - Gemspecs now ship fewer repository-only<br>
@@ -229,7 +270,7 @@ preserving comments and trailing commas during template updates.</p>
   <li>14.29% documented</li>
 </ul>
 
-<h3 id="added-2">Added</h3>
+<h3 id="added-3">Added</h3>
 
 <ul>
   <li>Added support for JRuby 10.1 and TruffleRuby 34.0.</li>
@@ -245,9 +286,9 @@ includes its <code>config/*.yml</code> RuboCop configuration files.</li>
 <h2 id="230---2026-06-01">
 <a href="https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v2.2.0...v2.3.0">2.3.0</a> - 2026-06-01</h2>
 
-<h3 id="added-3">Added</h3>
+<h3 id="added-4">Added</h3>
 
-<h3 id="changed-2">Changed</h3>
+<h3 id="changed-3">Changed</h3>
 
 <ul>
   <li>Updated dependency floors to the latest RuboCop-LTS family releases.</li>
@@ -269,9 +310,9 @@ includes its <code>config/*.yml</code> RuboCop configuration files.</li>
 <h2 id="220---2026-05-30">
 <a href="https://gitlab.com/rubocop-lts/rubocop-lts/-/compare/v2.1.1...v2.2.0">2.2.0</a> - 2026-05-30</h2>
 
-<h3 id="added-4">Added</h3>
+<h3 id="added-5">Added</h3>
 
-<h3 id="changed-3">Changed</h3>
+<h3 id="changed-4">Changed</h3>
 
 <ul>
   <li>Updated the <code>standard-rubocop-lts</code> dependency floor to <code>2.0.0</code>.</li>
@@ -288,7 +329,7 @@ includes its <code>config/*.yml</code> RuboCop configuration files.</li>
 <h2 id="211---2023-05-30">
 <a href="https://github.com/rubocop-lts/rubocop-lts/compare/v2.1.0...v2.1.1">2.1.1</a> - 2023-05-30</h2>
 
-<h3 id="added-5">Added</h3>
+<h3 id="added-6">Added</h3>
 
 <ul>
   <li>
@@ -300,7 +341,7 @@ includes its <code>config/*.yml</code> RuboCop configuration files.</li>
 <h2 id="210---2023-05-20">
 <a href="https://github.com/rubocop-lts/rubocop-lts/compare/v2.0.5...v2.1.0">2.1.0</a> - 2023-05-20</h2>
 
-<h3 id="changed-4">Changed</h3>
+<h3 id="changed-5">Changed</h3>
 
 <ul>
   <li>Broadened scope of gem, updated <code>rubocop-ruby*_*</code> which configures many linting tools via <code>standard-rubocop-lts</code>
@@ -317,7 +358,7 @@ includes its <code>config/*.yml</code> RuboCop configuration files.</li>
 <h2 id="205---2022-06-08">
 <a href="https://github.com/rubocop-lts/rubocop-lts/compare/v2.0.4...v2.0.5">2.0.5</a> - 2022-06-08</h2>
 
-<h3 id="added-6">Added</h3>
+<h3 id="added-7">Added</h3>
 
 <ul>
   <li>Improve, and dry up documentation</li>
@@ -372,7 +413,7 @@ includes its <code>config/*.yml</code> RuboCop configuration files.</li>
 </li>
 </ul>
 
-<h3 id="added-7">Added</h3>
+<h3 id="added-8">Added</h3>
 
 <ul>
   <li>Initial even release supporting Ruby &gt;= 1.9</li>
