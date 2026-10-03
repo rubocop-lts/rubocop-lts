@@ -5,7 +5,7 @@ module Rubocop
     # Version namespace for this gem.
     module Version
       # Current gem version.
-      VERSION = "10.3.5"
+      VERSION = "10.3.6"
     end
     # Current gem version exposed at the traditional constant location.
     VERSION = Version::VERSION # Traditional Constant Location
