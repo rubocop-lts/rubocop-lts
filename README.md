@@ -54,10 +54,6 @@ please support my efforts by making a donation, or becoming a sponsor.
 
 </div>
 
-* 👩‍💻 [Project Health](#project-health)
-* ✨ [Installation](#installation)
-* 🔧 [Usage](#basic-usage)
-
 ### This Branch 🌳
 
 <!-- FIND VERSION -->
