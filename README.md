@@ -54,10 +54,6 @@ please support my efforts by making a donation, or becoming a sponsor.
 
 </div>
 
-    * © [Copyright][Copyright]
-* 🤝 [Code of Conduct][Code of Conduct]
-* 📌 [Versioning][Versioning]
-
 [Convention-Over-Configuration]: https://rubocop-lts.gitlab.io/CONV_OVER_CONF/
 [Even-Major-Release]: https://rubocop-lts.gitlab.io/CONV_OVER_CONF/#even-major-release
 [How-To-Upgrade-Ruby]: https://rubocop-lts.gitlab.io/HOW_TO_UPGRADE_RUBY/
