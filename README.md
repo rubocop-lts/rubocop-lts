@@ -54,10 +54,6 @@ please support my efforts by making a donation, or becoming a sponsor.
 
 </div>
 
-    * 🌱 [Releases][Even-Major-Release]
-* 🌱 [How to Upgrade Ruby (1.8 to 3.2)!][How-To-Upgrade-Ruby]
-* 👩‍💻 [Org Health][OrgHealth]
-* ✨ [Installation][Installation]
 * 🔧 [Usage][Usage]
 * ⚡️ [Contributing][Contributing]
 * 🌈 [Contributors][Contributors]
