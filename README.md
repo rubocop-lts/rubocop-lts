@@ -54,10 +54,6 @@ please support my efforts by making a donation, or becoming a sponsor.
 
 </div>
 
-This README has two jobs:
-
-1. Describe the branch you are reading right now.
-2. Index the `rubocop-lts` branch stack so you can jump to the release line
    matching the oldest Ruby you still support.
 
 * 🌳 [This Branch](#this-branch)
