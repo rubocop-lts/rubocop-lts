@@ -30,6 +30,13 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Security
 
+## [2.3.6] - 2026-10-03
+
+- TAG: [v2.3.6][2.3.6t]
+- COVERAGE: 100.00% -- 15/15 lines in 2 files
+- BRANCH COVERAGE: 0.00% -- 0/0 branches in 2 files
+- 42.86% documented
+
 ## [2.3.5] - 2026-10-03
 
 - TAG: [v2.3.5][2.3.5t]
@@ -268,7 +275,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial even release supporting Ruby >= 1.9
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v2.3.5...HEAD
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts/compare/v2.3.6...HEAD
+[2.3.6]: https://github.com/rubocop-lts/rubocop-lts/compare/v2.3.5...v2.3.6
+[2.3.6t]: https://github.com/rubocop-lts/rubocop-lts/releases/tag/v2.3.6
 [2.3.5]: https://github.com/rubocop-lts/rubocop-lts/compare/v2.3.3...v2.3.5
 [2.3.5t]: https://github.com/rubocop-lts/rubocop-lts/releases/tag/v2.3.5
 [2.3.3]: https://github.com/rubocop-lts/rubocop-lts/compare/v2.3.2...v2.3.3
