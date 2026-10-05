@@ -120,6 +120,11 @@ dependency_conflicts:
       modular: gemfiles/modular/style.gemfile
       action: keep_both
       reason: "The gemspec constrains the compatible version; the modular declaration selects the required fork source."
+    - gem: rubocop-packaging
+      direct: rubocop-lts.gemspec
+      modular: gemfiles/modular/style_local.gemfile
+      action: keep_both
+      reason: "The gemspec constrains the compatible version; the local modular declaration selects the required fork source."
 # This project's identifying emoji.
 # Used as the leading emoji in the README H1 heading and in the gemspec
 # summary and description. Every gem should have its own unique emoji.
