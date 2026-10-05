@@ -119,7 +119,7 @@ dependency_conflicts:
       direct: rubocop-lts.gemspec
       modular: gemfiles/modular/style.gemfile
       action: keep_both
-      reason: "The gemspec owns this development dependency and the MRI style Gemfile retains the compatible declaration for the framework matrix."
+      reason: "The gemspec constrains the compatible version; the modular declaration selects the required fork source."
 # This project's identifying emoji.
 # Used as the leading emoji in the README H1 heading and in the gemspec
 # summary and description. Every gem should have its own unique emoji.
