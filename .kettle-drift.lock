@@ -1,10 +1,28 @@
 {
-  "action: keep_both\nreason: \"The gemspec owns this development dependency and the MRI style Gemfile retains the compatible declaration for the framework matrix.\"": [
+  "- gem: rubocop-packaging\ndirect: rubocop-lts.gemspec": [
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        116,
-        121
+        118,
+        123
+      ]
+    }
+  ],
+  "- ruby: \"ruby\"\nappraisal: \"current\"": [
+    {
+      "file": ".github/workflows/current.yml",
+      "lines": [
+        41,
+        47
+      ]
+    }
+  ],
+  "config: .licenserc.yaml\nmode: \"check\"": [
+    {
+      "file": ".github/workflows/license-eye.yml",
+      "lines": [
+        49,
+        62
       ]
     }
   ],
@@ -21,8 +39,8 @@
     {
       "file": ".github/workflows/current.yml",
       "lines": [
-        43,
-        49
+        44,
+        50
       ]
     }
   ],
