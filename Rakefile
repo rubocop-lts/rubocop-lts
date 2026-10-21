@@ -70,6 +70,8 @@ end
 desc "Generate YARD documentation"
 task :docs => "yard"
 
+task :docs => "yard"
+
 # simplecov:disable
 ### MONOREPO FAMILY TASKS
 if Dir.exist?(File.join(__dir__, "gems"))
