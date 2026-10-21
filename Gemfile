@@ -4,55 +4,6 @@
 # To retain chunks of comments & code during kettle-jem templating:
 # Wrap custom sections with freeze markers (e.g., as above and below this comment chunk).
 # kettle-jem will then preserve content between those markers across template runs.
-
-# Branch-stack targets depend on different Ruby leaf gems. Resolve all leaves
-# through sibling paths so worktrees do not require unreleased versions locally.
-direct_sibling_gems = %w[
-  rubocop-ruby1_8
-  rubocop-ruby1_9
-  rubocop-ruby2_0
-  rubocop-ruby2_1
-  rubocop-ruby2_2
-  rubocop-ruby2_3
-  rubocop-ruby2_4
-  rubocop-ruby2_5
-  rubocop-ruby2_6
-  rubocop-ruby2_7
-  rubocop-ruby3_0
-  rubocop-ruby3_1
-  rubocop-ruby3_2
-  standard-rubocop-lts
-  rubocop-lts-ruby
-]
-direct_sibling_dev = ENV.fetch("RUBOCOP_LTS_DEV", "")
-direct_sibling_local =
-  !direct_sibling_dev.empty? && !%w[false 0 no off].include?(direct_sibling_dev.downcase)
-direct_sibling_templating = ENV.fetch("K_JEM_TEMPLATING", "false").casecmp("true").zero?
-
-if direct_sibling_local || direct_sibling_templating
-  direct_sibling_dev_was_set = ENV.key?("RUBOCOP_LTS_DEV")
-  direct_sibling_dev_original = ENV.fetch("RUBOCOP_LTS_DEV", nil)
-  require "nomono/bundler"
-  begin
-    ENV["RUBOCOP_LTS_DEV"] = File.expand_path("..", __dir__) if direct_sibling_templating && !direct_sibling_local
-
-    eval_nomono_gems(
-      gems: direct_sibling_gems,
-      prefix: "RUBOCOP_LTS",
-      path_env: "RUBOCOP_LTS_DEV",
-      root: ["src", "my", "rubocop-lts"]
-    )
-  ensure
-    if direct_sibling_templating && !direct_sibling_local
-      if direct_sibling_dev_was_set
-        ENV["RUBOCOP_LTS_DEV"] = direct_sibling_dev_original
-      else
-        ENV.delete("RUBOCOP_LTS_DEV")
-      end
-    end
-  end
-end
-
 # kettle-jem:unfreeze
 
 source "https://gem.coop"
@@ -67,13 +18,23 @@ git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 # Include dependencies from rubocop-lts.gemspec
 gemspec
 
-gem "kettle-family", "~> 1.3", ">= 1.3.3"
+gem "kettle-family", "~> 1.3", ">= 1.3.25"
 
 # Local workspace dependency wiring for *_local.gemfile overrides
 gem "nomono", "~> 1.1", ">= 1.1.14", require: false # ruby >= 3.2.0
 
-# Templating (env-switched: STRUCTUREDMERGE_DEV=/path/to/structuredmerge/ruby/gems for local paths)
-eval_gemfile "gemfiles/modular/templating.gemfile" if ENV.fetch("K_JEM_TEMPLATING", "false").casecmp("true").zero?
+# Templating and the StructuredMerge family share this modular Gemfile.
+# kettle-jem needs StructuredMerge to template, and kettle-changelog needs it at
+# runtime (ast-crispr-markdown-markly -> markdown-merge -> tree_haver), so the
+# test, lint, and release bundles resolve the family too. While the family is
+# only partially released, registry copies pin the last published version exactly
+# and cannot be satisfied alongside a local lockstep version, so a partial local
+# wiring fails version solving for every command in the bundle.
+#
+# (env-switched: STRUCTUREDMERGE_DEV=/path/to/structuredmerge/ruby/gems for local paths)
+eval_gemfile "gemfiles/modular/templating.gemfile" if
+  ENV.fetch("K_JEM_TEMPLATING", "false").casecmp("true").zero? ||
+    ENV.fetch("STRUCTUREDMERGE_DEV", "false").casecmp("false") != 0
 
 # Debugging
 eval_gemfile "gemfiles/modular/debug.gemfile"
