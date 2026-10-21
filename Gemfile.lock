@@ -8,20 +8,20 @@ GIT
       rubocop (>= 1.72.1, < 2.0)
 
 PATH
-  remote: .
-  specs:
-    rubocop-lts (24.2.6)
-      rubocop-ruby3_2 (>= 3.0.0, < 4)
-      standard-rubocop-lts (>= 2.0.2, < 3)
-      version_gem (>= 1.1.2, < 3)
-
-PATH
   remote: ../rubocop-lts-ruby
   specs:
     rubocop-lts-ruby (0.1.5)
       lint_roller (~> 1.1)
       rubocop (>= 1.72.1, < 2.0)
       version_gem (~> 1.1, >= 1.1.15)
+
+PATH
+  remote: .
+  specs:
+    rubocop-lts (24.2.6)
+      rubocop-ruby3_2 (>= 3.0.0, < 4)
+      standard-rubocop-lts (>= 2.0.2, < 3)
+      version_gem (>= 1.1.2, < 3)
 
 PATH
   remote: /var/home/pboling/src/my/rubocop-lts/rubocop-ruby3_2
@@ -194,6 +194,8 @@ GEM
       kettle-test (~> 2.0, >= 2.0.27)
       ruby-progressbar (~> 1.13)
       tty-progressbar (~> 0.18)
+      version_gem (~> 1.1, >= 1.1.15)
+    kettle-drift (1.0.17)
       version_gem (~> 1.1, >= 1.1.15)
     kettle-family (1.3.27)
       ast-crispr (~> 7.1, >= 7.1.11)
@@ -604,7 +606,9 @@ DEPENDENCIES
   irb (~> 1.17)
   kettle-changelog (~> 1.0, >= 1.0.13)
   kettle-dev (~> 3.1, >= 3.1.19)
+  kettle-drift (~> 1.0, >= 1.0.17)
   kettle-family (~> 1.3, >= 1.3.25)
+  kettle-jem (~> 7.1, >= 7.1.36)
   kettle-soup-cover (~> 3.0, >= 3.0.13)
   kettle-test (~> 2.0, >= 2.0.27)
   kramdown (~> 2.5, >= 2.5.2)
@@ -630,6 +634,7 @@ DEPENDENCIES
   standard-rubocop-lts (>= 2.0.2, < 3)!
   stone_checksums (~> 1.0, >= 1.0.9)
   stringio (>= 3.0)
+  tree_sitter_language_pack (~> 1.16, >= 1.16.2)
   turbo_tests2 (~> 4.0, >= 4.0.0)
   webrick (~> 1.9)
   yaml-converter (~> 0.2, >= 0.2.7)
@@ -695,6 +700,7 @@ CHECKSUMS
   json-merge (7.1.14) sha256=4a230287d7a3bccec2c0039d1e7225e4251a6b60cee742b4317cf1401064048a
   kettle-changelog (1.0.13) sha256=34be2385fd44032c7e0761d68aa26986984118ad00fdfe877ae445afef3953bd
   kettle-dev (3.1.19) sha256=d1d702cdb8db04730c021d7309b052e88f5847b806dd5e7b988484cba3246cac
+  kettle-drift (1.0.17)
   kettle-family (1.3.27) sha256=1d6e7bd842a591c11cfc0fd6328d42605d5bda9cf9ada86ebcc05fbed41255ef
   kettle-gha-pins (0.3.18) sha256=7e1aab36c248bab6b55e6c9d79b9efb8233c14a5e33e0d8013a874c49030046a
   kettle-jem (7.1.36) sha256=bfbdb6916de47f6259168c664da4e34d542a769d5258207ea82a316194cce916
