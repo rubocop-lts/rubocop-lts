@@ -475,7 +475,7 @@ that matches your Ruby floor.
 | Tokens to Remember | [![Gem name][⛳️name-img]][⛳️gem-name] [![Gem namespace][⛳️namespace-img]][⛳️gem-namespace] |
 |-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Works with JRuby | [![JRuby 10.0 Compat][💎jruby-10.0i]][🚎jruby-10.0-wf] [![JRuby current Compat][💎jruby-c-i]][🚎10-j-wf] [![JRuby HEAD Compat][💎jruby-headi]][🚎3-hd-wf]|
-| Works with Truffle Ruby | [![Truffle Ruby 24.2 Compat][💎truby-24.2i]][🚎truby-24.2-wf] [![Truffle Ruby 25.0 Compat][💎truby-25.0i]][🚎truby-25.0-wf] [![Truffle Ruby 33.0 Compat][💎truby-33.0i]][🚎truby-33.0-wf] [![Truffle Ruby current Compat][💎truby-c-i]][🚎9-t-wf] [![Truffle Ruby HEAD Compat][💎truby-headi]][🚎3-hd-wf]|
+| Works with Truffle Ruby | [![Truffle Ruby 24.2 Compat][💎truby-24.2i]][🚎truby-24.2-wf] [![Truffle Ruby 25.0 Compat][💎truby-25.0i]][🚎truby-25.0-wf] [![Truffle Ruby 33.0 Compat][💎truby-33.0i]][🚎truby-33.0-wf] [![Truffle Ruby current Compat][💎truby-c-i]][🚎9-t-wf]|
 | Works with MRI Ruby 4 | [![Ruby current Compat][💎ruby-c-i]][🚎11-c-wf] [![Ruby HEAD Compat][💎ruby-headi]][🚎3-hd-wf]|
 | Works with MRI Ruby 3 | [![Ruby 3.2 Compat][💎ruby-3.2i]][🚎ruby-3.2-wf] [![Ruby 3.3 Compat][💎ruby-3.3i]][🚎ruby-3.3-wf] [![Ruby 3.4 Compat][💎ruby-3.4i]][🚎ruby-3.4-wf]|
 | Support & Community | [![Join Me on Daily.dev's RubyFriends][✉️ruby-friends-img]][✉️ruby-friends] [![Get help from RubyForum][✉️ruby-forum-img]][✉️ruby-forum] [![Live Chat on Discord][✉️discord-invite-img-ftb]][✉️discord-invite] [![Get help from me on Upwork][👨🏼‍🏫expsup-upwork-img]][👨🏼‍🏫expsup-upwork] [![Get help from me on Codementor][👨🏼‍🏫expsup-codementor-img]][👨🏼‍🏫expsup-codementor] |
@@ -512,6 +512,23 @@ The _amazing_ test matrix is powered by the kettle-dev stack.
 | [turbo_tests2](https://clickgems.clickhouse.com/dashboard/turbo_tests2) | [GitHub](https://github.com/galtzo-floss/turbo_tests2) | parallel test execution | [![Total downloads for turbo_tests2](https://img.shields.io/gem/dt/turbo_tests2.svg?style=flat-square)](https://clickgems.clickhouse.com/dashboard/turbo_tests2) |
 
 </details>
+
+### Runtime and Platform Support
+
+Support tiers describe what this project's CI actually exercises, not what may
+work in an untested environment:
+
+- **Parallel support**: CI runs the test suite with multiple workers available.
+- **Unsupported**: the engine/platform combination is not covered by CI and is
+ not a project compatibility claim.
+
+| Ruby engine/version | Linux | macOS | Windows | Notes |
+|---------------------|-------|-------|---------|-------|
+| MRI 3.2-3.4 | Parallel support | Unsupported | Unsupported | Versioned Ruby workflows run on Linux. |
+| MRI current | Parallel support | Parallel support | Unsupported | Current Ruby workflow covers the declared OS platforms. |
+| MRI head | Parallel support | Unsupported | Unsupported | CI is allowed to fail while Ruby is in development. |
+| JRuby (all CI lanes) | Parallel support | Unsupported | Unsupported | Engine workflows run on Linux; macOS and Windows are not exercised by CI. |
+| TruffleRuby (all CI lanes) | Parallel support | Unsupported | Unsupported | Never shipped a Windows build (zero Windows assets across 66 releases scanned 2026-10-10); setup-ruby hard-fails ([source](https://github.com/ruby/setup-ruby/blob/master/README.md)) |
 
 ### Federated DVCS
 
@@ -744,7 +761,9 @@ Many parts of this project are actively managed by a [kettle-jem](https://github
 
 Thanks for RTFM. ☺️
 
+[⛳liberapay-img]: https://img.shields.io/liberapay/goal/pboling.svg?logo=liberapay&color=a51611&style=flat
 [⛳liberapay-bottom-img]: https://img.shields.io/liberapay/goal/pboling.svg?style=for-the-badge&logo=liberapay&color=a51611
+[⛳liberapay]: https://liberapay.com/pboling/donate
 [🖇osc-all-img]: https://img.shields.io/opencollective/all/rubocop-lts
 [🖇osc-sponsors-img]: https://img.shields.io/opencollective/sponsors/rubocop-lts
 [🖇osc-backers-img]: https://img.shields.io/opencollective/backers/rubocop-lts
@@ -756,7 +775,9 @@ Thanks for RTFM. ☺️
 [🖇osc-sponsors-bottom-img]: https://img.shields.io/opencollective/sponsors/rubocop-lts?style=for-the-badge
 [🖇osc-backers-bottom-img]: https://img.shields.io/opencollective/backers/rubocop-lts?style=for-the-badge
 [🖇osc]: https://opencollective.com/rubocop-lts
+[🖇sponsor-img]: https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&logo=github
 [🖇sponsor-bottom-img]: https://img.shields.io/badge/Sponsor_Me!-pboling-blue?style=for-the-badge&logo=github
+[🖇sponsor]: https://github.com/sponsors/pboling
 [🖇kofi-img]: https://img.shields.io/badge/ko--fi-%E2%9C%93-a51611.svg?style=flat
 [🖇kofi]: https://ko-fi.com/pboling
 [🖇buyme-small-img]: https://img.shields.io/badge/buy_me_a_coffee-%E2%9C%93-a51611.svg?style=flat
@@ -875,7 +896,6 @@ Thanks for RTFM. ☺️
 [💎truby-25.0i]: https://img.shields.io/badge/Truffle_Ruby-25.0-34BCB1?style=for-the-badge&logo=ruby&logoColor=pink
 [💎truby-33.0i]: https://img.shields.io/badge/Truffle_Ruby-33.0-34BCB1?style=for-the-badge&logo=ruby&logoColor=pink
 [💎truby-c-i]: https://img.shields.io/badge/Truffle_Ruby-current-34BCB1?style=for-the-badge&logo=ruby&logoColor=green
-[💎truby-headi]: https://img.shields.io/badge/Truffle_Ruby-HEAD-34BCB1?style=for-the-badge&logo=ruby&logoColor=blue
 [💎jruby-10.0i]: https://img.shields.io/badge/JRuby-10.0-FBE742?style=for-the-badge&logo=ruby&logoColor=red
 [💎jruby-c-i]: https://img.shields.io/badge/JRuby-current-FBE742?style=for-the-badge&logo=ruby&logoColor=green
 [💎jruby-headi]: https://img.shields.io/badge/JRuby-HEAD-FBE742?style=for-the-badge&logo=ruby&logoColor=blue
