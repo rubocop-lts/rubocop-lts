@@ -31,7 +31,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Make the family GitHub Actions pin task request major upgrades.
 
-- [kc] kettle-jem/prepare: updated 14 project files:
+- [kc] kettle-jem/prepare: updated 15 project files:
+  - configuration (1)
   - dependencies (14)
 
 - [kc] kettle-jem/template: updated 25 project files:
