@@ -371,6 +371,11 @@ license_eye:
     - name: simplecov-rcov
       version: 0.3.7
       license: MIT
+    # Versionless on purpose: standard bumps frequently via bup, and a
+    # version-pinned override silently stops matching after every bump,
+    # failing the license-eye workflow with "standard | Unknown".
+    - name: standard
+      license: MIT
 
 # Machine / automation accounts to exclude from generated copyright output.
 #

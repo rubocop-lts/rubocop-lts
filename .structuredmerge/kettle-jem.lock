@@ -46,6 +46,7 @@ template_state:
     - ".github/workflows/truffleruby-33.0.yml"
     - ".github/workflows/unlocked_deps.yml"
     - ".idea/.gitignore"
+    - ".licenserc.yaml"
     - ".simplecov"
     - Appraisal.root.gemfile
     - Appraisals
@@ -523,8 +524,8 @@ files:
   ".licenserc.yaml":
     recipe: template_source_application_licenserc_yaml
     action: write
-    dest_sha256: 2cfbd147680131a708f654902bd6359a6d31045eb44975d35da67d448d7225ae
-    input_fingerprint: '083bbb9e097aed09e18c309ecc634615390c7a49a194983a01c157e10838780d'
+    dest_sha256: 7074e89d571c0d1a22992db6c552121734bfbc28ac8970e5f064987c525593bd
+    input_fingerprint: 3b95f203e1fcff6db38dfc4ae8cde1c240d2da0a073633967e90f6b38b100543
     template_sources:
     - ".licenserc.yaml.example"
   ".opencollective.yml":
@@ -702,12 +703,6 @@ files:
     input_fingerprint: 82cf808c5127a0fba3375509e42269376ecc98e4cbce98b752f35adee6b9e375
     template_sources:
     - README.md.example
-  REEK:
-    recipe: template_source_application_REEK
-    action: write
-    input_fingerprint: 579358d2dc47a08135b9351cf5ea9dc066fa34762a41880184e839033ff46649
-    template_sources:
-    - REEK
   RUBOCOP.md:
     recipe: template_source_application_RUBOCOP_md
     action: write

@@ -57,11 +57,11 @@ Please file a bug if you notice a violation of semantic versioning.
   - configuration (1)
   - dependencies (14)
 
-- [kc] kettle-jem/template: updated 30 project files:
+- [kc] kettle-jem/template: updated 31 project files:
   - code and tests (1)
   - dependencies (4)
   - documentation (2)
-  - other (4)
+  - other (5)
   - workflows (19)
 
 ### Deprecated
@@ -121,6 +121,8 @@ Please file a bug if you notice a violation of semantic versioning.
   preserving comments and trailing commas during template updates.
 
 - Repair README local navigation and duplicate reference definitions.
+
+- license-eye workflow: make the `standard` gem license override versionless, so dependency bumps no longer break the license check with "standard | Unknown"
 
 ### Security
 
