@@ -11,18 +11,8 @@ PATH
   remote: .
   specs:
     rubocop-lts (0.3.7)
-      rubocop-ruby1_8 (~> 2.0, >= 2.0.8)
-      standard-rubocop-lts (~> 2.0, >= 2.0.14)
-      version_gem (~> 1.1, >= 1.1.15)
-
-PATH
-  remote: /var/home/pboling/src/my/rubocop-lts/standard-rubocop-lts
-  specs:
-    standard-rubocop-lts (2.0.15)
-      rubocop-lts-ruby (~> 0.1, >= 0.1.4)
-      standard (~> 1.54, >= 1.54.0)
-      standard-custom (~> 1.0, >= 1.0.2)
-      standard-performance (~> 1.9, >= 1.9.0)
+      rubocop-ruby1_8 (~> 2.0, >= 2.0.9)
+      standard-rubocop-lts (~> 2.0, >= 2.0.15)
       version_gem (~> 1.1, >= 1.1.15)
 
 GEM
@@ -442,12 +432,19 @@ GEM
       lint_roller (~> 1.1)
       rubocop (~> 1.89)
       rubocop-rspec (~> 3.5)
-    rubocop-ruby1_8 (2.0.8)
+    rubocop-ruby1_8 (2.0.9)
       rubocop-gradual (~> 0.3, >= 0.3.6)
       rubocop-md (~> 2.0, >= 2.0.4)
       rubocop-rake (~> 0.7, >= 0.7.1)
       rubocop-thread_safety (~> 0.7, >= 0.7.3)
-      standard-rubocop-lts (~> 2.0, >= 2.0.14)
+      standard-rubocop-lts (~> 2.0, >= 2.0.15)
+      version_gem (~> 1.1, >= 1.1.15)
+    rubocop-ruby3_2 (3.0.10)
+      rubocop-gradual (~> 0.3, >= 0.3.6)
+      rubocop-md (~> 2.0, >= 2.0.4)
+      rubocop-rake (~> 0.7, >= 0.7.1)
+      rubocop-thread_safety (~> 0.7, >= 0.7.3)
+      standard-rubocop-lts (~> 2.0, >= 2.0.15)
       version_gem (~> 1.1, >= 1.1.15)
     rubocop-thread_safety (0.8.0)
       lint_roller (~> 1.1)
@@ -498,6 +495,12 @@ GEM
       rubocop-factory_bot (~> 2.27)
       rubocop-rspec (~> 3.9)
       rubocop-rspec_rails (~> 2.31)
+    standard-rubocop-lts (2.0.15)
+      rubocop-lts-ruby (~> 0.1, >= 0.1.4)
+      standard (~> 1.54, >= 1.54.0)
+      standard-custom (~> 1.0, >= 1.0.2)
+      standard-performance (~> 1.9, >= 1.9.0)
+      version_gem (~> 1.1, >= 1.1.15)
     stone_checksums (1.0.9)
       version_gem (~> 1.1, >= 1.1.15)
     stringio (3.2.0)
@@ -625,13 +628,13 @@ DEPENDENCIES
   rspec-block_is_expected (~> 1.0, >= 1.0.6)
   rubocop-gradual (~> 0.4, >= 0.4.0)
   rubocop-lts!
-  rubocop-lts-rspec (~> 1.0, >= 1.0.7)
+  rubocop-lts-rspec (~> 1.0, >= 1.0.8)
   rubocop-minitest (~> 0.41, >= 0.41.0)
   rubocop-on-rbs (~> 2.2, >= 2.2.0)
   rubocop-packaging (~> 0.6, >= 0.6.0, >= 0)!
+  rubocop-ruby3_2 (~> 3.0, >= 3.0.8)
   ruby-progressbar (~> 1.13)
   standard (~> 1.57, >= 1.57.0)
-  standard-rubocop-lts (~> 2.0, >= 2.0.14)!
   stone_checksums (~> 1.0, >= 1.0.9)
   stringio (>= 3.0)
   turbo_tests2 (~> 4.0, >= 4.0.0)
@@ -779,7 +782,8 @@ CHECKSUMS
   rubocop-rspec (3.10.2) sha256=0b3e2ecc592cd10ecbf0095bb58d1e357905276e069643523cc19eb7495f65e2
   rubocop-rspec-extra (0.3.0) sha256=ee4b6484d0332a0d23c4a465eeb607e41888eb3d4ed479f850b9f5212514f787
   rubocop-rspec_rails (2.33.0) sha256=669e0a7a9a5fca6d6ccaf853ac65b5b8bdfde3519f604616f2c5278cbf565689
-  rubocop-ruby1_8 (2.0.8) sha256=f66be9581b097de02aa38330df3631a0545f7569905e3a6dc0bcd9c61f9f2f44
+  rubocop-ruby1_8 (2.0.9) sha256=b2284cda3f65f8cbf3daecc98030899bcb2fab5946021660593369096a0fa1d7
+  rubocop-ruby3_2 (3.0.10) sha256=2269acad134057cb06449fe20cc7ef73824fcfe191f3e766fe363c0a9e852c5a
   rubocop-thread_safety (0.8.0) sha256=71fe5e7894fb9acfbd4c2dcd394feabc35bd690f75b0bc846e1504d9e31f9034
   ruby-merge (7.1.15) sha256=b05a501ee5cd21fcc822253cfa39fdf6b98307fc3a2a5ef445ba5c72d921a560
   ruby-progressbar (1.13.0) sha256=80fc9c47a9b640d6834e0dc7b3c94c9df37f08cb072b7761e4a71e22cff29b33
@@ -798,7 +802,7 @@ CHECKSUMS
   standard-custom (1.0.2) sha256=424adc84179a074f1a2a309bb9cf7cd6bfdb2b6541f20c6bf9436c0ba22a652b
   standard-performance (1.9.0) sha256=49483d31be448292951d80e5e67cdcb576c2502103c7b40aec6f1b6e9c88e3f2
   standard-rspec (0.5.1) sha256=94c6a0c94f6d303867df5cc403a0d4994cf0d72973e86c0a0c82e3b89843989a
-  standard-rubocop-lts (2.0.15)
+  standard-rubocop-lts (2.0.15) sha256=d5a521a2f6fb78a7a8e784c739bb6b73654682045a00a2043c65cc4d13aed777
   stone_checksums (1.0.9) sha256=fe9c897cacb2ead243c38a97d5a27ed9a4d6b7c55b9975a0b59fe7f6ed621802
   stringio (3.2.0) sha256=c37cb2e58b4ffbd33fe5cd948c05934af997b36e0b6ca6fdf43afa234cf222e1
   strings-ansi (0.2.0) sha256=90262d760ea4a94cc2ae8d58205277a343409c288cbe7c29416b1826bd511c88

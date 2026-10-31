@@ -32,6 +32,8 @@ Please file a bug if you notice a violation of semantic versioning.
   - other (5)
   - workflows (19)
 
+- Floor rubocop-ruby1_8 at 2.0.9, standard-rubocop-lts at 2.0.15, and rubocop-lts-rspec at 1.0.8
+
 ### Deprecated
 
 ### Removed
