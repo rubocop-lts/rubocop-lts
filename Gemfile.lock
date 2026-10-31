@@ -15,16 +15,6 @@ PATH
       standard-rubocop-lts (>= 2.0.2, < 3)
       version_gem (>= 1.1.2, < 3)
 
-PATH
-  remote: /var/home/pboling/src/my/rubocop-lts/standard-rubocop-lts
-  specs:
-    standard-rubocop-lts (2.0.15)
-      rubocop-lts-ruby (~> 0.1, >= 0.1.4)
-      standard (~> 1.54, >= 1.54.0)
-      standard-custom (~> 1.0, >= 1.0.2)
-      standard-performance (~> 1.9, >= 1.9.0)
-      version_gem (~> 1.1, >= 1.1.15)
-
 GEM
   remote: https://gem.coop/
   specs:
@@ -283,8 +273,8 @@ GEM
       racc (~> 1.4)
     nokogiri (1.19.4-x86_64-linux-musl)
       racc (~> 1.4)
-    nomono (1.1.14)
-      version_gem (~> 1.1, >= 1.1.15)
+    nomono (1.1.17)
+      version_gem (~> 1.1, >= 1.1.17)
     openssl (4.0.2)
     ostruct (0.6.3)
     parallel (1.28.0)
@@ -491,6 +481,12 @@ GEM
       rubocop-factory_bot (~> 2.27)
       rubocop-rspec (~> 3.9)
       rubocop-rspec_rails (~> 2.31)
+    standard-rubocop-lts (2.0.15)
+      rubocop-lts-ruby (~> 0.1, >= 0.1.4)
+      standard (~> 1.54, >= 1.54.0)
+      standard-custom (~> 1.0, >= 1.0.2)
+      standard-performance (~> 1.9, >= 1.9.0)
+      version_gem (~> 1.1, >= 1.1.15)
     stone_checksums (1.0.9)
       version_gem (~> 1.1, >= 1.1.15)
     stringio (3.2.0)
@@ -540,7 +536,7 @@ GEM
       runtime_groups (~> 0.1, >= 0.1.3)
       version_gem (~> 1.1, >= 1.1.15)
     unicode-display_width (2.6.0)
-    version_gem (1.1.15)
+    version_gem (1.1.17)
     webrick (1.9.2)
     yaml-converter (0.2.7)
       hexapdf (>= 1.8, < 2)
@@ -602,7 +598,7 @@ DEPENDENCIES
   kramdown (~> 2.5, >= 2.5.2)
   kramdown-parser-gfm (~> 1.1)
   mutex_m (~> 0.2)
-  nomono (~> 1.1, >= 1.1.14)
+  nomono (~> 1.1, >= 1.1.17)
   ostruct (~> 0.6)
   rake (~> 13.0)
   rbs (>= 3.0)
@@ -617,7 +613,6 @@ DEPENDENCIES
   rubocop-packaging (~> 0.5, >= 0)!
   ruby-progressbar (~> 1.13)
   standard (~> 1.57, >= 1.57.0)
-  standard-rubocop-lts (~> 2.0, >= 2.0.14)!
   stone_checksums (~> 1.0, >= 1.0.9)
   stringio (>= 3.0)
   turbo_tests2 (~> 4.0, >= 4.0.0)
@@ -709,7 +704,7 @@ CHECKSUMS
   nokogiri (1.19.4-x86_64-darwin) sha256=7fd17057d3e1f00e9954a74b3cd76595d3d4a5ef233b7ed9599047c204f70551
   nokogiri (1.19.4-x86_64-linux-gnu) sha256=379fae440b28915e3f19d752ce2dcf8465ed2b2fbefd2a7ca0dd497bc981a06a
   nokogiri (1.19.4-x86_64-linux-musl) sha256=17dfb7c1fa194ae02fbf7c51a7afc8d278045ab3fdacfd86f91d02d7b274470b
-  nomono (1.1.14) sha256=dd9465103202803a1b25046be9cb873b8ca8291647b59fab751306098b6131f6
+  nomono (1.1.17) sha256=92d978c1bf6d6f3e7169ef36cb9ae29e52cccd9ca64849ea03f9ed91f689a51c
   openssl (4.0.2) sha256=1037ad2868ae58df9ad917891c0c0f9815a1172f6846d4bcdd508e4c2ee747c2
   ostruct (0.6.3) sha256=95a2ed4a4bd1d190784e666b47b2d3f078e4a9efda2fccf18f84ddc6538ed912
   parallel (1.28.0) sha256=33e6de1484baf2524792d178b0913fc8eb94c628d6cfe45599ad4458c638c970
@@ -780,7 +775,7 @@ CHECKSUMS
   standard-custom (1.0.2) sha256=424adc84179a074f1a2a309bb9cf7cd6bfdb2b6541f20c6bf9436c0ba22a652b
   standard-performance (1.9.0) sha256=49483d31be448292951d80e5e67cdcb576c2502103c7b40aec6f1b6e9c88e3f2
   standard-rspec (0.5.1) sha256=94c6a0c94f6d303867df5cc403a0d4994cf0d72973e86c0a0c82e3b89843989a
-  standard-rubocop-lts (2.0.15)
+  standard-rubocop-lts (2.0.15) sha256=d5a521a2f6fb78a7a8e784c739bb6b73654682045a00a2043c65cc4d13aed777
   stone_checksums (1.0.9) sha256=fe9c897cacb2ead243c38a97d5a27ed9a4d6b7c55b9975a0b59fe7f6ed621802
   stringio (3.2.0) sha256=c37cb2e58b4ffbd33fe5cd948c05934af997b36e0b6ca6fdf43afa234cf222e1
   strings-ansi (0.2.0) sha256=90262d760ea4a94cc2ae8d58205277a343409c288cbe7c29416b1826bd511c88
@@ -803,7 +798,7 @@ CHECKSUMS
   tty-screen (0.8.2) sha256=c090652115beae764336c28802d633f204fb84da93c6a968aa5d8e319e819b50
   turbo_tests2 (4.0.0) sha256=a01c2e29eeca973946bcca8fed10366ffad34622b9fa85d4cb8ebf14f429aebd
   unicode-display_width (2.6.0) sha256=12279874bba6d5e4d2728cef814b19197dbb10d7a7837a869bab65da943b7f5a
-  version_gem (1.1.15) sha256=a73241587b29252e3567e0c818ded80730eb754d43b508f6ce4db22ca9ba27d0
+  version_gem (1.1.17) sha256=70420b9675fbb77a7e7e7eb8ed6580dd4dd25be53b1454c1a79cc18f3c5a8dfd
   webrick (1.9.2) sha256=beb4a15fc474defed24a3bda4ffd88a490d517c9e4e6118c3edce59e45864131
   yaml-converter (0.2.7) sha256=aa6cae4a9f41ab909c39e4185911c7c3b0a196ae33439ec721aa17631e6d1b3d
   yaml-merge (7.1.15) sha256=c382a59ea70a2b7a38e6f593b1f4a20a710037769b89d92c33f74093373a90e0
