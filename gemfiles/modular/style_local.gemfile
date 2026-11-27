@@ -46,7 +46,7 @@ local_gem_requirements = {
   "rubocop-lts" => ["~> 24.2", ">= 24.2.3"],
   "rubocop-lts-rspec" => ["~> 1.0", ">= 1.0.7"],
   "rubocop-ruby3_2" => ["~> 3.0", ">= 3.0.8"],
-  "standard-rubocop-lts" => ["~> 2.0", ">= 2.0.14"]
+  "standard-rubocop-lts" => ["~> 2.0", ">= 2.0.14"],
 }
 
 local_gems = %w[rubocop-lts-rspec rubocop-ruby3_2 standard-rubocop-lts]
@@ -68,7 +68,7 @@ def local_gem_satisfies?(gem_name, requirements, dev_root)
 
   # Parse version from gemspec
   spec = Gem::Specification.load(gemspec_path)
-  return false unless spec && spec.version
+  return false unless spec&.version
 
   # Check if version satisfies all requirements
   requirements.all? do |req|
