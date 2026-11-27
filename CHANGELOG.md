@@ -22,15 +22,16 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
-- [kc] kettle-jem/prepare: updated 18 project files:
-  - configuration (1)
-  - dependencies (17)
+- [kc] kettle-jem/prepare: updated 29 project files since the last release:
+  - configuration (2)
+  - dependencies (27)
 
-- [kc] kettle-jem/template: updated 43 project files:
-  - dependencies (17)
+- [kc] kettle-jem/template: updated 57 project files since the last release:
+  - code and tests (2)
+  - dependencies (23)
   - documentation (2)
-  - other (5)
-  - workflows (19)
+  - other (9)
+  - workflows (21)
 
 - Floor rubocop-ruby1_8 at 2.0.9, standard-rubocop-lts at 2.0.15, and rubocop-lts-rspec at 1.0.8
 
